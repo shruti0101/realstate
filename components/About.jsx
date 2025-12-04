@@ -50,25 +50,25 @@ export default function AboutSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-600">
               About Us
             </p>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-black sm:text-3xl">
               A trusted real estate partner for modern buyers & investors.
             </h2>
 
-            <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+            <p className="mt-4 text-sm leading-relaxed text-black sm:text-base">
               We are a professional real estate advisory firm focused on
               residential and commercial properties in prime locations. Our
               team combines strong market knowledge with transparent processes
               to help you make confident property decisions.
             </p>
 
-            <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
+            <p className="mt-3 text-sm leading-relaxed text-black sm:text-base">
               From shortlisting to site visits, negotiations and documentation,
               we manage the complete journey so you can focus on what matters
               most — choosing the right property.
             </p>
 
             {/* Points */}
-            <div className="mt-6 space-y-2 text-sm text-slate-700">
+            <div className="mt-6 space-y-2 text-sm text-black">
               <div className="flex gap-2">
                 <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
                 <p>Curated projects from verified, reputed developers.</p>
@@ -90,7 +90,7 @@ export default function AboutSection() {
               >
                 Schedule a Consultation
               </a>
-              <p className="text-xs text-slate-500">
+              <p className="text-xs black">
                 Speak with our team to get project options based on your budget.
               </p>
             </div>
@@ -113,19 +113,19 @@ export default function AboutSection() {
             {/* Simple stats row */}
             <div className="grid gap-4 sm:grid-cols-3">
               <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-                <p className="text-lg font-semibold text-slate-900">10+ yrs</p>
+                <p className="text-lg font-semibold text-black">10+ yrs</p>
                 <p className="mt-1 text-xs text-slate-500">
                   Experience in real estate advisory
                 </p>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-                <p className="text-lg font-semibold text-slate-900">300+</p>
+                <p className="text-lg font-semibold text-black">300+</p>
                 <p className="mt-1 text-xs text-slate-500">
                   Successful transactions closed
                 </p>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-                <p className="text-lg font-semibold text-slate-900">4.9/5</p>
+                <p className="text-lg font-semibold text-black">4.9/5</p>
                 <p className="mt-1 text-xs text-slate-500">
                   Average client satisfaction rating
                 </p>
@@ -146,10 +146,10 @@ export default function AboutSection() {
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-600">
             Our Expertise
           </p>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-black sm:text-3xl">
             Residential & Pre-Rented Commercial Specialists
           </h2>
-          <p className="mt-3 text-sm text-slate-600 sm:text-base">
+          <p className="mt-3 text-sm text-black sm:text-base">
             We help you invest in the right property category based on your
             needs, budget & long-term goals.
           </p>

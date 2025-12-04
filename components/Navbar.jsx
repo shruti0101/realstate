@@ -26,19 +26,19 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden items-center gap-8 md:flex">
-          <a href="#projects" className="text-sm font-medium text-gray-700 hover:text-emerald-600">
+          <a href="#projects" className="text-sm font-medium text-black hover:text-emerald-600">
             Projects
           </a>
-          <a href="#buy" className="text-sm font-medium text-gray-700 hover:text-emerald-600">
+          <a href="#buy" className="text-sm font-medium text-black hover:text-emerald-600">
             services
           </a>
-          <a href="#rent" className="text-sm font-medium text-gray-700 hover:text-emerald-600">
+          <a href="#rent" className="text-sm font-medium text-black hover:text-emerald-600">
             Rent
           </a>
-          <a href="#about" className="text-sm font-medium text-gray-700 hover:text-emerald-600">
+          <a href="#about" className="text-sm font-medium text-black hover:text-emerald-600">
             About
           </a>
-          <Link href="/contact-us" className="text-sm font-medium text-gray-700 hover:text-emerald-600">
+          <Link href="/contact-us" className="text-sm font-medium text-black hover:text-emerald-600">
             Contact
           </Link>
           <a
@@ -51,7 +51,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-gray-100 md:hidden"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle navigation"
         >

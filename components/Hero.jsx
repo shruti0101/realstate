@@ -70,7 +70,7 @@ export default function HeroCarousel() {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 via-slate-950/70 to-slate-950/40" />
       </div>
 
-      <div className="relative mx-auto flex max-w-7xl flex-col gap-6 px-4 py-12 sm:px-6 sm:py-16 lg:flex-row lg:items-center lg:gap-10 lg:py-24 lg:px-8">
+      <div className="relative mx-auto flex max-w-7xl flex-col gap-6 px-4 py-10 sm:px-6 sm:py-16 lg:flex-row lg:items-center lg:gap-10 lg:py-24 lg:px-8">
         {/* Left content */}
         <div className="max-w-xl space-y-4 text-white">
           <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-emerald-300 ring-1 ring-emerald-400/30">
