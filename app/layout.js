@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Stickybottom from "@/components/Stickybottom";
 import Navbar from "@/components/Navbar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
 
         <Navbar/>
         {children}
+          <Stickybottom />
       </body>
     </html>
   );
