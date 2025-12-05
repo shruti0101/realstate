@@ -7,24 +7,24 @@ export default function AboutSection() {
   const [active, setActive] = useState("serviced");
 const CATEGORIES = [
   {
-    key: "residential",
-    label: "RESIDENTIAL",
+    key: "leasing",
+    label: "LEASING",
     image:
       "https://images.pexels.com/photos/259950/pexels-photo-259950.jpeg?auto=compress&cs=tinysrgb&w=1600",
     description:
       "Quality residences with modern amenities and prime connectivity.",
   },
   {
-    key: "retail",
-    label: "RETAIL",
+    key: "industrial",
+    label: "INDUSTRIAL",
     image:
       "https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1600",
     description:
       "High-footfall retail spaces in established and emerging markets.",
   },
   {
-    key: "offices",
-    label: "COMMERCIAL",
+    key: "residential",
+    label: "Residential",
     image:
       "https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=1600",
     description:
@@ -39,8 +39,8 @@ const CATEGORIES = [
       "Comfortable living spaces for modern lifestyles on the go.",
   },
   {
-    key: "leasing",
-    label: "LEASING",
+    key: "commercial",
+    label: "COMMERCIAL",
     image:
       "https://images.pexels.com/photos/4172731/pexels-photo-4172731.jpeg?auto=compress&cs=tinysrgb&w=1600",
     description:
@@ -320,6 +320,81 @@ const CATEGORIES = [
     </section>
 
 
+    {/* accordian */}
+
+    <section className="bg-white py-9" >
+
+      <h2 className="text-2xl md:text-4xl font-bold text-center md:text-start  md:px-9 my-3 text-black">Crafting Excellence Across Verticals</h2>
+      <div className="mx-auto w-full px-0 sm:px-2 py-10">
+        <div className="overflow-hidden  bg-black/80 shadow-2xl">
+          {/* Accordion strip */}
+          <div className="flex h-[420px] flex-col lg:h-[480px] lg:flex-row">
+            {CATEGORIES.map((item) => {
+              const isActive = active === item.key;
+
+              return (
+                <button
+                  key={item.key}
+                  type="button"
+                  onMouseEnter={() => setActive(item.key)}
+                  onFocus={() => setActive(item.key)}
+                  className={`relative flex-1 cursor-pointer overflow-hidden border-b border-slate-800/70 last:border-b-0 transition-[flex] duration-500 ease-out 
+                  lg:border-b-0 lg:border-r lg:last:border-r-0
+                  ${isActive ? "lg:flex-[3] flex-[2]" : "lg:flex-[1] flex-[0.9]"}`}
+                >
+                  {/* Background image */}
+                  <img
+                    src={item.image}
+                    alt={item.label}
+                    className={`absolute inset-0 h-full w-full object-cover transition duration-500 ${
+                      isActive ? "grayscale-0" : "grayscale"
+                    }`}
+                  />
+
+                  {/* Overlay gradient */}
+                  <div
+                    className={`absolute inset-0 transition duration-500 ${
+                      isActive
+                        ? "bg-gradient-to-t from-black/70 via-black/40 to-black/10"
+                        : "bg-black/60"
+                    }`}
+                  />
+
+                  {/* Top label */}
+                  <div className="relative z-10 flex h-full flex-col justify-between px-6 py-6 sm:px-8 sm:py-8 text-left">
+                    <div className="flex items-start justify-between">
+                      <p className="text-xs sm:text-sm font-semibold tracking-[0.3em] text-white uppercase">
+                        {item.label}
+                      </p>
+                    </div>
+
+                    {/* Active content */}
+                    <div
+                      className={`transition-all duration-500 ease-out ${
+                        isActive
+                          ? "opacity-100 translate-y-0"
+                          : "opacity-0 translate-y-4 pointer-events-none"
+                      }`}
+                    >
+                      <p className="max-w-xs text-left text-base sm:text-lg font-medium text-white">
+                        {item.description}
+                      </p>
+                      <div className="mt-4">
+                        <span className="inline-flex items-center rounded-full bg-[#48c12f] px-6 py-2 text-xs sm:text-sm font-semibold text-white shadow-lg shadow-black/40 hover:bg-[#3aa424] transition">
+                          READ MORE
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 {/* contact form */}
 
 <section id="connect" className="relative overflow-hidden bg-white">
@@ -444,7 +519,7 @@ const CATEGORIES = [
           <button
             type="submit"
             className="inline-flex items-center rounded-full bg-[#009966] px-10 py-3.5 text-base sm:text-lg font-semibold text-white shadow-md transition hover:bg-[#009966] cursor-pointer"
-            
+
           >
             Submit Enquiry
           </button>
@@ -460,77 +535,7 @@ const CATEGORIES = [
 </section>
 
 
-    {/* accordian */}
 
-    <section className="bg-white">
-      <div className="mx-auto w-full px-0 sm:px-2 py-10">
-        <div className="overflow-hidden  bg-black/80 shadow-2xl">
-          {/* Accordion strip */}
-          <div className="flex h-[420px] flex-col lg:h-[480px] lg:flex-row">
-            {CATEGORIES.map((item) => {
-              const isActive = active === item.key;
-
-              return (
-                <button
-                  key={item.key}
-                  type="button"
-                  onMouseEnter={() => setActive(item.key)}
-                  onFocus={() => setActive(item.key)}
-                  className={`relative flex-1 cursor-pointer overflow-hidden border-b border-slate-800/70 last:border-b-0 transition-[flex] duration-500 ease-out 
-                  lg:border-b-0 lg:border-r lg:last:border-r-0
-                  ${isActive ? "lg:flex-[3] flex-[2]" : "lg:flex-[1] flex-[0.9]"}`}
-                >
-                  {/* Background image */}
-                  <img
-                    src={item.image}
-                    alt={item.label}
-                    className={`absolute inset-0 h-full w-full object-cover transition duration-500 ${
-                      isActive ? "grayscale-0" : "grayscale"
-                    }`}
-                  />
-
-                  {/* Overlay gradient */}
-                  <div
-                    className={`absolute inset-0 transition duration-500 ${
-                      isActive
-                        ? "bg-gradient-to-t from-black/70 via-black/40 to-black/10"
-                        : "bg-black/60"
-                    }`}
-                  />
-
-                  {/* Top label */}
-                  <div className="relative z-10 flex h-full flex-col justify-between px-6 py-6 sm:px-8 sm:py-8 text-left">
-                    <div className="flex items-start justify-between">
-                      <p className="text-xs sm:text-sm font-semibold tracking-[0.3em] text-white uppercase">
-                        {item.label}
-                      </p>
-                    </div>
-
-                    {/* Active content */}
-                    <div
-                      className={`transition-all duration-500 ease-out ${
-                        isActive
-                          ? "opacity-100 translate-y-0"
-                          : "opacity-0 translate-y-4 pointer-events-none"
-                      }`}
-                    >
-                      <p className="max-w-xs text-left text-base sm:text-lg font-medium text-white">
-                        {item.description}
-                      </p>
-                      <div className="mt-4">
-                        <span className="inline-flex items-center rounded-full bg-[#48c12f] px-6 py-2 text-xs sm:text-sm font-semibold text-white shadow-lg shadow-black/40 hover:bg-[#3aa424] transition">
-                          READ MORE
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </section>
 
 
     </>

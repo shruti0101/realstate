@@ -10,7 +10,7 @@ const slides = [
       "Premium apartments and villas in top locations with modern amenities.",
     badge: "New Launch",
     image:
-      "https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "/hero1.webp",
   },
   {
     id: 2,

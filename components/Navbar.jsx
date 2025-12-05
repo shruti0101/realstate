@@ -26,20 +26,20 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden items-center gap-8 md:flex">
-          <a href="#projects" className="text-sm font-medium text-black hover:text-emerald-600">
+          <Link href="/" className="text-sm font-medium text-black hover:text-emerald-600">
+            Home
+          </Link>
+          <Link href="/about" className="text-sm font-medium text-black hover:text-emerald-600">
+            About Us
+          </Link>
+          <Link href="/services" className="text-sm font-medium text-black hover:text-emerald-600">
+            Services
+          </Link>
+          <Link href="" className="text-sm font-medium text-black hover:text-emerald-600">
             Projects
-          </a>
-          <a href="#buy" className="text-sm font-medium text-black hover:text-emerald-600">
-            services
-          </a>
-          <a href="#rent" className="text-sm font-medium text-black hover:text-emerald-600">
-            Rent
-          </a>
-          <a href="#about" className="text-sm font-medium text-black hover:text-emerald-600">
-            About
-          </a>
+          </Link>
           <Link href="/contact-us" className="text-sm font-medium text-black hover:text-emerald-600">
-            Contact
+            Contact Us
           </Link>
           <a
             href="#visit"
@@ -84,36 +84,31 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden border-t border-gray-100 bg-white">
           <div className="space-y-1 px-4 py-3">
-            <a
-              href="#projects"
+            <Link
+              href="/projects"
               className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
             >
               Projects
-            </a>
-            <a
-              href="#buy"
+            </Link>
+            <Link
+              href="#/services"
               className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
             >
-              Buy
-            </a>
+              Services
+            </Link>
             <a
               href="#rent"
               className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
             >
-              Rent
+              About 
             </a>
-            <a
-              href="#about"
-              className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
-            >
-              About
-            </a>
-            <a
-              href="#contact"
+            <Link
+              href="/about"
               className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
             >
               Contact
-            </a>
+            </Link>
+        
             <a
               href="#visit"
               className="mt-2 block rounded-full bg-emerald-600 px-3 py-2 text-center text-sm font-semibold text-white hover:bg-emerald-700"
