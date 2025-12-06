@@ -10,7 +10,7 @@ const slides = [
       "Premium apartments and villas in top locations with modern amenities.",
     badge: "New Launch",
     image:
-      "/hero1.webp",
+      "/hero2.webp",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const slides = [
       "Spacious, elegant homes designed for comfort, style, and convenience.",
     badge: "Luxury",
     image:
-      "hero2.webp",
+      "hero1.webp",
   },
   {
     id: 3,

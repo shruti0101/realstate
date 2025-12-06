@@ -35,8 +35,22 @@ const inventory = [
       { name: "MNC BACK OFFICE", rent: "₹6,25,000", tag: "Grade-A Building" },
       { name: "CO-WORKING HUB", rent: "₹2,90,000", tag: "Fully Furnished" },
       { name: "CONSULTING FIRM", rent: "₹1,80,000", tag: "Premium Business District" },
+       { name: "Commercial Plaza", rent: "₹9,60,000", tag: "Retail + Offices Mix" },
     ],
   },
+
+{
+  title: "Entire Pre-Leased Buildings",
+  subtitle: "Multi-Tenant Income – High ROI",
+  items: [
+    { name: "Corporate Tower", rent: "₹14,25,000", tag: "Fully Leased to MNCs" },
+   
+    { name: "IT Business Park Block", rent: "₹18,50,000", tag: "Tech SEZ Zone" },
+    { name: "Medical & Diagnostics Tower", rent: "₹7,90,000", tag: "Healthcare Hub" },
+    { name: "Government-Leased Building", rent: "₹12,80,000", tag: "Long-Term Lease Security" }
+  ],
+},
+
 ];
 
 export default function PreRentedInventory() {

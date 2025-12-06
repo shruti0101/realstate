@@ -20,26 +20,17 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex justify-center gap-3 sm:gap-4">
-            <a href="#" aria-label="Facebook"
+            <a href="https://www.facebook.com/profile.php?id=100064072301431" aria-label="Facebook"
               className="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-full bg-[#1877F2] text-white font-bold hover:scale-110 transition">
               f
             </a>
-            <a href="#" aria-label="Instagram"
+            <a href="https://www.instagram.com/anandaggarwalproperties" aria-label="Instagram"
               className="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white font-bold hover:scale-110 transition">
               ◎
             </a>
-            <a href="#" aria-label="LinkedIn"
-              className="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-full bg-[#0A66C2] text-white font-bold hover:scale-110 transition">
-              in
-            </a>
-            <a href="#" aria-label="X"
-              className="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-full bg-black text-white font-bold hover:scale-110 transition">
-              X
-            </a>
-            <a href="#" aria-label="YouTube"
-              className="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-full bg-[#FF0000] text-white font-bold hover:scale-110 transition">
-              ▶
-            </a>
+          
+           
+          
           </div>
 
         </div>

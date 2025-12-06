@@ -11,23 +11,29 @@ export default function ContactPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
-  // Form state
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
 
-  // ⏱ Auto Open After 2 Seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
     }, 2000);
-
     return () => clearTimeout(timer);
   }, []);
 
-  const services = ["Select Service","Pre-rented Commercial Properties", "Flats / Apartments", "Plots / Kothi", "Independent Floors", "Commercial Shops & Office Spaces","Agricultural Land / Farmhouses", "Industrial"];
+  const services = [
+    "Select Service",
+    "Pre-rented Commercial Properties",
+    "Flats / Apartments",
+    "Plots / Kothi",
+    "Independent Floors",
+    "Commercial Shops & Office Spaces",
+    "Agricultural Land / Farmhouses",
+    "Industrial",
+  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,17 +51,19 @@ export default function ContactPopup() {
         message,
       };
 
-      const { data } = await axios.post("https://brandbnalo.com/api/form/add", formData);
+      const { data } = await axios.post(
+        "https://brandbnalo.com/api/form/add",
+        formData
+      );
 
       if (data?.success) {
         setStatus("✅ Message sent successfully!");
+        setTimeout(() => router.push("/thankyou"), 600);
         setName("");
         setEmail("");
         setPhone("");
         setService("");
         setMessage("");
-
-        setTimeout(() => router.push("/thankyou"), 500);
       } else {
         setStatus("❌ Something went wrong. Please try again.");
       }
@@ -69,30 +77,42 @@ export default function ContactPopup() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50 px-4">
-      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden border border-red-100">
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center px-4 z-[9999] animate-fadeIn">
+      
+      <div
+        style={{ backgroundImage: "url(/formbg.avif)" }}
+        className="relative bg-cover bg-center w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden border border-red-300 animate-slideUp"
+      >
+        {/* Overlay on bg for better readability */}
+        <div className="absolute inset-0 bg-black/50" />
 
         {/* Header */}
-        <div className="bg-[#ed3a20] p-6 text-center relative">
+        <div className="relative p-6 text-center ">
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 text-white text-2xl hover:opacity-80 transition"
+            className="absolute top-4 right-4 text-white/90 text-2xl hover:text-white transition"
           >
             ✕
           </button>
-          <h2 className="text-2xl font-bold text-white tracking-wide">Connect With Us</h2>
-          <p className="text-white/90 mt-1 text-sm">Our experts will contact you shortly</p>
+          <h2 className="text-2xl font-bold text-white tracking-wide drop-shadow">
+            Connect With Us
+          </h2>
+          <div className="w-20 h-[3px] bg-white mx-auto mt-2 mb-1 rounded-full opacity-80" />
+          <p className="text-white/85 text-xs font-medium">
+            A trusted advisor will call you shortly
+          </p>
         </div>
 
-        <div className="px-6 py-8">
-          <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+        {/* Form Content */}
+        <div className="relative px-6 pb-4 space-y-4 text-white">
 
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
               type="text"
-              placeholder="Full Name"
-              className="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-black placeholder-slate-500 focus:ring-2 focus:ring-[#ed3a20]"
+              placeholder="Your Name"
+              className="formField"
               required
             />
 
@@ -104,7 +124,7 @@ export default function ContactPopup() {
               maxLength={10}
               minLength={10}
               pattern="[0-9]{10}"
-              className="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-black focus:ring-2 focus:ring-[#ed3a20]"
+              className="formField"
               required
             />
 
@@ -113,14 +133,14 @@ export default function ContactPopup() {
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               placeholder="Email Address"
-              className="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-black focus:ring-2 focus:ring-[#ed3a20]"
+              className="formField"
               required
             />
 
             <select
               value={service}
               onChange={(e) => setService(e.target.value)}
-              className="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-black focus:ring-2 focus:ring-[#ed3a20]"
+              className="formField"
               required
             >
               {services.map((srv, idx) => (
@@ -138,34 +158,72 @@ export default function ContactPopup() {
             <textarea
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="How can we assist you?"
-              className="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-black h-24 resize-none focus:ring-2 focus:ring-[#ed3a20]"
+              placeholder="Message"
+              className="formField h-24 resize-none"
               required
             />
 
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 bg-[#ed3a20] hover:bg-red-700 text-white rounded-lg text-base font-semibold transition shadow-md disabled:opacity-70"
+              className="w-full py-3 rounded-xl bg-[#ed3a20] hover:bg-red-600 transition text-white font-semibold shadow-lg disabled:opacity-70"
             >
               {loading ? "Sending..." : "Submit Enquiry"}
             </button>
-
-            {status && (
-              <p
-                className={`text-center text-sm font-medium p-2 rounded-lg ${
-                  status.startsWith("✅")
-                    ? "bg-green-100 text-green-700"
-                    : "bg-red-100 text-red-700"
-                }`}
-              >
-                {status}
-              </p>
-            )}
           </form>
-        </div>
 
+          {status && (
+            <p
+              className={`text-center text-sm font-medium rounded-lg py-2 ${
+                status.startsWith("✅")
+                  ? "bg-green-100 text-green-700"
+                  : "bg-red-100 text-red-700"
+              }`}
+            >
+              {status}
+            </p>
+          )}
+        </div>
       </div>
+
+      {/* Animations */}
+      <style jsx>{`
+        .formField {
+          width: 100%;
+          background: rgba(255, 255, 255, 0.12);
+          border: 1px solid rgba(255, 255, 255, 0.45);
+          color: #fff;
+          padding: 12px 14px;
+          border-radius: 10px;
+          font-size: 0.92rem;
+          outline: none;
+          transition: all 0.2s ease;
+        }
+        .formField::placeholder {
+          color: rgba(255, 255, 255, 0.75);
+        }
+        .formField:focus {
+          border-color: #ed3a20;
+          background: rgba(255, 255, 255, 0.18);
+          box-shadow: 0 0 0 2px rgba(237, 58, 32, 0.35);
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes slideUp {
+          from { transform: translateY(50px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+
+        .animate-fadeIn {
+          animation: fadeIn 0.4s ease-out forwards;
+        }
+        .animate-slideUp {
+          animation: slideUp 0.45s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 }

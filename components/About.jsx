@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-
+import Link from "next/link";
 import ServicesMarquee from "@/components/Marquee";
 
 
@@ -163,12 +163,12 @@ const CATEGORIES = [
         </div>
 
         <div className="mt-7 flex flex-wrap items-center gap-4">
-          <a
-            href="#contact"
+          <Link 
+            href="/contact-us"
             className="inline-flex items-center rounded-full bg-[#ED3A20] px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#ED3A26] transition"
           >
             Schedule a Consultation
-          </a>
+          </Link>
           <p className="text-xs black">
             Speak with our team to get project options.
           </p>
@@ -261,10 +261,10 @@ const CATEGORIES = [
                     {city.name}
                   </h3>
 
-                  <button className="mt-4 inline-flex items-center rounded-full bg-white/95 px-5 py-2 text-xs sm:text-sm font-semibold text-slate-900 shadow-md transition hover:bg-white">
+                  <Link href="/pre-rented" className="mt-4 inline-flex items-center rounded-full bg-white/95 px-5 py-2 text-xs sm:text-sm font-semibold text-slate-900 shadow-md transition hover:bg-white">
                     View Listings
                     <span className="ml-2 text-[13px]">↗</span>
-                  </button>
+                  </Link>
                 </div>
               </div>
 
@@ -369,12 +369,12 @@ const CATEGORIES = [
                   {exp.title}
                 </p>
 
-                <a
-                  href="#contact"
-                  className="mt-2 inline-block rounded-full bg-[#ED3A20] px-4 py-1.5 text-xs font-semibold hover:bg-emerald-700 transition"
+                <Link
+                  href="/services"
+                  className="mt-2 inline-block rounded-full bg-[#ED3A20] px-4 py-1.5 text-xs font-semibold hover:bg-red-700 transition"
                 >
                   View More
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -388,7 +388,7 @@ const CATEGORIES = [
     <section className="bg-white mt-8" >
 
       <h2 className="text-2xl md:text-4xl font-bold text-center md:text-start  md:px-9 my-3 text-black">Crafting Excellence Across Verticals</h2>
-      <div className="mx-auto w-full px-0 sm:px-2 py-10">
+      <div className="mx-auto w-full px-0 sm:px-2 ">
         <div className="overflow-hidden  bg-black/80 shadow-2xl">
           {/* Accordion strip */}
           <div className="flex h-[570px] flex-col lg:h-[480px] lg:flex-row">
@@ -443,9 +443,9 @@ const CATEGORIES = [
                         {item.description}
                       </p>
                       <div className="mt-4">
-                        <span className="inline-flex items-center rounded-full bg-[#ED3A20] px-6 py-2 text-xs sm:text-sm font-semibold text-white shadow-lg shadow-black/40 hover:bg-[#ED3A20] transition">
+                        <Link href="/services" className="inline-flex items-center rounded-full bg-[#ED3A20] px-6 py-2 text-xs sm:text-sm font-semibold text-white shadow-lg shadow-black/40 hover:bg-[#ED3A20] transition">
                           READ MORE
-                        </span>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -461,7 +461,7 @@ const CATEGORIES = [
 
 {/* contact form */}
 
-<section id="connect" className="relative mt-9 overflow-hidden bg-white">
+<section id="connect" className="relative  overflow-hidden bg-white">
   {/* Background image */}
   <div
     className="pointer-events-none absolute inset-0 bg-cover bg-fixed bg-center"

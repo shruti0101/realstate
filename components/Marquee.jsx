@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link"; // ✅ Correct import for navigation
+
 import {
   Building2,
   Home,
@@ -13,15 +15,15 @@ import {
 } from "lucide-react";
 
 const marqueeServices = [
-  { label: "Residential Properties", icon: Home },
-  { label: "Commercial Real Estate", icon: Briefcase },
-  { label: "Pre-rented Commercial Assets", icon: Wallet },
-  { label: "Plots & Land", icon: MapPin },
-  { label: "Agricultural Land / Farmhouses", icon: Landmark },
-  { label: "NRI Investment Services", icon: FileCheck2 },
-  { label: "Home Loan Assistance", icon: Building2 },
-  { label: "Legal & Documentation Support", icon: ClipboardList },
-  { label: "Property Valuation & Advisory", icon: TrendingUp },
+  { label: "Residential Properties", icon: Home, link: "/services" },
+  { label: "Commercial Real Estate", icon: Briefcase, link: "/services" },
+  { label: "Pre-rented Commercial Assets", icon: Wallet, link: "/services" },
+  { label: "Plots & Land", icon: MapPin, link: "/services" },
+  { label: "Agricultural Land / Farmhouses", icon: Landmark, link: "/services" },
+  { label: "NRI Investment Services", icon: FileCheck2, link: "/services" },
+  { label: "Home Loan Assistance", icon: Building2, link: "/services" },
+  { label: "Legal & Documentation Support", icon: ClipboardList, link: "/services" },
+  { label: "Property Valuation & Advisory", icon: TrendingUp, link: "/services" },
 ];
 
 export default function ServicesMarquee() {
@@ -38,13 +40,14 @@ export default function ServicesMarquee() {
         {items.map((item, i) => {
           const Icon = item.icon;
           return (
-            <span
+            <Link
+              href={item.link}
               key={i}
               className="inline-flex items-center gap-2 bg-white text-[#ed3a20] px-5 py-2 rounded-full font-semibold text-sm sm:text-base shadow-[0_4px_12px_rgba(255,255,255,0.2)] border border-white/50 backdrop-blur-md hover:scale-110 hover:shadow-[0_6px_18px_rgba(255,255,255,0.4)] transition-all duration-300"
             >
               <Icon className="h-4 w-4" />
               {item.label}
-            </span>
+            </Link>
           );
         })}
       </div>
