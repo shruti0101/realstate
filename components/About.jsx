@@ -90,11 +90,7 @@ const CATEGORIES = [
       image:
         "/delhi.jpg",
     },
-    {
-      name: "Gurugram",
-      image:
-        "https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    },
+    
     // Add more cities if you want
     // { name: "Noida", image: "..." },
   ];
@@ -117,7 +113,7 @@ const CATEGORIES = [
 
       {/* Left: Text */}
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-600">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#ED3A20]">
           About Us
         </p>
         <h2 className="mt-3 text-2xl font-semibold tracking-tight text-black sm:text-3xl">
@@ -137,15 +133,15 @@ const CATEGORIES = [
         {/* Points */}
         <div className="mt-6 space-y-2 text-sm text-black">
           <div className="flex gap-2">
-            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#ED3A20]" />
             <p>Curated projects from verified developers.</p>
           </div>
           <div className="flex gap-2">
-            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#ED3A20]" />
             <p>Clear communication & transparent pricing.</p>
           </div>
           <div className="flex gap-2">
-            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#ED3A20]" />
             <p>Support across buying, selling & investment.</p>
           </div>
         </div>
@@ -153,7 +149,7 @@ const CATEGORIES = [
         <div className="mt-7 flex flex-wrap items-center gap-4">
           <a
             href="#contact"
-            className="inline-flex items-center rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-700 transition"
+            className="inline-flex items-center rounded-full bg-[#ED3A20] px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#ED3A26] transition"
           >
             Schedule a Consultation
           </a>
@@ -222,14 +218,14 @@ const CATEGORIES = [
         </div>
 
         {/* City cards */}
-        <div className="mt-5 grid  gap-6 grid-cols-2">
+        <div className="mt-5 grid ">
           {cities.map((city) => (
             <div
               key={city.name}
               className="group relative overflow-hidden rounded-3xl bg-slate-900/80 shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
             >
               {/* Image */}
-              <div className="relative h-52 sm:h-60 lg:h-64">
+              <div className="relative h-52 sm:h-60 lg:h-85">
                 <img
                   src={city.image}
                   alt={city.name}
@@ -265,13 +261,64 @@ const CATEGORIES = [
     </section>
 
 
+{/* journey */}
+
+
+<section
+  style={{ backgroundImage: "url(/maroonbg1.jpg)" }}
+  className="relative bg-center bg-cover py-8  text-white"
+>
+  {/* Overlay */}
+  {/* <div className="absolute inset-0 bg-black/30 z-0"></div> */}
+
+  {/* Actual content should be ABOVE overlay */}
+  <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    {/* Heading */}
+    <div className="text-center">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
+        From Dreams to Doorsteps
+      </h2>
+      <p className="mt-3 text-sm sm:text-base lg:text-lg font-medium text-white/85">
+        We don’t just build homes, we nurture the emotions behind them.
+      </p>
+    </div>
+
+    {/* Image timeline block */}
+    <div className="mt-8 flex justify-center">
+      <div className="relative w-full max-w-3xl">
+        <div className="h-64   rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+          <img
+            src="/1985.png"
+            alt="Then - 1983"
+            className="h-full w-full object-cover"
+          />
+        </div>
+
+      
+      </div>
+    </div>
+
+    {/* Story text */}
+    <div className="mt-10 sm:mt-12 max-w-4xl mx-auto text-center">
+      <p className="text-sm sm:text-base lg:text-[15px] leading-relaxed text-white/90">
+        A journey that began in 1985 with one man’s dream has now evolved
+        into a mission to help every individual own their dream home. Today,
+        Anand Aggarwal Properties stands for hassle-free property
+        ownership, offering both residential and commercial plots through a
+        simple, transparent process. We’re dedicated to turning your dream
+        of owning a home into reality — effortlessly and responsibly.
+      </p>
+    </div>
+  </div>
+</section>
+
 
 {/* our expertise */}
 
     <section id="expertise" className="bg-slate-50 border-t border-slate-100">
       <div className="mx-auto max-w-7xl px-4 md:py-11 sm:px-6 lg:px-8 ">
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-600">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#ED3A20]">
             Our Expertise
           </p>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-black sm:text-3xl">
@@ -308,7 +355,7 @@ const CATEGORIES = [
 
                 <a
                   href="#contact"
-                  className="mt-2 inline-block rounded-full bg-emerald-600 px-4 py-1.5 text-xs font-semibold hover:bg-emerald-700 transition"
+                  className="mt-2 inline-block rounded-full bg-[#ED3A20] px-4 py-1.5 text-xs font-semibold hover:bg-emerald-700 transition"
                 >
                   View More
                 </a>
@@ -380,7 +427,7 @@ const CATEGORIES = [
                         {item.description}
                       </p>
                       <div className="mt-4">
-                        <span className="inline-flex items-center rounded-full bg-[#48c12f] px-6 py-2 text-xs sm:text-sm font-semibold text-white shadow-lg shadow-black/40 hover:bg-[#3aa424] transition">
+                        <span className="inline-flex items-center rounded-full bg-[#ED3A20] px-6 py-2 text-xs sm:text-sm font-semibold text-white shadow-lg shadow-black/40 hover:bg-[#ED3A20] transition">
                           READ MORE
                         </span>
                       </div>
@@ -407,10 +454,10 @@ const CATEGORIES = [
   />
 
   {/* Soft overlay */}
-  <div className="pointer-events-none absolute inset-0 bg-black/30" />
+  <div className="pointer-events-none absolute inset-0 bg-black/50" />
 
   {/* Content */}
-  <div className="relative z-10 mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+  <div className="relative z-10 mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
     {/* Heading */}
     <div className="mx-auto max-w-3xl text-center">
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white">
@@ -425,11 +472,11 @@ const CATEGORIES = [
     </div>
 
     {/* Form card */}
-    <div className="mt-10 rounded-3xl border border-white/50 bg-white/85 backdrop-blur-2xl shadow-2xl">
-      <form className="space-y-8 px-6 py-10 sm:px-10 sm:py-8">
+    <div className="mt-10 rounded-3xl border border-white/50 bg-white/85 backdrop-blur-xl">
+      <form className="space-y-4 px-6 py-10 ">
         
         {/* Row 1 */}
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2">
           <div>
             <label className="block text-sm font-semibold text-slate-800 mb-2">
               Your Name
@@ -437,7 +484,7 @@ const CATEGORIES = [
             <input
               type="text"
               placeholder="Enter your full name"
-              className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#009966]"
+              className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#ED3A20]"
             />
           </div>
           <div>
@@ -447,7 +494,7 @@ const CATEGORIES = [
             <input
               type="tel"
               placeholder="+91 -"
-              className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#009966]"
+              className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#ED3A20]"
             />
           </div>
         </div>
@@ -461,7 +508,7 @@ const CATEGORIES = [
             <input
               type="email"
               placeholder="you@example.com"
-              className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#009966]"
+              className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#ED3A20]"
             />
           </div>
           <div>
@@ -470,7 +517,7 @@ const CATEGORIES = [
             </label>
             <select
               defaultValue=""
-              className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 outline-none focus:border-[#009966]"
+              className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 outline-none focus:border-[#ED3A20]"
             >
               <option value="" disabled>Select property type</option>
               <option>Flats / Apartments</option>
@@ -491,7 +538,7 @@ const CATEGORIES = [
           </label>
           <select
             defaultValue=""
-            className="w-full border-b border-slate-400  bg-transparent text-base text-slate-900 outline-none focus:border-[#009966]"
+            className="w-full border-b border-slate-400  bg-transparent text-base text-slate-900 outline-none focus:border-[#ED3A20]"
           >
             <option value="" disabled>Select city</option>
             <option>Delhi</option>
@@ -510,29 +557,33 @@ const CATEGORIES = [
           <textarea
             rows={4}
             placeholder="Tell us what you're looking for..."
-            className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#009966] resize-none"
+            className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#ED3A20] resize-none"
           />
         </div>
 
-        {/* CTA */}
-        <div className="">
-          <button
-            type="submit"
-            className="inline-flex items-center rounded-full bg-[#009966] px-10 py-3.5 text-base sm:text-lg font-semibold text-white shadow-md transition hover:bg-[#009966] cursor-pointer"
+      {/* CTA */}
+      {/* CTA */}
+<div className="flex flex-col items-center">
+  <button
+    type="submit"
+    className="mx-auto rounded-full bg-[#ED3A20] px-5 py-3 text-base font-semibold text-white shadow-md transition hover:bg-[#ED3A20] cursor-pointer"
+  >
+    Submit Enquiry
+  </button>
 
-          >
-            Submit Enquiry
-          </button>
+  <p className="mt-2 text-xs sm:text-sm text-slate-700 text-center">
+    We usually respond within a few hours.
+  </p>
+</div>
 
-          <p className="mt-2 text-xs sm:text-sm text-slate-700">
-            We usually respond within a few hours.
-          </p>
-        </div>
       </form>
     </div>
 
   </div>
 </section>
+
+
+
 
 
 

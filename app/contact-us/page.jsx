@@ -31,7 +31,7 @@ export default function ContactSection() {
           
           {/* Heading */}
           <div className="max-w-2xl mb-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#ED3A20]">
               Contact Us
             </p>
             <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900">
@@ -114,7 +114,7 @@ export default function ContactSection() {
 
                 <button
                   type="submit"
-                  className="mt-2 inline-flex items-center rounded-full bg-emerald-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700"
+                  className="mt-2 inline-flex items-center rounded-full bg-[#ED3A20] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-red-700"
                 >
                   Submit Enquiry
                 </button>
@@ -132,26 +132,32 @@ export default function ContactSection() {
                 />
               </div>
 
-              <div className="rounded-3xl border border-slate-200 bg-white px-5 py-4 text-sm text-slate-700 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-                  Office Address
-                </p>
-                <p className="mt-3 text-sm font-medium text-slate-800">
-                  Anand Aggarwal Properties <br />
-                  Connaught Place, New Delhi
-                </p>
+          <div className="rounded-3xl border border-slate-200 bg-white px-5 py-4 text-sm text-slate-700 shadow-sm">
+  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+    Office Address
+  </p>
 
-                <div className="mt-3 grid gap-2 text-xs sm:grid-cols-2 text-slate-600">
-                  <p>
-                    <span className="font-semibold">Phone:</span>{" "}
-                    +91 98990 58882
-                  </p>
-                  <p>
-                    <span className="font-semibold">Email:</span>{" "}
-                    info@anandaggarwalproperties.com
-                  </p>
-                </div>
-              </div>
+  <p className="mt-3 text-sm font-medium text-slate-800">
+    Delhi (Head Office) <br />
+    B-27, Pushpanjali Enclave, <br />
+    Outer Ring Road, Pitampura, Delhi
+  </p>
+
+  <div className="mt-3 grid gap-2 text-xs sm:grid-cols-2 text-slate-600">
+    <p>
+      <span className="font-semibold">Mobile:</span>{" "}
+      +91 9810395051, +91 9899151090
+    </p>
+    {/* <p>
+      <span className="font-semibold">Phone:</span>{" "}
+      Ajay Aggarwal (B.E.) +91 9810759498
+    </p> */}
+    <p>
+      <span className="font-semibold">Email:</span>{" "}
+      info@anandaggarwalproperties.com
+    </p>
+  </div>
+</div>
 
             </div>
           </div>

@@ -1,7 +1,6 @@
 'use client'
 import PropertyCarousel from "@/components/Carousel";
 
-
 import {
   ShieldCheck,
   CheckCircle,
@@ -9,15 +8,10 @@ import {
   Handshake,
 } from "lucide-react";
 
-
 export default function AboutPage() {
-
-
-
-
-
   return (
     <main className="bg-white text-slate-900">
+
       {/* Top Banner */}
       <section className="relative h-[240px] sm:h-[300px] lg:h-[360px] w-full overflow-hidden">
         <img
@@ -40,67 +34,64 @@ export default function AboutPage() {
         </div>
       </section>
 
-     {/* Company Overview */}
-<section className="border-b border-slate-100">
-  <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-    <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
-      <div>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#009966]">
-          Company Overview
-        </p>
-        <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">
-          Real estate decisions backed by experience and due diligence.
-        </h2>
-        <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-slate-600">
-          Anand Aggarwal Properties operates as a focused real estate
-          advisory firm, working with end-users, investors and NRIs across
-          Delhi–NCR. Our role is to simplify complex property decisions by
-          combining on-ground knowledge with a clear, process-driven
-          approach.
-        </p>
-        <p className="mt-3 text-sm sm:text-[15px] leading-relaxed text-slate-600">
-          We work across residential and commercial segments—apartments,
-          independent floors, plots, pre-leased assets and select
-          commercial projects—helping clients evaluate risk, returns,
-          legal clarity and long-term suitability before committing
-          capital.
-        </p>
+      {/* Company Overview */}
+      <section className="border-b border-slate-100">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#ED3A20]">
+                Company Overview
+              </p>
+              <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">
+                Real estate decisions backed by experience and due diligence.
+              </h2>
+              <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-slate-600">
+              At Anand Aggarwal Properties, we’re not just real estate consultants—we’re builders of enduring legacies. Driven by a passion for excellence and a dedication to superior quality, we turn aspirations into reality, one project at a time.
 
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-            <p className="text-sm font-semibold text-slate-900">
-              Advisory-first approach
-            </p>
-            <p className="mt-1 text-xs text-slate-600">
-              Recommendations based on fit and facts, not just inventory.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-            <p className="text-sm font-semibold text-slate-900">
-              Long-term relationships
-            </p>
-            <p className="mt-1 text-xs text-slate-600">
-              A large part of our business comes through repeat clients
-              and referrals.
-            </p>
+Established in 1987 on the values of integrity, reliability, and exceptional service, our story began with a mission to transform the construction landscape by combining time-honored craftsmanship with contemporary innovation. Today, we proudly stand as a trusted name in the industry.
+              </p>
+              <p className="mt-3 text-sm sm:text-[15px] leading-relaxed text-slate-600">
+                We work across residential and commercial segments—apartments,
+                independent floors, plots, pre-leased assets and select
+                commercial projects—helping clients evaluate risk, returns,
+                legal clarity and long-term suitability before committing
+                capital.
+              </p>
+
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+                  <p className="text-sm font-semibold text-slate-900">
+                    Advisory-first approach
+                  </p>
+                  <p className="mt-1 text-xs text-slate-600">
+                    Recommendations based on fit and facts, not just inventory.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+                  <p className="text-sm font-semibold text-slate-900">
+                    Long-term relationships
+                  </p>
+                  <p className="mt-1 text-xs text-slate-600">
+                    A large part of our business comes through repeat clients
+                    and referrals.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Property Carousel */}
+            <div className="relative">
+              <PropertyCarousel />
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Right: Property Carousel */}
-      <div className="relative">
-        <PropertyCarousel />
-      </div>
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* Our Approach */}
       <section className="bg-slate-50">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
           <div className="max-w-3xl">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#009966]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#ED3A20]">
               Our Approach
             </p>
             <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">
@@ -157,7 +148,7 @@ export default function AboutPage() {
           ].map((title) => (
             <div
               key={title}
-              className="group rounded-3xl border border-slate-200 bg-white px-5 py-6 shadow-sm transition hover:-translate-y-1 hover:border-[#009966] hover:shadow-lg"
+              className="group rounded-3xl border border-slate-200 bg-white px-5 py-6 shadow-sm transition hover:-translate-y-1 hover:border-[#ED3A20] hover:shadow-lg"
             >
               <h3 className="text-sm sm:text-base font-semibold text-slate-900">
                 {title}
@@ -166,7 +157,7 @@ export default function AboutPage() {
                 Curated options with clarity on pricing, documentation and
                 long-term potential.
               </p>
-              <div className="mt-4 h-0.5 w-10 bg-[#009966]/70 group-hover:w-16 group-hover:bg-[#009966] transition-all" />
+              <div className="mt-4 h-0.5 w-10 bg-[#ED3A20]/70 group-hover:w-16 group-hover:bg-[#ED3A20] transition-all" />
             </div>
           ))}
         </div>
@@ -198,22 +189,21 @@ export default function AboutPage() {
           Discuss a requirement or evaluate a project?
         </h3>
         <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-xl mx-auto">
-          Share a few details with us and our team will connect with a structured
-         , no-obligation discussion on suitable options.
+          Share a few details with us and our team will connect with a
+          structured, no-obligation discussion on suitable options.
         </p>
         <a
           href="/contact"
-          className="mt-6 inline-flex items-center rounded-full bg-[#009966] px-9 py-3 text-sm sm:text-base font-semibold text-white shadow-md hover:bg-[#007a53] transition"
+          className="mt-6 inline-flex items-center rounded-full bg-[#ED3A20] px-9 py-3 text-sm sm:text-base font-semibold text-white shadow-md hover:bg-[#c73019] transition"
         >
           Schedule a Call
         </a>
       </section>
 
-
-
-         <section className="bg-[#f7fffa] border-y border-[#009966]/15 py-16">
+      {/* Why Choose Us */}
+      <section className="bg-[#fff5f3] border-y border-[#ED3A20]/15 py-16">
         <div className="mx-auto max-w-6xl px-4 text-center">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#009966]">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#ED3A20]">
             Why Choose Us
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight">
@@ -245,28 +235,22 @@ export default function AboutPage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="group relative rounded-3xl bg-white p-7 shadow-md border border-transparent hover:-translate-y-2 hover:border-[#009966] hover:shadow-2xl transition"
+                className="group relative rounded-3xl bg-white p-7 shadow-md border border-transparent hover:-translate-y-2 hover:border-[#ED3A20] hover:shadow-2xl transition"
               >
-                <div className="text-[#009966] mb-4 flex justify-center">
-                  <div className="p-3 rounded-full bg-[#009966]/10">
+                <div className="text-[#ED3A20] mb-4 flex justify-center">
+                  <div className="p-3 rounded-full bg-[#ED3A20]/10">
                     {item.icon}
                   </div>
                 </div>
                 <h4 className="text-lg font-semibold">{item.title}</h4>
                 <p className="mt-3 text-sm text-slate-600">{item.desc}</p>
 
-                <div className="absolute bottom-0 left-0 right-0 mx-auto mb-3 h-[2px] w-12 bg-[#009966] opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 mx-auto mb-3 h-[2px] w-12 bg-[#ED3A20] opacity-0 group-hover:opacity-100 transition-all duration-300" />
               </div>
             ))}
           </div>
         </div>
       </section>
-
-
-
-
-
-
     </main>
   );
 }

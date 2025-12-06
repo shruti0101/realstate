@@ -2,51 +2,49 @@
 
 import { useState } from "react";
 import Link from "next/link";
-
+import ContactForm from "@/components/Form"; // 👈 import the form
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isFormOpen, setIsFormOpen] = useState(false); // 👈 modal state
   return (
+<>
+
     <header className="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-gray-100">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 md:px-6 lg:px-10">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="h-9 w-9 rounded-xl bg-emerald-600 flex items-center justify-center text-white font-bold">
-            RE
-          </div>
-          <div className="flex flex-col leading-tight">
-            <span className="text-base font-semibold text-gray-900">
-              RealEstate Pro
-            </span>
-            <span className="text-xs text-gray-500">
-              Premium Properties
-            </span>
-          </div>
-        </div>
+        <Link href="/">
+          <img className="w-20" src="/logo.png" />
+           </Link >
+
+
 
         {/* Desktop Menu */}
         <div className="hidden items-center gap-8 md:flex">
-          <Link href="/" className="text-sm font-medium text-black hover:text-emerald-600">
+          <Link href="/" className="text-base font-medium text-black hover:text-[#ED3A20]">
             Home
           </Link>
-          <Link href="/about" className="text-sm font-medium text-black hover:text-emerald-600">
+          <Link href="/about" className="text-base font-medium text-black hover:text-[#ED3A20]">
             About Us
           </Link>
-          <Link href="/services" className="text-sm font-medium text-black hover:text-emerald-600">
+          <Link href="/services" className="text-base font-medium text-black hover:text-[#ED3A20]">
             Services
           </Link>
-          <Link href="" className="text-sm font-medium text-black hover:text-emerald-600">
+          <Link href="" className="text-base font-medium text-black hover:text-[#ED3A20]">
             Projects
           </Link>
-          <Link href="/contact-us" className="text-sm font-medium text-black hover:text-emerald-600">
+          <Link href="/contact-us" className="text-base font-medium text-black hover:text-[#ED3A20]">
             Contact Us
           </Link>
-          <a
-            href="#visit"
-            className="inline-flex items-center rounded-full border border-emerald-600 bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-700 transition"
+          <button
+          onClick={()=> setIsFormOpen(true)}
+            type="button"
+            
+
+            
+            className="cursor-pointer inline-flex items-center rounded-full border border-[#ED3A20] bg-[#ED3A20] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#ED3A20] transition"
           >
             Schedule a Visit
-          </a>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -111,7 +109,7 @@ export default function Navbar() {
         
             <a
               href="#visit"
-              className="mt-2 block rounded-full bg-emerald-600 px-3 py-2 text-center text-sm font-semibold text-white hover:bg-emerald-700"
+              className="mt-2 block rounded-full bg-[#ED3A20] px-3 py-2 text-center text-sm font-semibold text-white hover:bg-emerald-700"
             >
               Schedule a Visit
             </a>
@@ -119,5 +117,16 @@ export default function Navbar() {
         </div>
       )}
     </header>
+
+
+
+         {/* Contact Form Modal – appears after our expertise tabs */}
+          <ContactForm
+            isOpen={isFormOpen}
+            onClose={() => setIsFormOpen(false)}
+          />
+</>
+
+
   );
 }

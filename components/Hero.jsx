@@ -70,10 +70,10 @@ export default function HeroCarousel() {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 via-slate-950/70 to-slate-950/40" />
       </div>
 
-      <div className="relative mx-auto flex max-w-7xl flex-col gap-6 px-4 py-10 sm:px-6 sm:py-16 lg:flex-row lg:items-center lg:gap-10 lg:py-24 lg:px-8">
+      <div className="relative mx-auto flex max-w-7xl flex-col gap-6 px-4 py-10 sm:px-6 sm:py-16 lg:flex-row lg:items-center lg:gap-10  lg:px-8">
         {/* Left content */}
         <div className="max-w-xl space-y-4 text-white">
-          <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-emerald-300 ring-1 ring-emerald-400/30">
+          <span className="inline-flex items-center rounded-full bg-[#ED3A20]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-[#ED3A20] ring-1 ring-[#ED3A20]/30">
             {activeSlide.badge}
           </span>
           <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl lg:text-5xl">
@@ -86,13 +86,13 @@ export default function HeroCarousel() {
           <div className="flex flex-wrap items-center gap-3 pt-1">
             <a
               href="#projects"
-              className="inline-flex items-center rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/30 hover:bg-emerald-400 transition"
+              className="inline-flex items-center rounded-full bg-[#ED3A20] px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-[#ED3A20]/30 hover:bg-[#ED3A20] transition"
             >
               Explore Projects
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center rounded-full border border-slate-500/60 bg-slate-900/50 px-4 py-2 text-xs sm:text-sm font-medium text-slate-100 hover:border-emerald-400/70 hover:text-emerald-200 transition"
+              className="inline-flex items-center rounded-full border border-slate-500/60 bg-slate-900/50 px-4 py-2 text-xs sm:text-sm font-medium text-slate-100 hover:border-[#ED3A20] hover:[#ED3A20] transition"
             >
               Talk to an Expert
             </a>
@@ -131,14 +131,14 @@ export default function HeroCarousel() {
               <button
                 onClick={prevSlide}
                 aria-label="Previous slide"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-600 bg-slate-900/80 text-slate-100 hover:border-emerald-400 hover:text-emerald-200 transition"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-600 bg-slate-900/80 text-slate-100 hover:border-[#ED3A20] hover:text-[#ED3A20] transition"
               >
                 ←
               </button>
               <button
                 onClick={nextSlide}
                 aria-label="Next slide"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-600 bg-slate-900/80 text-slate-100 hover:border-emerald-400 hover:text-emerald-200 transition"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-600 bg-slate-900/80 text-slate-100 hover:border-[#ED3A20] hover:text-[#ED3A20] transition"
               >
                 →
               </button>
@@ -152,7 +152,7 @@ export default function HeroCarousel() {
                   onClick={() => goTo(index)}
                   className={`h-2.5 rounded-full transition ${
                     index === activeIndex
-                      ? "w-6 bg-emerald-400"
+                      ? "w-6 bg-[#ED3A20]"
                       : "w-2 bg-slate-500"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
@@ -170,7 +170,7 @@ export default function HeroCarousel() {
                   3 BHK • Gated Community • City Center
                 </p>
               </div>
-              <p className="text-right text-sm font-semibold text-emerald-300">
+              <p className="text-right text-sm font-semibold text-[#ED3A20]">
                 ₹ 1.2 Cr onwards
               </p>
             </div>

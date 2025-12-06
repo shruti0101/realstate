@@ -13,19 +13,19 @@ const Footer = () => {
 
           {/* Center nav */}
           <nav className="flex-1 flex justify-center gap-6 sm:gap-10 text-sm sm:text-base font-semibold">
-            <Link href="#home" className="hover:text-[#009966] transition">
+            <Link href="#home" className="hover:text-[#ED3A20] transition">
               Home
             </Link>
-            <Link href="#about" className="hover:text-[#009966] transition">
+            <Link href="#about" className="hover:text-[#ED3A20] transition">
               About Us
             </Link>
-            <Link href="#services" className="hover:text-[#009966] transition">
+            <Link href="#services" className="hover:text-[#ED3A20] transition">
               Services
             </Link>
-            <Link href="#projects" className="hover:text-[#009966] transition">
+            <Link href="#projects" className="hover:text-[#ED3A20] transition">
               Projects
             </Link>
-            <Link href="/contact-us" className="hover:text-[#009966] transition">
+            <Link href="/contact-us" className="hover:text-[#ED3A20] transition">
               Contact Us
             </Link>
           </nav>
