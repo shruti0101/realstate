@@ -139,7 +139,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Main Services + Tabs */}
-      <section className="max-w-7xl mx-auto px-4 py-16 grid lg:grid-cols-3 gap-10">
+      <section className="max-w-7xl mx-auto px-4 py-7 md:py-16 grid lg:grid-cols-3 gap-10">
         {/* Left Sidebar */}
         <aside className="rounded-2xl p-6">
           <h3 className="text-xl font-bold text-red-600 mb-6 text-center">
@@ -165,7 +165,7 @@ export default function ServicesPage() {
         {/* Right Details Panel */}
         <div className="lg:col-span-2">
           <div className="rounded-3xl overflow-hidden shadow-xl">
-            <img src={active.image} className="w-full h-80 object-cover" />
+            <img src={active.image} className="w-full md:h-80 object-cover" />
           </div>
 
           <h2 className="mt-8 text-3xl font-bold text-slate-900">

@@ -6,6 +6,10 @@ import ContactForm from "@/components/Form"; // 👈 import the form
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false); // 👈 modal state
+
+    const handleMobileClick = () => {
+    setIsOpen(false); // Close mobile menu after clicking any item
+  };
   return (
 <>
 
@@ -79,54 +83,31 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white">
-          <div className="space-y-1 px-4 py-3">
-            <Link
-              href="/projects"
-              className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
-            >
-              Projects
-            </Link>
-            <Link
-              href="#/services"
-              className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
-            >
-              Services
-            </Link>
-            <a
-              href="#rent"
-              className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
-            >
-              About 
-            </a>
-            <Link
-              href="/about"
-              className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
-            >
-              Contact
-            </Link>
-        
-            <a
-              href="#visit"
-              className="mt-2 block rounded-full bg-[#ED3A20] px-3 py-2 text-center text-sm font-semibold text-white hover:bg-emerald-700"
-            >
-              Schedule a Visit
-            </a>
+   {isOpen && (
+          <div className="md:hidden border-t border-gray-100 bg-white">
+            <div className="space-y-1 px-4 py-3">
+              <Link href="/" className="block px-3 py-2" onClick={handleMobileClick}>Home</Link>
+              <Link href="/about" className="block px-3 py-2" onClick={handleMobileClick}>About</Link>
+              <Link href="/services" className="block px-3 py-2" onClick={handleMobileClick}>Services</Link>
+              <Link href="/projects" className="block px-3 py-2" onClick={handleMobileClick}>Projects</Link>
+              <Link href="/contact-us" className="block px-3 py-2" onClick={handleMobileClick}>Contact</Link>
+
+              <button
+                onClick={() => {
+                  handleMobileClick();
+                  setIsFormOpen(true);
+                }}
+                className="mt-2 w-full bg-[#ED3A20] text-white px-3 py-2 rounded-full text-sm font-semibold hover:bg-red-700"
+              >
+                Schedule a Visit
+              </button>
+            </div>
           </div>
-        </div>
-      )}
-    </header>
+        )}
+      </header>
 
-
-
-         {/* Contact Form Modal – appears after our expertise tabs */}
-          <ContactForm
-            isOpen={isFormOpen}
-            onClose={() => setIsFormOpen(false)}
-          />
-</>
-
-
+      {/* Contact Form Popup */}
+      <ContactForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+    </>
   );
 }

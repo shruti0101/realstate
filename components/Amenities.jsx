@@ -42,23 +42,23 @@ export default function AmenitiesSection() {
         </div>
 
         {/* Amenity Grid */}
-        <div className="mt-4 grid gap-x-7 gap-y-5 sm:grid-cols-3 md:grid-cols-4">
+        <div className="mt-4 grid gap-x-4 gap-y-5  grid-cols-4">
           {amenities.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.label}
-                className="flex flex-col items-center text-center"
+                className="flex flex-col  items-center text-center"
               >
                 <div className="relative">
                   {/* glow */}
                   <div className="absolute inset-0 rounded-full bg-[#ed3a20]/25 blur-xl" />
                   {/* main circle */}
-                  <div className="relative flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center rounded-full bg-[#BB0000] text-white shadow-lg shadow-black/20 ring-1 ring-white/10 transition-transform duration-200 hover:-translate-y-1 hover:shadow-2xl hover:ring-[#BB0000]/70">
+                  <div className=" relative flex h-15 w-15 md:h-20 md:w-20 sm:h-24 sm:w-24 items-center justify-center rounded-full bg-[#BB0000] text-white shadow-lg shadow-black/20 ring-1 ring-white/10 transition-transform duration-200 hover:-translate-y-1 hover:shadow-2xl hover:ring-[#BB0000]/70">
                     <Icon className="h-10 w-10 sm:h-11 sm:w-11 stroke-[1.6]" />
                   </div>
                 </div>
-                <p className="mt-3 text-sm sm:text-base font-medium text-slate-900">
+                <p className="mt-3  text-sm sm:text-base font-medium text-slate-900">
                   {item.label}
                 </p>
               </div>

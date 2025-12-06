@@ -391,7 +391,7 @@ const CATEGORIES = [
       <div className="mx-auto w-full px-0 sm:px-2 py-10">
         <div className="overflow-hidden  bg-black/80 shadow-2xl">
           {/* Accordion strip */}
-          <div className="flex h-[420px] flex-col lg:h-[480px] lg:flex-row">
+          <div className="flex h-[570px] flex-col lg:h-[480px] lg:flex-row">
             {CATEGORIES.map((item) => {
               const isActive = active === item.key;
 
@@ -439,7 +439,7 @@ const CATEGORIES = [
                           : "opacity-0 translate-y-4 pointer-events-none"
                       }`}
                     >
-                      <p className="max-w-xs text-left text-base sm:text-lg font-medium text-white">
+                      <p className="max-w-xs text-left text-sm sm:text-lg font-medium text-white">
                         {item.description}
                       </p>
                       <div className="mt-4">

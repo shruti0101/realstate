@@ -59,13 +59,13 @@ export default function HeroCarousel() {
   const activeSlide = slides[activeIndex];
 
   return (
-    <section className="relative md:h-[90vh] overflow-hidden bg-slate-600">
+    <section className="relative h-full md:h-[90vh] overflow-hidden bg-slate-600">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={activeSlide.image}
           alt={activeSlide.title}
-          className="h-[90vh] w-full object-cover opacity-80"
+          className="h-full md:h-[90vh] w-full object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/50 via-slate-950/60 to-slate-950/40" />
       </div>

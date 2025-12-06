@@ -32,7 +32,7 @@ export default function OfficesSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid  ">
+        <div className=" max-w-3xl ">
           {offices.map((office) => (
             <article
               key={office.title}
