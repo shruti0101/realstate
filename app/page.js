@@ -4,7 +4,6 @@ import OfficesSection from "@/components/Office";
 import PopupForm from "@/components/Popup";
 
 
-
 export default function Home() {
   return (
  <>
@@ -12,6 +11,7 @@ export default function Home() {
  <HeroCarousel></HeroCarousel>
  <About></About>
  <OfficesSection></OfficesSection>
+
  </>
   );
 }

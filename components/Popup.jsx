@@ -27,7 +27,7 @@ export default function ContactPopup() {
     return () => clearTimeout(timer);
   }, []);
 
-  const services = ["Select Service", "Residential", "Commercial", "Plots", "Flats"];
+  const services = ["Select Service","Pre-rented Commercial Properties", "Flats / Apartments", "Plots / Kothi", "Independent Floors", "Commercial Shops & Office Spaces","Agricultural Land / Farmhouses", "Industrial"];
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const slides = [
@@ -19,7 +19,7 @@ const slides = [
       "Spacious, elegant homes designed for comfort, style, and convenience.",
     badge: "Luxury",
     image:
-      "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "hero2.webp",
   },
   {
     id: 3,
@@ -59,7 +59,7 @@ export default function HeroCarousel() {
   const activeSlide = slides[activeIndex];
 
   return (
-    <section className="relative md:h-[90vh] overflow-hidden bg-slate-950">
+    <section className="relative md:h-[90vh] overflow-hidden bg-slate-600">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -67,7 +67,7 @@ export default function HeroCarousel() {
           alt={activeSlide.title}
           className="h-[90vh] w-full object-cover opacity-80"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 via-slate-950/70 to-slate-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/50 via-slate-950/60 to-slate-950/40" />
       </div>
 
       <div className="relative mx-auto flex max-w-7xl flex-col gap-6 px-4 py-10 sm:px-6 sm:py-16 lg:flex-row lg:items-center lg:gap-10  lg:px-8">
@@ -84,18 +84,18 @@ export default function HeroCarousel() {
           </p>
 
           <div className="flex flex-wrap items-center gap-3 pt-1">
-            <a
-              href="#projects"
+            <Link
+              href="/projects"
               className="inline-flex items-center rounded-full bg-[#ED3A20] px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-[#ED3A20]/30 hover:bg-[#ED3A20] transition"
             >
               Explore Projects
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              href="/contact-us"
               className="inline-flex items-center rounded-full border border-slate-500/60 bg-slate-900/50 px-4 py-2 text-xs sm:text-sm font-medium text-slate-100 hover:border-[#ED3A20] hover:[#ED3A20] transition"
             >
               Talk to an Expert
-            </a>
+            </Link>
           </div>
 
           {/* Small stats – hidden on very small screens */}

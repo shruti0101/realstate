@@ -1,9 +1,11 @@
 import React from "react";
+import Link from "next/link";
 
 const Stickybottom = () => {
   return (
-    <button
-      type="button"
+    <Link 
+      href="/pre-rented"
+
       className="
         fixed left-4 bottom-4 z-[9999]
         inline-flex items-center
@@ -16,7 +18,7 @@ const Stickybottom = () => {
       "
     >
       Latest Pre-rented Properties
-    </button>
+    </Link>
   );
 };
 

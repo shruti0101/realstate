@@ -2,25 +2,28 @@
 
 import { useState } from "react";
 
+import ServicesMarquee from "@/components/Marquee";
+
 
 export default function AboutSection() {
   const [active, setActive] = useState("serviced");
 const CATEGORIES = [
   {
-    key: "leasing",
-    label: "LEASING",
+    key: "prerented",
+    label: "Pre-Rented Commercial Properties",
     image:
-      "https://images.pexels.com/photos/259950/pexels-photo-259950.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "/pre-rented.jpg",
     description:
-      "Quality residences with modern amenities and prime connectivity.",
+      "Premium pre-leased commercial spaces offering stable monthly rental income and long-term tenant security.",
   },
+ 
   {
     key: "industrial",
-    label: "INDUSTRIAL",
+    label: "Industrial",
     image:
       "https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1600",
     description:
-      "High-footfall retail spaces in established and emerging markets.",
+      "Strategic industrial and warehouse spaces designed for logistics, manufacturing, and large-scale operations.",
   },
   {
     key: "residential",
@@ -28,26 +31,43 @@ const CATEGORIES = [
     image:
       "https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=1600",
     description:
-      "Grade-A office spaces tailored for modern businesses.",
+      "Luxury homes, builder floors, apartments, and villa-style residences in premium neighborhoods.",
+  },
+
+   {
+    key: "leasing",
+    label: "Leasing",
+    image:
+      "https://images.pexels.com/photos/259950/pexels-photo-259950.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    description:
+      "End-to-end leasing solutions for retail, offices, warehouses, and commercial occupiers across Delhi-NCR.",
   },
   {
     key: "serviced",
-    label: "SERVICED APARTMENTS",
+    label: "Serviced Apartments",
     image:
       "https://images.pexels.com/photos/262405/pexels-photo-262405.jpeg?auto=compress&cs=tinysrgb&w=1600",
     description:
-      "Comfortable living spaces for modern lifestyles on the go.",
+      "Fully furnished, hotel-style serviced apartments ideal for corporates, NRIs, and long-stay guests.",
   },
   {
     key: "commercial",
-    label: "COMMERCIAL",
+    label: "Commercial",
     image:
       "https://images.pexels.com/photos/4172731/pexels-photo-4172731.jpeg?auto=compress&cs=tinysrgb&w=1600",
     description:
-      "Structured leasing solutions for investors and occupiers.",
+      "High-value retail, office, and showroom spaces in top business and high-footfall commercial districts.",
   },
 ];
+
+
+
  const expertise = [
+   {
+      title: "Pre-Rented Commercial Properties",
+      image:
+        "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    },
     {
       title: "Flats / Apartments",
       image:
@@ -68,11 +88,7 @@ const CATEGORIES = [
       image:
         "https://images.pexels.com/photos/264797/pexels-photo-264797.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
-    {
-      title: "Pre-Rented Commercial Properties",
-      image:
-        "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    },
+   
     {
       title: "Agricultural Land / Farmhouses",
       image:
@@ -176,7 +192,7 @@ const CATEGORIES = [
         {/* Stats */}
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-3">
           <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-            <p className="text-lg font-semibold text-black">10+ yrs</p>
+            <p className="text-lg font-semibold text-black">40+ yrs</p>
             <p className="mt-1 text-xs text-slate-500">Experience</p>
           </div>
 
@@ -369,7 +385,7 @@ const CATEGORIES = [
 
     {/* accordian */}
 
-    <section className="bg-white py-9" >
+    <section className="bg-white mt-8" >
 
       <h2 className="text-2xl md:text-4xl font-bold text-center md:text-start  md:px-9 my-3 text-black">Crafting Excellence Across Verticals</h2>
       <div className="mx-auto w-full px-0 sm:px-2 py-10">
@@ -441,10 +457,11 @@ const CATEGORIES = [
       </div>
     </section>
 
+ <ServicesMarquee></ServicesMarquee>
 
 {/* contact form */}
 
-<section id="connect" className="relative overflow-hidden bg-white">
+<section id="connect" className="relative mt-9 overflow-hidden bg-white">
   {/* Background image */}
   <div
     className="pointer-events-none absolute inset-0 bg-cover bg-fixed bg-center"
