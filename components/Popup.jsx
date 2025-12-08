@@ -6,23 +6,18 @@ import { useRouter } from "next/navigation";
 
 export default function ContactPopup() {
   const formRef = useRef(null);
+  const router = useRouter();
+
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
+  const [isClosing, setIsClosing] = useState(false);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
 
   const services = [
     "Select Service",
@@ -34,6 +29,23 @@ export default function ContactPopup() {
     "Agricultural Land / Farmhouses",
     "Industrial",
   ];
+
+  // Auto-popup delay
+  useEffect(() => {
+    const t = setTimeout(() => setIsOpen(true), 2000);
+    return () => clearTimeout(t);
+  }, []);
+
+  // FIXED CLOSE LOGIC — prevents double triggers
+  const closePopup = () => {
+    if (isClosing) return; // IMPORTANT FIX
+    setIsClosing(true);
+
+    setTimeout(() => {
+      setIsOpen(false);
+      setIsClosing(false);
+    }, 400);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -57,18 +69,20 @@ export default function ContactPopup() {
       );
 
       if (data?.success) {
-        setStatus("✅ Message sent successfully!");
-        setTimeout(() => router.push("/thankyou"), 600);
+        setStatus("Message sent successfully!");
+        closePopup();
+        setTimeout(() => router.push("/thankyou"), 500);
+
         setName("");
         setEmail("");
         setPhone("");
         setService("");
         setMessage("");
       } else {
-        setStatus("❌ Something went wrong. Please try again.");
+        setStatus("Something went wrong. Try again.");
       }
     } catch (error) {
-      setStatus(`❌ ${error?.message || "Network error"}`);
+      setStatus(error?.message || "Network error");
     } finally {
       setLoading(false);
     }
@@ -77,116 +91,68 @@ export default function ContactPopup() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center px-4 z-[9999] animate-fadeIn">
-      
+    <div
+      className={`fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center px-4 z-9999
+        ${isClosing ? "animate-fadeOut" : "animate-fadeIn"}`}
+      onClick={closePopup}
+    >
       <div
         style={{ backgroundImage: "url(/formbg.avif)" }}
-        className="relative bg-cover bg-center w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden border border-red-300 animate-slideUp"
+        className={`relative bg-cover bg-center w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden border border-red-300
+          ${isClosing ? "animate-slideDown" : "animate-slideUp"}`}
+        onClick={(e) => e.stopPropagation()}
       >
-        {/* Overlay on bg for better readability */}
         <div className="absolute inset-0 bg-black/50" />
 
-        {/* Header */}
-        <div className="relative p-6 text-center ">
+        <div className="relative p-6 text-center">
           <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 text-white/90 text-2xl hover:text-white transition"
+            onClick={closePopup}
+            className="absolute top-4 right-4 text-white text-2xl hover:text-red-400 transition"
           >
             ✕
           </button>
-          <h2 className="text-2xl font-bold text-white tracking-wide drop-shadow">
+
+          <h2 className="text-2xl font-bold text-white drop-shadow">
             Connect With Us
           </h2>
           <div className="w-20 h-[3px] bg-white mx-auto mt-2 mb-1 rounded-full opacity-80" />
-          <p className="text-white/85 text-xs font-medium">
-            A trusted advisor will call you shortly
-          </p>
+          <p className="text-white/85 text-xs">A trusted advisor will call you shortly</p>
         </div>
 
-        {/* Form Content */}
-        <div className="relative px-6 pb-4 space-y-4 text-white">
+        <div className="relative px-6 pb-6 space-y-4 text-white">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input value={name} type="text" placeholder="Your Name" required
+              onChange={(e) => setName(e.target.value)} className="formField" />
+            <input value={phone} type="tel" placeholder="Phone Number" maxLength={10} minLength={10}
+              pattern="[0-9]{10}" required onChange={(e) => setPhone(e.target.value)} className="formField" />
+            <input value={email} type="email" placeholder="Email Address" required
+              onChange={(e) => setEmail(e.target.value)} className="formField" />
 
-          <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-            <input
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              type="text"
-              placeholder="Your Name"
-              className="formField"
-              required
-            />
-
-            <input
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              type="tel"
-              placeholder="Phone Number"
-              maxLength={10}
-              minLength={10}
-              pattern="[0-9]{10}"
-              className="formField"
-              required
-            />
-
-            <input
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              type="email"
-              placeholder="Email Address"
-              className="formField"
-              required
-            />
-
-            <select
-              value={service}
-              onChange={(e) => setService(e.target.value)}
-              className="formField"
-              required
-            >
-              {services.map((srv, idx) => (
-                <option
-                  key={idx}
-                  value={idx === 0 ? "" : srv}
-                  disabled={idx === 0}
-                  className="text-black"
-                >
+            <select value={service} required className="formField"
+              onChange={(e) => setService(e.target.value)}>
+              {services.map((srv, i) => (
+                <option key={i} value={i === 0 ? "" : srv} disabled={i === 0} className="text-black">
                   {srv}
                 </option>
               ))}
             </select>
 
-            <textarea
-              value={message}
+            <textarea value={message} required placeholder="Message"
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="Message"
-              className="formField h-24 resize-none"
-              required
-            />
+              className="formField h-24 resize-none" />
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-3 rounded-xl bg-[#ed3a20] hover:bg-red-600 transition text-white font-semibold shadow-lg disabled:opacity-70"
-            >
+            <button type="submit" disabled={loading}
+              className="w-full py-3 rounded-xl bg-[#ed3a20] hover:bg-red-600 transition text-white font-semibold shadow-lg">
               {loading ? "Sending..." : "Submit Enquiry"}
             </button>
           </form>
 
           {status && (
-            <p
-              className={`text-center text-sm font-medium rounded-lg py-2 ${
-                status.startsWith("✅")
-                  ? "bg-green-100 text-green-700"
-                  : "bg-red-100 text-red-700"
-              }`}
-            >
-              {status}
-            </p>
+            <p className="text-center text-sm bg-white/15 p-2 rounded-lg">{status}</p>
           )}
         </div>
       </div>
 
-      {/* Animations */}
       <style jsx>{`
         .formField {
           width: 100%;
@@ -207,22 +173,24 @@ export default function ContactPopup() {
           background: rgba(255, 255, 255, 0.18);
           box-shadow: 0 0 0 2px rgba(237, 58, 32, 0.35);
         }
-
         @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
+          from { opacity: 0; } to { opacity: 1; }
+        }
+        @keyframes fadeOut {
+          from { opacity: 1; } to { opacity: 0; }
         }
         @keyframes slideUp {
           from { transform: translateY(50px); opacity: 0; }
           to { transform: translateY(0); opacity: 1; }
         }
-
-        .animate-fadeIn {
-          animation: fadeIn 0.4s ease-out forwards;
+        @keyframes slideDown {
+          from { transform: translateY(0); opacity: 1; }
+          to { transform: translateY(50px); opacity: 0; }
         }
-        .animate-slideUp {
-          animation: slideUp 0.45s ease-out forwards;
-        }
+        .animate-fadeIn { animation: fadeIn .35s ease-out forwards; }
+        .animate-fadeOut { animation: fadeOut .35s ease-out forwards; }
+        .animate-slideUp { animation: slideUp .4s ease-out forwards; }
+        .animate-slideDown { animation: slideDown .4s ease-out forwards; }
       `}</style>
     </div>
   );

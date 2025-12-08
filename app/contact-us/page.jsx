@@ -19,7 +19,7 @@ export default function ContactSection() {
             </h1>
             <p className="mt-3 text-sm sm:text-base text-white/90 max-w-lg mx-auto">
               We help you find the best residential and commercial investments
-              in Delhi-NCR.
+              in Delhi.
             </p>
           </div>
         </div>

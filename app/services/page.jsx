@@ -9,7 +9,7 @@ const services = [
   {
     id: 3,
     title: "Pre-Rented Properties",
-    subtitle: "Guaranteed Monthly Rental from Day-1",
+    subtitle: "Best and Affordable Pre-Rented Properties",
     desc: `Anand Aggarwal Properties offers a curated selection of pre-leased commercial assets located in major business hubs across Delhi NCR — including North, South, East, West & Central Delhi, Gurugram, Manesar, Noida, Vasundhara, Vaishali, Indirapuram and Greater Noida.
 
 Our inventory includes fully leased Banks, ATMs, Government institutions, MNC offices, popular food chains, multiplexes, retail outlets, hospitals, schools, guest houses and entire commercial buildings — delivering an attractive 5–10% assured annual rental return.

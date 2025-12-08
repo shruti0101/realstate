@@ -167,7 +167,7 @@ Established in 1987 on the values of integrity, reliability, and exceptional ser
       <section className="bg-slate-900 py-10 sm:py-12">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid gap-8 sm:grid-cols-3 text-center text-slate-50">
           {[
-            { label: "Years of active presence", value: "10+" },
+            { label: "Years of active presence", value: "40+" },
             { label: "Transactions facilitated", value: "300+" },
             { label: "Repeat & referral clients", value: "70%+" },
           ].map((stat) => (

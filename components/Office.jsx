@@ -94,12 +94,12 @@ export default function OfficesSection() {
                   >
                     View on Map
                   </Link>
-                  <button
-                    type="button"
+                  <a href="tel:+919810395051"
+                  
                     className="hidden sm:inline-flex rounded-full border border-slate-300 bg-slate-50 px-4 py-1.5 font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-100"
                   >
                     Call Office
-                  </button>
+                  </a>
                 </div>
 
                 {/* Hover Bar */}
