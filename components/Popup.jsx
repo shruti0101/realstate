@@ -104,10 +104,10 @@ export default function ContactPopup() {
       >
         <div className="absolute inset-0 bg-black/50" />
 
-        <div className="relative p-6 text-center">
+        <div    onClick={closePopup} className="text-center p-6 ">
           <button
-            onClick={closePopup}
-            className="absolute top-4 right-4 text-white text-2xl hover:text-red-400 transition"
+         
+            className="   absolute top-4 right-4 text-white text-2xl hover:text-red-400 transition"
           >
             ✕
           </button>

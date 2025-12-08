@@ -45,12 +45,12 @@ export default function AboutPage() {
               <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">
                 Real estate decisions backed by experience and due diligence.
               </h2>
-              <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-slate-600">
+              <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-black">
               At Anand Aggarwal Properties, we’re not just real estate consultants—we’re builders of enduring legacies. Driven by a passion for excellence and a dedication to superior quality, we turn aspirations into reality, one project at a time.
 
-Established in 1987 on the values of integrity, reliability, and exceptional service, our story began with a mission to transform the construction landscape by combining time-honored craftsmanship with contemporary innovation. Today, we proudly stand as a trusted name in the industry.
+Established in 1985 on the values of integrity, reliability, and exceptional service, our story began with a mission to transform the construction landscape by combining time-honored craftsmanship with contemporary innovation. Today, we proudly stand as a trusted name in the industry.
               </p>
-              <p className="mt-3 text-sm sm:text-[15px] leading-relaxed text-slate-600">
+              <p className="mt-3 text-sm sm:text-[15px] leading-relaxed text-black">
                 We work across residential and commercial segments—apartments,
                 independent floors, plots, pre-leased assets and select
                 commercial projects—helping clients evaluate risk, returns,
@@ -60,18 +60,18 @@ Established in 1987 on the values of integrity, reliability, and exceptional ser
 
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-                  <p className="text-sm font-semibold text-slate-900">
+                  <p className="text-sm font-semibold text-[#ED3A20]">
                     Advisory-first approach
                   </p>
-                  <p className="mt-1 text-xs text-slate-600">
+                  <p className="mt-1 text-xs text-black">
                     Recommendations based on fit and facts, not just inventory.
                   </p>
                 </div>
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-                  <p className="text-sm font-semibold text-slate-900">
+                  <p className="text-sm font-semibold text-[#ED3A20]">
                     Long-term relationships
                   </p>
-                  <p className="mt-1 text-xs text-slate-600">
+                  <p className="mt-1 text-xs text-black">
                     A large part of our business comes through repeat clients
                     and referrals.
                   </p>
@@ -88,7 +88,7 @@ Established in 1987 on the values of integrity, reliability, and exceptional ser
       </section>
 
       {/* Our Approach */}
-      <section className="bg-slate-50">
+      <section style={{backgroundImage:"url(/sketch1.jpg)"}} className="bg-center bg-fixed bg-contain">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
           <div className="max-w-3xl">
             <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#ED3A20]">
@@ -100,29 +100,29 @@ Established in 1987 on the values of integrity, reliability, and exceptional ser
           </div>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl border border-slate-200 bg-white px-5 py-5">
+            <div className="rounded-2xl border border-[#ED3A20] bg-white px-5 py-5">
               <h3 className="text-sm font-semibold text-slate-900">
                 Requirement mapping
               </h3>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600">
+              <p className="mt-2 text-xs sm:text-sm text-black">
                 We invest time to understand budget, timelines, risk appetite,
                 end-use vs. investment and location preferences.
               </p>
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-white px-5 py-5">
+            <div className="rounded-2xl border border-[#ED3A20] bg-white px-5 py-5">
               <h3 className="text-sm font-semibold text-slate-900">
                 Shortlisting & analysis
               </h3>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600">
+              <p className="mt-2 text-xs sm:text-sm text-black">
                 Projects are compared on approvals, delivery track record,
                 pricing, rental potential and infrastructure outlook.
               </p>
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-white px-5 py-5">
+            <div className="rounded-2xl border border-[#ED3A20] bg-white px-5 py-5">
               <h3 className="text-sm font-semibold text-slate-900">
                 Negotiation & closure
               </h3>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600">
+              <p className="mt-2 text-xs sm:text-sm text-black">
                 We support with negotiations, documentation, coordination with
                 developers and post-booking formalities.
               </p>
@@ -141,7 +141,7 @@ Established in 1987 on the values of integrity, reliability, and exceptional ser
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            "Residential apartments",
+            "Residential/Floor apartments",
             "Independent floors & builder floors",
             "Plots & kothis in prime sectors",
             "Pre-rented commercial properties",
@@ -150,10 +150,10 @@ Established in 1987 on the values of integrity, reliability, and exceptional ser
               key={title}
               className="group rounded-3xl border border-slate-200 bg-white px-5 py-6 shadow-sm transition hover:-translate-y-1 hover:border-[#ED3A20] hover:shadow-lg"
             >
-              <h3 className="text-sm sm:text-base font-semibold text-slate-900">
+              <h3 className="text-sm sm:text-base font-semibold text-[#ED3A20]">
                 {title}
               </h3>
-              <p className="mt-3 text-xs sm:text-sm text-slate-600">
+              <p className="mt-3 text-xs sm:text-sm text-black">
                 Curated options with clarity on pricing, documentation and
                 long-term potential.
               </p>
@@ -185,15 +185,15 @@ Established in 1987 on the values of integrity, reliability, and exceptional ser
 
       {/* Closing CTA */}
       <section className="py-14 sm:py-16 text-center">
-        <h3 className="text-xl sm:text-2xl font-semibold">
+        <h3 className="text-xl px-3 sm:text-2xl font-semibold">
           Discuss a requirement or evaluate a project?
         </h3>
-        <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-xl mx-auto">
+        <p className="mt-3 text-sm sm:text-base text-black max-w-xl mx-auto">
           Share a few details with us and our team will connect with a
           structured, no-obligation discussion on suitable options.
         </p>
         <a
-          href="/contact"
+          href="tel:+919810759498"
           className="mt-6 inline-flex items-center rounded-full bg-[#ED3A20] px-9 py-3 text-sm sm:text-base font-semibold text-white shadow-md hover:bg-[#c73019] transition"
         >
           Schedule a Call

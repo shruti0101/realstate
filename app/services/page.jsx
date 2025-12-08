@@ -6,6 +6,28 @@ import AmenitiesSection from "@/components/Amenities";
 import ContactForm from "@/components/Form"; // 👈 import the form
 
 const services = [
+
+   {
+    id: 2,
+    title: "Commercial Real Estate",
+    subtitle: "Business-driven Spaces for Brands & Corporates",
+    desc: `Anand Aggarwal Properties brings decades of expertise in delivering high-quality commercial real estate solutions across Delhi and Gurugram. Since 1985, our commitment to transparency, professionalism, and long-term value has enabled us to serve business owners, investors, corporates, and retail brands seeking strategic, growth-driven commercial spaces.
+
+Our portfolio includes an extensive range of commercial properties located in some of the most prominent business districts of Delhi—Rohini, Pitampura, Netaji Subhash Place (NSP), Ashok Vihar, Shalimar Bagh, Punjabi Bagh, Paschim Vihar, Karol Bagh, Kamla Nagar, and Connaught Place. In Gurugram, we offer premium commercial options in key business hubs such as Cyber City, MG Road, Golf Course Road, Golf Course Extension, Udyog Vihar, Sohna Road, and the rapidly growing Dwarka Expressway belt.
+
+Whether you're looking for office spaces, retail showrooms, pre-leased investments, food & beverage outlets, co-working setups, or high-footfall commercial units, our curated listings ensure you find a property that aligns perfectly with your business strategy and financial goals. These prime commercial spaces offer excellent connectivity, strong catchment areas, modern infrastructure, and high appreciation potential.
+
+Let us help you secure a commercial property that strengthens your brand presence and maximizes your investment returns. With Anand Aggarwal Properties, you gain access to expert market insights, verified listings, and a smooth, dependable transaction experience—making us a trusted partner for all your commercial real estate needs.`,
+    image: "/services/2.jpg",
+    points: [
+      "Grade-A Corporate Offices",
+      "Retail Showrooms in Prime Markets",
+      "Hypermarket Anchors & Food Courts",
+      "Lease Structuring & Commercial Due Diligence",
+      "High Footfall Business Districts",
+      "Rental Income Guidance & Market Projections",
+    ],
+  },
   {
     id: 3,
     title: "Pre-Rented Properties",
@@ -54,27 +76,7 @@ Choose Anand Aggarwal Properties to find a home that offers more than just an ad
       "Best Price Negotiation with Builders",
     ],
   },
-  {
-    id: 2,
-    title: "Commercial Real Estate",
-    subtitle: "Business-driven Spaces for Brands & Corporates",
-    desc: `Anand Aggarwal Properties brings decades of expertise in delivering high-quality commercial real estate solutions across Delhi and Gurugram. Since 1985, our commitment to transparency, professionalism, and long-term value has enabled us to serve business owners, investors, corporates, and retail brands seeking strategic, growth-driven commercial spaces.
-
-Our portfolio includes an extensive range of commercial properties located in some of the most prominent business districts of Delhi—Rohini, Pitampura, Netaji Subhash Place (NSP), Ashok Vihar, Shalimar Bagh, Punjabi Bagh, Paschim Vihar, Karol Bagh, Kamla Nagar, and Connaught Place. In Gurugram, we offer premium commercial options in key business hubs such as Cyber City, MG Road, Golf Course Road, Golf Course Extension, Udyog Vihar, Sohna Road, and the rapidly growing Dwarka Expressway belt.
-
-Whether you're looking for office spaces, retail showrooms, pre-leased investments, food & beverage outlets, co-working setups, or high-footfall commercial units, our curated listings ensure you find a property that aligns perfectly with your business strategy and financial goals. These prime commercial spaces offer excellent connectivity, strong catchment areas, modern infrastructure, and high appreciation potential.
-
-Let us help you secure a commercial property that strengthens your brand presence and maximizes your investment returns. With Anand Aggarwal Properties, you gain access to expert market insights, verified listings, and a smooth, dependable transaction experience—making us a trusted partner for all your commercial real estate needs.`,
-    image: "/services/2.jpg",
-    points: [
-      "Grade-A Corporate Offices",
-      "Retail Showrooms in Prime Markets",
-      "Hypermarket Anchors & Food Courts",
-      "Lease Structuring & Commercial Due Diligence",
-      "High Footfall Business Districts",
-      "Rental Income Guidance & Market Projections",
-    ],
-  },
+ 
   {
     id: 4,
     title: "Plots & Real Estate Land",

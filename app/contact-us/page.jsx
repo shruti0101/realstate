@@ -57,7 +57,7 @@ export default function ContactSection() {
                     <input
                       type="text"
                       placeholder="Enter your name"
-                      className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
                     />
                   </div>
                   <div>
@@ -67,7 +67,10 @@ export default function ContactSection() {
                     <input
                       type="tel"
                       placeholder="+91 -"
-                      className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-emerald-500"
+                      maxLength={10}
+                      minLength={10}
+                      pattern="[0-9]{10}"
+                      className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
                     />
                   </div>
                 </div>
@@ -79,7 +82,7 @@ export default function ContactSection() {
                   <input
                     type="email"
                     placeholder="Enter email"
-                    className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
                   />
                 </div>
 
@@ -88,7 +91,7 @@ export default function ContactSection() {
                     Interested In
                   </label>
                   <select
-                    className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
                   >
                     <option value="">Select property type</option>
                     <option>Flats / Apartments</option>
@@ -108,13 +111,13 @@ export default function ContactSection() {
                   <textarea
                     rows={4}
                     placeholder="Share budget, location & requirements..."
-                    className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="mt-2 inline-flex items-center rounded-full bg-[#ED3A20] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-red-700"
+                  className="mt-2 inline-flex items-center rounded-full bg-[#ED3A20] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-red-700 cursor-pointer"
                 >
                   Submit Enquiry
                 </button>
@@ -126,37 +129,55 @@ export default function ContactSection() {
               <div className="rounded-3xl border border-slate-200 bg-white shadow-sm p-1">
                 <iframe
                   title="Office Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14012.612151540745!2d77.206532!3d28.628901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd35b3e042a5%3A0x4d0d0f0c6c1a5e1b!2sConnaught%20Place%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                  className="h-72 w-full rounded-2xl border-0"
-                  loading="lazy"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.4263225717627!2d77.1114589!3d28.695709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03fae41231e3%3A0xe8f7b3a754c24c05!2sAnand%20Aggarwal%20Properties!5e1!3m2!1sen!2sin!4v1765172726967!5m2!1sen!2sin"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+                   className="h-72 w-full rounded-2xl border-0"
+                 
+                 
                 />
               </div>
 
-          <div className="rounded-3xl border border-slate-200 bg-white px-5 py-4 text-sm text-slate-700 shadow-sm">
+          <div className="rounded-3xl w-full border border-slate-200 bg-white px-5 py-4 text-sm text-slate-700 shadow-sm">
   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
     Office Address
   </p>
 
-  <p className="mt-3 text-sm font-medium text-slate-800">
+  <p className="mt-2 text-sm font-medium text-slate-800">
     Delhi (Head Office) <br />
     B-27, Pushpanjali Enclave, <br />
     Outer Ring Road, Pitampura, Delhi
   </p>
 
-  <div className="mt-3 grid gap-2 text-xs sm:grid-cols-2 text-slate-600">
-    <p>
-      <span className="font-semibold">Mobile:</span>{" "}
-      +91 9810395051, +91 9899151090
-    </p>
-    {/* <p>
-      <span className="font-semibold">Phone:</span>{" "}
-      Ajay Aggarwal (B.E.) +91 9810759498
-    </p> */}
-    <p>
-      <span className="font-semibold">Email:</span>{" "}
-      info@anandaggarwalproperties.com
-    </p>
+  <div className="mt-3 grid  text-xs sm:grid-cols-2 text-black">
+   <p className="font-bold">
+  <span className="font-bold">Mobile:</span>{" "}
+  <a href="tel:+919810395051" className="hover:text-[#ED3A20] transition">
+    +91 9810395051
+  </a>
+  ,
+  <a href="tel:+919899151090" className="hover:text-[#ED3A20] transition">
+    +91 9899151090
+  </a>
+</p>
+
+ 
+  
   </div>
+
+   <p className="mt-2">
+      <span className="font-semibold">Phone:</span>{" "}
+      Ajay Aggarwal (B.E.) <a className="font-bold hover:text-[#ED3A20] transition" href="tel:+919810759498">+91 9810759498</a> 
+    </p>
+
+  <p className="mt-2 font-bold">
+  <span className="font-bold">Email:</span>{" "}
+  <a
+    href="mailto:info@anandaggarwalproperties.com"
+    className="text-red-600 underline"
+  >
+    info@anandaggarwalproperties.com
+  </a>
+</p>
+
 </div>
 
             </div>

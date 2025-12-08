@@ -7,7 +7,7 @@ const Stickybottom = () => {
       href="/pre-rented"
 
       className="
-        fixed left-4 bottom-4 z-[9999]
+        fixed left-4 bottom-6 z-[9999]
         inline-flex items-center
         rounded-full bg-red-700
         px-6 py-3

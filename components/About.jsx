@@ -118,13 +118,13 @@ const CATEGORIES = [
    <section
   style={{ backgroundImage: "url(/sketch2.jpg)" }}
   id="about"
-  className="relative bg-center bg-cover bg-fixed border-t border-slate-100"
+  className="relative bg-center bg-contain bg-fixed bg-no-repeat border-t border-slate-100"
 >
   {/* Overlay */}
-  <div className="absolute inset-0 bg-white/60 z-[1]"></div>
+  <div className="absolute inset-0 bg-white/50 z-1"></div>
 
   {/* Content wrapper */}
-  <div className="relative z-[2] mx-auto max-w-6xl px-4 py-8 md:py-13 sm:px-6 lg:px-8">
+  <div className="relative z-2 mx-auto max-w-6xl px-4 py-8 md:py-13 sm:px-6 lg:px-8">
     <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
 
       {/* Left: Text */}
@@ -190,18 +190,18 @@ const CATEGORIES = [
         </div>
 
         {/* Stats */}
-        <div className="grid gap-4 grid-cols-1 sm:grid-cols-3">
-          <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+        <div className="grid gap-4 grid-cols-3">
+          <div className="rounded-2xl border border-[#ED3A20] bg-red-50 px-4 py-3">
             <p className="text-lg font-semibold text-black">40+ yrs</p>
             <p className="mt-1 text-xs text-slate-500">Experience</p>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+          <div className="rounded-2xl border border-[#ED3A20] bg-red-50 px-4 py-3">
             <p className="text-lg font-semibold text-black">300+</p>
             <p className="mt-1 text-xs text-slate-500">Transactions</p>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+          <div className="rounded-2xl border border-[#ED3A20] bg-red-50 px-4 py-3">
             <p className="text-lg font-semibold text-black">4.9/5</p>
             <p className="mt-1 text-xs text-slate-500">Client Rating</p>
           </div>
@@ -300,9 +300,9 @@ const CATEGORIES = [
     </div>
 
     {/* Image timeline block */}
-    <div className="mt-8 flex justify-center">
+    <div className="mt-5 flex justify-center">
       <div className="relative w-full max-w-3xl">
-        <div className="h-64   rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+        <div className="h-75   rounded-xl overflow-hidden  border border-white/10">
           <img
             src="/1985.png"
             alt="Then - 1983"
@@ -315,7 +315,7 @@ const CATEGORIES = [
     </div>
 
     {/* Story text */}
-    <div className="mt-10 sm:mt-12 max-w-4xl mx-auto text-center">
+    <div className="mt-10  max-w-4xl mx-auto text-center">
       <p className="text-sm sm:text-base lg:text-[15px] leading-relaxed text-white/90">
         A journey that began in 1985 with one man’s dream has now evolved
         into a mission to help every individual own their dream home. Today,

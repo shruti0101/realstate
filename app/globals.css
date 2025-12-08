@@ -50,3 +50,60 @@ body {
 .animate-scaleIn {
   animation: scaleIn 0.25s ease-out forwards;
 }
+
+
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: transform 0.2s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .whatsapp-float {
+ 
+    right: 5;
+    bottom: 120px;
+ 
+  }
+}
+
+
+
+.call-float {
+  position: fixed;
+  bottom: 15px;
+  right: 10px;
+  background-color: #e7591c;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: transform 0.2s ease;
+}
+.call-float:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .call-float {
+ 
+    right: 5;
+    bottom: 50px;
+ 
+  }
+}

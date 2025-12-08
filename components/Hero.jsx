@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    title: "Find Your Dream Home",
+    title: "Find Your Dream Property",
     subtitle:
       "Premium apartments and villas in top locations with modern amenities.",
     badge: "New Launch",
@@ -105,7 +105,7 @@ export default function HeroCarousel() {
               <div className="text-xs text-slate-300">Properties Listed</div>
             </div>
             <div>
-              <div className="text-lg font-semibold">15+</div>
+              <div className="text-lg font-semibold">40+</div>
               <div className="text-xs text-slate-300">Years Experience</div>
             </div>
             <div>

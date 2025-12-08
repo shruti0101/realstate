@@ -87,14 +87,14 @@ export default function OfficesSection() {
 
                 {/* CTA Buttons */}
                 <div className="mt-6 flex items-center justify-center gap-3 text-xs sm:text-sm">
-                  <Link href="/contact-us"
+                  <a href="https://maps.app.goo.gl/95EdeJHMFyi5dY3cA?g_st=ipc"
 
                     type="button"
                     className="rounded-full border border-[#ED3A20] bg-white px-4 py-1.5 font-semibold text-[#ED3A20] shadow-sm transition group-hover:bg-[#ED3A20] group-hover:text-white"
                   >
                     View on Map
-                  </Link>
-                  <a href="tel:+919810395051"
+                  </a>
+                  <a href="tel:+919810759498"
                   
                     className="hidden sm:inline-flex rounded-full border border-slate-300 bg-slate-50 px-4 py-1.5 font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-100"
                   >
