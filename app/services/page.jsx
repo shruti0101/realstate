@@ -18,7 +18,7 @@ Our portfolio includes an extensive range of commercial properties located in so
 Whether you're looking for office spaces, retail showrooms, pre-leased investments, food & beverage outlets, co-working setups, or high-footfall commercial units, our curated listings ensure you find a property that aligns perfectly with your business strategy and financial goals. These prime commercial spaces offer excellent connectivity, strong catchment areas, modern infrastructure, and high appreciation potential.
 
 Let us help you secure a commercial property that strengthens your brand presence and maximizes your investment returns. With Anand Aggarwal Properties, you gain access to expert market insights, verified listings, and a smooth, dependable transaction experience—making us a trusted partner for all your commercial real estate needs.`,
-    image: "/services/2.jpg",
+    image: "/services/2.webp",
     points: [
       "Grade-A Corporate Offices",
       "Retail Showrooms in Prime Markets",
@@ -44,7 +44,7 @@ At Anand Aggarwal Properties, we maintain complete transparency and a profession
 
 Explore our trusted pre-leased commercial opportunities in Delhi & Gurugram and make a secure, smart and hassle-free investment — for wealth that grows steadily with time.
 `,
-    image: "/services/3.jpeg",
+    image: "/services/3.webp",
     points: [
       "Pre-Leased to Reliable National/MNC Brands",
       "7% – 10% Assured Annual Rental Yield",
@@ -109,7 +109,7 @@ Anand Aggarwal Properties deals in Agricultural Land in R-Zone and offer farmhou
 R-Zone agricultural lands fall under zones earmarked for potential future residential or mixed-use development as per urban planning regulations. These plots are ideal for investors seeking long-term appreciation—allowing you to use the land for agriculture today while benefiting from significant value growth as city boundaries expand.
 
 We also specialize in premium farmhouse land in some of the most popular and serene destinations, including P1/P2 Zone, L Zone, Chattarpur, Dera Mandi, Vasant Kunj, Asola Farms, and prime locations across Gurugram, Manesar, Kundli, Sonipat, Bahadurgarh, and Kharkhoda.`,
-    image: "/services/5.avif",
+    image: "/services/5.webp",
     points: [
       "High Appreciation Potential in Expanding Corridors",
       "Flexible Agricultural + Future Development Use",
@@ -128,7 +128,7 @@ export default function ServicesPage() {
       {/* Banner */}
       <section className="relative h-[300px] sm:h-[380px] bg-black">
         <img
-          src="/bannerbg.jpg"
+          src="/bannerbg.webp"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/60" />

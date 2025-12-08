@@ -5,7 +5,7 @@ export default function ContactSection() {
       {/* 📌 Top Banner Section */}
       <div className="relative h-[260px] sm:h-[340px] lg:h-[400px] w-full">
         <img
-          src="/bannerbg.jpg" // Change to your actual image
+          src="/bannerbg.webp" // Change to your actual image
           alt="Contact Banner"
           className="absolute inset-0 h-full w-full object-cover"
         />

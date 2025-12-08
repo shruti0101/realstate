@@ -4,19 +4,19 @@ import { useEffect, useState } from "react";
 
 const propertyImages = [
   {
-    src: "/about/1.jpg",
+    src: "/about/1.webp",
     alt: "Luxury apartment exterior",
   },
   {
-    src: "/about/2.jpg",
+    src: "/about/2.webp",
     alt: "Modern living room interior",
   },
   {
-    src: "/about/3.jpg",
+    src: "/about/3.webp",
     alt: "Independent floor facade",
   },
   {
-    src: "/about/2.png",
+    src: "/about/2.webp",
     alt: "Premium commercial building",
   },
 ];

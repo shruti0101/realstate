@@ -59,6 +59,7 @@ export default function ContactPopup() {
         name,
         phone,
         email,
+        place:"N/A",
         product: service,
         message,
       };
@@ -71,7 +72,7 @@ export default function ContactPopup() {
       if (data?.success) {
         setStatus("Message sent successfully!");
         closePopup();
-        setTimeout(() => router.push("/thankyou"), 500);
+      
 
         setName("");
         setEmail("");
@@ -97,7 +98,7 @@ export default function ContactPopup() {
       onClick={closePopup}
     >
       <div
-        style={{ backgroundImage: "url(/formbg.avif)" }}
+        style={{ backgroundImage: "url(/formbg.webp)" }}
         className={`relative bg-cover bg-center w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden border border-red-300
           ${isClosing ? "animate-slideDown" : "animate-slideUp"}`}
         onClick={(e) => e.stopPropagation()}

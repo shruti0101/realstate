@@ -9,13 +9,18 @@ import {
 } from "lucide-react";
 
 export default function AboutPage() {
+
+
+
+
+  
   return (
     <main className="bg-white text-slate-900">
 
       {/* Top Banner */}
       <section className="relative h-[240px] sm:h-[300px] lg:h-[360px] w-full overflow-hidden">
         <img
-          src="/bannerbg.jpg"
+          src="/bannerbg.webp"
           alt="About Anand Aggarwal Properties"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -88,7 +93,7 @@ Established in 1985 on the values of integrity, reliability, and exceptional ser
       </section>
 
       {/* Our Approach */}
-      <section style={{backgroundImage:"url(/sketch1.jpg)"}} className="bg-center bg-fixed bg-contain">
+      <section style={{backgroundImage:"url(/sketch1.webp)"}} className="bg-center bg-fixed bg-contain">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
           <div className="max-w-3xl">
             <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#ED3A20]">

@@ -20,11 +20,14 @@ export default function ContactForm({ isOpen, onClose }) {
 
   // Service options
   const services = [
-    "Select service",
-    "Residential",
-    "Commercial",
-    "Plots",
-    "Flats",
+    "Select Service",
+    "Pre-rented Commercial Properties",
+    "Flats / Apartments",
+    "Plots / Kothi",
+    "Independent Floors",
+    "Commercial Shops & Office Spaces",
+    "Agricultural Land / Farmhouses",
+    "Industrial",
   ];
 
   const handleSubmit = async (e) => {
@@ -38,6 +41,7 @@ export default function ContactForm({ isOpen, onClose }) {
         platformEmail: "info@anandaggarwalproperties.com",
         name,
         phone,
+        place:"N/A",
         email,
         product: service,
         message,
@@ -57,7 +61,7 @@ export default function ContactForm({ isOpen, onClose }) {
         setMessage("");
 
         setLoading(false);
-        router.push("/thankyou");
+  
       } else {
         setLoading(false);
         setStatus("❌ Something went wrong. Please try again.");
@@ -71,10 +75,10 @@ export default function ContactForm({ isOpen, onClose }) {
 
   return (
  <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50 px-4">
-  <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden border border-red-100">
+  <div className="relative w-full max-w-lg bg-stone-50 rounded-3xl shadow-2xl overflow-hidden border border-red-100">
 
     {/* Top Red Header */}
-    <div className="bg-[#ed3a20] p-6 text-center relative">
+    <div className="bg-[#ed3a20] p-2 text-center relative">
       <button
         onClick={onClose}
         className="absolute top-4 right-4 text-white text-2xl hover:opacity-80 transition"
@@ -90,7 +94,7 @@ export default function ContactForm({ isOpen, onClose }) {
     </div>
 
     {/* Form Body */}
-    <div className="px-6 py-8">
+    <div className="px-6 py-6">
       <form onSubmit={handleSubmit} className="space-y-4">
 
         <input

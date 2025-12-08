@@ -3,16 +3,94 @@
 import { useState } from "react";
 import Link from "next/link";
 import ServicesMarquee from "@/components/Marquee";
-
+import axios from "axios";
 
 export default function AboutSection() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [place,setPlace] = useState("")
+    const [service, setService] = useState("");
+    const [message, setMessage] = useState("");
+      const [loading, setLoading] = useState(false);
+      const [status, setStatus] = useState("");
+
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setStatus("Sending...");
+  setLoading(true);
+
+  try {
+    const formData = {
+      platform: "Real Estate Website",
+      platformEmail: "info@anandaggarwalproperties.com",
+      name,
+      phone,
+      place,
+      email,
+      product: service,
+      message,
+    };
+
+    const { data } = await axios.post(
+      "https://brandbnalo.com/api/form/add",
+      formData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      }
+    );
+
+    if (data?.success) {
+      setStatus("✅ Message sent successfully!");
+
+      setName("");
+      setEmail("");
+      setPhone("");
+      setPlace("");
+      setService("");
+      setMessage("");
+
+      setLoading(false);
+    } else {
+      setLoading(false);
+      setStatus(
+        "❌ Something went wrong on the server. Please try again later."
+      );
+    }
+  } catch (error) {
+    console.log("AXIOS ERROR:", error);
+
+    if (error.response) {
+      console.log("RESPONSE DATA:", error.response.data);
+      setStatus(
+        "❌ " +
+          (error.response.data?.message ||
+            `Server error (${error.response.status}). Please try again later.`)
+      );
+    } else if (error.request) {
+      setStatus("❌ No response from server. Please check your internet.");
+    } else {
+      setStatus("❌ " + (error.message || "Something went wrong"));
+    }
+
+    setLoading(false);
+  }
+};
+
+
+
+
+
   const [active, setActive] = useState("serviced");
 const CATEGORIES = [
   {
     key: "prerented",
     label: "Pre-Rented Commercial Properties",
     image:
-      "/pre-rented.jpg",
+      "/pre-rented.webp",
     description:
       "Premium pre-leased commercial spaces offering stable monthly rental income and long-term tenant security.",
   },
@@ -104,7 +182,7 @@ const CATEGORIES = [
     {
       name: "Delhi",
       image:
-        "/delhi.jpg",
+        "/delhi.webp",
     },
     
     // Add more cities if you want
@@ -116,7 +194,7 @@ const CATEGORIES = [
 
     <>
    <section
-  style={{ backgroundImage: "url(/sketch2.jpg)" }}
+  style={{ backgroundImage: "url(/sketch2.webp)" }}
   id="about"
   className="relative bg-center bg-contain bg-fixed bg-no-repeat border-t border-slate-100"
 >
@@ -281,7 +359,7 @@ const CATEGORIES = [
 
 
 <section
-  style={{ backgroundImage: "url(/maroonbg1.jpg)" }}
+  style={{ backgroundImage: "url(/maroonbg1.webp)" }}
   className="relative bg-center bg-cover py-8  text-white"
 >
   {/* Overlay */}
@@ -304,7 +382,7 @@ const CATEGORIES = [
       <div className="relative w-full max-w-3xl">
         <div className="h-75   rounded-xl overflow-hidden  border border-white/10">
           <img
-            src="/1985.png"
+            src="/1985.webp"
             alt="Then - 1983"
             className="h-full w-full object-cover"
           />
@@ -490,7 +568,7 @@ const CATEGORIES = [
 
     {/* Form card */}
     <div className="mt-10 rounded-3xl border border-white/50 bg-white/85 backdrop-blur-xl">
-      <form className="space-y-4 px-6 py-10 ">
+      <form onSubmit={handleSubmit} className="space-y-4 px-6 py-10 ">
         
         {/* Row 1 */}
         <div className="grid gap-5 md:grid-cols-2">
@@ -499,6 +577,8 @@ const CATEGORIES = [
               Your Name
             </label>
             <input
+            value={name}
+            onChange={(e)=> setName(e.target.value) }
               type="text"
               placeholder="Enter your full name"
               className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#ED3A20]"
@@ -509,7 +589,12 @@ const CATEGORIES = [
               Your Phone
             </label>
             <input
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
               type="tel"
+              maxLength={10}
+              minLength={10}
+              pattern="[0-9] {10}"
               placeholder="+91 -"
               className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#ED3A20]"
             />
@@ -523,8 +608,10 @@ const CATEGORIES = [
               Your Email
             </label>
             <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
               type="email"
-              placeholder="you@example.com"
+              placeholder="Enter Your Email"
               className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#ED3A20]"
             />
           </div>
@@ -533,6 +620,8 @@ const CATEGORIES = [
               Property you are looking for?
             </label>
             <select
+            value={service}
+            onChange={(e) => setService(e.target.value)}
               defaultValue=""
               className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 outline-none focus:border-[#ED3A20]"
             >
@@ -554,6 +643,8 @@ const CATEGORIES = [
             Select city you are looking into
           </label>
           <select
+          value={place}
+          onChange={(e) => setPlace(e.target.value)}
             defaultValue=""
             className="w-full border-b border-slate-400  bg-transparent text-base text-slate-900 outline-none focus:border-[#ED3A20]"
           >
@@ -572,6 +663,8 @@ const CATEGORIES = [
             Your Message
           </label>
           <textarea
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
             rows={4}
             placeholder="Tell us what you're looking for..."
             className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#ED3A20] resize-none"
@@ -581,16 +674,30 @@ const CATEGORIES = [
       {/* CTA */}
       {/* CTA */}
 <div className="flex flex-col items-center">
-  <button
-    type="submit"
-    className="mx-auto rounded-full bg-[#ED3A20] px-5 py-3 text-base font-semibold text-white shadow-md transition hover:bg-[#ED3A20] cursor-pointer"
-  >
-    Submit Enquiry
-  </button>
-
+   {/* Submit Button */}
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full py-3 bg-[#ed3a20] hover:bg-red-700 text-white text-base font-semibold rounded-lg transition duration-300 shadow-md"
+        >
+          {loading ? "Sending..." : "Submit Enquiry"}
+        </button>
   <p className="mt-2 text-xs sm:text-sm text-slate-700 text-center">
     We usually respond within a few hours.
   </p>
+        {status && (
+          <p
+            className={`text-center text-sm font-medium p-2 rounded-lg ${
+              status.startsWith("✅")
+                ? "bg-green-100 text-green-700"
+                : "bg-red-100 text-red-700"
+            }`}
+          >
+            {status}
+          </p>
+        )}
+
+
 </div>
 
       </form>

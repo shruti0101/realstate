@@ -17,7 +17,7 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 md:px-6 lg:px-10">
         {/* Logo */}
         <Link href="/">
-          <img className="w-20" src="/logo.png" />
+          <img className="w-20" src="/logo.webp" />
            </Link >
 
 
