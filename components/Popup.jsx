@@ -55,7 +55,7 @@ export default function ContactPopup() {
     try {
       const formData = {
         platform: "Real Estate Website",
-        platformEmail: "info@anandaggarwalproperties.com",
+        platformEmail: "anand_aggarwal_properties@yahoo.com",
         name,
         phone,
         email,

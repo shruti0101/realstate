@@ -23,7 +23,7 @@ export default function AboutSection() {
   try {
     const formData = {
       platform: "Real Estate Website",
-      platformEmail: "info@anandaggarwalproperties.com",
+      platformEmail: "anand_aggarwal_properties@yahoo.com",
       name,
       phone,
       place,
@@ -99,7 +99,7 @@ const CATEGORIES = [
     key: "industrial",
     label: "Industrial",
     image:
-      "https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "https://images.pexels.com/photos/4172731/pexels-photo-4172731.jpeg?auto=compress&cs=tinysrgb&w=1600",
     description:
       "Strategic industrial and warehouse spaces designed for logistics, manufacturing, and large-scale operations.",
   },
@@ -132,7 +132,7 @@ const CATEGORIES = [
     key: "commercial",
     label: "Commercial",
     image:
-      "https://images.pexels.com/photos/4172731/pexels-photo-4172731.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1600",
     description:
       "High-value retail, office, and showroom spaces in top business and high-footfall commercial districts.",
   },

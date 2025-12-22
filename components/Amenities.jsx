@@ -25,7 +25,7 @@ const amenities = [
 
 export default function AmenitiesSection() {
   return (
-    <section className="bg-gradient-to-b from-white to-slate-50 pb-5">
+    <section className=" md:mt-10 from-white to-slate-50 pb-5">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="max-w-5xl">

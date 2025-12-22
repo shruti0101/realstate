@@ -21,7 +21,7 @@ export default function ContactSection() {
     try {
       const formData = {
         platform: "Real Estate Website",
-        platformEmail: "info@anandaggarwalproperties.com",
+        platformEmail: "anand_aggarwal_properties@yahoo.com",
         name,
         phone,
         place: "N/A",
@@ -262,10 +262,10 @@ export default function ContactSection() {
                 <p className="mt-2 font-bold">
                   <span className="font-bold">Email:</span>{" "}
                   <a
-                    href="mailto:info@anandaggarwalproperties.com"
+                    href="mailto:anand_aggarwal_properties@yahoo.com"
                     className="text-red-600 underline"
                   >
-                    info@anandaggarwalproperties.com
+                    anand_aggarwal_properties@yahoo.com
                   </a>
                 </p>
               </div>
