@@ -72,9 +72,7 @@ const services = [
       ],
     },
   },
-
-
-  {
+   {
     id: 3,
     title: "Industrial Properties",
     subtitle: "Factories, Warehouses & Land",
@@ -84,7 +82,7 @@ We offer industrial properties in well-established and strategically located ind
 
 All properties are thoroughly verified with clear titles and regulatory compliance, making them ideal for business owners, investors, and enterprises seeking long-term stability and growth in industrial infrastructure.`,
 
-    image: "/services/3.webp",
+    image: "/services/4.avif",
     points: [
       "Industrial Plots",
       "Warehouses",
@@ -107,7 +105,7 @@ All properties are thoroughly verified with clear titles and regulatory complian
     title: "Pre-Leased / Investment",
     subtitle: "Assured Rental Income",
     desc: `Anand Aggarwal Properties offers a curated selection of pre-leased commercial assets located in major business hubs across Delhi NCR — including North, South, East, West & Central Delhi, Gurugram, Manesar, Noida, Vasundhara, Vaishali, Indirapuram and Greater Noida. Our inventory includes fully leased Banks, ATMs, Government institutions, MNC offices, popular food chains, multiplexes, retail outlets, hospitals, schools, guest houses and entire commercial buildings — delivering an attractive 5–10% assured annual rental return. Pre-rented commercial properties are a preferred choice for investors seeking stable, low-risk and immediate income. With tenants already occupied on long-term leases, there is no leasing uncertainty and investors can enjoy consistent rental cash flows from the first day of ownership. These assets also provide high demand, liquidity, and long-term capital appreciation, being located in well-established commercial destinations with strong footfall and minimal vacancy risks. At Anand Aggarwal Properties, we maintain complete transparency and a professional consultation process — offering verified property details, tenant history and clear lease agreements, ensuring your investment aligns with your financial objectives. Explore our trusted pre-leased commercial opportunities in Delhi & Gurugram and make a secure, smart and hassle-free investment — for wealth that grows steadily with time.`,
-    image: "/services/4.avif",
+    image: "/services/3.webp",
     points: [
       "Banks & ATMs",
       "Retail Brands",
@@ -135,7 +133,7 @@ We deal in prime areas such as DLF Phases I–IV, Aralias, Magnolias, Crest, Sus
 
 Whether you are looking for a dream home, a commercial space, or a secure investment opportunity, our Gurgaon properties are carefully selected to offer long-term value, reliability, and growth.`,
 
-    image: "/services/5.webp",
+    image: "hero2.webp",
     points: [
       "DLF Phases",
       "Luxury Apartments",

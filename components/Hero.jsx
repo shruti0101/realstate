@@ -70,6 +70,10 @@ export default function HeroCarousel() {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/50 via-slate-950/60 to-slate-950/40" />
       </div>
 
+
+<div className="absolute right-12 z-50 top-14 ">
+  <img className="rounded-full" width={70} height={70} src="/trust.jpeg" alt="" />
+</div>
       <div className="relative mx-auto flex max-w-7xl flex-col gap-6 px-4 py-10 sm:px-6 sm:py-16 lg:flex-row lg:items-center lg:gap-10  lg:px-8">
         {/* Left content */}
         <div className="max-w-xl space-y-4 text-white">
