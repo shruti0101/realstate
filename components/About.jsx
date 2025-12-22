@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ServicesMarquee from "@/components/Marquee";
 import axios from "axios";
-
+import { CheckCircle } from "lucide-react";
 export default function AboutSection() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -285,7 +285,7 @@ const CATEGORIES = [
 
           <div className="rounded-2xl border border-[#ED3A20] bg-red-50 px-4 py-3">
             <p className="text-lg font-semibold text-black">15k+</p>
-            <p className="mt-1 text-xs text-slate-500">Pre-Rented Properties</p>
+            <p className="mt-1 text-xs text-slate-500">Property Rented </p>
           </div>
 
           <div className="rounded-2xl border border-[#ED3A20] bg-red-50 px-4 py-3">
@@ -420,6 +420,103 @@ const CATEGORIES = [
     </section>
 
 
+
+
+
+
+
+
+ {/* prerented */}
+
+
+     <div><section className="relative bg-slate-50 py-16">
+  {/* Accent Background */}
+  <div className="absolute inset-0 bg-gradient-to-r from-[#ed3a20]/5 to-transparent"></div>
+
+  <div className="relative max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+    
+    {/* Left Content */}
+    <div>
+      <span className="inline-block mb-3 rounded-full bg-[#ed3a20]/10 px-4 py-1 text-sm font-semibold text-[#ed3a20]">
+        High-Demand Investment
+      </span>
+
+      <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+        Pre-Rented Properties
+      </h2>
+
+      <p className="mt-3 text-lg font-medium text-[#ed3a20]">
+        Secure Assets with Assured Rental Income
+      </p>
+
+      <p className="mt-5 text-slate-700 leading-relaxed">
+        Pre-rented properties are ideal for investors seeking stable,
+        low-risk returns with immediate rental income. These assets are
+        already leased to reputed tenants, eliminating vacancy risks and
+        ensuring predictable cash flow from day one.
+      </p>
+
+      <p className="mt-4 text-slate-700 leading-relaxed">
+        At Anand Aggarwal Properties, we offer verified pre-leased commercial
+        assets across Delhi & NCR, including banks, MNC offices, retail
+        brands, food chains, hospitals, and institutional properties located
+        in high-footfall business zones.
+      </p>
+
+      {/* CTA */}
+      <button
+      
+        className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#ed3a20] px-8 py-3 text-white font-medium shadow-md hover:bg-red-700 transition"
+      >
+        Explore Pre-Rented Opportunities
+      </button>
+    </div>
+
+    {/* Right Highlight Card */}
+    <div className="bg-white rounded-3xl shadow-xl p-8 border border-red-100">
+      <h3 className="text-xl font-bold text-slate-900 mb-6">
+        Why Invest in Pre-Rented Properties?
+      </h3>
+
+      <ul className="space-y-4 text-sm sm:text-base">
+        <li className="flex gap-3">
+          <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
+          <p>7% – 10% assured annual rental returns</p>
+        </li>
+
+        <li className="flex gap-3">
+            <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
+          <p>Immediate monthly income from Day-1</p>
+        </li>
+
+        <li className="flex gap-3">
+           <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
+          <p>Zero vacancy risk with long-term tenants</p>
+        </li>
+
+        <li className="flex gap-3">
+         <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
+          <p>Leased to banks, MNCs & national brands</p>
+        </li>
+
+        <li className="flex gap-3">
+            <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
+          <p>High liquidity & strong capital appreciation</p>
+        </li>
+
+        <li className="flex gap-3">
+            <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
+          <p>Fully verified lease agreements & documents</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+</div>
+
+
+
+
     {/* accordian */}
 
     <section className="bg-white mt-8" >
@@ -440,15 +537,15 @@ const CATEGORIES = [
                   onFocus={() => setActive(item.key)}
                   className={`relative flex-1 cursor-pointer overflow-hidden border-b border-slate-800/70 last:border-b-0 transition-[flex] duration-500 ease-out 
                   lg:border-b-0 lg:border-r lg:last:border-r-0
-                  ${isActive ? "lg:flex-[3] flex-[2]" : "lg:flex-[1] flex-[0.9]"}`}
+                  ${isActive ? "lg:flex-3 flex-2" : "lg:flex-1 flex-[0.9]"}`}
                 >
                   {/* Background image */}
                   <img
                     src={item.image}
                     alt={item.label}
-                    className={`absolute inset-0 h-full w-full object-cover transition duration-500 ${
-                      isActive ? "grayscale-0" : "grayscale"
-                    }`}
+                    className="absolute inset-0 h-full w-full object-cover transition duration-500 
+                    "
+                   
                   />
 
                   {/* Overlay gradient */}
@@ -495,6 +592,18 @@ const CATEGORIES = [
     </section>
 
  <ServicesMarquee></ServicesMarquee>
+
+
+
+
+
+
+
+
+
+
+
+
 
 {/* contact form */}
 
@@ -581,7 +690,7 @@ const CATEGORIES = [
             <select
             value={service}
             onChange={(e) => setService(e.target.value)}
-              defaultValue=""
+         
               className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 outline-none focus:border-[#ED3A20]"
             >
               <option value="" disabled>Select property type</option>
@@ -604,7 +713,7 @@ const CATEGORIES = [
           <select
           value={place}
           onChange={(e) => setPlace(e.target.value)}
-            defaultValue=""
+   
             className="w-full border-b border-slate-400  bg-transparent text-base text-slate-900 outline-none focus:border-[#ED3A20]"
           >
             <option value="" disabled>Select city</option>
