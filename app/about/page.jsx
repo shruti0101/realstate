@@ -169,24 +169,35 @@ Established in 1985 on the values of integrity, reliability, and exceptional ser
       </section>
 
       {/* Stats Strip */}
-      <section className="bg-slate-900 py-10 sm:py-12">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid gap-8 sm:grid-cols-3 text-center text-slate-50">
-          {[
-            { label: "Years of active presence", value: "40+" },
-            { label: "Transactions facilitated", value: "300+" },
-            { label: "Repeat & referral clients", value: "70%+" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <p className="text-3xl sm:text-4xl font-semibold">
-                {stat.value}
-              </p>
-              <p className="mt-1 text-[11px] sm:text-xs uppercase tracking-[0.16em] text-slate-300">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+    {/* Stats Strip */}
+<section
+  className="relative bg-center bg-cover bg-fixed py-10 sm:py-18"
+  style={{ backgroundImage: "url(/countimg.jpg)" }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/30" />
+
+  {/* Content */}
+  <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div className="grid gap-8 sm:grid-cols-3 text-center text-white">
+      {[
+        { label: "Years of active presence", value: "40+" },
+        { label: "Transactions facilitated", value: "300+" },
+        { label: "Repeat & referral clients", value: "70%+" },
+      ].map((stat) => (
+        <div key={stat.label}>
+          <p className="text-3xl sm:text-5xl font-bold">
+            {stat.value}
+          </p>
+          <p className="mt-2 text-[11px] sm:text-xs uppercase tracking-[0.16em] text-white/90">
+            {stat.label}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Closing CTA */}
       <section className="py-14 sm:py-16 text-center">

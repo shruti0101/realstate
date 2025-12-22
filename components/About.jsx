@@ -1,5 +1,9 @@
 'use client'
-
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 import { useState } from "react";
 import Link from "next/link";
 import ServicesMarquee from "@/components/Marquee";
@@ -79,6 +83,8 @@ export default function AboutSection() {
     setLoading(false);
   }
 };
+
+
 
 
 
@@ -175,6 +181,34 @@ const CATEGORIES = [
    
   ];
 
+// investment projects data
+const projects = [
+  {
+    image: "/amaryllis.jpg",
+    location: "UNITY AMARYLLIS",
+    desc: "Luxury high-rise residences offering spacious layouts, premium amenities, and excellent connectivity in a prime urban location.",
+  },
+  {
+    image: "/jindal2.jpg",
+    location: "JINDAL",
+    desc: "Well-planned residential development known for quality construction, modern infrastructure, and comfortable living spaces.",
+  },
+  {
+    image: "/vibes-imperial-green.png",
+    location: "IMPERIAL GREENS",
+    desc: "Green-themed residential project designed with open spaces, landscaped gardens, and a peaceful lifestyle environment.",
+  },
+  {
+    image: "/newstone.webp",
+    location: "NEWSTONE",
+    desc: "Contemporary residential project featuring smart layouts, modern architecture, and convenient access to city essentials.",
+  },
+  {
+    image: "/vibs2.jpg",
+    location: "VIBS Sonepat",
+    desc: "Premium residential development in Sonepat offering a balanced lifestyle with modern amenities and growing connectivity.",
+  },
+];
 
 
 
@@ -366,6 +400,66 @@ const CATEGORIES = [
 
 
 
+
+
+    <section className="bg-gradient-to-r from-[#8d2413] via-red-800 to-[#6d090c]  py-10">
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-3xl sm:text-5xl font-bold text-white mb-8 text-center">
+       Investment Projects
+        </h2>
+
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation
+          autoplay={{ delay: 4000 }}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="pb-12"
+        >
+          {projects.map((project, index) => (
+            <SwiperSlide key={index}>
+              <div className="  overflow-hidden  group">
+                
+                {/* Image */}
+                <div className="relative h-[420px] overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition duration-700"
+                  />
+
+                </div>
+
+                {/* Info */}
+                <div className="p-5">
+                  <p className="text-sm text-white">
+                    {project.location}
+                  </p>
+
+         
+
+                  <p className="text-xs  text-white">
+                    {project.desc}
+                  </p>
+
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
+
+
+
+
+
+
 {/* our expertise */}
 
     <section id="expertise" className="bg-slate-50 border-t border-slate-100">
@@ -456,7 +550,7 @@ const CATEGORIES = [
         ensuring predictable cash flow from day one.
       </p>
 
-      <p className="mt-4 text-slate-700 leading-relaxed">
+      <p className="mt-4 text-lack leading-relaxed">
         At Anand Aggarwal Properties, we offer verified pre-leased commercial
         assets across Delhi & NCR, including banks, MNC offices, retail
         brands, food chains, hospitals, and institutional properties located
@@ -466,7 +560,7 @@ const CATEGORIES = [
       {/* CTA */}
       <button
       
-        className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#ed3a20] px-8 py-3 text-white font-medium shadow-md hover:bg-red-700 transition"
+        className="mt-8 inline-flex items-center gap-2 rounded-full bg-red-600 cursor-pointer px-8 py-3 text-white font-medium shadow-md hover:bg-red-700 transition"
       >
         Explore Pre-Rented Opportunities
       </button>
