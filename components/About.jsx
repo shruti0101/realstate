@@ -213,44 +213,53 @@ const CATEGORIES = [
         <h2 className="mt-3 text-2xl font-semibold tracking-tight text-black sm:text-3xl">
           A trusted real estate partner for modern buyers & investors.
         </h2>
+<p className="mt-3 text-sm leading-relaxed text-black sm:text-base">
+  We are a professional real estate advisory firm specializing in
+  residential, commercial, and investment properties across prime
+  locations in Delhi and NCR. With strong market expertise and a
+  client-first approach, we help buyers and investors make confident,
+  well-informed property decisions.
+  From initial requirement understanding and property shortlisting to
+  site visits, price negotiations, legal documentation, and final
+  possession, we manage the complete real estate journey with clarity,
+  efficiency, and transparency at every stage.
+</p>
 
-        <p className="mt-4 text-sm leading-relaxed text-black sm:text-base">
-          We are a professional real estate advisory firm focused on
-          residential and commercial properties in prime locations.
-        </p>
 
-        <p className="mt-3 text-sm leading-relaxed text-black sm:text-base">
-          From shortlisting to site visits, negotiations and documentation,
-          we manage the complete journey.
-        </p>
 
-        {/* Points */}
-        <div className="mt-6 space-y-2 text-sm text-black">
-          <div className="flex gap-2">
-            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#ED3A20]" />
-            <p>Curated projects from verified developers.</p>
-          </div>
-          <div className="flex gap-2">
-            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#ED3A20]" />
-            <p>Clear communication & transparent pricing.</p>
-          </div>
-          <div className="flex gap-2">
-            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#ED3A20]" />
-            <p>Support across buying, selling & investment.</p>
-          </div>
-        </div>
+<p className="mt-3 text-sm leading-relaxed text-black sm:text-base">
+  Our team works closely with reputed developers, landowners, and
+  institutional sellers to ensure that every property we present meets
+  strict standards of location, legality, and long-term value.
+</p>
 
-        <div className="mt-7 flex flex-wrap items-center gap-4">
-          <Link 
-            href="/contact-us"
-            className="inline-flex items-center rounded-full bg-[#ED3A20] px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#ED3A26] transition"
-          >
-            Schedule a Consultation
-          </Link>
-          <p className="text-xs black">
-            Speak with our team to get project options.
-          </p>
-        </div>
+{/* Points */}
+<div className="mt-6 space-y-2 text-sm text-black">
+  <div className="flex gap-2">
+    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#ED3A20]" />
+    <p>Curated residential and commercial projects from verified developers.</p>
+  </div>
+
+  <div className="flex gap-2">
+    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#ED3A20]" />
+    <p>Clear communication, transparent pricing, and honest advisory.</p>
+  </div>
+
+  <div className="flex gap-2">
+    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#ED3A20]" />
+    <p>End-to-end support across buying, selling, leasing, and investments.</p>
+  </div>
+
+
+
+  <div className="flex gap-2">
+    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#ED3A20]" />
+    <p>Assistance with legal checks, documentation, and smooth closures.</p>
+  </div>
+</div>
+
+
+        
       </div>
 
       {/* Right content */}
@@ -275,8 +284,8 @@ const CATEGORIES = [
           </div>
 
           <div className="rounded-2xl border border-[#ED3A20] bg-red-50 px-4 py-3">
-            <p className="text-lg font-semibold text-black">300+</p>
-            <p className="mt-1 text-xs text-slate-500">Transactions</p>
+            <p className="text-lg font-semibold text-black">15k+</p>
+            <p className="mt-1 text-xs text-slate-500">Pre-Rented Properties</p>
           </div>
 
           <div className="rounded-2xl border border-[#ED3A20] bg-red-50 px-4 py-3">
@@ -296,7 +305,7 @@ const CATEGORIES = [
     {/* our locations */}
 
 
-     <section  className="bg-[#f5f7fc] py-8 mb-5 ">
+     <section  className="bg-[#f5f7fc] py-8 ">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center">
@@ -355,56 +364,6 @@ const CATEGORIES = [
     </section>
 
 
-{/* journey */}
-
-
-<section
-  style={{ backgroundImage: "url(/maroonbg1.webp)" }}
-  className="relative bg-center bg-cover py-8  text-white"
->
-  {/* Overlay */}
-  {/* <div className="absolute inset-0 bg-black/30 z-0"></div> */}
-
-  {/* Actual content should be ABOVE overlay */}
-  <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-    {/* Heading */}
-    <div className="text-center">
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
-        From Dreams to Doorsteps
-      </h2>
-      <p className="mt-3 text-sm sm:text-base lg:text-lg font-medium text-white/85">
-        We don’t just build homes, we nurture the emotions behind them.
-      </p>
-    </div>
-
-    {/* Image timeline block */}
-    <div className="mt-5 flex justify-center">
-      <div className="relative w-full max-w-3xl">
-        <div className="h-75   rounded-xl overflow-hidden  border border-white/10">
-          <img
-            src="/1985.webp"
-            alt="Then - 1983"
-            className="h-full w-full object-cover"
-          />
-        </div>
-
-      
-      </div>
-    </div>
-
-    {/* Story text */}
-    <div className="mt-10  max-w-4xl mx-auto text-center">
-      <p className="text-sm sm:text-base lg:text-[15px] leading-relaxed text-white/90">
-        A journey that began in 1985 with one man’s dream has now evolved
-        into a mission to help every individual own their dream home. Today,
-        Anand Aggarwal Properties stands for hassle-free property
-        ownership, offering both residential and commercial plots through a
-        simple, transparent process. We’re dedicated to turning your dream
-        of owning a home into reality — effortlessly and responsibly.
-      </p>
-    </div>
-  </div>
-</section>
 
 
 {/* our expertise */}
