@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import ContactForm from "@/components/Form";
 
 const projects = [
+
+  // fortis hsopital
   {
-    code: "RP-027-SD",
+ 
     image: "/pre/fortis.webp",
     title: "FORTIS HOSPITAL",
     location: "Sec-38, Gurugram, Near Medanta",
@@ -20,9 +22,9 @@ const projects = [
     expectedPrice: "₹30 Cr",
     circleRate: "₹15 Cr",
   },
-
+// icici bank
   {
-    code: "RP-027-SD",
+  
     image: "/pre/icici.webp",
     title: "ICICI BANK",
     location: "Sector-8, Rohini",
@@ -39,8 +41,10 @@ const projects = [
     circleRate: "Rs. 1.30/- Cr.",
   },
 
+  // manyavar showroom
+
   {
-    code: "RP-029-SD",
+    
     image: "/pre/manyavar.jpeg",
     title: "MANYAVAR SHOWROOM",
     location: "Vaishali, Pitampura",
@@ -57,10 +61,10 @@ const projects = [
     circleRate: "Rs. 10/- Cr.",
   },
 
-
+// food court
 
     {
-    code: "RP-029-SD",
+   
     image: "/pre/food.jpg",
     title: "FOOD COURT (14 BRANDS) HALDIRAM, KFC, PIZZA HUT, BURGER KING etc.",
     location: "V3S Mall, Laxmi Nagar",
@@ -77,6 +81,46 @@ const projects = [
     circleRate: "Rs. 30/- Cr.",
   },
 
+// icici sec 24
+
+
+  {
+  
+    image: "/pre/icici2.jpg",
+    title: "ICICI BANK",
+    location: "A-1/34, Sec 15, Rohini",
+
+    builtUpArea: "90 mtrs., 3 side corner GF+FF- Bank ",
+    rentPerMonth: "₹ 3.04/- lakhs",
+    security: "3 Months",
+      advance: "6 Months",
+       lockIn: "6 Months",
+    leasePeriod: "9 yrs. (Fresh)",
+    escalation: "12% after every 3 years",
+
+   
+    circleRate: "Rs. 8.40/- Cr.",
+  },
+
+  // birla
+
+    {
+  
+    image: "/pre/birla.jpg",
+    title: "BIRLA INST. OF TECHNOLOGY",
+    location: "BPTP Park Centra NH-8, GGN",
+
+    builtUpArea: "5400 sq.ft., GF ",
+    rentPerMonth: "Rs. 5.13/- Lakh",
+    security: "5 Months",
+      advance: "6 Months",
+       lockIn: "6 Months",
+    leasePeriod: "9 Years (Fresh)",
+    escalation: "15% after every 3 years",
+
+   
+    circleRate: "Rs. 11.50/- Cr.",
+  },
   
 ];
 
@@ -120,10 +164,7 @@ export default function PreRentedInventory() {
                     alt={item.title}
                     className="h-full w-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <span className="absolute top-4 right-4 bg-black/80 text-white text-xs px-3 py-1 rounded-full">
-                    {item.code}
-                  </span>
+                
                 </div>
 
                 {/* Content */}
