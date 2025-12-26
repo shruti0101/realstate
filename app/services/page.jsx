@@ -13,9 +13,10 @@ const services = [
     title: "Residential Properties",
     subtitle: "Premium Housing & Lifestyle Residences",
 
-    desc: `Anand Aggarwal Properties offers the most exclusive residential choices across the prime neighborhoods of North and West Delhi, including Pushpanjali Enclave, Saraswati Vihar, Deepali, Tarun Enclave, Sharda Niketan, Harsh Vihar, and Lok Vihar. For buyers seeking homes in Gurugram, we present exceptional residences across leading localities such as Sushant Lok Phases I–III, DLF Phases I–III, South City 1 & 2, Dwarka Expressway, Golf Course Extension, and all major HUDA sectors. Our portfolio features an extensive selection of plots, bungalows, builder floors, apartments, villas, and penthouses—many situated within secure, well-planned gated communities. We proudly serve a wide spectrum of clients, from first-time homebuyers and growing families to HNIs and international residents, providing living spaces tailored to their lifestyle, preferences, and budget. 
-    
-    Whether your goal is a luxury residence or a value-driven home, each property is carefully handpicked to offer comfort, functionality, and long-term value. With decades of expertise and a strong foundation of trust, transparency, and market understanding, Anand Aggarwal Properties ensures a smooth and reliable home-buying journey. Our deep knowledge of these high-demand locations allows us to guide you effortlessly toward the ideal property that aligns with your aspirations. Choose Anand Aggarwal Properties to find a home that offers more than just an address—experience a lifestyle in the heart of Delhi and Gurugram. Let us help you transform your dream of owning the perfect home into a reality.`,
+   desc: `Anand Aggarwal Properties offers premium residential properties across the most sought-after locations of North & West Delhi and Gurugram, catering to first-time buyers, growing families, HNIs, and NRI clients. Our carefully curated portfolio includes **builder floors & apartments**, **luxury villas & penthouses**, and homes within **secure gated communities** located in **prime residential colonies** with excellent infrastructure and connectivity.
+
+Every property is verified for quality, legality, and long-term value, ensuring a smooth and transparent home-buying experience. Backed by decades of market expertise, we guide you at every step—from property selection to final possession—helping you secure a home that perfectly matches your lifestyle, budget, and future aspirations.`,
+
 
     image: "/services/1.avif",
     points: [
@@ -54,7 +55,10 @@ const services = [
     id: 2,
     title: "Commercial Real Estate",
     subtitle: "Shops, Offices & Showrooms",
-    desc: `Anand Aggarwal Properties brings decades of expertise in delivering high-quality commercial real estate solutions across Delhi and Gurugram. Since 1985, our commitment to transparency, professionalism, and long-term value has enabled us to serve business owners, investors, corporates, and retail brands seeking strategic, growth-driven commercial spaces. Our portfolio includes an extensive range of commercial properties located in some of the most prominent business districts of Delhi—Rohini, Pitampura, Netaji Subhash Place (NSP), Ashok Vihar, Shalimar Bagh, Punjabi Bagh, Paschim Vihar, Karol Bagh, Kamla Nagar, and Connaught Place. In Gurugram, we offer premium commercial options in key business hubs such as Cyber City, MG Road, Golf Course Road, Golf Course Extension, Udyog Vihar, Sohna Road, and the rapidly growing Dwarka Expressway belt. Whether you're looking for office spaces, retail showrooms, pre-leased investments, food & beverage outlets, co-working setups, or high-footfall commercial units, our curated listings ensure you find a property that aligns perfectly with your business strategy and financial goals. These prime commercial spaces offer excellent connectivity, strong catchment areas, modern infrastructure, and high appreciation potential. Let us help you secure a commercial property that strengthens your brand presence and maximizes your investment returns. With Anand Aggarwal Properties, you gain access to expert market insights, verified listings, and a smooth, dependable transaction experience—making us a trusted partner for all your commercial real estate needs.`,
+   desc: `With decades of experience, Anand Aggarwal Properties delivers high-quality commercial real estate solutions across major business hubs of Delhi and Gurugram. We specialize in **office spaces**, **retail showrooms**, **food & beverage outlets**, and **main road commercial properties** located in high-footfall, high-visibility zones ideal for business growth and investment.
+
+Our commercial listings are strategically selected to offer excellent connectivity, strong catchment areas, and long-term appreciation potential. Whether you are a business owner, brand, or investor, we provide expert guidance, verified listings, and end-to-end transaction support—ensuring your commercial property aligns seamlessly with your operational needs and financial goals.`
+,
     image: "/services/2.webp",
     points: [
       "Office Spaces",
@@ -72,15 +76,15 @@ const services = [
       ],
     },
   },
+
    {
     id: 3,
     title: "Industrial Properties",
     subtitle: "Factories, Warehouses & Land",
-   desc: `Anand Aggarwal Properties deals in a wide range of industrial properties across approved industrial zones of Delhi and NCR. Our portfolio includes industrial plots, factory buildings, warehouses, and CLU land suitable for manufacturing, storage, logistics, and allied commercial activities.
+   desc: `Anand Aggarwal Properties deals in a wide range of industrial real estate across approved industrial zones of Delhi NCR. Our offerings include **industrial plots**, **warehouse spaces**, **factory buildings**, and **CLU land** suitable for manufacturing, storage, logistics, and allied operations.
 
-We offer industrial properties in well-established and strategically located industrial areas such as Mangolpuri, Udyog Nagar, Narela, Bawana, Kundli, Rai, Barhi, Bahadurgarh, Kharkhoda, Udyog Vihar, Manesar, and Lawrence Road—ensuring excellent connectivity, transportation access, and operational convenience.
-
-All properties are thoroughly verified with clear titles and regulatory compliance, making them ideal for business owners, investors, and enterprises seeking long-term stability and growth in industrial infrastructure.`,
+All industrial properties are thoroughly verified with clear titles and regulatory compliance, ensuring operational ease and long-term stability. Located in strategically connected industrial hubs, our properties are ideal for business owners and investors seeking scalable infrastructure, efficient logistics access, and sustainable industrial growth.`
+,
 
     image: "/services/4.avif",
     points: [
@@ -104,7 +108,10 @@ All properties are thoroughly verified with clear titles and regulatory complian
     id: 4,
     title: "Pre-Leased / Investment",
     subtitle: "Assured Rental Income",
-    desc: `Anand Aggarwal Properties offers a curated selection of pre-leased commercial assets located in major business hubs across Delhi NCR — including North, South, East, West & Central Delhi, Gurugram, Manesar, Noida, Vasundhara, Vaishali, Indirapuram and Greater Noida. Our inventory includes fully leased Banks, ATMs, Government institutions, MNC offices, popular food chains, multiplexes, retail outlets, hospitals, schools, guest houses and entire commercial buildings — delivering an attractive 5–10% assured annual rental return. Pre-rented commercial properties are a preferred choice for investors seeking stable, low-risk and immediate income. With tenants already occupied on long-term leases, there is no leasing uncertainty and investors can enjoy consistent rental cash flows from the first day of ownership. These assets also provide high demand, liquidity, and long-term capital appreciation, being located in well-established commercial destinations with strong footfall and minimal vacancy risks. At Anand Aggarwal Properties, we maintain complete transparency and a professional consultation process — offering verified property details, tenant history and clear lease agreements, ensuring your investment aligns with your financial objectives. Explore our trusted pre-leased commercial opportunities in Delhi & Gurugram and make a secure, smart and hassle-free investment — for wealth that grows steadily with time.`,
+   desc: `Anand Aggarwal Properties offers a curated portfolio of high-yield pre-leased commercial assets across prime locations in Delhi NCR. Our inventory includes fully leased **banks & ATMs**, **retail brands**, **hotels & schools**, and institutional properties delivering **assured annual returns of 6%–12%**.
+
+With tenants already in place under long-term leases, these investments offer immediate rental income, minimal risk, and strong capital appreciation. We ensure complete transparency through verified documentation, tenant profiles, and lease agreements—making pre-leased assets a secure and hassle-free investment choice for long-term wealth creation.`
+,
     image: "/services/3.webp",
     points: [
       "Banks & ATMs",
@@ -127,11 +134,10 @@ All properties are thoroughly verified with clear titles and regulatory complian
     id: 5,
     title: "Gurgaon Properties",
     subtitle: "Prime Locations in Gurugram",
-   desc: `Anand Aggarwal Properties offers a curated selection of residential and commercial properties across the most premium and high-demand locations of Gurugram. Our Gurgaon portfolio includes luxury apartments, builder floors, villas, plotted developments, office spaces, and commercial properties in well-planned townships and business districts.
+   desc: `Anand Aggarwal Properties presents premium residential and commercial real estate options across Gurugram’s most prestigious locations. Our Gurgaon portfolio includes **DLF Phases developments**, **luxury apartments**, **commercial hubs**, and **premium townships** known for world-class infrastructure and strong appreciation potential.
 
-We deal in prime areas such as DLF Phases I–IV, Aralias, Magnolias, Crest, Sushant Lok, South City, and leading developments by M3M, Vatika, and Godrej—known for superior infrastructure, excellent connectivity, and strong appreciation potential.
-
-Whether you are looking for a dream home, a commercial space, or a secure investment opportunity, our Gurgaon properties are carefully selected to offer long-term value, reliability, and growth.`,
+Whether you are seeking a dream home, a commercial establishment, or a long-term investment, our Gurgaon properties are handpicked for reliability, growth, and lifestyle value. With deep market insights and personalized advisory, we help you make confident property decisions in one of India’s fastest-growing real estate markets.`
+,
 
     image: "hero2.webp",
     points: [
