@@ -271,10 +271,11 @@ const fadeUp = {
   <motion.p
     variants={fadeUp}
     custom={3}
-    className="text-sm md:text-base text-white leading-relaxed"
+    className="m md:text-sm **: text-white leading-relaxed"
   >
-Pre-rented properties are a high-demand, low-risk investment option, offering assured rental income from day one. Already leased to reputed tenants, these assets eliminate vacancy risk and deliver stable, predictable returns across prime business locations.
+Pre-rented properties are a high-demand, low-risk investment option, offering assured rental income from day one. Already leased to reputed tenants, these assets eliminate vacancy risk and deliver stable, predictable returns across prime business locations.  we deals in 
 
+<strong className="text-red-600"> Residential Properties, Commercial Real Estate, Industrial Properties, Pre-Leased / Investment, DLF / Gurgaon Properties</strong> 
 Since 1985, we have been curating residential and commercial projects exclusively from verified developers, ensuring transparent pricing, clear communication, and honest advisory at every stage. Our team provides end-to-end support across buying, selling, leasing, and long-term investments, along with thorough legal assistance—so you can invest with complete confidence.
   </motion.p>
 
@@ -318,7 +319,7 @@ Since 1985, we have been curating residential and commercial projects exclusivel
               <motion.img
                 src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="Modern real estate project"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
                 initial={{ scale: 1.1 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 1 }}
