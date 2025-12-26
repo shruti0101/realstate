@@ -176,6 +176,7 @@ export default function PreRentedInventory() {
                     {item.title}, 
                   </p>
 
+
                   <div className="mt-5 space-y-2 text-sm">
                     {item.plotSize && (
                       <p>
