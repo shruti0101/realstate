@@ -565,14 +565,14 @@ Since 1985, we have been curating residential and commercial projects exclusivel
         Secure Assets with Assured Rental Income
       </p>
 
-      <p className="mt-5 text-slate-700 leading-relaxed">
+      <p className="mt-5 text-black leading-relaxed">
         Pre-rented properties are ideal for investors seeking stable,
         low-risk returns with immediate rental income. These assets are
         already leased to reputed tenants, eliminating vacancy risks and
         ensuring predictable cash flow from day one.
       </p>
 
-      <p className="mt-4 text-lack leading-relaxed">
+      <p className="mt-4 text-black leading-relaxed">
         At Anand Aggarwal Properties, we offer verified pre-leased commercial
         assets across Delhi & NCR, including banks, MNC offices, retail
         brands, food chains, hospitals, and institutional properties located

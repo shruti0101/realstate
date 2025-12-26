@@ -150,9 +150,11 @@ Whether you are seeking a dream home, a commercial establishment, or a long-term
       heading: "GURGAON",
       phone: "9810327243",
       columns: [
-        ["DLF Phase I, II, III, IV"],
-        ["Aralias / Magnolias / Crest"],
+        ["DLF Phase I, II, III, IV"," Omaxe Dwarka"],
+        ["Aralias / Magnolias / Crest","Unity Amaryllis"],
         ["Sushant Lok", "South City", "M3M / Vatika / Godrej"],
+       
+       
       ],
     },
   },
