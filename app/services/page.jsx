@@ -13,7 +13,7 @@ const services = [
     title: "Residential Properties",
     subtitle: "Premium Housing & Lifestyle Residences",
 
-   desc: `Anand Aggarwal Properties offers premium residential properties across the most sought-after locations of North & West Delhi and Gurugram, catering to first-time buyers, growing families, HNIs, and NRI clients. Our carefully curated portfolio includes **builder floors & apartments**, **luxury villas & penthouses**, and homes within **secure gated communities** located in **prime residential colonies** with excellent infrastructure and connectivity.
+   desc: `Anand Aggarwal Properties offers premium residential properties across the most sought-after locations of North & West Delhi and Gurugram, catering to first-time buyers, growing families, HNIs, and NRI clients. Our carefully curated portfolio includes <strong>builder floors & apartments </strong>, <strong>luxury villas & penthouses </strong>, and homes within <strong>secure gated communities</strong> located in <strong>prime residential colonies</strong> with excellent infrastructure and connectivity.
 
 Every property is verified for quality, legality, and long-term value, ensuring a smooth and transparent home-buying experience. Backed by decades of market expertise, we guide you at every step—from property selection to final possession—helping you secure a home that perfectly matches your lifestyle, budget, and future aspirations.`,
 
@@ -55,7 +55,7 @@ Every property is verified for quality, legality, and long-term value, ensuring 
     id: 2,
     title: "Commercial Real Estate",
     subtitle: "Shops, Offices & Showrooms",
-   desc: `With decades of experience, Anand Aggarwal Properties delivers high-quality commercial real estate solutions across major business hubs of Delhi and Gurugram. We specialize in **office spaces**, **retail showrooms**, **food & beverage outlets**, and **main road commercial properties** located in high-footfall, high-visibility zones ideal for business growth and investment.
+   desc: `With decades of experience, Anand Aggarwal Properties delivers high-quality commercial real estate solutions across major business hubs of Delhi and Gurugram. We specialize in <strong>office spaces</strong>, <strong>retail showrooms</strong>, <strong>food & beverage outlets</strong>, and <strong>high street properties</strong> located in high-footfall, high-visibility zones ideal for business growth and investment.
 
 Our commercial listings are strategically selected to offer excellent connectivity, strong catchment areas, and long-term appreciation potential. Whether you are a business owner, brand, or investor, we provide expert guidance, verified listings, and end-to-end transaction support—ensuring your commercial property aligns seamlessly with your operational needs and financial goals.`
 ,
@@ -81,7 +81,7 @@ Our commercial listings are strategically selected to offer excellent connectivi
     id: 3,
     title: "Industrial Properties",
     subtitle: "Factories, Warehouses & Land",
-   desc: `Anand Aggarwal Properties deals in a wide range of industrial real estate across approved industrial zones of Delhi NCR. Our offerings include **industrial plots**, **warehouse spaces**, **factory buildings**, and **CLU land** suitable for manufacturing, storage, logistics, and allied operations.
+   desc: `Anand Aggarwal Properties deals in a wide range of industrial real estate across approved industrial zones of Delhi NCR. Our offerings include <strong>industrial plots</strong>, <strong>warehouse spaces</strong>, <strong>factory buildings</strong>, and <strong>CLU land</strong> suitable for manufacturing, storage, logistics, and allied operations.
 
 All industrial properties are thoroughly verified with clear titles and regulatory compliance, ensuring operational ease and long-term stability. Located in strategically connected industrial hubs, our properties are ideal for business owners and investors seeking scalable infrastructure, efficient logistics access, and sustainable industrial growth.`
 ,
@@ -108,7 +108,7 @@ All industrial properties are thoroughly verified with clear titles and regulato
     id: 4,
     title: "Pre-Leased / Investment",
     subtitle: "Assured Rental Income",
-   desc: `Anand Aggarwal Properties offers a curated portfolio of high-yield pre-leased commercial assets across prime locations in Delhi NCR. Our inventory includes fully leased **banks & ATMs**, **retail brands**, **hotels & schools**, and institutional properties delivering **assured annual returns of 6%–12%**.
+   desc: `Anand Aggarwal Properties offers a curated portfolio of high-yield pre-leased commercial assets across prime locations in Delhi NCR. Our inventory includes fully leased <strong>banks & ATMs</strong>, <strong>retail brands</strong>, <strong>hotels & schools</strong>, and institutional properties delivering <strong>assured annual returns of 6%–12%</strong>.
 
 With tenants already in place under long-term leases, these investments offer immediate rental income, minimal risk, and strong capital appreciation. We ensure complete transparency through verified documentation, tenant profiles, and lease agreements—making pre-leased assets a secure and hassle-free investment choice for long-term wealth creation.`
 ,
@@ -132,9 +132,9 @@ With tenants already in place under long-term leases, these investments offer im
 
   {
     id: 5,
-    title: "Gurgaon Properties",
+    title: "DLF / Gurgaon Properties",
     subtitle: "Prime Locations in Gurugram",
-   desc: `Anand Aggarwal Properties presents premium residential and commercial real estate options across Gurugram’s most prestigious locations. Our Gurgaon portfolio includes **DLF Phases developments**, **luxury apartments**, **commercial hubs**, and **premium townships** known for world-class infrastructure and strong appreciation potential.
+   desc: `Anand Aggarwal Properties presents premium residential and commercial real estate options across Gurugram’s most prestigious locations as . Our Gurgaon portfolio includes <strong>DLF Phases developments</strong>,<strong> Gurgaon Dwarka Expressways</strong>,  <strong>luxury apartments</strong>, <strong>commercial hubs</strong>, and <strong>premium townships</strong> known for world-class infrastructure and strong appreciation potential.
 
 Whether you are seeking a dream home, a commercial establishment, or a long-term investment, our Gurgaon properties are handpicked for reliability, growth, and lifestyle value. With deep market insights and personalized advisory, we help you make confident property decisions in one of India’s fastest-growing real estate markets.`
 ,
@@ -223,18 +223,13 @@ const [selectedLocation, setSelectedLocation] = useState("");
       {active.subtitle}
     </p>
 
-    <p className="mt-4 text-slate-700  leading-loose">
-      {active.desc}
-    </p>
+ <p
+  className="mt-4 text-black leading-loose"
+  dangerouslySetInnerHTML={{ __html: active.desc }}
+/>
 
-    <ul className="mt-6 space-y-3">
-      {active.points.map((p, i) => (
-        <li key={i} className="flex gap-3 text-sm">
-          <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
-          {p}
-        </li>
-      ))}
-    </ul>
+
+  
 
     <button
       onClick={() => setIsFormOpen(true)}
@@ -293,7 +288,10 @@ Please share details.`}
 />
 
 
-      <AmenitiesSection />
+  {!["Commercial Real Estate", "Pre-Leased / Investment"].includes(active.title) && (
+  <AmenitiesSection />
+)}
+
     </main>
   );
 }

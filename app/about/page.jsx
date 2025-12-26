@@ -92,7 +92,41 @@ Established in 1985 on the values of integrity, reliability, and exceptional ser
         </div>
       </section>
 
-      {/* Our Approach */}
+  
+
+      {/* Services Snapshot */}
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+        <div className="text-center">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+            What We Help You With
+          </h2>
+        </div>
+
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            "Residential/Floor apartments",
+            "Independent floors & builder floors",
+            "Plots & kothis in prime sectors",
+            "Pre-rented commercial properties",
+          ].map((title) => (
+            <div
+              key={title}
+              className="group rounded-3xl border border-slate-200 bg-white px-5 py-6 shadow-sm transition hover:-translate-y-1 hover:border-[#ED3A20] hover:shadow-lg"
+            >
+              <h3 className="text-sm sm:text-base font-semibold text-[#ED3A20]">
+                {title}
+              </h3>
+              <p className="mt-3 text-xs sm:text-sm text-black">
+                Curated options with clarity on pricing, documentation and
+                long-term potential.
+              </p>
+              <div className="mt-4 h-0.5 w-10 bg-[#ED3A20]/70 group-hover:w-16 group-hover:bg-[#ED3A20] transition-all" />
+            </div>
+          ))}
+        </div>
+      </section>
+
+          {/* Our Approach */}
       <section style={{backgroundImage:"url(/sketch1.webp)"}} className="bg-center bg-fixed bg-contain">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
           <div className="max-w-3xl">
@@ -133,38 +167,6 @@ Established in 1985 on the values of integrity, reliability, and exceptional ser
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Services Snapshot */}
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
-        <div className="text-center">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-            What We Help You With
-          </h2>
-        </div>
-
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            "Residential/Floor apartments",
-            "Independent floors & builder floors",
-            "Plots & kothis in prime sectors",
-            "Pre-rented commercial properties",
-          ].map((title) => (
-            <div
-              key={title}
-              className="group rounded-3xl border border-slate-200 bg-white px-5 py-6 shadow-sm transition hover:-translate-y-1 hover:border-[#ED3A20] hover:shadow-lg"
-            >
-              <h3 className="text-sm sm:text-base font-semibold text-[#ED3A20]">
-                {title}
-              </h3>
-              <p className="mt-3 text-xs sm:text-sm text-black">
-                Curated options with clarity on pricing, documentation and
-                long-term potential.
-              </p>
-              <div className="mt-4 h-0.5 w-10 bg-[#ED3A20]/70 group-hover:w-16 group-hover:bg-[#ED3A20] transition-all" />
-            </div>
-          ))}
         </div>
       </section>
 

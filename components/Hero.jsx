@@ -250,47 +250,32 @@ const fadeUp = {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8"
+        className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6  "
       >
         <div className="grid items-center gap-14 lg:grid-cols-2">
 
           {/* LEFT CONTENT */}
         <div className="max-w-xl space-y-4">
 
-  <motion.p
-    variants={fadeUp}
-    custom={1}
-    className="text-xs font-semibold uppercase tracking-[0.35em] text-[#ED3A20]"
-  >
-    About Us
-  </motion.p>
+
 
   <motion.h1
     variants={fadeUp}
     custom={2}
-    className="text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl"
+    className="text-4xl font-semibold leading-tight text-white  "
   >
-   Welcome to 
-    <span className="text-[#ED3A20]">Anand Aggarwal Properties</span>
+   Welcome to {"  "}
+    <span className="text-[#ED3A20] animate-pulse text-[45px]">Anand Aggarwal Properties</span>
   </motion.h1>
 
   <motion.p
     variants={fadeUp}
     custom={3}
-    className="text-sm leading-relaxed text-slate-200 sm:text-base"
+    className="text-sm md:text-base text-white leading-relaxed"
   >
-    Pre-rented properties are a high-demand, low-risk investment option,
-    offering assured rental income from day one. Already leased to reputed
-    tenants, these assets eliminate vacancy risk and deliver stable,
-    predictable returns across prime business locations.  
+Pre-rented properties are a high-demand, low-risk investment option, offering assured rental income from day one. Already leased to reputed tenants, these assets eliminate vacancy risk and deliver stable, predictable returns across prime business locations.
 
-
-
-we curate residential and commercial projects
-    exclusively from verified developers, ensuring transparent pricing, clear
-    communication, and honest advisory at every stage. Our team provides
-    end-to-end support across buying, selling, leasing, and long-term
-    investments, while also assisting with legal checks, so you can invest with complete confidence.
+Since 1985, we have been curating residential and commercial projects exclusively from verified developers, ensuring transparent pricing, clear communication, and honest advisory at every stage. Our team provides end-to-end support across buying, selling, leasing, and long-term investments, along with thorough legal assistance—so you can invest with complete confidence.
   </motion.p>
 
   {/* CTA */}
