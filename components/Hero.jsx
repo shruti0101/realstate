@@ -581,12 +581,12 @@ Since 1985, we have been curating residential and commercial projects exclusivel
       </p>
 
       {/* CTA */}
-      <button
+      <Link href="/contact-us"
       
         className="mt-8 inline-flex items-center gap-2 rounded-full bg-red-600 cursor-pointer px-8 py-3 text-white font-medium shadow-md hover:bg-red-700 transition"
       >
         Explore Pre-Rented Opportunities
-      </button>
+      </Link>
     </div>
 
     {/* Right Highlight Card */}

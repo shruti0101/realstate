@@ -1,55 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import {  ArrowRight } from "lucide-react";
 import AmenitiesSection from "@/components/Amenities";
 import ContactForm from "@/components/Form";
 
 
 
 const services = [
-
-{
-  id: 1,
-  title: "Commercial & Pre-Leased Real Estate",
-  subtitle: "Shops, Offices, Showrooms & Assured Investments",
-  desc: `
-With decades of experience, Anand Aggarwal Properties delivers high-quality <strong>commercial real estate</strong> and <strong>pre-leased investment solutions</strong> across prime business hubs of Delhi and Gurugram.
-
-We specialize in <strong>office spaces</strong>, <strong>retail showrooms</strong>, <strong>food & beverage outlets</strong>, and <strong>high-street properties</strong> located in high-footfall, high-visibility zones—ideal for business growth and long-term value.
-
-Our portfolio also includes a curated selection of <strong>pre-leased commercial assets</strong> such as <strong>banks & ATMs</strong>, <strong>retail brands</strong>, <strong>hotels</strong>, <strong>schools</strong>, and institutional properties offering <strong>assured rental returns of 6%–12%</strong>.
-
-Whether you are a business owner, brand, or investor, we provide verified listings, strong tenant profiles, transparent documentation, and end-to-end transaction support—ensuring secure investments, immediate rental income, and long-term capital appreciation.
-`,
-  image: "/services/2.webp",
-  points: [
-    "Office Spaces",
-    "Retail Showrooms",
-    "Food & Beverage Outlets",
-    "High Street / Main Road Properties",
-    "Banks & ATMs",
-    "Retail Brands",
-    "Hotels & Schools",
-    "6%–12% Assured Returns",
-  ],
-  pamphlet: {
-    heading: "COMMERCIAL & PRE-LEASED",
-    phone: "9810395051, 9899151090, 9810327243",
-    columns: [
-      ["Netaji Subhash Place", "Pitampura", "Ashok Vihar", "Karol Bagh"],
-      ["Punjabi Bagh", "Paschim Vihar", "Kamla Nagar", "Connaught Place"],
-      ["DLF Gurgaon", "Cyber City", "Udyog Vihar", "MG Road"],
-      ["Banks", "MNCs", "Govt. Offices"],
-      ["Retail Stores", "Warehouses"],
-      ["Hotels", "Schools"],
-    ],
-  },
-}
-,
-
-
-
   {
     id: 2,
     title: "Residential Properties",
@@ -95,6 +53,7 @@ Every property is verified for quality, legality, and long-term value, ensuring 
 
 
 
+
    {
     id: 4,
     title: "Industrial Properties",
@@ -121,6 +80,80 @@ All industrial properties are thoroughly verified with clear titles and regulato
       ],
     },
   },
+
+
+
+
+{
+  id: 1,
+  title: "Commercial & Pre-Leased Real Estate",
+  subtitle: "Shops, Offices, Showrooms & Assured Investments",
+  desc: `
+With decades of experience, Anand Aggarwal Properties delivers high-quality <strong>commercial real estate</strong> and <strong>pre-leased investment solutions</strong> across prime business hubs of Delhi and Gurugram.
+
+We specialize in <strong>office spaces</strong>, <strong>retail showrooms</strong>, <strong>food & beverage outlets</strong>, and <strong>high-street properties</strong> located in high-footfall, high-visibility zones—ideal for business growth and long-term value.
+
+Our portfolio also includes a curated selection of <strong>pre-leased commercial assets</strong> such as <strong>banks & ATMs</strong>, <strong>retail brands</strong>, <strong>hotels</strong>, <strong>schools</strong>, and institutional properties offering <strong>assured rental returns of 6%–12%</strong>.
+
+Whether you are a business owner, brand, or investor, we provide verified listings, strong tenant profiles, transparent documentation, and end-to-end transaction support—ensuring secure investments, immediate rental income, and long-term capital appreciation.
+`,
+  image: "/services/2.webp",
+  points: [
+    "Office Spaces",
+    "Retail Showrooms",
+    "Food & Beverage Outlets",
+    "High Street / Main Road Properties",
+    "Banks & ATMs",
+    "Retail Brands",
+    "Hotels & Schools",
+    "6%–12% Assured Returns",
+  ],
+  pamphlet: {
+    heading: "COMMERCIAL & PRE-LEASED",
+    phone: "9810395051, 9899151090, 9810327243",
+    columns: [
+      ["Netaji Subhash Place", "Pitampura", "Ashok Vihar", "Karol Bagh"],
+      ["Punjabi Bagh", "Paschim Vihar", "Kamla Nagar", "Connaught Place"],
+      ["DLF Gurgaon", "Cyber City", "Udyog Vihar", "MG Road"],
+      ["Banks", "MNCs", "Govt. Offices"],
+      ["Retail Stores", "Warehouses"],
+      ["Hotels", "Schools"],
+    ],
+  },
+}
+,
+
+
+
+
+  {
+  id: 6,
+  title: "KUNDLI / SONEPAT",
+  subtitle: "Strategic Growth Corridor of North Delhi NCR",
+  desc: `
+Anand Aggarwal Properties offers carefully curated <strong>residential</strong> and <strong>commercial real estate</strong> opportunities across <strong>Kundli and Sonipat</strong>—one of the fastest-growing real estate corridors in North Delhi NCR.
+
+Driven by excellent connectivity via <strong>NH-44</strong>, <strong>KMP Expressway</strong>, and proximity to <strong>Delhi</strong>, Kundli–Sonipat has emerged as a preferred destination for <strong>plotted developments</strong>, <strong>group housing projects</strong>, <strong>integrated townships</strong>, and <strong>commercial hubs</strong>.
+
+Whether you are looking for an affordable home, a future-ready investment, or a commercial space with high growth potential, our verified listings are selected for strong infrastructure, upcoming developments, and long-term appreciation. With deep local expertise and transparent advisory, we help you secure the right property in this rapidly evolving real estate market.
+`,
+  image: "hero2.webp",
+  points: [
+    "Plotted Developments",
+    "Group Housing Projects",
+    "Commercial Markets",
+    "High Appreciation Potential",
+  ],
+  pamphlet: {
+    heading: "KUNDLI / SONEPAT",
+    phone: "9810327243",
+    columns: [
+      ["VIBS Sonepat", "Imperial Greens"],
+      ["Newstone", "Jindal Sonepat", ]
+    ],
+  },
+}
+,
 
  
 
@@ -157,33 +190,7 @@ Whether you are seeking a dream home, a commercial establishment, or a long-term
 
 
 
-  {
-  id: 6,
-  title: "KUNDLI / SONIPAT",
-  subtitle: "Strategic Growth Corridor of North Delhi NCR",
-  desc: `
-Anand Aggarwal Properties offers carefully curated <strong>residential</strong> and <strong>commercial real estate</strong> opportunities across <strong>Kundli and Sonipat</strong>—one of the fastest-growing real estate corridors in North Delhi NCR.
 
-Driven by excellent connectivity via <strong>NH-44</strong>, <strong>KMP Expressway</strong>, and proximity to <strong>Delhi</strong>, Kundli–Sonipat has emerged as a preferred destination for <strong>plotted developments</strong>, <strong>group housing projects</strong>, <strong>integrated townships</strong>, and <strong>commercial hubs</strong>.
-
-Whether you are looking for an affordable home, a future-ready investment, or a commercial space with high growth potential, our verified listings are selected for strong infrastructure, upcoming developments, and long-term appreciation. With deep local expertise and transparent advisory, we help you secure the right property in this rapidly evolving real estate market.
-`,
-  image: "hero2.webp",
-  points: [
-    "Plotted Developments",
-    "Group Housing Projects",
-    "Commercial Markets",
-    "High Appreciation Potential",
-  ],
-  pamphlet: {
-    heading: "KUNDLI / SONIPAT",
-    phone: "9810327243",
-    columns: [
-      ["VIBS Sonepat", "Imperial Greens"],
-      ["Newstone", "Jindal Sonepat", ]
-    ],
-  },
-}
 
 ];
 
