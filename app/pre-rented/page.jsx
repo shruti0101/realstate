@@ -121,7 +121,7 @@ const [selectedLocation, setSelectedLocation] = useState("");
     <div className="absolute inset-0 bg-gradient-to-br from-[#fff5f4] to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
     {/* Card Content */}
-    <div className="relative z-10 flex h-full flex-col justify-between px-8 py-9">
+    <div className="relative z-10 flex h-full flex-col justify-between px-8 py-5">
 
       {/* Top */}
       <div>

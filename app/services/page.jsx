@@ -26,7 +26,7 @@ Every property is verified for quality, legality, and long-term value, ensuring 
       "Prime Residential Colonies",
     ],
     pamphlet: {
-      heading: "RESIDENTIAL",
+      heading: "RESIDENTIAL (Plots / Kothi / Floor)",
       phone: "9810395051, 9899151090",
       columns: [
         [
@@ -44,11 +44,24 @@ Every property is verified for quality, legality, and long-term value, ensuring 
         [
           "Rajdhani / M.P. Enclave",
           "Rohini (All Sectors)",
-          "DLF, Gurgaon",
+         "Shalimar Bagh",
           "Punjabi Bagh",
+          "Paschim Vihar"
         ],
+
+
+
+
+
+        
       ],
+
+      
     },
+
+
+
+    
   },
 
 
@@ -71,7 +84,7 @@ All industrial properties are thoroughly verified with clear titles and regulato
       "CLU Land",
     ],
     pamphlet: {
-      heading: "INDUSTRIAL",
+      heading: "INDUSTRIAL (Plots/  Factory)",
       phone: "9811218597, 9810916176",
       columns: [
         ["Mangolpuri Phase I & II", "Udyog Nagar", "Narela / Bawana"],
@@ -91,9 +104,9 @@ All industrial properties are thoroughly verified with clear titles and regulato
   desc: `
 With decades of experience, Anand Aggarwal Properties delivers high-quality <strong>commercial real estate</strong> and <strong>pre-leased investment solutions</strong> across prime business hubs of Delhi and Gurugram.
 
-We specialize in <strong>office spaces</strong>, <strong>retail showrooms</strong>, <strong>food & beverage outlets</strong>, and <strong>high-street properties</strong> located in high-footfall, high-visibility zones—ideal for business growth and long-term value.
+We specialize in <strong>banks, office spaces</strong>, <strong>retail showrooms</strong>, <strong>food & beverage outlets</strong>, and <strong>high-street properties</strong> located in high-footfall, high-visibility zones—ideal for business growth and long-term value.
 
-Our portfolio also includes a curated selection of <strong>pre-leased commercial assets</strong> such as <strong>banks & ATMs</strong>, <strong>retail brands</strong>, <strong>hotels</strong>, <strong>schools</strong>, and institutional properties offering <strong>assured rental returns of 6%–12%</strong>.
+Our portfolio also includes a curated selection of <strong>pre-leased commercial assets</strong> such as <strong>banks & ATMs</strong>, <strong>retail brands</strong>, <strong>hotels</strong>, <strong>schools</strong>, and institutional properties offering <strong>assured rental returns of 5%–8%</strong>.
 
 Whether you are a business owner, brand, or investor, we provide verified listings, strong tenant profiles, transparent documentation, and end-to-end transaction support—ensuring secure investments, immediate rental income, and long-term capital appreciation.
 `,
@@ -109,15 +122,13 @@ Whether you are a business owner, brand, or investor, we provide verified listin
     "6%–12% Assured Returns",
   ],
   pamphlet: {
-    heading: "COMMERCIAL & PRE-LEASED",
-    phone: "9810395051, 9899151090, 9810327243",
+    heading: "COMMERCIAL & PRE-LEASED RETURNS (5 to 8%)",
+    phone: "9811257394 , 9810327243",
     columns: [
       ["Netaji Subhash Place", "Pitampura", "Ashok Vihar", "Karol Bagh"],
       ["Punjabi Bagh", "Paschim Vihar", "Kamla Nagar", "Connaught Place"],
       ["DLF Gurgaon", "Cyber City", "Udyog Vihar", "MG Road"],
-      ["Banks", "MNCs", "Govt. Offices"],
-      ["Retail Stores", "Warehouses"],
-      ["Hotels", "Schools"],
+     
     ],
   },
 }
@@ -129,7 +140,7 @@ Whether you are a business owner, brand, or investor, we provide verified listin
   {
   id: 6,
   title: "KUNDLI / SONEPAT",
-  subtitle: "Strategic Growth Corridor of North Delhi NCR",
+  subtitle: "Strategic Growth Corridor of KUNDLI / SONEPAT",
   desc: `
 Anand Aggarwal Properties offers carefully curated <strong>residential</strong> and <strong>commercial real estate</strong> opportunities across <strong>Kundli and Sonipat</strong>—one of the fastest-growing real estate corridors in North Delhi NCR.
 
@@ -145,11 +156,13 @@ Whether you are looking for an affordable home, a future-ready investment, or a 
     "High Appreciation Potential",
   ],
   pamphlet: {
-    heading: "KUNDLI / SONEPAT",
-    phone: "9810327243",
+    heading: "KUNDLI / SONEPAT (Good for Investment)",
+    phone: "9891683399,9810327243",
     columns: [
-      ["VIBS Sonepat", "Imperial Greens"],
-      ["Newstone", "Jindal Sonepat", ]
+      ["VIBS Sonepat", "Imperial Greens","Mapsko", "Godrej"],
+      ["Newstone", "Jindal Sonepat", "TDI","Eldco"],
+        ["Oneprastha", "SOHO", "Parker","M3M"],
+        
     ],
   },
 }
@@ -174,11 +187,11 @@ Whether you are seeking a dream home, a commercial establishment, or a long-term
       "Premium Townships",
     ],
     pamphlet: {
-      heading: "GURGAON",
-      phone: "9810327243",
+      heading: "DLF / GURGAON (Apartment / Plots / Kothi)",
+      phone: "9810328243",
       columns: [
-        ["DLF Phase I, II, III, IV"," Omaxe Dwarka"],
-        ["Aralias / Magnolias / Crest","Unity Amaryllis"],
+        ["DLF Phase I, II, III, IV"," Dwarka Expressway Golf Course Extension   "],
+        ["Golf Course Road","Suncity"],
         ["Sushant Lok", "South City", "M3M / Vatika / Godrej"],
        
        
@@ -281,7 +294,7 @@ const [selectedLocation, setSelectedLocation] = useState("");
     {/* Header */}
     <div className="flex flex-col md:flex-row items-center justify-between gap-3 bg-[#ed3a20] text-white rounded-full px-6 py-3 shadow-sm">
       <h3 className="text-lg font-bold tracking-wide">
-        {active.pamphlet.heading}
+        {active.pamphlet.heading} 
       </h3>
       <p className="text-sm font-semibold">
         Ph.: {active.pamphlet.phone}
@@ -322,7 +335,7 @@ Please share details.`}
 />
 
 
-  {!["Commercial Real Estate", "Pre-Leased / Investment"].includes(active.title) && (
+  {!["Commercial Real Estate", "Pre-Leased / Investment","Industrial Properties" ,"KUNDLI / SONEPAT"].includes(active.title) && (
   <AmenitiesSection />
 )}
 

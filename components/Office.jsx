@@ -4,13 +4,13 @@ import Link from "next/link";
 
 const offices = [
   {
-    title: "Delhi (Head Office)",
+
     address: [
       "B-27, Pushpanjali Enclave,",
       "Outer Ring Road, Pitampura, Delhi",
     ],
     mobile: ["+91 9810395051", "+91 9899151090"],
-    phone: "Ajay Aggarwal (B.E.)  +91 9810759498",
+    
     email: "anand_aggarwal_properties@yahoo.com",
   },
 
@@ -52,19 +52,15 @@ export default function OfficesSection() {
 
               {/* Content */}
               <div className="flex  flex-col  pt-10 text-center sm:pb-7">
-                <h3 className="text-lg sm:text-xl font-semibold text-white">
-                  <span className="rounded-full bg-[#ED3A20] px-4 py-1.5 shadow-sm">
-                    {office.title}
-                  </span>
-                </h3>
 
-                <div className="mt-4 space-y-1 text-sm sm:text-base text-slate-800">
+
+                <div className="mt-4 space-y-1 text-sm font-bold sm:text-xl text-slate-800">
                   {office.address.map((line) => (
                     <p key={line}>{line}</p>
                   ))}
                 </div>
 
-                <div className="mt-4 space-y-1 text-xs sm:text-sm text-slate-700">
+                <div className="mt-4 space-y-1 text-xs sm:text-xl text-slate-700">
                   {office.mobile && (
                     <p>
                       <span className="font-semibold">Mobile: </span>

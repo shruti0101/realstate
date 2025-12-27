@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import {  ShieldCheck, TrendingUp, Handshake } from "lucide-react";
 import Link from "next/link";
 import ServicesMarquee from "@/components/Marquee";
 import axios from "axios";
@@ -149,35 +150,47 @@ const CATEGORIES = [
 
  const expertise = [
    {
-      title: "Pre-Rented Commercial Properties",
+      title: "Residential Properties",
       image:
-        "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "/services/1.avif",
+
+        subtitle:"plot/kothi/floor"
+
     },
     {
-      title: "Flats / Apartments",
+      title: "Industrial Properties",
       image:
-        "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "/services/4.avif",
+
+            subtitle:"plot/factory"
     },
     {
-      title: "Plots / Kothi",
+      title: "Commercial & Pre-Leased",
       image:
-        "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "/services/2.webp",
+
+            subtitle:"return 5 to 8%"
     },
     {
-      title: "Independent Floors",
+      title: "Kundli / Sonepat ",
       image:
-        "https://images.pexels.com/photos/7031704/pexels-photo-7031704.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "/services/sonepat.jpg",
+
+            subtitle:"good for investment"
     },
     {
-      title: "Commercial Shops & Office Spaces",
+      title: "DLF / Gurgaon Properties",
       image:
-        "https://images.pexels.com/photos/264797/pexels-photo-264797.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "hero2.webp",
+
+            subtitle:"apartments/kothi/plots"
     },
    
     {
-      title: "Agricultural Land / Farmhouses",
+      title: "Farmhouses",
       image:
         "https://images.pexels.com/photos/2406398/pexels-photo-2406398.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            subtitle:"all over delhi NCR"
     },
    
   ];
@@ -220,6 +233,13 @@ const projects = [
         "/delhi.webp",
     },
     
+
+
+      {
+      name: "Gurugram",
+      image:
+        "/hero2.webp",
+    },
     // Add more cities if you want
     // { name: "Noida", image: "..." },
   ];
@@ -363,10 +383,10 @@ Since 1985, we have been curating residential and commercial projects exclusivel
 
 
      <section  className="bg-[#f5f7fc] py-8 ">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full py-5 px-4 sm:px-6 lg:px-20">
         {/* Heading */}
         <div className="text-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-slate-900">
+          <h2 className="text-2xl mb-10 sm:text-3xl lg:text-4xl font-semibold tracking-tight text-slate-900">
             We Are A Leading{" "}
             <span className="text-black">
               Real Estate Agency
@@ -378,14 +398,14 @@ Since 1985, we have been curating residential and commercial projects exclusivel
         </div>
 
         {/* City cards */}
-        <div className="mt-5 grid ">
+        <div className="mt-5 grid grid-cols-2 gap-10 ">
           {cities.map((city) => (
             <div
               key={city.name}
-              className="group relative overflow-hidden rounded-3xl bg-slate-900/80 shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              className="group relative overflow-hidden  bg-slate-900/80 shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
             >
               {/* Image */}
-              <div className="relative h-52 sm:h-60 lg:h-85">
+              <div className="relative h-52 sm:h-60 lg:h-75">
                 <img
                   src={city.image}
                   alt={city.name}
@@ -405,7 +425,7 @@ Since 1985, we have been curating residential and commercial projects exclusivel
                     {city.name}
                   </h3>
 
-                  <Link href="/pre-rented" className="mt-4 inline-flex items-center rounded-full bg-white/95 px-5 py-2 text-xs sm:text-sm font-semibold text-slate-900 shadow-md transition hover:bg-white">
+                  <Link href="/services" className="mt-4 inline-flex items-center rounded-full bg-white/95 px-5 py-2 text-xs sm:text-sm font-semibold text-slate-900 shadow-md transition hover:bg-white">
                     View Listings
                     <span className="ml-2 text-[13px]">↗</span>
                   </Link>
@@ -422,6 +442,57 @@ Since 1985, we have been curating residential and commercial projects exclusivel
 
 
 
+  {/* Why Choose Us */}
+      <section className="bg-[#fff5f3] border-y border-[#ED3A20]/15 py-16">
+        <div className="mx-auto max-w-6xl px-4 text-center">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#ED3A20]">
+            Why Choose Us
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+            Trusted. Transparent. Transaction Ready.
+          </h2>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Verified Inventory",
+                desc: "Only legally clear & approved properties",
+                icon: <ShieldCheck className="h-7 w-7" />,
+              },
+              {
+                title: "Clear Pricing",
+                desc: "No hidden charges or mark-ups",
+                icon: <CheckCircle className="h-7 w-7" />,
+              },
+              {
+                title: "Profitable Deals",
+                desc: "Strong rental and resale potential",
+                icon: <TrendingUp className="h-7 w-7" />,
+              },
+              {
+                title: "End-to-End Support",
+                desc: "Documentation, loans & handover",
+                icon: <Handshake className="h-7 w-7" />,
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="group relative rounded-3xl bg-white p-7 shadow-md border border-transparent hover:-translate-y-2 hover:border-[#ED3A20] hover:shadow-2xl transition"
+              >
+                <div className="text-[#ED3A20] mb-4 flex justify-center">
+                  <div className="p-3 rounded-full bg-[#ED3A20]/10">
+                    {item.icon}
+                  </div>
+                </div>
+                <h4 className="text-lg font-semibold">{item.title}</h4>
+                <p className="mt-3 text-sm text-slate-600">{item.desc}</p>
+
+                <div className="absolute bottom-0 left-0 right-0 mx-auto mb-3 h-[2px] w-12 bg-[#ED3A20] opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
 
 
@@ -488,13 +559,11 @@ Since 1985, we have been curating residential and commercial projects exclusivel
     <section id="expertise" className="bg-slate-50 border-t border-slate-100">
       <div className="mx-auto max-w-7xl px-4 md:py-11 sm:px-6 lg:px-8 ">
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#ED3A20]">
+          <p className="text-3xl font-bold uppercase  text-[#ED3A20]">
             Our Expertise
           </p>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-black sm:text-3xl">
-            Residential & Pre-Rented Commercial Specialists
-          </h2>
-          <p className="mt-3 text-sm text-black sm:text-base">
+       
+          <p className="mt-3 text-xs text-black sm:text-base">
             We help you invest in the right property category based on your
             needs, budget & long-term goals.
           </p>
@@ -518,14 +587,18 @@ Since 1985, we have been curating residential and commercial projects exclusivel
               </div>
 
               {/* Title + Button */}
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <p className="font-semibold text-sm sm:text-base">
+              <div className=" bg-white text-black p-4 space-y-1">
+                <p className="font-semibold text-sm sm:text-2xl">
                   {exp.title}
+                </p>
+
+ <p className="capitalize font-semibold text-sm font-serif text-red-600 tracking-wide[0.2em]">
+                  {exp.subtitle}
                 </p>
 
                 <Link
                   href="/services"
-                  className="mt-2 inline-block rounded-full bg-[#ED3A20] px-4 py-1.5 text-xs font-semibold hover:bg-red-700 transition"
+                  className="mt-2 inline-block rounded-full text-white bg-[#ED3A20] px-4 py-1.5 text-xs font-semibold hover:bg-red-700 transition"
                 >
                   View More
                 </Link>
@@ -636,12 +709,12 @@ Since 1985, we have been curating residential and commercial projects exclusivel
 
     {/* accordian */}
 
-    <section className="bg-white mt-8" >
+    {/* <section className="bg-white mt-8" >
 
       <h2 className="text-2xl md:text-4xl font-bold text-center md:text-start  md:px-9 my-3 text-black">Crafting Excellence Across Verticals</h2>
       <div className="mx-auto w-full px-0 sm:px-2 ">
         <div className="overflow-hidden  bg-black/80 shadow-2xl">
-          {/* Accordion strip */}
+        
           <div className="flex h-[570px] flex-col lg:h-[480px] lg:flex-row">
             {CATEGORIES.map((item) => {
               const isActive = active === item.key;
@@ -656,7 +729,7 @@ Since 1985, we have been curating residential and commercial projects exclusivel
                   lg:border-b-0 lg:border-r lg:last:border-r-0
                   ${isActive ? "lg:flex-3 flex-2" : "lg:flex-1 flex-[0.9]"}`}
                 >
-                  {/* Background image */}
+           
                   <img
                     src={item.image}
                     alt={item.label}
@@ -665,7 +738,7 @@ Since 1985, we have been curating residential and commercial projects exclusivel
                    
                   />
 
-                  {/* Overlay gradient */}
+             
                   <div
                     className={`absolute inset-0 transition duration-500 ${
                       isActive
@@ -674,7 +747,7 @@ Since 1985, we have been curating residential and commercial projects exclusivel
                     }`}
                   />
 
-                  {/* Top label */}
+               
                   <div className="relative z-10 flex h-full flex-col justify-between px-6 py-6 sm:px-8 sm:py-8 text-left">
                     <div className="flex items-start justify-between">
                       <p className="text-xs sm:text-sm font-semibold tracking-[0.3em] text-white uppercase">
@@ -682,7 +755,7 @@ Since 1985, we have been curating residential and commercial projects exclusivel
                       </p>
                     </div>
 
-                    {/* Active content */}
+                   
                     <div
                       className={`transition-all duration-500 ease-out ${
                         isActive
@@ -706,7 +779,7 @@ Since 1985, we have been curating residential and commercial projects exclusivel
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
 
  <ServicesMarquee></ServicesMarquee>
 

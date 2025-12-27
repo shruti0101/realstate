@@ -33,9 +33,7 @@ export default function Navbar() {
           <Link href="/services" className="text-base font-medium text-black hover:text-[#ED3A20]">
             Services
           </Link>
-          <Link href="" className="text-base font-medium text-black hover:text-[#ED3A20]">
-            Projects
-          </Link>
+        
           <Link href="/contact-us" className="text-base font-medium text-black hover:text-[#ED3A20]">
             Contact Us
           </Link>
@@ -89,7 +87,6 @@ export default function Navbar() {
               <Link href="/" className="block px-3 py-2" onClick={handleMobileClick}>Home</Link>
               <Link href="/about" className="block px-3 py-2" onClick={handleMobileClick}>About</Link>
               <Link href="/services" className="block px-3 py-2" onClick={handleMobileClick}>Services</Link>
-              <Link href="/projects" className="block px-3 py-2" onClick={handleMobileClick}>Projects</Link>
               <Link href="/contact-us" className="block px-3 py-2" onClick={handleMobileClick}>Contact</Link>
 
               <button

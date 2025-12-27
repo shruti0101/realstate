@@ -16,14 +16,11 @@ import {
 
 const marqueeServices = [
   { label: "Residential Properties", icon: Home, link: "/services" },
-  { label: "Commercial Real Estate", icon: Briefcase, link: "/services" },
-  { label: "Pre-rented Commercial Assets", icon: Wallet, link: "/services" },
-  { label: "Plots & Land", icon: MapPin, link: "/services" },
-  { label: "Agricultural Land / Farmhouses", icon: Landmark, link: "/services" },
-  { label: "NRI Investment Services", icon: FileCheck2, link: "/services" },
-  { label: "Home Loan Assistance", icon: Building2, link: "/services" },
-  { label: "Legal & Documentation Support", icon: ClipboardList, link: "/services" },
-  { label: "Property Valuation & Advisory", icon: TrendingUp, link: "/services" },
+  { label: " Industrial Properties", icon: Briefcase, link: "/services" },
+  { label: "Commercial/Pre-leased ", icon: Briefcase, link: "/services" },
+  { label: "Kundli/Sonepat", icon: Wallet, link: "/services" },
+  { label: "DLF / Gurgaon Properties", icon: Landmark, link: "/services" },
+
 ];
 
 export default function ServicesMarquee() {
