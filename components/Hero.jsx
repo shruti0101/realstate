@@ -275,7 +275,7 @@ const fadeUp = {
   >
 Pre-rented properties are a high-demand, low-risk investment option, offering assured rental income from day one. Already leased to reputed tenants, these assets eliminate vacancy risk and deliver stable, predictable returns across prime business locations.  we deals in 
 
-<strong className="text-red-600"> Residential Properties, Commercial Real Estate, Industrial Properties, Pre-Leased / Investment, DLF / Gurgaon Properties</strong> 
+<strong className="text-red-600"> Residential Properties, Commercial &  Pre-Leased Real Estate, Industrial Properties, DLF / Gurgaon Properties, Kundli / Sonepat</strong> { " "}
 Since 1985, we have been curating residential and commercial projects exclusively from verified developers, ensuring transparent pricing, clear communication, and honest advisory at every stage. Our team provides end-to-end support across buying, selling, leasing, and long-term investments, along with thorough legal assistance—so you can invest with complete confidence.
   </motion.p>
 
