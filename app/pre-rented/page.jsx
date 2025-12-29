@@ -108,80 +108,47 @@ const [selectedLocation, setSelectedLocation] = useState("");
       </section>
 
       {/* Inventory */}
-      <section className="bg-[#f7f5f2] py-18">
-        <div className="max-w-7xl mx-auto px-4">
+   <section className="bg-white py-16">
+  <div className="max-w-7xl mx-auto px-4">
 
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-{projects.map((item, i) => (
-  <div
-    key={i}
-    className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
-  >
-    {/* Soft Hover Glass Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-br from-[#fff5f4] to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    {/* <h2 className="text-2xl font-bold mb-8">
+      Banks <span className="text-sm font-medium">(Monthly Rental)</span>
+    </h2> */}
 
-    {/* Card Content */}
-    <div className="relative z-10 flex h-full flex-col justify-between px-8 py-5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {projects.map((item, i) => (
+        <div
+          key={i}
+          className="border border-gray-300 rounded-md bg-white text-center p-6"
+        >
+          {/* Tenant */}
+          <h3 className="text-lg font-semibold text-blue-800 uppercase">
+            {item.tenant}
+          </h3>
 
-      {/* Top */}
-      <div>
-        {/* Category Badge */}
-        <span className="inline-flex items-center rounded-full bg-[#ed3a20]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[#ed3a20]">
-          {item.category}
-        </span>
+          {/* Rent */}
+          <p className="mt-3 text-xl font-bold text-red-600">
+            {item.rental}
+          </p>
 
-        <h3 className="mt-4 text-xl font-semibold text-slate-900 tracking-tight">
-          {item.tenant}
-        </h3>
-
-        <p className="mt-2 text-sm text-slate-600">
-          Location{" "}
-          <span className="font-medium text-slate-800">
-            · {item.location}
-          </span>
-        </p>
-      </div>
-
-      {/* Divider */}
-      <div className="my-6 h-px w-full bg-slate-200/70" />
-
-      {/* Rental Section */}
-      <div>
-        <p className="text-xs uppercase tracking-widest text-slate-500">
-          Monthly Rental
-        </p>
-        <p className="mt-2 text-2xl font-semibold text-[#ed3a20]">
-          {item.rental}
-        </p>
-      </div>
-
-<button
-  onClick={() => {
-    setActive(item);
-    setSelectedLocation(item.location);
-    setIsFormOpen(true);
-  }}
-  className="mt-4 cursor-pointer inline-flex items-center gap-2 self-start rounded-full border border-[#ed3a20]/40 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-[#ed3a20] transition-all duration-300 hover:bg-[#ed3a20] hover:text-white hover:border-[#ed3a20]"
->
-  Enquire Now
-  <span className="transition-transform duration-300 group-hover:translate-x-1">
-    →
-  </span>
-</button>
-
-
-
+          {/* Button */}
+          <button
+            onClick={() => {
+              setActive(item);
+              setSelectedLocation(item.location);
+              setIsFormOpen(true);
+            }}
+            className="mt-5 inline-block bg-blue-900 text-white text-sm font-semibold px-6 py-2 rounded-md hover:bg-blue-800 transition"
+          >
+            Request Call Back
+          </button>
+        </div>
+      ))}
     </div>
 
-    {/* Bottom Accent */}
-    <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#ed3a20] to-red-700 transition-all duration-500 group-hover:w-full" />
   </div>
-))}
+</section>
 
-          </div>
-
-        </div>
-      </section>
 
   <ContactForm
   isOpen={isFormOpen}

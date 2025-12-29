@@ -44,9 +44,9 @@ export default function PropertyCarousel() {
   const current = propertyImages[activeIndex];
 
   return (
-    <div className="relative rounded-3xl overflow-hidden border border-slate-100 shadow-md bg-slate-900/5">
+    <div className="relative  overflow-hidden border border-slate-100 shadow-md bg-slate-900/5">
       {/* Image */}
-      <div className="relative h-64  lg:h-95">
+      <div className="relative h-64  lg:h-110">
         <img
           src={current.src}
           alt={current.alt}

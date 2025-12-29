@@ -102,7 +102,7 @@ export default function ContactSection() {
               <form className="space-y-5" onSubmit={handleSubmit}>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700">
+                    <label className="block text-sm font-semibold text-slate-700">
                       Full Name
                     </label>
                     <input
@@ -115,7 +115,7 @@ export default function ContactSection() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700">
+                    <label className="block text-sm font-semibold text-slate-700">
                       Phone Number
                     </label>
                     <input
@@ -133,7 +133,7 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700">
+                  <label className="block text-sm font-semibold text-slate-700">
                     Email
                   </label>
                   <input
@@ -147,7 +147,7 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700">
+                  <label className="block text-sm font-semibold text-slate-700">
                     Interested In
                   </label>
                   <select
@@ -157,18 +157,18 @@ export default function ContactSection() {
                     className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
                   >
                     <option value="">Select property type</option>
-                    <option>Flats / Apartments</option>
-                    <option>Plots / Kothi</option>
-                    <option>Independent Floors</option>
-                    <option>Commercial Shops & Office Spaces</option>
-                    <option>Pre-rented Commercial Properties</option>
-                    <option>Agricultural Land / Farmhouses</option>
-                    <option>Industrial</option>
+                    <option>Residential Properties</option>
+                    <option>Industrial Properties</option>
+                    <option>Commercial & Pre-Leased Real Estate</option>
+                    <option>KUNDLI / SONEPAT</option>
+                    <option>DLF / Gurgaon Properties</option>
+                    <option>Farmhouses</option>
+                
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700">
+                  <label className="block text-sm font-semibold text-slate-700">
                     Message / Requirements
                   </label>
                   <textarea
@@ -223,13 +223,13 @@ export default function ContactSection() {
                   Office Address
                 </p>
 
-                <p className="mt-2 text-sm font-medium text-slate-800">
-                  Delhi (Head Office) <br />
-                  B-27, Pushpanjali Enclave, <br />
-                  Outer Ring Road, Pitampura, Delhi
+                <p className="mt-2 text-lg font-medium text-black">
+                 B-27, Pushpanjali Enclave,
+
+Outer Ring Road, Pitampura, Delhi
                 </p>
 
-                <div className="mt-3 grid text-xs sm:grid-cols-2 text-black">
+                <div className="mt-3 grid text-md sm:grid-cols-2 text-black">
                   <p className="font-bold">
                     <span className="font-bold">Mobile:</span>{" "}
                     <a
@@ -238,7 +238,7 @@ export default function ContactSection() {
                     >
                       +91 9810395051
                     </a>
-                    ,{" "}
+                   <br></br>
                     <a
                       href="tel:+919899151090"
                       className="hover:text-[#ED3A20] transition"
@@ -248,16 +248,7 @@ export default function ContactSection() {
                   </p>
                 </div>
 
-                <p className="mt-2">
-                  <span className="font-semibold">Phone:</span>{" "}
-                  Ajay Aggarwal (B.E.){" "}
-                  <a
-                    className="font-bold hover:text-[#ED3A20] transition"
-                    href="tel:+919810759498"
-                  >
-                    +91 9810759498
-                  </a>
-                </p>
+             
 
                 <p className="mt-2 font-bold">
                   <span className="font-bold">Email:</span>{" "}

@@ -11,6 +11,8 @@ import Link from "next/link";
 import ServicesMarquee from "@/components/Marquee";
 import axios from "axios";
 import { CheckCircle } from "lucide-react";
+import { useEffect } from "react";
+
 export default function AboutSection() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -93,6 +95,8 @@ export default function AboutSection() {
 
 
   const [active, setActive] = useState("serviced");
+
+    const [current, setCurrent] = useState(0);
 const CATEGORIES = [
   {
     key: "prerented",
@@ -254,25 +258,108 @@ const fadeUp = {
   }),
 };
 
+
+
+const slides = [
+  {
+    image: "banner3.png",
+    title: "Pre-Rented Commercial Properties",
+    subtitle:
+      "Verified Assets with Assured Monthly Rental from Reputed Tenants",
+  },
+  {
+    image: "banner2.png",
+    title: "Banks, Retail & Institutional Properties",
+    subtitle:
+      "Stable Income • Strong Tenants • Long-Term Capital Appreciation",
+  },
+];
+
+
+
+ useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
 
 
     <>
 
+
+    <section className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden">
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === current ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Image
+            src={slide.image}
+            alt={slide.title}
+            fill
+            priority
+            className="object-cover"
+          />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/50" />
+
+          {/* Content */}
+          <div className="relative z-10 flex h-full items-center">
+            <div className="max-w-6xl mx-auto px-6 text-white">
+              <h1 className="text-3xl md:text-5xl font-semibold leading-tight">
+                {slide.title}
+              </h1>
+              <p className="mt-4 max-w-xl text-lg text-white/90">
+                {slide.subtitle}
+              </p>
+
+              <Link href="/contact-us" className="mt-6 inline-block bg-[#ed3a20] px-6 py-3 text-sm font-semibold rounded-md hover:bg-red-700 transition">
+                Request Call Back
+              </Link>
+            </div>
+          </div>
+        </div>
+      ))}
+
+      {/* Arrows */}
+      <button
+        onClick={() =>
+          setCurrent((current - 1 + slides.length) % slides.length)
+        }
+        className="absolute left-5 top-1/2 -translate-y-1/2 bg-white/20 text-white px-3 py-2 rounded-full hover:bg-white/40"
+      >
+        ‹
+      </button>
+
+      <button
+        onClick={() => setCurrent((current + 1) % slides.length)}
+        className="absolute right-5 top-1/2 -translate-y-1/2 bg-white/20 text-white px-3 py-2 rounded-full hover:bg-white/40"
+      >
+        ›
+      </button>
+    </section>
+
+
+{/* about us */}
  <section
-      style={{ backgroundImage: "url(/hero2.webp)" }}
-      className="relative w-full bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url(/sketch2.webp)" }}
+      className="relative w-full bg-cover bg-center  bg-fixed "
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30" />
-
+   
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6  "
+        className="relative mx-auto w-full  px-4 sm:px-6 lg:px-20 py-8  "
       >
-        <div className="grid items-center gap-14 lg:grid-cols-2">
+        <div className="grid items-center gap-10 lg:grid-cols-2">
 
           {/* LEFT CONTENT */}
         <div className="max-w-xl space-y-4">
@@ -282,16 +369,16 @@ const fadeUp = {
   <motion.h1
     variants={fadeUp}
     custom={2}
-    className="text-4xl font-semibold leading-tight text-white  "
+    className="text-4xl font-semibold leading-tight text-black  "
   >
    Welcome to {"  "}
-    <span className="text-[#ED3A20] animate-pulse text-[45px]">Anand Aggarwal Properties</span>
+    <span className="text-[#ED3A20]  text-[35px]">Anand Aggarwal Properties</span>
   </motion.h1>
 
   <motion.p
     variants={fadeUp}
     custom={3}
-    className="m md:text-sm **: text-white leading-relaxed"
+    className="m md:text-md **: text-black leading-relaxed"
   >
 Pre-rented properties are a high-demand, low-risk investment option, offering assured rental income from day one. Already leased to reputed tenants, these assets eliminate vacancy risk and deliver stable, predictable returns across prime business locations.  we deals in 
 
@@ -359,12 +446,12 @@ Since 1985, we have been curating residential and commercial projects exclusivel
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.15, duration: 0.6 }}
                   viewport={{ once: true }}
-                  className="rounded-2xl border border-white/15 bg-white/10 px-4 py-4 text-center backdrop-blur"
+                  className="rounded-2xl border border-black/15 bg-black/10 px-4 py-4 text-center backdrop-blur"
                 >
-                  <p className="text-xl font-semibold text-white">
+                  <p className="text-xl font-semibold text-black">
                     {stat.value}
                   </p>
-                  <p className="mt-1 text-xs text-slate-300">
+                  <p className="mt-1 text-xs text-black">
                     {stat.label}
                   </p>
                 </motion.div>
@@ -378,12 +465,11 @@ Since 1985, we have been curating residential and commercial projects exclusivel
 
 
 
-
     {/* our locations */}
 
 
      <section  className="bg-[#f5f7fc] py-8 ">
-      <div className="mx-auto w-full py-5 px-4 sm:px-6 lg:px-20">
+      <div className="mx-auto py-5 w-full  px-4 sm:px-6 lg:px-20">
         {/* Heading */}
         <div className="text-center">
           <h2 className="text-2xl mb-10 sm:text-3xl lg:text-4xl font-semibold tracking-tight text-slate-900">
@@ -444,7 +530,7 @@ Since 1985, we have been curating residential and commercial projects exclusivel
 
   {/* Why Choose Us */}
       <section className="bg-[#fff5f3] border-y border-[#ED3A20]/15 py-16">
-        <div className="mx-auto max-w-6xl px-4 text-center">
+        <div className="mx-auto w-full  px-4 sm:px-6 lg:px-20 text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#ED3A20]">
             Why Choose Us
           </p>
@@ -497,7 +583,7 @@ Since 1985, we have been curating residential and commercial projects exclusivel
 
 
     <section className="bg-gradient-to-r from-[#8d2413] via-red-800 to-[#6d090c]  py-10">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="w-full  px-4 sm:px-6 lg:px-20 mx-auto ">
         <h2 className="text-3xl sm:text-5xl font-bold text-white mb-8 text-center">
        Investment Projects
         </h2>
@@ -557,7 +643,7 @@ Since 1985, we have been curating residential and commercial projects exclusivel
 {/* our expertise */}
 
     <section id="expertise" className="bg-slate-50 border-t border-slate-100">
-      <div className="mx-auto max-w-7xl px-4 md:py-11 sm:px-6 lg:px-8 ">
+      <div className="mx-auto w-full  px-4 sm:px-6 lg:px-20 md:py-11  ">
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-3xl font-bold uppercase  text-[#ED3A20]">
             Our Expertise
@@ -623,7 +709,7 @@ Since 1985, we have been curating residential and commercial projects exclusivel
   {/* Accent Background */}
   <div className="absolute inset-0 bg-gradient-to-r from-[#ed3a20]/5 to-transparent"></div>
 
-  <div className="relative max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+  <div className="relative  mx-auto w-full  px-4 sm:px-6 lg:px-15 grid lg:grid-cols-2 gap-12 items-center">
     
     {/* Left Content */}
     <div>

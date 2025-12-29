@@ -5,28 +5,34 @@ import {  ArrowRight } from "lucide-react";
 import AmenitiesSection from "@/components/Amenities";
 import ContactForm from "@/components/Form";
 
+import PreRentedInventory from "@/app/pre-rented/page.jsx";
 
 
 const services = [
-  {
-    id: 2,
-    title: "Residential Properties",
-    subtitle: "Premium Housing & Lifestyle Residences",
+ {
+  id: 2,
+  title: "Residential Properties",
+  subtitle: "Premium Housing & Lifestyle Residences",
 
-   desc: `Anand Aggarwal Properties offers premium residential properties across the most sought-after locations of North & West Delhi and Gurugram, catering to first-time buyers, growing families, HNIs, and NRI clients. Our carefully curated portfolio includes <strong>builder floors & apartments </strong>, <strong>luxury villas & penthouses </strong>, and homes within <strong>secure gated communities</strong> located in <strong>prime residential colonies</strong> with excellent infrastructure and connectivity.
+  desc: `Anand Aggarwal Properties offers premium residential properties across the most sought-after locations of North & West Delhi and Gurugram, catering to first-time buyers, growing families, HNIs, and NRI clients. Our carefully curated portfolio includes <strong>builder floors & apartments</strong>, <strong>luxury villas & penthouses</strong>, and homes within <strong>secure gated communities</strong> located in <strong>prime residential colonies</strong> with excellent infrastructure and connectivity.
 
 Every property is verified for quality, legality, and long-term value, ensuring a smooth and transparent home-buying experience. Backed by decades of market expertise, we guide you at every step—from property selection to final possession—helping you secure a home that perfectly matches your lifestyle, budget, and future aspirations.`,
 
+  image: "/services/1.avif",
 
-    image: "/services/1.avif",
-    points: [
-      "Builder Floors & Apartments",
-      "Luxury Villas & Penthouses",
-      "Gated Communities",
-      "Prime Residential Colonies",
-    ],
-    pamphlet: {
-      heading: "RESIDENTIAL (Plots / Kothi / Floor)",
+  points: [
+    "Builder Floors & Apartments",
+    "Luxury Villas & Penthouses",
+    "Gated Communities",
+    "Prime Residential Colonies",
+  ],
+
+ 
+  pamphlets: [
+
+    // 📌 Pamphlet 1 – North & West Delhi
+    {
+      heading: "RESIDENTIAL – North & West Delhi (Plots / Kothi / Floors)",
       phone: "9810395051, 9899151090",
       columns: [
         [
@@ -44,25 +50,63 @@ Every property is verified for quality, legality, and long-term value, ensuring 
         [
           "Rajdhani / M.P. Enclave",
           "Rohini (All Sectors)",
-         "Shalimar Bagh",
+          "Shalimar Bagh",
           "Punjabi Bagh",
-          "Paschim Vihar"
+          "Paschim Vihar",
         ],
-
-
-
-
-
-        
       ],
-
-      
     },
 
-
-
+    // 📌 Pamphlet 2 – Gurugram Residential
+    {
+      heading: "RESIDENTIAL – Gurugram (Apartments / Kothi / Floors)",
+      phone: "9810328243",
+      columns: [
+        [
+          "DLF Phase I to IV",
+        "Sushant Lok",
     
-  },
+      
+    
+        ],
+        [
+           "South City Suncity",
+        "Golf Course Road",
+        ],
+        [
+           "Dwarka Expressway",
+        "Golf Course Extension",
+        ],
+      ],
+    },
+
+    // 📌 Pamphlet 3 – Plotted / Investment Residential
+    {
+      heading: "RESIDENTIAL  (DLF / Gurgaon / Apartments)",
+      phone: "9891683399",
+      columns: [
+        [
+          "DLF M3M ARALA",
+          "DLF Aralias , Adani",
+     
+        ],
+        [
+          "DLF Camelias , Vatika",
+        "DLF Privas",
+             "DLF Magnolias , Sohna",
+   
+        ],
+        [
+          "North West Delhi - Apartments",
+          "Unity Amaryllias , Maxwell",
+            "Swasdee ",
+        ],
+      ],
+    },
+
+  ],
+}
+,
 
 
 
@@ -99,7 +143,7 @@ All industrial properties are thoroughly verified with clear titles and regulato
 
 {
   id: 1,
-  title: "Commercial & Pre-Leased Real Estate",
+  title: "Commercial & Pre-Leased ",
   subtitle: "Shops, Offices, Showrooms & Assured Investments",
   desc: `
 With decades of experience, Anand Aggarwal Properties delivers high-quality <strong>commercial real estate</strong> and <strong>pre-leased investment solutions</strong> across prime business hubs of Delhi and Gurugram.
@@ -148,7 +192,7 @@ Driven by excellent connectivity via <strong>NH-44</strong>, <strong>KMP Express
 
 Whether you are looking for an affordable home, a future-ready investment, or a commercial space with high growth potential, our verified listings are selected for strong infrastructure, upcoming developments, and long-term appreciation. With deep local expertise and transparent advisory, we help you secure the right property in this rapidly evolving real estate market.
 `,
-  image: "hero2.webp",
+  image: "/services/sonepat.jpg",
   points: [
     "Plotted Developments",
     "Group Housing Projects",
@@ -200,6 +244,51 @@ Whether you are seeking a dream home, a commercial establishment, or a long-term
   },
 
 
+
+{
+  id: 7,
+  title: "Farmhouses & Agricultural Land",
+  subtitle: "R-Zone Land & Premium Farmhouse Investments",
+  desc: `Anand Aggarwal Properties offers carefully curated <strong>farmhouse properties</strong> and <strong>R-Zone agricultural land</strong> across prime locations of Delhi NCR and Gurugram, catering to investors, HNIs, and buyers seeking long-term appreciation or lifestyle-oriented ownership.
+
+Our farmhouse portfolio includes properties located in <strong>approved P1–P2 Zones</strong>, <strong>L-K Zones</strong>, and designated farmhouse belts, offering the flexibility of agricultural use today with strong potential for future development as urban boundaries expand.
+
+We deal in premium farmhouse locations such as <strong>Chattarpur</strong>, <strong>Dera Mandi</strong>, <strong>Vasant Kunj</strong>, <strong>Asola Farms</strong>, <strong>Gurugram</strong>, <strong>Manesar</strong>, <strong>Kundli</strong>, <strong>Sonipat</strong>, <strong>Bahadurgarh</strong>, and <strong>Kharkhoda</strong>, known for their connectivity, green surroundings, and investment value.
+
+With verified land titles, transparent documentation, and expert advisory, we help clients identify the right farmhouse or agricultural land asset aligned with their investment goals, lifestyle preferences, and long-term growth expectations.`,
+  image: "services/farmhouse.jpg",
+  points: [
+    "R-Zone Agricultural Land",
+    "Premium Farmhouse Locations",
+    "P1–P2 & L-K Zone Land",
+    "High Appreciation Potential",
+    "Land Banking Opportunities",
+  ],
+  pamphlet: {
+    heading: "FARMHOUSES & AGRICULTURAL LAND (R-Zone / P1–P2)",
+    phone: "9891683399, 9810327243",
+    columns: [
+      [
+        "Chattarpur",
+        "Dera Mandi",
+        "Vasant Kunj",
+        "Asola Farms",
+      ],
+      [
+        "Gurugram",
+        "Manesar",
+        "Bahadurgarh",
+        "Kharkhoda",
+      ],
+      [
+        "Kundli",
+        "Sonipat",
+        "Pandwala Kalan",
+        "Kanjhawla",
+      ],
+    ],
+  },
+},
 
 
 
@@ -259,7 +348,7 @@ const [selectedLocation, setSelectedLocation] = useState("");
   {/* Details */}
   <div className="lg:col-span-2">
     <div className="rounded-3xl overflow-hidden shadow-md">
-      <img src={active.image} className="w-full h-72 object-cover" />
+      <img src={active.image} className="w-full h-92 object-cover" />
     </div>
 
     <h2 className="mt-7 text-3xl font-bold text-slate-900">
@@ -288,41 +377,52 @@ const [selectedLocation, setSelectedLocation] = useState("");
 </section>
 
 
-   {active.pamphlet && (
-  <section className="max-w-7xl mx-auto px-4 py-15 border-t">
-    
-    {/* Header */}
-    <div className="flex flex-col md:flex-row items-center justify-between gap-3 bg-[#ed3a20] text-white rounded-full px-6 py-3 shadow-sm">
-      <h3 className="text-lg font-bold tracking-wide">
-        {active.pamphlet.heading} 
-      </h3>
-      <p className="text-sm font-semibold">
-        Ph.: {active.pamphlet.phone}
-      </p>
-    </div>
+{(active.pamphlets || active.pamphlet) && (
+  <section className="max-w-7xl  mx-auto px-4 py-16 border-t space-y-16">
 
-    {/* Columns */}
-    <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-slate-800">
-      {active.pamphlet.columns.map((col, colIndex) => (
-        <ul key={colIndex} className="space-y-3">
-          {col.map((item, idx) => (
-            <li
-              key={idx}
-              onClick={() => {
-                setSelectedLocation(item);
-                setIsFormOpen(true);
-              }}
-              className="cursor-pointer flex items-start gap-2 hover:text-[#ed3a20] transition"
-            >
-              <span className="text-[#ed3a20]">•</span>
-              {item}
-            </li>
-          ))}
-        </ul>
-      ))}
-    </div>
+    {(active.pamphlets ?? [active.pamphlet]).map(
+      (pamphlet, pamphletIndex) => (
+        <div key={pamphletIndex} className="space-y-10 bg-red-200/30 p-10">
+
+          {/* Header */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 bg-[#ed3a20] text-white rounded-full px-6 py-3 shadow-sm">
+            <h3 className="text-lg font-bold tracking-wide text-center md:text-left">
+              {pamphlet.heading}
+            </h3>
+            <p className="text-sm font-semibold">
+              Ph.: {pamphlet.phone}
+            </p>
+          </div>
+
+          {/* Columns */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-black">
+            {pamphlet.columns.map((col, colIndex) => (
+              <ul key={colIndex} className="space-y-3">
+                {col.map((item, idx) => (
+                  <li
+                    key={idx}
+                    onClick={() => {
+                      setSelectedLocation(item);
+                      setIsFormOpen(true);
+                    }}
+                    className="cursor-pointer flex items-start gap-2 hover:text-[#ed3a20] transition"
+                  >
+                    <span className="text-[#ed3a20]">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            ))}
+          </div>
+
+        </div>
+      )
+    )}
+
   </section>
 )}
+
+
 
 <ContactForm
   isOpen={isFormOpen}
@@ -338,6 +438,12 @@ Please share details.`}
   {!["Commercial Real Estate", "Pre-Leased / Investment","Industrial Properties" ,"KUNDLI / SONEPAT"].includes(active.title) && (
   <AmenitiesSection />
 )}
+
+
+
+{active.id === 1 && <PreRentedInventory />}
+
+
 
     </main>
   );

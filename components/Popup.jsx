@@ -21,14 +21,15 @@ export default function ContactPopup() {
 
   const services = [
     "Select Service",
-    "Pre-rented Commercial Properties",
-    "Flats / Apartments",
-    "Plots / Kothi",
-    "Independent Floors",
-    "Commercial Shops & Office Spaces",
-    "Agricultural Land / Farmhouses",
-    "Industrial",
+    "Residential Properties",
+    "Industrial Properties",
+    "Commercial & Pre-Leased Real Estate",
+    "KUNDLI / SONEPAT",
+    "DLF / Gurgaon Properties",
+    "Farmhouses",
+  
   ];
+
 
   // Auto-popup delay
   useEffect(() => {
