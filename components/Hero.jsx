@@ -164,7 +164,7 @@ const CATEGORIES = [
     {
       title: "Industrial Properties",
       image:
-        "/services/4.avif",
+        "/services/industry.webp",
 
             subtitle:"plot/factory"
     },
@@ -193,7 +193,7 @@ const CATEGORIES = [
     {
       title: "Farmhouses",
       image:
-        "https://images.pexels.com/photos/2406398/pexels-photo-2406398.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "services/farmhouse.jpg",
             subtitle:"all over delhi NCR"
     },
    
@@ -297,7 +297,7 @@ const slides = [
     <>
 
 
-    <section className="relative h-[70vh] md:h-[90vh] w-full overflow-hidden">
+    <section className="relative h-[60vh] md:h-[90vh] w-full overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -318,11 +318,11 @@ const slides = [
 
           {/* Content */}
           <div className="relative z-10 flex h-full items-center">
-            <div className="max-w-6xl mx-auto px-6 text-white">
-              <h1 className="text-3xl md:text-5xl font-semibold leading-tight">
+            <div className=" md:mx-auto px-6 text-white">
+              <h1 className="text-2xl md:text-5xl font-semibold leading-tight">
                 {slide.title}
               </h1>
-              <p className="mt-4 max-w-xl text-lg text-white/90">
+              <p className="mt-4 max-w-xl text-lg text-white">
                 {slide.subtitle}
               </p>
 
@@ -334,22 +334,8 @@ const slides = [
         </div>
       ))}
 
-      {/* Arrows */}
-      <button
-        onClick={() =>
-          setCurrent((current - 1 + slides.length) % slides.length)
-        }
-        className="absolute left-5 top-1/2 -translate-y-1/2 bg-white/20 text-white px-3 py-2 rounded-full hover:bg-white/40"
-      >
-        ‹
-      </button>
+  
 
-      <button
-        onClick={() => setCurrent((current + 1) % slides.length)}
-        className="absolute right-5 top-1/2 -translate-y-1/2 bg-white/20 text-white px-3 py-2 rounded-full hover:bg-white/40"
-      >
-        ›
-      </button>
     </section>
 
 

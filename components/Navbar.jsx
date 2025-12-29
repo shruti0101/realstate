@@ -13,28 +13,28 @@ export default function Navbar() {
   return (
 <>
 
-    <header className="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-gray-100">
+    <header className="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-red-700">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 md:px-6 lg:px-10">
         {/* Logo */}
         <Link href="/">
-          <img className="w-20" src="/logo.webp" />
+          <img className="w-10 md:w-19" src="/logo.webp" />
            </Link >
 
 
 
         {/* Desktop Menu */}
-        <div className="hidden items-center gap-8 md:flex">
-          <Link href="/" className="text-base font-medium text-black hover:text-[#ED3A20]">
+        <div className="hidden items-center gap-6 md:flex ">
+          <Link href="/" className="text-base hover:bg-[#ED3A20] p-2 rounded-md transform transition-all font-medium text-black hover:text-white">
             Home
           </Link>
-          <Link href="/about" className="text-base font-medium text-black hover:text-[#ED3A20]">
+          <Link href="/about" className="text-base hover:bg-[#ED3A20] p-2 rounded-md transform transition-all font-medium text-black hover:text-white">
             About Us
           </Link>
-          <Link href="/services" className="text-base font-medium text-black hover:text-[#ED3A20]">
+          <Link href="/services" className="text-base hover:bg-[#ED3A20] p-2 rounded-md transform transition-all font-medium text-black hover:text-white">
             Services
           </Link>
         
-          <Link href="/contact-us" className="text-base font-medium text-black hover:text-[#ED3A20]">
+          <Link href="/contact-us" className="text-base hover:bg-[#ED3A20] p-2 rounded-md transform transition-all font-medium text-black hover:text-white">
             Contact Us
           </Link>
           <button
@@ -43,7 +43,7 @@ export default function Navbar() {
             
 
             
-            className="cursor-pointer inline-flex items-center rounded-full border border-[#ED3A20] bg-[#ED3A20] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#ED3A20] transition"
+            className="cursor-pointer inline-flex items-center rounded-full border border-[#ED3A20] bg-[#ED3A20] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-600 transition"
           >
             Schedule a Visit
           </button>
@@ -94,7 +94,7 @@ export default function Navbar() {
                   handleMobileClick();
                   setIsFormOpen(true);
                 }}
-                className="mt-2 w-full bg-[#ED3A20] text-white px-3 py-2 rounded-full text-sm font-semibold hover:bg-red-700"
+                className="mt-2 w-full bg-[#ED3A20] text-white px-3 py-2 rounded-full text-sm font-semibold hover:bg-red-600"
               >
                 Schedule a Visit
               </button>

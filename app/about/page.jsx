@@ -52,7 +52,7 @@ export default function AboutPage() {
                 At Anand Aggarwal Properties, we’re not just real estate
                 consultants—we’re builders of enduring legacies. Driven by a
                 passion for excellence and a dedication to superior quality, we
-                turn aspirations into reality Established in 1985 on the values
+                turn aspirations into reality. Established in 1985 on the values
                 of integrity, reliability, and exceptional service. Today, we
                 proudly stand as a trusted name in the industry.
               </p>

@@ -32,7 +32,7 @@ Every property is verified for quality, legality, and long-term value, ensuring 
 
     // 📌 Pamphlet 1 – North & West Delhi
     {
-      heading: "RESIDENTIAL – North & West Delhi (Plots / Kothi / Floors)",
+      heading: "RESIDENTIAL – North & West Delhi (Plots / Kothis / Floors)",
       phone: "9810395051, 9899151090",
       columns: [
         [
@@ -50,9 +50,9 @@ Every property is verified for quality, legality, and long-term value, ensuring 
         [
           "Rajdhani / M.P. Enclave",
           "Rohini (All Sectors)",
-          "Shalimar Bagh",
+          "Pitampura (All Blocks)",
           "Punjabi Bagh",
-          "Paschim Vihar",
+     
         ],
       ],
     },
@@ -120,7 +120,7 @@ Every property is verified for quality, legality, and long-term value, ensuring 
 All industrial properties are thoroughly verified with clear titles and regulatory compliance, ensuring operational ease and long-term stability. Located in strategically connected industrial hubs, our properties are ideal for business owners and investors seeking scalable infrastructure, efficient logistics access, and sustainable industrial growth.`
 ,
 
-    image: "/services/4.avif",
+    image: "/services/industry.webp",
     points: [
       "Industrial Plots",
       "Warehouses",
@@ -128,7 +128,7 @@ All industrial properties are thoroughly verified with clear titles and regulato
       "CLU Land",
     ],
     pamphlet: {
-      heading: "INDUSTRIAL (Plots/  Factory)",
+      heading: "INDUSTRIAL (Plots / Factories)",
       phone: "9811218597, 9810916176",
       columns: [
         ["Mangolpuri Phase I & II", "Udyog Nagar", "Narela / Bawana"],
@@ -378,7 +378,7 @@ const [selectedLocation, setSelectedLocation] = useState("");
 
 
 {(active.pamphlets || active.pamphlet) && (
-  <section className="max-w-7xl  mx-auto px-4 py-16 border-t space-y-16">
+  <section className="max-w-7xl  mx-auto px-4 py-16 border-t space-y-10">
 
     {(active.pamphlets ?? [active.pamphlet]).map(
       (pamphlet, pamphletIndex) => (
@@ -395,7 +395,7 @@ const [selectedLocation, setSelectedLocation] = useState("");
           </div>
 
           {/* Columns */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-black">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm md:text-lg font-bold text-black">
             {pamphlet.columns.map((col, colIndex) => (
               <ul key={colIndex} className="space-y-3">
                 {col.map((item, idx) => (
