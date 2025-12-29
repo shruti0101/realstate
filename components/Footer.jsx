@@ -14,7 +14,6 @@ const Footer = () => {
             <Link href="/" className="hover:text-[#ED3A20] transition">Home</Link>
             <Link href="/about" className="hover:text-[#ED3A20] transition">About Us</Link>
             <Link href="/services" className="hover:text-[#ED3A20] transition">Services</Link>
-            <Link href="/projects" className="hover:text-[#ED3A20] transition">Projects</Link>
             <Link href="/contact-us" className="hover:text-[#ED3A20] transition">Contact Us</Link>
           </nav>
 

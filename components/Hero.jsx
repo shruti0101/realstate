@@ -265,15 +265,22 @@ const slides = [
     image: "banner3.png",
     title: "Pre-Rented Commercial Properties",
     subtitle:
-      "Verified Assets with Assured Monthly Rental from Reputed Tenants",
+      "Verified Income-Generating Assets with Assured Monthly Rentals",
   },
   {
     image: "banner2.png",
     title: "Banks, Retail & Institutional Properties",
     subtitle:
-      "Stable Income • Strong Tenants • Long-Term Capital Appreciation",
+      "Strong Tenant Profiles • Stable Cash Flow • Long-Term Security",
+  },
+  {
+    image: "banner3.webp",
+    title: "Residential Properties",
+    subtitle:
+      "Premium Homes in Prime Locations with Long-Term Value Appreciation",
   },
 ];
+
 
 
 
@@ -290,7 +297,7 @@ const slides = [
     <>
 
 
-    <section className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden">
+    <section className="relative h-[70vh] md:h-[90vh] w-full overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -307,7 +314,7 @@ const slides = [
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/40" />
 
           {/* Content */}
           <div className="relative z-10 flex h-full items-center">
@@ -349,15 +356,15 @@ const slides = [
 {/* about us */}
  <section
       style={{ backgroundImage: "url(/sketch2.webp)" }}
-      className="relative w-full bg-cover bg-center  bg-fixed "
+      className="relative w-full bg-contain bg-center  bg-fixed "
     >
       {/* Overlay */}
-   
+   <div className="absolute inset-0 bg-white/40"></div>
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="relative mx-auto w-full  px-4 sm:px-6 lg:px-20 py-8  "
+        className="relative mx-auto w-full  px-4 sm:px-6 lg:px-20 py-10  "
       >
         <div className="grid items-center gap-10 lg:grid-cols-2">
 
@@ -378,7 +385,7 @@ const slides = [
   <motion.p
     variants={fadeUp}
     custom={3}
-    className="m md:text-md **: text-black leading-relaxed"
+    className="m md:text-lg **: text-black "
   >
 Pre-rented properties are a high-demand, low-risk investment option, offering assured rental income from day one. Already leased to reputed tenants, these assets eliminate vacancy risk and deliver stable, predictable returns across prime business locations.  we deals in 
 
@@ -649,7 +656,7 @@ Since 1985, we have been curating residential and commercial projects exclusivel
             Our Expertise
           </p>
        
-          <p className="mt-3 text-xs text-black sm:text-base">
+          <p className="mt-3 text-xs text-black sm:text-sm">
             We help you invest in the right property category based on your
             needs, budget & long-term goals.
           </p>

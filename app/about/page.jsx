@@ -76,11 +76,11 @@ export default function AboutPage() {
       </section>
 
 {/* ================= SERVICES & COVERAGE SECTION ================= */}
-<section className="mx-auto w-full px-4 sm:px-6 lg:px-20 py-6 bg-white">
-
+<section className="mx-auto relative w-full  py-10 px-4 sm:px-6 lg:px-20 py-6 ">
+  <div className="absolute inset-0 bg-linear-to-r from-[#ed3a20]/5 to-transparent"></div>
   {/* ---------- Heading ---------- */}
   <div className="max-w-3xl mx-auto text-center">
-    <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-gray-900">
+    <h2 className="text-3xl mb-5 sm:text-4xl font-semibold tracking-tight text-black">
       What We Help You With
     </h2>
 
@@ -193,7 +193,7 @@ export default function AboutPage() {
   
   
   className="mt-6  bg-red-900 px-8 py-12 text-center">
-    <h3 className="text-2xl font-semibold text-white">
+    <h3 className="text-2xl md:text-3xl font-semibold text-white">
       Authorized Channel Partners
     </h3>
 
@@ -201,7 +201,8 @@ export default function AboutPage() {
       Whether you are investing in plots, flats, or commercial assets, our
       portfolio ensures the right opportunity for every requirement. We are
       authorized agents for leading developers including
-      <span className="font-semibold text-white">
+      <span className="font-bold text-black bg-white  ">
+        <br></br>
         {" "}Unitech, Ansal, Vatika, Omaxe, Parsvnath, Mapsko, AAR City,
         Vardhman, ABW, TDI, Suncity, IREO, M3M, Unity Group, V3S,
         Signature Global, TARC, Godrej, Sawasdee, Eldeco,
@@ -226,7 +227,7 @@ export default function AboutPage() {
      
       {/* Stats Strip */}
       <section
-        className="relative bg-center bg-cover bg-fixed py-10 sm:py-18"
+        className="relative bg-center bg-cover bg-fixed py-10 sm:py-22"
         style={{ backgroundImage: "url(/countimg.jpg)" }}
       >
         {/* Overlay */}
@@ -242,7 +243,7 @@ export default function AboutPage() {
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-3xl sm:text-5xl font-bold">{stat.value}</p>
-                <p className="mt-2 text-[11px] sm:text-lg uppercase tracking-[0.16em] text-white/90">
+                <p className="mt-2 text-[11px] sm:text-lg uppercase tracking-[0.16em] text-white">
                   {stat.label}
                 </p>
               </div>
@@ -252,7 +253,11 @@ export default function AboutPage() {
       </section>
 
       {/* Closing CTA */}
-      <section className="py-14 sm:py-16 text-center">
+
+      
+      <section className="py-14  sm:py-16 text-center">
+
+        
         <h3 className="text-xl px-3 sm:text-3xl font-semibold">
           Discuss a requirement or evaluate a project?
         </h3>
