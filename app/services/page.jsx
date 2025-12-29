@@ -59,8 +59,8 @@ Every property is verified for quality, legality, and long-term value, ensuring 
 
     // 📌 Pamphlet 2 – Gurugram Residential
     {
-      heading: "RESIDENTIAL – Gurugram (Apartments / Kothi / Floors)",
-      phone: "9810328243",
+      heading: "DLF/GURGAON (Plots / Kothis / Floors)",
+        phone: "9810395051, 9899151090",
       columns: [
         [
           "DLF Phase I to IV",
@@ -82,8 +82,8 @@ Every property is verified for quality, legality, and long-term value, ensuring 
 
     // 📌 Pamphlet 3 – Plotted / Investment Residential
     {
-      heading: "RESIDENTIAL  (DLF / Gurgaon / Apartments)",
-      phone: "9891683399",
+      heading: "DLF / Gurgaon  (Apartments)",
+         phone: "9810395051, 9899151090",
       columns: [
         [
           "DLF M3M ARALA",
