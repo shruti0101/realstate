@@ -73,6 +73,7 @@ Every property is verified for quality, legality, and long-term value, ensuring 
            "South City Suncity",
         "Golf Course Road",
         ],
+
         [
            "Dwarka Expressway",
         "Golf Course Extension",
@@ -234,8 +235,8 @@ Whether you are seeking a dream home, a commercial establishment, or a long-term
       heading: "DLF / GURGAON (Apartment / Plots / Kothi)",
       phone: "9810328243",
       columns: [
-        ["DLF Phase I, II, III, IV"," Dwarka Expressway Golf Course Extension   "],
-        ["Golf Course Road","Suncity"],
+        ["DLF Phase I, II, III, IV"," Dwarka Expressway   "],
+        ["Golf Course Road","Suncity","Golf Course Extension "],
         ["Sushant Lok", "South City", "M3M / Vatika / Godrej"],
        
        
