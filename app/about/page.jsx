@@ -211,7 +211,7 @@ export default function AboutPage() {
     </p>
 
       <p className="text-xl leading-8 text-white">
-      At <span className="">Naresh Aggarwal Properties</span>,
+      At <span className="">Anand Aggarwal Properties</span>,
       we believe in understanding your goals before recommending solutions.
       With transparent dealings, reliable guidance, and decades of market
       insight, we help you secure properties that align perfectly with your
