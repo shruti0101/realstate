@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {  ShieldCheck, TrendingUp, Handshake } from "lucide-react";
+import {  ShieldCheck, TrendingUp, Handshake,FileSearch } from "lucide-react";
 import Link from "next/link";
 import ServicesMarquee from "@/components/Marquee";
 import axios from "axios";
@@ -158,7 +158,7 @@ const CATEGORIES = [
       image:
         "/services/1.avif",
 
-        subtitle:"plot/kothi/floor"
+        subtitle:"plots/kothis/floors"
 
     },
     {
@@ -166,7 +166,7 @@ const CATEGORIES = [
       image:
         "/services/industry.webp",
 
-            subtitle:"plot/factory"
+            subtitle:"plots/factories"
     },
     {
       title: "Commercial & Pre-Leased",
@@ -373,10 +373,10 @@ const slides = [
     custom={3}
     className="m md:text-lg **: text-black "
   >
-Pre-rented properties are a high-demand, low-risk investment option, offering assured rental income from day one. Already leased to reputed tenants, these assets eliminate vacancy risk and deliver stable, predictable returns across prime business locations.  we deals in 
+Pre-rented properties are a high-demand, low-risk investment option, offering assured rental income from day one. Already leased to reputed tenants, these assets eliminate vacancy risk and deliver stable, predictable returns across prime business locations. We deal in 
 
-<strong className="text-red-600"> Residential Properties, Commercial &  Pre-Leased Real Estate, Industrial Properties, DLF / Gurgaon Properties, Kundli / Sonepat</strong> { " "}
-Since 1985, we have been curating residential and commercial projects exclusively from verified developers, ensuring transparent pricing, clear communication, and honest advisory at every stage. Our team provides end-to-end support across buying, selling, leasing, and long-term investments, along with thorough legal assistance—so you can invest with complete confidence.
+<strong className="text-red-600"> Residential, Industrial, Pre-Leased & Commercial  Properties in Delhi/NCR</strong> { " "}
+<strong>Since 1985</strong> , we have been dealing in residential and commercial projects exclusively from verified developers, ensuring transparent pricing, clear communication, and honest advisory at every stage. Our team provides end-to-end support across buying, selling, leasing, and long-term investments, along with thorough legal assistance—so you can invest with complete confidence.
   </motion.p>
 
   {/* CTA */}
@@ -430,7 +430,7 @@ Since 1985, we have been curating residential and commercial projects exclusivel
             <div className="grid grid-cols-3 gap-4">
               {[
                 { value: "40+", label: "Years Experience" },
-                { value: "15k+", label: "Properties Rented" },
+                { value: "100%", label: "Satisfied Customers " },
                 { value: "4.9/5", label: "Client Rating" },
               ].map((stat, i) => (
                 <motion.div
@@ -521,57 +521,88 @@ Since 1985, we have been curating residential and commercial projects exclusivel
 
 
 
-  {/* Why Choose Us */}
-      <section className="bg-[#fff5f3] border-y border-[#ED3A20]/15 py-16">
-        <div className="mx-auto w-full  px-4 sm:px-6 lg:px-20 text-center">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#ED3A20]">
-            Why Choose Us
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-            Trusted. Transparent. Transaction Ready.
-          </h2>
+{/* Why Choose Us */}
+<section className="bg-[#fff5f3] border-y border-[#ED3A20]/15 py-16">
+  <div className="mx-auto w-full px-4 sm:px-6 lg:px-20 text-center">
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                title: "Verified Inventory",
-                desc: "Only legally clear & approved properties",
-                icon: <ShieldCheck className="h-7 w-7" />,
-              },
-              {
-                title: "Clear Pricing",
-                desc: "No hidden charges or mark-ups",
-                icon: <CheckCircle className="h-7 w-7" />,
-              },
-              {
-                title: "Profitable Deals",
-                desc: "Strong rental and resale potential",
-                icon: <TrendingUp className="h-7 w-7" />,
-              },
-              {
-                title: "End-to-End Support",
-                desc: "Documentation, loans & handover",
-                icon: <Handshake className="h-7 w-7" />,
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="group relative rounded-3xl bg-white p-7 shadow-md border border-transparent hover:-translate-y-2 hover:border-[#ED3A20] hover:shadow-2xl transition"
-              >
-                <div className="text-[#ED3A20] mb-4 flex justify-center">
-                  <div className="p-3 rounded-full bg-[#ED3A20]/10">
-                    {item.icon}
-                  </div>
-                </div>
-                <h4 className="text-lg font-semibold">{item.title}</h4>
-                <p className="mt-3 text-sm text-slate-600">{item.desc}</p>
+    <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+      Why Choose Us
+    </h2>
 
-                <div className="absolute bottom-0 left-0 right-0 mx-auto mb-3 h-[2px] w-12 bg-[#ED3A20] opacity-0 group-hover:opacity-100 transition-all duration-300" />
-              </div>
-            ))}
+    {/* FIRST ROW — 3 CARDS */}
+    <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {[
+        {
+          title: "Verified Inventory",
+          desc: "Only legally clear & approved properties",
+          icon: <ShieldCheck className="h-7 w-7" />,
+        },
+        {
+          title: "Clear Pricing",
+          desc: "No hidden charges or mark-ups",
+          icon: <CheckCircle className="h-7 w-7" />,
+        },
+        {
+          title: "Transparent Deals",
+          desc: "Full clarity on documents, terms & payment schedules",
+          icon: <FileSearch className="h-7 w-7" />,
+        },
+      ].map((item) => (
+        <div
+          key={item.title}
+          className="group relative rounded-3xl bg-white p-7 shadow-md border hover:-translate-y-2 hover:border-[#ED3A20] hover:shadow-2xl transition"
+        >
+          <div className="text-[#ED3A20] mb-4 flex justify-center">
+            <div className="p-3 rounded-full bg-[#ED3A20]/10">
+              {item.icon}
+            </div>
           </div>
+          <h4 className="text-xl font-bold">{item.title}</h4>
+          <p className="mt-3 text-sm text-slate-600">{item.desc}</p>
+          <div className="absolute bottom-0 left-0 right-0 mx-auto mb-3 h-[2px] w-12 bg-[#ED3A20] opacity-0 group-hover:opacity-100 transition-all duration-300" />
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* SECOND ROW — 2 CARDS CENTERED */}
+ <div className="mt-8 flex justify-center">
+  {[
+    {
+      title: "Profitable Deals",
+      desc: "Strong rental and resale potential",
+      icon: <TrendingUp className="h-7 w-7" />,
+    },
+    {
+      title: "End-to-End Support",
+      desc: "Documentation, loans & handover",
+      icon: <Handshake className="h-7 w-7" />,
+    },
+  ].map((item) => (
+    <div
+      key={item.title}
+      className="group relative rounded-3xl bg-white p-7 shadow-md border hover:-translate-y-2 hover:border-[#ED3A20] hover:shadow-2xl transition w-full sm:w-[45%] lg:w-[30%] mx-2"
+    >
+      <div className="text-[#ED3A20] mb-4 flex justify-center">
+        <div className="p-3 rounded-full bg-[#ED3A20]/10">
+          {item.icon}
+        </div>
+      </div>
+
+      <h4 className="text-xl font-bold">{item.title}</h4>
+      <p className="mt-3 text-sm text-slate-600">{item.desc}</p>
+
+      <div className="absolute bottom-0 left-0 right-0 mx-auto mb-3 h-[2px] w-12 bg-[#ED3A20] opacity-0 group-hover:opacity-100 transition-all duration-300" />
+    </div>
+  ))}
+</div>
+
+
+  </div>
+</section>
+
+
+
+
 
 
 
@@ -697,91 +728,6 @@ Since 1985, we have been curating residential and commercial projects exclusivel
 
  {/* prerented */}
 
-
-     <div><section className="relative bg-slate-50 py-16">
-  {/* Accent Background */}
-  <div className="absolute inset-0 bg-gradient-to-r from-[#ed3a20]/5 to-transparent"></div>
-
-  <div className="relative  mx-auto w-full  px-4 sm:px-6 lg:px-15 grid lg:grid-cols-2 gap-12 items-center">
-    
-    {/* Left Content */}
-    <div>
-      <span className="inline-block mb-3 rounded-full bg-[#ed3a20]/10 px-4 py-1 text-sm font-semibold text-[#ed3a20]">
-        High-Demand Investment
-      </span>
-
-      <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
-        Pre-Rented Properties
-      </h2>
-
-      <p className="mt-3 text-lg font-medium text-[#ed3a20]">
-        Secure Assets with Assured Rental Income
-      </p>
-
-      <p className="mt-5 text-black leading-relaxed">
-        Pre-rented properties are ideal for investors seeking stable,
-        low-risk returns with immediate rental income. These assets are
-        already leased to reputed tenants, eliminating vacancy risks and
-        ensuring predictable cash flow from day one.
-      </p>
-
-      <p className="mt-4 text-black leading-relaxed">
-        At Anand Aggarwal Properties, we offer verified pre-leased commercial
-        assets across Delhi & NCR, including banks, MNC offices, retail
-        brands, food chains, hospitals, and institutional properties located
-        in high-footfall business zones.
-      </p>
-
-      {/* CTA */}
-      <Link href="/contact-us"
-      
-        className="mt-8 inline-flex items-center gap-2 rounded-full bg-red-600 cursor-pointer px-8 py-3 text-white font-medium shadow-md hover:bg-red-700 transition"
-      >
-        Explore Pre-Rented Opportunities
-      </Link>
-    </div>
-
-    {/* Right Highlight Card */}
-    <div className="bg-white rounded-3xl shadow-xl p-8 border border-red-100">
-      <h3 className="text-xl font-bold text-slate-900 mb-6">
-        Why Invest in Pre-Rented Properties?
-      </h3>
-
-      <ul className="space-y-4 text-sm sm:text-base">
-        <li className="flex gap-3">
-          <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
-          <p>7% – 10% assured annual rental returns</p>
-        </li>
-
-        <li className="flex gap-3">
-            <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
-          <p>Immediate monthly income from Day-1</p>
-        </li>
-
-        <li className="flex gap-3">
-           <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
-          <p>Zero vacancy risk with long-term tenants</p>
-        </li>
-
-        <li className="flex gap-3">
-         <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
-          <p>Leased to banks, MNCs & national brands</p>
-        </li>
-
-        <li className="flex gap-3">
-            <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
-          <p>High liquidity & strong capital appreciation</p>
-        </li>
-
-        <li className="flex gap-3">
-            <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
-          <p>Fully verified lease agreements & documents</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-</div>
 
 
 

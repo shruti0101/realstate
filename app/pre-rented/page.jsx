@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import ContactForm from "@/components/Form";
-
+import Link from "next/link";
+import { CheckCircle } from "lucide-react";
 export default function PreRentedInventory() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [active, setActive] = useState(null);
@@ -61,6 +62,98 @@ export default function PreRentedInventory() {
           </div>
         </div>
       </section>
+
+
+
+
+      {/* pre rnted */}
+
+      
+           <div><section className="relative bg-slate-50 py-16">
+        {/* Accent Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#ed3a20]/5 to-transparent"></div>
+      
+        <div className="relative  mx-auto w-full  px-4 sm:px-6 lg:px-15 grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Content */}
+          <div>
+            <span className="inline-block mb-3 rounded-full bg-[#ed3a20]/10 px-4 py-1 text-sm font-semibold text-[#ed3a20]">
+              High-Demand Investment
+            </span>
+      
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+              Pre-Rented Properties
+            </h2>
+      
+            <p className="mt-3 text-lg font-medium text-[#ed3a20]">
+              Secure Assets with Assured Rental Income
+            </p>
+      
+            <p className="mt-5 text-black leading-relaxed">
+              Pre-rented properties are ideal for investors seeking stable,
+              low-risk returns with immediate rental income. These assets are
+              already leased to reputed tenants, eliminating vacancy risks and
+              ensuring predictable cash flow from day one.
+            </p>
+      
+            <p className="mt-4 text-black leading-relaxed">
+              At Anand Aggarwal Properties, we offer verified pre-leased commercial
+              assets across Delhi & NCR, including banks, MNC offices, retail
+              brands, food chains, hospitals, and institutional properties located
+              in high-footfall business zones.
+            </p>
+      
+            {/* CTA */}
+            <Link href="/contact-us"
+            
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-red-600 cursor-pointer px-8 py-3 text-white font-medium shadow-md hover:bg-red-700 transition"
+            >
+              Explore Pre-Rented Opportunities
+            </Link>
+          </div>
+      
+          {/* Right Highlight Card */}
+          <div className="bg-white rounded-3xl shadow-xl p-8 border border-red-100">
+            <h3 className="text-xl font-bold text-slate-900 mb-6">
+              Why Invest in Pre-Rented Properties?
+            </h3>
+      
+            <ul className="space-y-4 text-sm sm:text-base">
+              <li className="flex gap-3">
+                <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
+                <p>7% – 10% assured annual rental returns</p>
+              </li>
+      
+              <li className="flex gap-3">
+                  <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
+                <p>Immediate monthly income from Day-1</p>
+              </li>
+      
+              <li className="flex gap-3">
+                 <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
+                <p>Zero vacancy risk with long-term tenants</p>
+              </li>
+      
+              <li className="flex gap-3">
+               <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
+                <p>Leased to banks, MNCs & national brands</p>
+              </li>
+      
+              <li className="flex gap-3">
+                  <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
+                <p>High liquidity & strong capital appreciation</p>
+              </li>
+      
+              <li className="flex gap-3">
+                  <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
+                <p>Fully verified lease agreements & documents</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      </div>
+      
 
       {/* INVENTORY */}
       <section className="bg-white py-16">

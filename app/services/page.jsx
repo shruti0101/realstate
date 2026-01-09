@@ -14,7 +14,7 @@ const services = [
   title: "Residential Properties",
   subtitle: "Premium Housing & Lifestyle Residences",
 
-  desc: `Anand Aggarwal Properties offers premium residential properties across the most sought-after locations of North & West Delhi and Gurugram, catering to first-time buyers, growing families, HNIs, and NRI clients. Our carefully curated portfolio includes <strong>builder floors & apartments</strong>, <strong>luxury villas & penthouses</strong>, and homes within <strong>secure gated communities</strong> located in <strong>prime residential colonies</strong> with excellent infrastructure and connectivity.
+  desc: `Anand Aggarwal Properties offers premium residential properties across the most sought-after locations of North & West Delhi (Pushpanjali, Pitampura, Punjabi Bagh, Tarun enclave) and DLF/Gurugram, catering to first-time buyers, growing families, HNIs, and NRI clients. Our carefully curated portfolio includes <strong>builder floors & apartments</strong>, <strong>luxury villas & penthouses</strong>, and homes within <strong>secure gated communities</strong> located in <strong>prime residential colonies</strong> with excellent infrastructure and connectivity.
 
 Every property is verified for quality, legality, and long-term value, ensuring a smooth and transparent home-buying experience. Backed by decades of market expertise, we guide you at every step—from property selection to final possession—helping you secure a home that perfectly matches your lifestyle, budget, and future aspirations.`,
 
@@ -64,14 +64,14 @@ Every property is verified for quality, legality, and long-term value, ensuring 
       columns: [
         [
           "DLF Phase I to IV",
-        "Sushant Lok",
+        "Sushant Lok I to III",
     
       
     
         ],
         [
-           "South City Suncity",
-        "Golf Course Road",
+           "South City I & II",
+        "Suncity",
         ],
 
         [
@@ -81,29 +81,77 @@ Every property is verified for quality, legality, and long-term value, ensuring 
       ],
     },
 
-    // 📌 Pamphlet 3 – Plotted / Investment Residential
+   
     {
       heading: "DLF / Gurgaon  (Apartments)",
          phone: "9810395051, 9899151090",
       columns: [
         [
-          "DLF M3M ARALA",
-          "DLF Aralias , Adani",
+          "DLF M3M Aralias",
+          "DLF Adani",
+          "DLF Aralias",
+          "DLF Privana "
      
         ],
         [
-          "DLF Camelias , Vatika",
+          "DLF Camelias ",
         "DLF Privas",
              "DLF Magnolias , Sohna",
+             "M3M Projects",
+             "Signature Global",
+             "Birla Group"
    
         ],
         [
           "North West Delhi - Apartments",
-          "Unity Amaryllias , Maxwell",
+          "Unity Amaryllias ",
             "Swasdee ",
+            "Adani Group",
+            "Suncity",
+            "Krishnakunj"
+
+
         ],
+
+
+      
+        
       ],
     },
+
+
+
+      {
+      heading: "North West Delhi  (Apartments)",
+         phone: "9810395051, 9899151090",
+      columns: [
+     
+     
+        [
+          
+          "Unity Amaryllias ",
+            "Swasdee/Lawrence Road ",
+           
+
+
+        ],
+
+           [
+          
+        
+            "Maxwell ",
+            "Golf Island Dwarka",
+
+
+
+        ],
+
+
+      
+        
+      ],
+    },
+
 
   ],
 }
@@ -116,7 +164,7 @@ Every property is verified for quality, legality, and long-term value, ensuring 
     id: 4,
     title: "Industrial Properties",
     subtitle: "Factories, Warehouses & Land",
-   desc: `Anand Aggarwal Properties deals in a wide range of industrial real estate across approved industrial zones of Delhi NCR. Our offerings include <strong>industrial plots</strong>, <strong>warehouse spaces</strong>, <strong>factory buildings</strong>, and <strong>CLU land</strong> suitable for manufacturing, storage, logistics, and allied operations.
+   desc: `Anand Aggarwal Properties deals in a wide range of industrial real estate across approved industrial zones of Mangolpuri, Udyog Nagar, Kundli & other areas in Delhi NCR. Our offerings include <strong>industrial plots</strong>, <strong>warehouse spaces</strong>, <strong>factory buildings</strong>, and <strong>CLU land</strong> suitable for manufacturing, storage, logistics, and allied operations.
 
 All industrial properties are thoroughly verified with clear titles and regulatory compliance, ensuring operational ease and long-term stability. Located in strategically connected industrial hubs, our properties are ideal for business owners and investors seeking scalable infrastructure, efficient logistics access, and sustainable industrial growth.`
 ,
@@ -149,7 +197,7 @@ All industrial properties are thoroughly verified with clear titles and regulato
   desc: `
 With decades of experience, Anand Aggarwal Properties delivers high-quality <strong>commercial real estate</strong> and <strong>pre-leased investment solutions</strong> across prime business hubs of Delhi and Gurugram.
 
-We specialize in <strong>banks, office spaces</strong>, <strong>retail showrooms</strong>, <strong>food & beverage outlets</strong>, and <strong>high-street properties</strong> located in high-footfall, high-visibility zones—ideal for business growth and long-term value.
+We specialize in Pre-Leased properties rented to <strong>  </strong>, <strong>banks, offices </strong>, <strong>retail showrooms</strong>, <strong>food & beverage outlets</strong>, and <strong>high-street properties</strong> located in high-footfall, high-visibility zones—ideal for business growth and long-term value.
 
 Our portfolio also includes a curated selection of <strong>pre-leased commercial assets</strong> such as <strong>banks & ATMs</strong>, <strong>retail brands</strong>, <strong>hotels</strong>, <strong>schools</strong>, and institutional properties offering <strong>assured rental returns of 5%–8%</strong>.
 
@@ -167,12 +215,14 @@ Whether you are a business owner, brand, or investor, we provide verified listin
     "6%–12% Assured Returns",
   ],
   pamphlet: {
-    heading: "COMMERCIAL & PRE-LEASED RETURNS (5 to 8%)",
+    heading: " PRE-LEASED PROPERTIES (5 to 8%)",
     phone: "9811257394 , 9810327243",
+    subtitle:"All over Delhi/Gurgaon Noida Returns 5 to 8%",
     columns: [
-      ["Netaji Subhash Place", "Pitampura", "Ashok Vihar", "Karol Bagh"],
-      ["Punjabi Bagh", "Paschim Vihar", "Kamla Nagar", "Connaught Place"],
-      ["DLF Gurgaon", "Cyber City", "Udyog Vihar", "MG Road"],
+      
+      ["Banks", "Retail Outlets", ],
+      ["Showroom", "Food Court",],
+      ["Hospitals", "Office Space"],
      
     ],
   },
@@ -200,16 +250,53 @@ Whether you are looking for an affordable home, a future-ready investment, or a 
     "Commercial Markets",
     "High Appreciation Potential",
   ],
-  pamphlet: {
-    heading: "KUNDLI / SONEPAT (Good for Investment)",
-    phone: "9891683399,9810327243",
-    columns: [
-      ["VIBS Sonepat", "Imperial Greens","Mapsko", "Godrej"],
-      ["Newstone", "Jindal Sonepat", "TDI","Eldco"],
-        ["Oneprastha", "SOHO", "Parker","M3M"],
-        
-    ],
-  },
+
+  pamphlets: [
+
+
+  {
+
+
+      heading: "KUNDLI / SONEPAT(Good for Investment)",
+      phone: "9891683399,9810327243",
+      columns: [
+        ["VIBS Imperial Greens ","Mapsko", "Godrej"],
+        ["Newstone", "Jindal City", "TDI","Eldco"],
+          ["Oneprastha", "SOHO", "Parker","M3M"],
+          
+      ],
+    },
+ 
+
+
+    {
+
+
+      heading: "KUNDLI (Good for Investment)",
+      phone: "9891683399,9810327243",
+      columns: [
+        ["VIBS Imperial Greens", "TDI", ],
+        ["Newstone", "Parker", ],
+          ["Royal Green Reality", "Anandan"],
+          
+      ],
+    },
+ 
+
+      {
+
+
+      heading: "SONEPAT (Good for Investment)",
+      phone: "9891683399,9810327243",
+      columns: [
+        ["Mapsko", "Krishna Arta"],
+        ["SOHO", "Oneprastha", ],
+          ["Eldco", "Jindal City"],
+          
+      ],
+    },
+  ]
+
 }
 ,
 
@@ -219,7 +306,7 @@ Whether you are looking for an affordable home, a future-ready investment, or a 
     id: 5,
     title: "DLF / Gurgaon Properties",
     subtitle: "Prime Locations in Gurugram",
-   desc: `Anand Aggarwal Properties presents premium residential and commercial real estate options across Gurugram’s most prestigious locations as . Our Gurgaon portfolio includes <strong>DLF Phases developments</strong>,<strong> Gurgaon Dwarka Expressways</strong>,  <strong>luxury apartments</strong>, <strong>commercial hubs</strong>, and <strong>premium townships</strong> known for world-class infrastructure and strong appreciation potential.
+   desc: `Anand Aggarwal Properties presents premium residential and commercial real estate options in <strong> DLF Phase I to IV, Sushant Lok, South City, etc across Gurugram’s most premium locations like Golf Course Road, Extension Road & Dwarka Expressway </strong> and strong appreciation potential.
 
 Whether you are seeking a dream home, a commercial establishment, or a long-term investment, our Gurgaon properties are handpicked for reliability, growth, and lifestyle value. With deep market insights and personalized advisory, we help you make confident property decisions in one of India’s fastest-growing real estate markets.`
 ,
@@ -254,7 +341,7 @@ Whether you are seeking a dream home, a commercial establishment, or a long-term
 
 Our farmhouse portfolio includes properties located in <strong>approved P1–P2 Zones</strong>, <strong>L-K Zones</strong>, and designated farmhouse belts, offering the flexibility of agricultural use today with strong potential for future development as urban boundaries expand.
 
-We deal in premium farmhouse locations such as <strong>Chattarpur</strong>, <strong>Dera Mandi</strong>, <strong>Vasant Kunj</strong>, <strong>Asola Farms</strong>, <strong>Gurugram</strong>, <strong>Manesar</strong>, <strong>Kundli</strong>, <strong>Sonipat</strong>, <strong>Bahadurgarh</strong>, and <strong>Kharkhoda</strong>, known for their connectivity, green surroundings, and investment value.
+We deal in premium farmhouse locations such as <strong>Westend Greens, Brijwasan,  Chattarpur</strong>, <strong>Dera Mandi</strong>, <strong>Vasant Kunj</strong>, <strong>Asola Farms</strong>, <strong>Gurugram</strong>, <strong>Manesar</strong>, <strong>Kundli</strong>, <strong>Sonipat</strong>, <strong>Bahadurgarh</strong>, and <strong>Kharkhoda</strong>, known for their connectivity, green surroundings, and investment value.
 
 With verified land titles, transparent documentation, and expert advisory, we help clients identify the right farmhouse or agricultural land asset aligned with their investment goals, lifestyle preferences, and long-term growth expectations.`,
   image: "services/farmhouse.jpg",
@@ -284,8 +371,8 @@ With verified land titles, transparent documentation, and expert advisory, we he
       [
         "Kundli",
         "Sonipat",
-        "Pandwala Kalan",
-        "Kanjhawla",
+        "R Zone P1–P2",
+        "L-K Zone",
       ],
     ],
   },
@@ -393,8 +480,10 @@ const [selectedLocation, setSelectedLocation] = useState("");
             <p className="text-sm font-semibold">
               Ph.: {pamphlet.phone}
             </p>
-          </div>
 
+       
+          </div>
+     <p className="font-bold text-xl">{pamphlet.subtitle}</p>
           {/* Columns */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm md:text-lg font-bold text-black">
             {pamphlet.columns.map((col, colIndex) => (
@@ -408,6 +497,8 @@ const [selectedLocation, setSelectedLocation] = useState("");
                     }}
                     className="cursor-pointer flex items-start gap-2 hover:text-[#ed3a20] transition"
                   >
+
+                  
                     <span className="text-[#ed3a20]">•</span>
                     {item}
                   </li>
@@ -425,6 +516,8 @@ const [selectedLocation, setSelectedLocation] = useState("");
 
 
 
+
+
 <ContactForm
   isOpen={isFormOpen}
   onClose={() => setIsFormOpen(false)}
@@ -436,9 +529,10 @@ Please share details.`}
 />
 
 
-  {!["Commercial Real Estate", "Pre-Leased / Investment","Industrial Properties" ,"KUNDLI / SONEPAT"].includes(active.title) && (
+{!["Industrial Properties", "KUNDLI / SONEPAT", "Commercial & Pre-Leased"].includes(active.title.trim()) && (
   <AmenitiesSection />
 )}
+
 
 
 
