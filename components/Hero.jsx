@@ -273,7 +273,7 @@ const slides = [
 
 Pre-rented properties are a high-demand, low-risk investment option, offering assured rental income from day one. Already leased to reputed tenants, these assets eliminate vacancy risk and deliver stable, predictable returns across prime business locations.
 
-We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/NCR**. Since 1985, we have been associated with verified developers, ensuring transparent pricing, clear communication, and ethical advisory throughout the process. 
+We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/NCR. Since 1985, we have been associated with verified developers, ensuring transparent pricing, clear communication, and ethical advisory throughout the process. 
 
 Our team provides end-to-end support for buying, selling, leasing, and long-term investments—combined with complete legal assistance, so you can invest with total confidence.
 
