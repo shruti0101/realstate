@@ -265,11 +265,11 @@ const slides = [
 
   {
   image: "/banner5.jpg",
-  title: "Industrial Properties",
+  title: "Welcome to Anand Aggarwal Properties.",
 
    
   subtitle: `
-Welcome to Anand Aggarwal Properties.
+
 
 Pre-rented properties are a high-demand, low-risk investment option, offering assured rental income from day one. Already leased to reputed tenants, these assets eliminate vacancy risk and deliver stable, predictable returns across prime business locations.
 
