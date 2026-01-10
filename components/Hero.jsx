@@ -279,6 +279,40 @@ const slides = [
     subtitle:
       "Premium Homes in Prime Locations with Long-Term Value Appreciation",
   },
+
+ {
+  image: "/services/industry.webp",
+  title: "Industrial Properties",
+  subtitle:
+    "High-value industrial plots, warehouses & factory spaces designed for growth and long-term productivity.",
+  desc: `
+
+
+Whether you're setting up a new manufacturing unit, expanding operations, or investing in pre-leased industrial assets,
+we offer verified listings with transparent pricing and end-to-end support.`,
+},
+
+
+
+{
+  image: "/banner5.jpg",
+  title: "Welcome to Anand Aggarwal Properties.",
+
+   
+  subtitle: `
+
+
+Pre-rented properties are a high-demand, low-risk investment option, offering assured rental income from day one. Already leased to reputed tenants, these assets eliminate vacancy risk and deliver stable, predictable returns across prime business locations.
+
+We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/NCR**. Since 1985, we have been associated with verified developers, ensuring transparent pricing, clear communication, and ethical advisory throughout the process. 
+
+Our team provides end-to-end support for buying, selling, leasing, and long-term investments—combined with complete legal assistance, so you can invest with total confidence.
+
+Whether you're setting up a new manufacturing unit, expanding operations, or investing in pre-leased industrial assets, we offer verified listings with transparent pricing and end-to-end support.
+`,
+}
+
+
 ];
 
 
@@ -317,12 +351,12 @@ const slides = [
           <div className="absolute inset-0 bg-black/40" />
 
           {/* Content */}
-          <div className="relative z-10 flex h-full items-center">
+          <div className="relative px-5 z-10 flex h-full items-center">
             <div className=" md:mx-auto px-6 text-white">
               <h1 className="text-2xl md:text-5xl font-semibold leading-tight">
                 {slide.title}
               </h1>
-              <p className="mt-4 max-w-xl text-lg text-white">
+              <p className="mt-4  text-lg text-white">
                 {slide.subtitle}
               </p>
 

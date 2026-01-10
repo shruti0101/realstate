@@ -13,11 +13,11 @@ export default function Navbar() {
   return (
 <>
 
-    <header className="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-red-700">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 md:px-6 lg:px-10">
+    <header className="sticky top-0 z-30 bg-white/80 backdrop-blur  border-b border-red-700">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between h-20 px-4 md:px-6 lg:px-10">
         {/* Logo */}
         <Link href="/">
-          <img className="w-10 md:w-19" src="/logo.webp" />
+          <img className="w-10 md:w-25" src="/logo.png" />
            </Link >
 
 
