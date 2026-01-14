@@ -14,7 +14,7 @@ const services = [
   title: "Residential Properties",
   subtitle: "Premium Housing & Lifestyle Residences",
 
-  desc: `Anand Aggarwal Properties offers premium residential properties across the most sought-after locations of North & West Delhi (Pushpanjali, Pitampura, Punjabi Bagh, Tarun enclave) and DLF/Gurugram, catering to first-time buyers, growing families, HNIs, and NRI clients. Our carefully curated portfolio includes <strong>builder floors & apartments</strong>, <strong>luxury villas & penthouses</strong>, and homes within <strong>secure gated communities</strong> located in <strong>prime residential colonies</strong> with excellent infrastructure and connectivity.
+  desc: `Anand Aggarwal Properties offers premium residential properties across the  North & West Delhi <strong> (Pushpanjali Enclave, Pitampura, Punjabi Bagh, Tarun enclave) </strong> and DLF/Gurugram, catering to first-time buyers, growing families, HNIs, and NRI clients. Our carefully curated portfolio includes <strong>builder floors & apartments</strong>, <strong>luxury villas & penthouses</strong>, and homes within <strong>secure gated communities</strong> located in <strong>prime residential colonies</strong> with excellent infrastructure and connectivity.
 
 Every property is verified for quality, legality, and long-term value, ensuring a smooth and transparent home-buying experience. Backed by decades of market expertise, we guide you at every step—from property selection to final possession—helping you secure a home that perfectly matches your lifestyle, budget, and future aspirations.`,
 
@@ -87,25 +87,21 @@ Every property is verified for quality, legality, and long-term value, ensuring 
          phone: "9810395051, 9899151090",
       columns: [
         [
-          "DLF M3M Aralias",
-          "DLF Adani",
+          "DLF Camelias ",
           "DLF Aralias",
           "DLF Privana "
      
         ],
         [
-          "DLF Camelias ",
-        "DLF Privas",
-             "DLF Magnolias , Sohna",
+         
+      
              "M3M Projects",
              "Signature Global",
              "Birla Group"
    
         ],
         [
-          "North West Delhi - Apartments",
-          "Unity Amaryllias ",
-            "Swasdee ",
+         
             "Adani Group",
             "Suncity",
             "Krishnakunj"
@@ -129,7 +125,7 @@ Every property is verified for quality, legality, and long-term value, ensuring 
      
         [
           
-          "Unity Amaryllias ",
+          "Unity Amaryllis  ",
             "Swasdee/Lawrence Road ",
            
 
@@ -164,7 +160,7 @@ Every property is verified for quality, legality, and long-term value, ensuring 
     id: 4,
     title: "Industrial Properties",
     subtitle: "Factories, Warehouses & Land",
-   desc: `Anand Aggarwal Properties deals in a wide range of industrial real estate across approved industrial zones of Mangolpuri, Udyog Nagar, Kundli & other areas in Delhi NCR. Our offerings include <strong>industrial plots</strong>, <strong>warehouse spaces</strong>, <strong>factory buildings</strong>, and <strong>CLU land</strong> suitable for manufacturing, storage, logistics, and allied operations.
+   desc: `Anand Aggarwal Properties deals in a wide range of industrial real estate across approved industrial  zones of <strong>Mangolpuri, Udyog Nagar, Kundli </strong> & other areas in <strong> Delhi NCR. </strong> Our offerings include <strong>industrial plots</strong>, <strong>warehouse spaces</strong>, <strong>factory buildings</strong>, and <strong>CLU land</strong> suitable for manufacturing, storage, logistics, and allied operations.
 
 All industrial properties are thoroughly verified with clear titles and regulatory compliance, ensuring operational ease and long-term stability. Located in strategically connected industrial hubs, our properties are ideal for business owners and investors seeking scalable infrastructure, efficient logistics access, and sustainable industrial growth.`
 ,
@@ -214,18 +210,40 @@ Whether you are a business owner, brand, or investor, we provide verified listin
     "Hotels & Schools",
     "6%–12% Assured Returns",
   ],
-  pamphlet: {
-    heading: " PRE-LEASED PROPERTIES (5 to 8%)",
-    phone: "9811257394 , 9810327243",
-    subtitle:"All over Delhi/Gurgaon Noida Returns 5 to 8%",
-    columns: [
+
+  
+  pamphlets:   [
+
+    {
+
+
+      heading: " PRE-LEASED PROPERTIES (5 to 8%)",
+      phone: "9811257394 , 9810327243",
+      // subtitle:"All over Delhi/Gurgaon Noida Returns 5 to 8%",
+      columns: [
+        
       
-      ["Banks", "Retail Outlets", ],
-      ["Showroom", "Food Court",],
-      ["Hospitals", "Office Space"],
-     
-    ],
-  },
+       
+      ],
+    },
+
+     {
+
+
+      heading: " All OVER DELHI/GURGAON NOIDA",
+      phone: "9811257394 , 9810327243",
+      subtitle:" Returns 5 to 8%",
+      columns: [
+        
+      
+       
+      ],
+    }
+    
+],
+
+
+
 }
 ,
 
@@ -277,7 +295,7 @@ Whether you are looking for an affordable home, a future-ready investment, or a 
       columns: [
         ["VIBS Imperial Greens", "TDI", ],
         ["Newstone", "Parker", ],
-          ["Royal Green Reality", "Anandan"],
+          ["Royal Green Reality", "Anandam"],
           
       ],
     },
@@ -289,9 +307,9 @@ Whether you are looking for an affordable home, a future-ready investment, or a 
       heading: "SONEPAT (Good for Investment)",
       phone: "9891683399,9810327243",
       columns: [
-        ["Mapsko", "Krishna Arta"],
+        ["Mapsko", "Krishna Artec"],
         ["SOHO", "Oneprastha", ],
-          ["Eldco", "Jindal City"],
+          ["Eldeco", "Jindal City"],
           
       ],
     },
@@ -421,7 +439,7 @@ const [selectedLocation, setSelectedLocation] = useState("");
         <li
           key={s.id}
           onClick={() => setActive(s)}
-          className={`cursor-pointer rounded-lg px-4 py-3 transition text-sm ${
+          className={`cursor-pointer rounded-lg px-4 py-3 transition text-lg ${
             active.id === s.id
               ? "bg-[#ed3a20] text-white font-semibold"
               : "bg-white hover:bg-[#ed3a20]/10"
@@ -448,7 +466,7 @@ const [selectedLocation, setSelectedLocation] = useState("");
     </p>
 
  <p
-  className="mt-4 text-black leading-loose"
+  className="mt-4 text-xl text-black leading-loose"
   dangerouslySetInnerHTML={{ __html: active.desc }}
 />
 

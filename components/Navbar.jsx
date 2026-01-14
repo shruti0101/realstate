@@ -17,7 +17,7 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between h-20 px-4 md:px-6 lg:px-10">
         {/* Logo */}
         <Link href="/">
-          <img className="w-10 md:w-25" src="/logo.png" />
+          <img className="w-10 md:w-35" src="/logo.png" />
            </Link >
 
 

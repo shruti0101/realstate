@@ -200,33 +200,33 @@ const CATEGORIES = [
   ];
 
 // investment projects data
-const projects = [
-  {
-    image: "/amaryllis.jpg",
-    location: "UNITY AMARYLLIS",
-    desc: "Luxury high-rise residences offering spacious layouts, premium amenities, and excellent connectivity in a prime urban location.",
-  },
-  {
-    image: "/jindal2.jpg",
-    location: "JINDAL",
-    desc: "Well-planned residential development known for quality construction, modern infrastructure, and comfortable living spaces.",
-  },
-  {
-    image: "/vibes-imperial-green.png",
-    location: "IMPERIAL GREENS",
-    desc: "Green-themed residential project designed with open spaces, landscaped gardens, and a peaceful lifestyle environment.",
-  },
-  {
-    image: "/newstone.webp",
-    location: "NEWSTONE",
-    desc: "Contemporary residential project featuring smart layouts, modern architecture, and convenient access to city essentials.",
-  },
-  {
-    image: "/vibs2.jpg",
-    location: "VIBS Sonepat",
-    desc: "Premium residential development in Sonepat offering a balanced lifestyle with modern amenities and growing connectivity.",
-  },
-];
+// const projects = [
+//   {
+//     image: "/amaryllis.jpg",
+//     location: "UNITY AMARYLLIS",
+//     desc: "Luxury high-rise residences offering spacious layouts, premium amenities, and excellent connectivity in a prime urban location.",
+//   },
+//   {
+//     image: "/jindal2.jpg",
+//     location: "JINDAL",
+//     desc: "Well-planned residential development known for quality construction, modern infrastructure, and comfortable living spaces.",
+//   },
+//   {
+//     image: "/vibes-imperial-green.png",
+//     location: "IMPERIAL GREENS",
+//     desc: "Green-themed residential project designed with open spaces, landscaped gardens, and a peaceful lifestyle environment.",
+//   },
+//   {
+//     image: "/newstone.webp",
+//     location: "NEWSTONE",
+//     desc: "Contemporary residential project featuring smart layouts, modern architecture, and convenient access to city essentials.",
+//   },
+//   {
+//     image: "/vibs2.jpg",
+//     location: "VIBS Sonepat",
+//     desc: "Premium residential development in Sonepat offering a balanced lifestyle with modern amenities and growing connectivity.",
+//   },
+// ];
 
 
 
@@ -271,13 +271,11 @@ const slides = [
   subtitle: `
 
 
-Pre-rented properties are a high-demand, low-risk investment option, offering assured rental income from day one. Already leased to reputed tenants, these assets eliminate vacancy risk and deliver stable, predictable returns across prime business locations.
+At Anand Aggarwal Properties, we’re not just real estate consultants—we’re builders of enduring legacies. Driven by a passion for excellence and a dedication to superior quality, we turn aspirations into reality. Established in 1985 on the values of integrity, reliability, and exceptional service. Today, we proudly stand as a trusted name in the industry
 
 We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/NCR. Since 1985, we have been associated with verified developers, ensuring transparent pricing, clear communication, and ethical advisory throughout the process. 
 
-Our team provides end-to-end support for buying, selling, leasing, and long-term investments—combined with complete legal assistance, so you can invest with total confidence.
 
-Whether you're setting up a new manufacturing unit, expanding operations, or investing in pre-leased industrial assets, we offer verified listings with transparent pricing and end-to-end support.
 `,
 },
   {
@@ -299,17 +297,7 @@ Whether you're setting up a new manufacturing unit, expanding operations, or inv
       "Premium Homes in Prime Locations with Long-Term Value Appreciation",
   },
 
- {
-  image: "/services/industry.webp",
-  title: "Industrial Properties",
-  subtitle:
-    "High-value industrial plots, warehouses & factory spaces designed for growth and long-term productivity.",
-  desc: `
 
-
-Whether you're setting up a new manufacturing unit, expanding operations, or investing in pre-leased industrial assets,
-we offer verified listings with transparent pricing and end-to-end support.`,
-},
 
 
 
@@ -359,7 +347,7 @@ we offer verified listings with transparent pricing and end-to-end support.`,
               <h1 className="text-2xl md:text-5xl font-semibold leading-tight">
                 {slide.title}
               </h1>
-              <p className="mt-4 max-w-2xl text-lg text-white">
+              <p className="mt-4 max-w-4xl text-xl text-white">
                 {slide.subtitle}
               </p>
 
@@ -410,7 +398,7 @@ we offer verified listings with transparent pricing and end-to-end support.`,
     custom={3}
     className="m md:text-lg **: text-black "
   >
-Pre-rented properties are a high-demand, low-risk investment option, offering assured rental income from day one. Already leased to reputed tenants, these assets eliminate vacancy risk and deliver stable, predictable returns across prime business locations. We deal in 
+At Anand Aggarwal Properties, we’re not just real estate consultants—we’re builders of enduring legacies. Driven by a passion for excellence and a dedication to superior quality, we turn aspirations into reality. Established in 1985 on the values of integrity, reliability, and exceptional service. Today, we proudly stand as a trusted name in the industry We deal in 
 
 <strong className="text-red-600"> Residential, Industrial, Pre-Leased & Commercial  Properties in Delhi/NCR</strong> { " "}
 <strong>Since 1985</strong> , we have been dealing in residential and commercial projects exclusively from verified developers, ensuring transparent pricing, clear communication, and honest advisory at every stage. Our team provides end-to-end support across buying, selling, leasing, and long-term investments, along with thorough legal assistance—so you can invest with complete confidence.
@@ -642,7 +630,7 @@ Pre-rented properties are a high-demand, low-risk investment option, offering as
 
 
 
-
+{/* 
     <section className="bg-gradient-to-r from-[#8d2413] via-red-800 to-[#6d090c]  py-10">
       <div className="w-full  px-4 sm:px-6 lg:px-20 mx-auto ">
         <h2 className="text-3xl sm:text-5xl font-bold text-white mb-8 text-center">
@@ -665,7 +653,7 @@ Pre-rented properties are a high-demand, low-risk investment option, offering as
             <SwiperSlide key={index}>
               <div className="  overflow-hidden  group">
                 
-                {/* Image */}
+              
                 <div className="relative h-[420px] overflow-hidden">
                   <Image
                     src={project.image}
@@ -676,7 +664,6 @@ Pre-rented properties are a high-demand, low-risk investment option, offering as
 
                 </div>
 
-                {/* Info */}
                 <div className="p-5">
                   <p className="text-sm text-white">
                     {project.location}
@@ -694,7 +681,7 @@ Pre-rented properties are a high-demand, low-risk investment option, offering as
           ))}
         </Swiper>
       </div>
-    </section>
+    </section> */}
 
 
 
