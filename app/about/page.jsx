@@ -48,7 +48,7 @@ export default function AboutPage() {
               <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">
                 Real estate decisions backed by experience and due diligence.
               </h2>
-              <p className="mt-4 text-sm sm:text-[18px] leading-relaxed text-black">
+              <p className="mt-4 text-sm sm:text-[20px] leading-relaxed text-black">
                 At Anand Aggarwal Properties, we’re not just real estate
                 consultants—we’re builders of enduring legacies. Driven by a
                 passion for excellence and a dedication to superior quality, we
@@ -56,10 +56,10 @@ export default function AboutPage() {
                 of integrity, reliability, and exceptional service. Today, we
                 proudly stand as a trusted name in the industry.
               </p>
-              <p className="mt-3 text-sm sm:text-[18px] leading-relaxed text-black">
-                We work across residential and commercial segments—apartments,
+              <p className="mt-3 text-sm sm:text-[20px] leading-relaxed text-black">
+                We work across residential and commercial segments— <strong>apartments,
                 independent floors, plots, pre-leased assets and select
-                commercial projects—helping clients evaluate risk, returns,
+                commercial projects</strong> —helping clients evaluate risk, returns,
                 legal clarity and long-term suitability before committing
                 capital.
               </p>
