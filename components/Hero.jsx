@@ -349,7 +349,7 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
               <motion.p
                 variants={fadeUp}
                 custom={3}
-                className="m md:text-lg **: text-black "
+                className="m md:text-lg **: text-black text-justify"
               >
                 At Anand Aggarwal Properties, we’re not just real estate
                 consultants—we’re builders of enduring legacies. Driven by a
@@ -477,9 +477,7 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
                 {/* Content */}
                 <div className="absolute inset-0 flex items-center justify-center px-6">
                   <div className="text-center">
-                    <p className="text-sm font-medium tracking-[0.2em] uppercase text-slate-200 mb-1">
-                      Explore Properties In
-                    </p>
+                  
                     <h3 className="text-2xl sm:text-3xl font-semibold text-white">
                       {city.name}
                     </h3>
@@ -694,7 +692,7 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <p className="text-black text-lg leading-relaxed mb-4 ">
+          <p className="text-black text-lg leading-relaxed mb-4 text-justify">
             <strong className="text-red-600 mt-8">
               Anand Aggarwal Properties
             </strong>{" "}
@@ -847,10 +845,10 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
             <ul className="space-y-3">
               <li className="font-semibold flex items-start text-black">
                 <span className="text-red-600 mr-2 text-xl">•</span> DLF
-                Camelias
+                Aralias
               </li>
               <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> DLF Aralias
+                <span className="text-red-600 mr-2 text-xl">•</span> DLF Camelias
               </li>
               <li className="font-semibold flex items-start text-black">
                 <span className="text-red-600 mr-2 text-xl">•</span> DLF Privana
@@ -858,6 +856,11 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
             </ul>
 
             <ul className="space-y-3">
+
+               <li className="font-semibold flex items-start text-black">
+                <span className="text-red-600 mr-2 text-xl">•</span> M3M
+                Projects
+              </li>
               <li className="font-semibold flex items-start text-black">
                 <span className="text-red-600 mr-2 text-xl">•</span> Signature
                 Global
@@ -865,22 +868,20 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
               <li className="font-semibold flex items-start text-black">
                 <span className="text-red-600 mr-2 text-xl">•</span> Birla Group
               </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> M3M
-                Projects
-              </li>
+             
             </ul>
 
             <ul className="space-y-3">
+                 <li className="font-semibold flex items-start text-black">
+                <span className="text-red-600 mr-2 text-xl">•</span> Adani Group
+              </li>
               <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Krishnakunj
+                <span className="text-red-600 mr-2 text-xl">•</span> Krisumi
               </li>
               <li className="font-semibold flex items-start text-black">
                 <span className="text-red-600 mr-2 text-xl">•</span> Suncity
               </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Adani Group
-              </li>
+           
             </ul>
           </div>
         </div>
@@ -903,7 +904,7 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
               </li>
               <li className="font-semibold flex items-start text-black">
                 <span className="text-red-600 mr-2 text-xl">•</span>{" "}
-                Swasdee/Lawrence Road
+                DLF Midtown (Moti Nagar)
               </li>
             </ul>
 
@@ -914,6 +915,22 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
               <li className="font-semibold flex items-start text-black">
                 <span className="text-red-600 mr-2 text-xl">•</span> Golf Island
                 Dwarka
+              </li>
+
+             
+            </ul>
+
+
+              <ul className="space-y-3">
+             <li className="font-semibold flex items-start text-black">
+                <span className="text-red-600 mr-2 text-xl">•</span>{" "}
+                Sawasdee/Lawrence Road
+              </li>
+             
+
+              <li className="font-semibold flex items-start text-black">
+                <span className="text-red-600 mr-2 text-xl">•</span>{" "}
+               Rohini Sector-32
               </li>
             </ul>
           </div>
