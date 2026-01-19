@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 
 const propertyImages = [
   {
-    src: "/about/office1.jpg",
+    src: "/office1.jpg",
     alt: "Luxury apartment exterior",
   },
   {
-    src: "/about/office2.jpg",
+    src: "/office2.jpg",
     alt: "Modern living room interior",
   },
   {
-    src: "/about/office3.jpg",
+    src: "/office3.jpg",
     alt: "Modern living room interior",
   },
  

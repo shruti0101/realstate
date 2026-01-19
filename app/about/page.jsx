@@ -165,7 +165,7 @@ export default function AboutPage() {
         {item.points.map((point, idx) => (
           <li key={idx} className="flex items-start gap-2">
             <span className="text-[#ED3A20] text-xl">•</span>
-            <span className="text-black  text-sm">{point}</span>
+            <span className="text-black font-bold  text-sm">{point}</span>
           </li>
         ))}
       </ul>

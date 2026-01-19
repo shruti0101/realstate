@@ -218,9 +218,9 @@ Whether you are a business owner, brand, or investor, we provide verified listin
     {
 
 
-      heading: " PRE-LEASED PROPERTIES (5 to 8%)",
+      heading: " PRE-LEASED PROPERTIES (5 to 10%)",
       phone: "  9810327243 , 9811257394",
-      subtitle:"All over Delhi/Gurgaon Noida (Returns 5 to 8%)",
+      subtitle:"All over Delhi/Gurgaon Noida (Returns 5 to 10%)",
       columns: [
         ["Banks", "Hospitals", ""],
         ["Retail outlet", "Showrooms", ],
@@ -233,7 +233,7 @@ Whether you are a business owner, brand, or investor, we provide verified listin
 
     //   heading: " All OVER DELHI/GURGAON NOIDA",
     //   phone: "9811257394 , 9810327243",
-    //   subtitle:" Returns 5 to 8%",
+    //   subtitle:" Returns 5 to 10%",
     //   columns: [
         
       

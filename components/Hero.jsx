@@ -160,7 +160,7 @@ export default function AboutSection() {
       title: "Commercial & Pre-Leased",
       image: "/services/2.webp",
 
-      subtitle: "return 5 to 8%",
+      subtitle: "return 5 to 10%",
     },
     {
       title: "Kundli / Sonepat ",
