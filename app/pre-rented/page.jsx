@@ -240,7 +240,7 @@ export default function PreRentedInventory() {
               <ul className="space-y-4 text-sm sm:text-base">
                 <li className="flex gap-3">
                   <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
-                  <p>7% – 10% assured annual rental returns</p>
+                  <p>5% – 10% assured annual rental returns</p>
                 </li>
 
                 <li className="flex gap-3">
