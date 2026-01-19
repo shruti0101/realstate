@@ -8,15 +8,15 @@ export default function PropertyCarousel() {
 
 const propertyImages = [
   {
-    image: "/office/officeimg1",
+    image: "/office/officeimg1.JPG",
     alt: " living room ",
   },
   {
-    image: "/office/officeimg2.jpg",
+    image: "/office/officeimg2.JPG",
     alt: "Luxury apartment exterior",
   },
   {
-    image: "/office/officeimg3.jpg",
+    image: "/office/officeimg3.JPG",
     alt: "Modern living room interior",
   },
 
