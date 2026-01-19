@@ -60,7 +60,7 @@ Every property is verified for quality, legality, and long-term value, ensuring 
     // 📌 Pamphlet 2 – Gurugram Residential
     {
       heading: "DLF/GURGAON (Plots / Kothis / Floors)",
-        phone: "9810395051, 9899151090",
+        phone: "9810395051 , 9899151090",
       columns: [
         [
           "DLF Phase I to IV",
@@ -84,11 +84,11 @@ Every property is verified for quality, legality, and long-term value, ensuring 
    
     {
       heading: "DLF / Gurgaon  (Apartments)",
-         phone: "9810395051, 9899151090",
+         phone: "9810395051 , 9899151090",
       columns: [
         [
-          "DLF Camelias ",
-          "DLF Aralias",
+          "DLF Aralias ",
+          "DLF Camelias",
           "DLF Privana "
      
         ],
@@ -103,8 +103,9 @@ Every property is verified for quality, legality, and long-term value, ensuring 
         [
          
             "Adani Group",
+              "Krisumi",
             "Suncity",
-            "Krishnakunj"
+          
 
 
         ],
@@ -119,7 +120,7 @@ Every property is verified for quality, legality, and long-term value, ensuring 
 
       {
       heading: "North West Delhi  (Apartments)",
-         phone: "9810395051, 9899151090",
+         phone: "9810395051 , 9899151090",
       columns: [
      
      
@@ -174,7 +175,7 @@ All industrial properties are thoroughly verified with clear titles and regulato
     ],
     pamphlet: {
       heading: "INDUSTRIAL (Plots / Factories)",
-      phone: "9811218597, 9810916176",
+      phone: "9811218597 , 9899151090",
       columns: [
         ["Mangolpuri Phase I & II", "Udyog Nagar", "Narela / Bawana"],
         ["Kundli / Rai / Barhi", "Bahadurgarh", "Kharkhoda"],
@@ -218,27 +219,27 @@ Whether you are a business owner, brand, or investor, we provide verified listin
 
 
       heading: " PRE-LEASED PROPERTIES (5 to 8%)",
-      phone: "9811257394 , 9810327243",
-      // subtitle:"All over Delhi/Gurgaon Noida Returns 5 to 8%",
+      phone: "  9810327243 , 9811257394",
+      subtitle:"All over Delhi/Gurgaon Noida (Returns 5 to 8%)",
       columns: [
-        
-      
-       
+        ["Banks", "Hospitals", ""],
+        ["Retail outlet", "Showrooms", ],
+        ["Food Court", "Office Space", ],
       ],
     },
 
-     {
+    //  {
 
 
-      heading: " All OVER DELHI/GURGAON NOIDA",
-      phone: "9811257394 , 9810327243",
-      subtitle:" Returns 5 to 8%",
-      columns: [
+    //   heading: " All OVER DELHI/GURGAON NOIDA",
+    //   phone: "9811257394 , 9810327243",
+    //   subtitle:" Returns 5 to 8%",
+    //   columns: [
         
       
        
-      ],
-    }
+    //   ],
+    // }
     
 ],
 
@@ -272,18 +273,18 @@ Whether you are looking for an affordable home, a future-ready investment, or a 
   pamphlets: [
 
 
-  {
+  // {
 
 
-      heading: "KUNDLI / SONEPAT(Good for Investment)",
-      phone: "9891683399,9810327243",
-      columns: [
-        ["VIBS Imperial Greens ","Mapsko", "Godrej"],
-        ["Newstone", "Jindal City", "TDI","Eldco"],
-          ["Oneprastha", "SOHO", "Parker","M3M"],
+  //     heading: "KUNDLI / SONEPAT(Good for Investment)",
+  //     phone: "9891683399,9810327243",
+  //     columns: [
+  //       ["VIBS Imperial Greens ","Mapsko", "Godrej"],
+  //       ["Newstone", "Jindal City", "TDI","Eldco"],
+  //         ["Oneprastha", "SOHO", "Parker","M3M"],
           
-      ],
-    },
+  //     ],
+  //   },
  
 
 
@@ -336,17 +337,17 @@ Whether you are seeking a dream home, a commercial establishment, or a long-term
       "Commercial Hubs",
       "Premium Townships",
     ],
-    pamphlet: {
-      heading: "DLF / GURGAON (Apartment / Plots / Kothi)",
-      phone: "9810328243",
-      columns: [
-        ["DLF Phase I, II, III, IV"," Dwarka Expressway   "],
-        ["Golf Course Road","Suncity","Golf Course Extension "],
-        ["Sushant Lok", "South City", "M3M / Vatika / Godrej"],
+    // pamphlet: {
+    //   heading: "DLF / GURGAON (Apartment / Plots / Kothi)",
+    //   phone: "9810328243",
+    //   columns: [
+    //     ["DLF Phase I, II, III, IV"," Dwarka Expressway   "],
+    //     ["Golf Course Road","Suncity","Golf Course Extension "],
+    //     ["Sushant Lok", "South City", "M3M / Vatika / Godrej"],
        
        
-      ],
-    },
+    //   ],
+    // },
   },
 
 
@@ -547,7 +548,7 @@ Please share details.`}
 />
 
 
-{!["Industrial Properties", "KUNDLI / SONEPAT", "Commercial & Pre-Leased"].includes(active.title.trim()) && (
+{!["Industrial Properties", "KUNDLI / SONEPAT", "Farmhouses & Agricultural Land", "Commercial & Pre-Leased"].includes(active.title.trim()) && (
   <AmenitiesSection />
 )}
 

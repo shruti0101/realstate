@@ -249,24 +249,54 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
 
 `,
     },
+
     {
       image: "banner3.png",
       title: "Pre-Rented Commercial Properties",
       subtitle:
         "Verified Income-Generating Assets with Assured Monthly Rentals",
     },
+
     {
       image: "banner2.png",
       title: "Banks, Retail & Institutional Properties",
       subtitle:
         "Strong Tenant Profiles • Stable Cash Flow • Long-Term Security",
     },
+
     {
       image: "banner3.webp",
       title: "Residential Properties",
       subtitle:
         "Premium Homes in Prime Locations with Long-Term Value Appreciation",
     },
+
+      {
+      image: "/services/industry.webp",
+      title: "Industrial Properties",
+      subtitle:
+        "Strategic Warehouses & Factories for Logistics & Manufacturing",
+    },
+
+    {
+  image: "/services/sonepat.jpg",
+  title: "KUNDLI / SONEPAT",
+  subtitle: "Fast-growing residential & commercial hub with excellent connectivity to Delhi NCR",
+},
+
+{
+  image: "/hero2.webp",
+  title: "DLF / Gurgaon Properties",
+  subtitle: "Premium luxury residences & commercial spaces in Gurgaon’s most prestigious sectors",
+},
+
+{
+  image: "/services/farmhouse.jpg",
+  title: "Farmhouses & Agricultural Land",
+  subtitle: "Spacious green land ideal for luxury farmhouses, weekend homes & long-term investment",
+},
+
+
   ];
 
   useEffect(() => {
@@ -686,6 +716,8 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
 
       {/* residential */}
 
+
+{/* 
       <section className="bg-white py-20 px-10">
         <h2 className="text-2xl md:text-5xl mb-8 font-bold">
           Residential Properties
@@ -717,7 +749,7 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
         </div>
 
         <div className="bg-red-50 p-8 rounded-xl w-full mt-5">
-          {/* HEADER */}
+          
           <div className="bg-red-600 text-white px-6 py-3 rounded-full font-bold text-lg flex justify-between items-center">
             <span>
               RESIDENTIAL – North & West Delhi (Plots / Kothis / Floors)
@@ -725,7 +757,6 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
             <span className="text-sm">Ph.: 9810395051, 9899151090</span>
           </div>
 
-          {/* COLUMNS */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             <ul className="space-y-3">
               <li className="font-semibold flex items-start text-black">
@@ -786,16 +817,16 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
           </div>
         </div>
 
-        {/* secrond row */}
+      
 
         <div className="bg-red-50 p-8 rounded-xl w-full mt-5">
-          {/* HEADER */}
+         
           <div className="bg-red-600 text-white px-6 py-3 rounded-full font-bold text-lg flex justify-between items-center">
             <span>DLF/GURGAON (Plots / Kothis / Floors)</span>
             <span className="text-sm">Ph.: 9810395051, 9899151090</span>
           </div>
 
-          {/* COLUMNS */}
+         
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             <ul className="space-y-3">
               <li className="font-semibold flex items-start text-black">
@@ -831,16 +862,16 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
           </div>
         </div>
 
-        {/* third row */}
+     
 
         <div className="bg-red-50 p-8 rounded-xl w-full mt-5">
-          {/* HEADER */}
+      
           <div className="bg-red-600 text-white px-6 py-3 rounded-full font-bold text-lg flex justify-between items-center">
             <span>DLF / Gurgaon (Apartments)</span>
             <span className="text-sm">Ph.: 9810395051, 9899151090</span>
           </div>
 
-          {/* COLUMNS */}
+     
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             <ul className="space-y-3">
               <li className="font-semibold flex items-start text-black">
@@ -886,16 +917,15 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
           </div>
         </div>
 
-        {/* fourth row */}
+    
 
         <div className="bg-red-50 p-8 rounded-xl w-full mt-5">
-          {/* HEADER */}
+     
           <div className="bg-red-600 text-white px-6 py-3 rounded-full font-bold text-lg flex justify-between items-center">
             <span>North West Delhi (Apartments)</span>
             <span className="text-sm">Ph.: 9810395051, 9899151090</span>
           </div>
 
-          {/* COLUMNS */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             <ul className="space-y-3">
               <li className="font-semibold flex items-start text-black">
@@ -935,8 +965,9 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
             </ul>
           </div>
         </div>
-      </section>
-      {/* nd of the section resident */}
+      </section>  */}
+
+
 
       {/* accordian */}
 

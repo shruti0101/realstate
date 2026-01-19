@@ -88,53 +88,100 @@ export default function AboutPage() {
 
   {/* ---------- Services Grid ---------- */}
   <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-    {[
-      {
-        title: "Residential Properties",
-        desc: "Apartments, builder floors, and plotted developments chosen for superior livability, connectivity, and long-term appreciation."
-      },
-      {
-        title: "Industrial Properties",
-        desc: "Warehouses, factories, and industrial plots in approved zones with clear compliances and excellent logistics access."
-      },
-      {
-        title: "Commercial & Pre-leased",
-        desc: "Office spaces, retail units, and pre-leased assets offering stable rental yields and investment security."
-      },
-      {
-        title: "Kundli / Sonepat",
-        desc: "High-growth residential and commercial options along NH-44 and the KMP corridor with future-ready infrastructure."
-      },
-      {
-        title: "DLF / Gurgaon Properties",
-        desc: "Premium developments across DLF phases, Golf Course Road, and prime Gurgaon sectors."
-      },
-      {
-        title: "Farmhouses",
-        desc: "Exclusive farmhouse properties ideal for luxury living, weekend retreats, and long-term land investments."
-      }
-    ].map((item) => (
-      <div
-        key={item.title}
-        className="group rounded-3xl border border-gray-200 bg-white p-4 shadow-sm transition-all hover:-translate-y-1 hover:border-[#ED3A20] hover:shadow-lg"
-      >
-        <h3 className="text-xl font-semibold text-[#ED3A20]">
-          {item.title}
-        </h3>
+  {
+  [
+    {
+      title: "Residential Properties",
+      desc: "Apartments, builder floors, and plotted developments chosen for superior livability, connectivity, and long-term appreciation.",
+      points: [
+        "Pushpanjali Enclave",
+        "Suvidha Kunj",
+        "Rajdhani / M.P. Enclave",
+        "Deepali / Tarun Enclave"
+      ]
+    },
+    {
+      title: "Industrial Properties",
+      desc: "Warehouses, factories, and industrial plots in approved zones with clear compliances and excellent logistics access.",
+      points: [
+        "Mangolpuri Phase I & II",
+        "Kundli / Rai / Barhi",
+        "Udyog Vihar",
+        "Bahadurgarh"
 
-        <p className="mt-4 text-sm leading-relaxed text-black">
-          {item.desc}
-        </p>
+      ]
+    },
+    {
+      title: "Commercial & Pre-leased",
+      desc: "Office spaces, retail units, and pre-leased assets offering stable rental yields and investment security.",
+      points: [
+        "Hospitals",
+        "Retail outlet",
+        "Food Court",
+        "Hospitals"
+      ]
+    },
+    {
+      title: "Kundli / Sonepat",
+      desc: "High-growth residential and commercial options along NH-44 and the KMP corridor with future-ready infrastructure.",
+      points: [
+        "VIBS Imperial Greens",
+        "Newstone",
+        "Jindal City",
+        "Oneprastha"
+      ]
+    },
+    {
+      title: "DLF / Gurgaon Properties",
+      desc: "Premium developments across DLF phases, Golf Course Road, and prime Gurgaon sectors.",
+      points: [
+        "DLF Phase I to IV",
+        "South City I & II",
+        "Dwarka Expressway",
+        "Sushant Lok I to III"
+      ]
+    },
+    {
+      title: "Farmhouses",
+      desc: "Exclusive farmhouse properties ideal for luxury living, weekend retreats, and long-term land investments.",
+      points: [
+        "Chattarpur",
+        "Gurugram",
+        "Kundli",
+        "Dera Mandi"
+      ]
+    }
+  ].map((item) => (
+    <div
+      key={item.title}
+      className="group rounded-3xl border border-gray-200 bg-white p-4 shadow-sm transition-all hover:-translate-y-1 hover:border-[#ED3A20] hover:shadow-lg"
+    >
+      <h3 className="text-xl font-semibold text-[#ED3A20]">{item.title}</h3>
 
-        <div className="mt-6 h-[2px] w-10 bg-[#ED3A20]/60 transition-all group-hover:w-16 group-hover:bg-[#ED3A20]" />
-      </div>
-    ))}
+      <p className="mt-4 text-base   leading-relaxed text-black">{item.desc}</p>
+
+      {/* ---------- POINTERS ---------- */}
+      <ul className="mt-4 space-y-1 text-sm text-gray-700">
+        {item.points.map((point, idx) => (
+          <li key={idx} className="flex items-start gap-2">
+            <span className="text-[#ED3A20] text-xl">•</span>
+            <span className="text-black  text-sm">{point}</span>
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-3 h-[2px] w-10 bg-[#ED3A20]/60 transition-all group-hover:w-16 group-hover:bg-[#ED3A20]" />
+    </div>
+  ))}
+
+
+  
   </div>
 
   {/* ---------- Coverage Section ---------- */}
-  <div className="mt-10 grid gap-14 lg:grid-cols-2 items-start">
+  {/* <div className="mt-10 grid gap-14 lg:grid-cols-2 items-start">
 
-    {/* Left Content */}
+ 
     <div>
       <h3 className="text-3xl font-bold text-black">
         Strong Presence in Prime Locations
@@ -160,7 +207,7 @@ export default function AboutPage() {
       </p>
     </div>
 
-    {/* Right Content */}
+ 
     <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8">
       <h4 className="text-xl font-semibold text-gray-900">
         Beyond Delhi — Gurugram Focus
@@ -183,7 +230,7 @@ export default function AboutPage() {
       </p>
     </div>
 
-  </div>
+  </div> */}
 
   {/* ---------- Developers / Authority ---------- */}
   <div 

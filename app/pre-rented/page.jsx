@@ -11,12 +11,12 @@ export default function PreRentedInventory() {
 
   const projects = [
     // RETAIL
-    {
-      category: "Retail",
-      tenant: "Manyavar",
-      location: "Delhi",
-      rental: "₹3.50 L / Month",
-    },
+    // {
+    //   category: "Retail",
+    //   tenant: "Manyavar",
+    //   location: "Delhi",
+    //   rental: "₹3.50 L / Month",
+    // },
     {
       category: "Retail",
       tenant: "Food Court",
@@ -142,7 +142,7 @@ export default function PreRentedInventory() {
 
       {
       category: "Independent Buildings",
-      tenant: "Multi-tanent ",
+      tenant: "Multi-tenant ",
       location: "Delhi",
       rental: "₹28.25 L / Month",
     },
@@ -150,7 +150,7 @@ export default function PreRentedInventory() {
 
        {
       category: "Independent Buildings",
-      tenant: "Multi-tanent ",
+      tenant: "Multi-tenant ",
       location: "Delhi",
       rental: "₹16.00 L / Month",
     },
@@ -206,18 +206,20 @@ export default function PreRentedInventory() {
               </p>
 
               <p className="mt-5 text-black leading-relaxed">
-                Pre-rented properties are ideal for investors seeking stable,
-                low-risk returns with immediate rental income. These assets are
-                already leased to reputed tenants, eliminating vacancy risks and
-                ensuring predictable cash flow from day one.
-              </p>
-
-              <p className="mt-4 text-black leading-relaxed">
-                At Anand Aggarwal Properties, we offer verified pre-leased
+                   At Anand Aggarwal Properties,  we offer <strong> verified pre-leased
                 commercial assets across Delhi & NCR, including banks, MNC
                 offices, retail brands, food chains, hospitals, and
                 institutional properties located in high-footfall business
-                zones.
+                zones.</strong>
+              </p>
+
+              <p className="mt-4 text-black leading-relaxed">
+            
+
+                 Pre-rented properties are ideal for investors seeking stable,
+                low-risk returns with immediate rental income. These assets are
+                already leased to reputed tenants, eliminating vacancy risks and
+                ensuring predictable cash flow from day one.
               </p>
 
               {/* CTA */}
@@ -251,10 +253,10 @@ export default function PreRentedInventory() {
                   <p>Zero vacancy risk with long-term tenants</p>
                 </li>
 
-                <li className="flex gap-3">
+                {/* <li className="flex gap-3">
                   <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
                   <p>Leased to banks, MNCs & national brands</p>
-                </li>
+                </li> */}
 
                 <li className="flex gap-3">
                   <CheckCircle className="text-[#ed3a20] w-5 h-5 mt-[2px]" />
