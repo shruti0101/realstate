@@ -1,7 +1,11 @@
 "use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+
+
+
+export default function PropertyCarousel() {
+
 const propertyImages = [
   {
     image: "/office/officeimg1.jpg",
@@ -19,7 +23,6 @@ const propertyImages = [
  
 ];
 
-export default function PropertyCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   // Auto slide
@@ -45,9 +48,9 @@ export default function PropertyCarousel() {
     <div className="relative  overflow-hidden border border-slate-100 shadow-md bg-slate-900/5">
       {/* Image */}
       <div className="relative h-64  lg:h-110">
-     import Image from "next/image";
+  
 
-<Image
+<img
   src={current.image}
   alt={current.alt}
   width={800}
