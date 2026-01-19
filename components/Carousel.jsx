@@ -4,21 +4,18 @@ import { useEffect, useState } from "react";
 
 const propertyImages = [
   {
-    src: "/about/1.webp",
+    src: "/about/office1.jpg",
     alt: "Luxury apartment exterior",
   },
   {
-    src: "/about/2.webp",
+    src: "/about/office2.jpg",
     alt: "Modern living room interior",
   },
   {
-    src: "/about/3.webp",
-    alt: "Independent floor facade",
+    src: "/about/office3.jpg",
+    alt: "Modern living room interior",
   },
-  {
-    src: "/about/2.webp",
-    alt: "Premium commercial building",
-  },
+ 
 ];
 
 export default function PropertyCarousel() {
