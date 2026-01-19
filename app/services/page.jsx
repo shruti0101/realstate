@@ -4,7 +4,6 @@ import { useState } from "react";
 import {  ArrowRight } from "lucide-react";
 import AmenitiesSection from "@/components/Amenities";
 import ContactForm from "@/components/Form";
-
 import PreRentedInventory from "@/app/pre-rented/page.jsx";
 
 
@@ -33,7 +32,7 @@ Every property is verified for quality, legality, and long-term value, ensuring 
     // 📌 Pamphlet 1 – North & West Delhi
     {
       heading: "RESIDENTIAL – North & West Delhi (Plots / Kothis / Floors)",
-      phone: "9810395051, 9899151090",
+      phone: "9810395051 , 9899151090",
       columns: [
         [
           "Pushpanjali Enclave",
@@ -127,7 +126,7 @@ Every property is verified for quality, legality, and long-term value, ensuring 
         [
           
           "Unity Amaryllis  ",
-            "Swasdee/Lawrence Road ",
+           "DLF Mid Town (Moti Nagar) ",
            
 
 
@@ -138,6 +137,16 @@ Every property is verified for quality, legality, and long-term value, ensuring 
         
             "Maxwell ",
             "Golf Island Dwarka",
+
+
+
+        ],
+
+            [
+          
+        
+            "Sawasdee (Lawrence Road) ",
+          "Rohini Sector - 32"
 
 
 
@@ -218,28 +227,16 @@ Whether you are a business owner, brand, or investor, we provide verified listin
     {
 
 
-      heading: " PRE-LEASED PROPERTIES (5 to 10%)",
+      heading: " PRE-LEASED PROPERTIES Returns (5 to 10%)",
       phone: "  9810327243 , 9811257394",
-      subtitle:"All over Delhi/Gurgaon Noida (Returns 5 to 10%)",
+      subtitle:"All over Delhi / Gurgaon Noida (Returns 5 to 10%)",
       columns: [
-        ["Banks", "Hospitals", ""],
+        ["Banks", "Hospitals"],
         ["Retail outlet", "Showrooms", ],
         ["Food Court", "Office Space", ],
       ],
     },
 
-    //  {
-
-
-    //   heading: " All OVER DELHI/GURGAON NOIDA",
-    //   phone: "9811257394 , 9810327243",
-    //   subtitle:" Returns 5 to 10%",
-    //   columns: [
-        
-      
-       
-    //   ],
-    // }
     
 ],
 
@@ -292,9 +289,9 @@ Whether you are looking for an affordable home, a future-ready investment, or a 
 
 
       heading: "KUNDLI (Good for Investment)",
-      phone: "9891683399,9810327243",
+      phone: "9891683399 , 9810327243",
       columns: [
-        ["VIBS Imperial Greens", "TDI", ],
+        ["VIBS - Imperial Greens", "TDI", ],
         ["Newstone", "Parker", ],
           ["Royal Green Reality", "Anandam"],
           
@@ -306,7 +303,7 @@ Whether you are looking for an affordable home, a future-ready investment, or a 
 
 
       heading: "SONEPAT (Good for Investment)",
-      phone: "9891683399,9810327243",
+      phone: "9891683399 , 9810327243",
       columns: [
         ["Mapsko", "Krishna Artec"],
         ["SOHO", "Oneprastha", ],
@@ -373,7 +370,7 @@ With verified land titles, transparent documentation, and expert advisory, we he
   ],
   pamphlet: {
     heading: "FARMHOUSES & AGRICULTURAL LAND (R-Zone / P1–P2)",
-    phone: "9891683399, 9810327243",
+    phone: "9891683399 , 9810327243",
     columns: [
       [
         "Chattarpur",
@@ -467,7 +464,7 @@ const [selectedLocation, setSelectedLocation] = useState("");
     </p>
 
  <p
-  className="mt-4 text-xl text-black leading-loose"
+  className="mt-4 text-xl text-black text-justify leading-loose"
   dangerouslySetInnerHTML={{ __html: active.desc }}
 />
 
