@@ -1,6 +1,6 @@
 "use client";
 import { MapPin } from "lucide-react";
-import Link from "next/link";
+
 
 const offices = [
   {
@@ -11,7 +11,7 @@ const offices = [
     ],
     mobile: ["+91 9810395051", "+91 9899151090"],
     
-    email: "anand_aggarwal_properties@yahoo.com",
+    email: "anandaggarwalproperties1@gmail.com",
   },
 
 ];

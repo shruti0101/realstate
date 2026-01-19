@@ -21,7 +21,7 @@ export default function ContactSection() {
     try {
       const formData = {
         platform: "Real Estate Website",
-        platformEmail: "anand_aggarwal_properties@yahoo.com",
+        platformEmail: "anandaggarwalproperties1@gmail.com",
         name,
         phone,
         place: "N/A",
@@ -256,7 +256,7 @@ Outer Ring Road, Pitampura, Delhi
                     href="mailto:anand_aggarwal_properties@yahoo.com"
                     className="text-red-600 underline"
                   >
-                    anand_aggarwal_properties@yahoo.com
+                    anandaggarwalproperties1@gmail.com
                   </a>
                 </p>
               </div>

@@ -30,8 +30,8 @@ export default function AboutSection() {
 
     try {
       const formData = {
-        platform: "Real Estate Website",
-        platformEmail: "anand_aggarwal_properties@yahoo.com",
+        platform: "Real Estate Website landing page",
+        platformEmail: "anandaggarwalproperties1@gmail.com",
         name,
         phone,
         place,

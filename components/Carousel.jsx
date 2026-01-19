@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 
 const propertyImages = [
   {
-    src: "/cab1.jpg",
+    image: "/services/cab1.jpg",
     alt: "Modern living room interior",
   },
   {
-    src: "/cab2.jpg",
+    image: "/services/cab2.jpg",
     alt: "Luxury apartment exterior",
   },
   {
-    src: "/cab3.jpg",
+    image: "/services/cab3.jpg",
     alt: "Modern living room interior",
   },
 
@@ -46,7 +46,7 @@ export default function PropertyCarousel() {
       {/* Image */}
       <div className="relative h-64  lg:h-110">
         <img
-          src={current.src}
+          src={current.image}
           alt={current.alt}
           className="h-full w-full object-cover transition-all duration-500"
         />
