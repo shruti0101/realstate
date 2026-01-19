@@ -1,18 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
+import Image from "next/image";
 const propertyImages = [
   {
-    image: "/services/cab1.jpg",
-    alt: "Modern living room interior",
+    image: "/office/officeimg1.jpg",
+    alt: " living room ",
   },
   {
-    image: "/services/cab2.jpg",
+    image: "/office/officeimg2.jpg",
     alt: "Luxury apartment exterior",
   },
   {
-    image: "/services/cab3.jpg",
+    image: "/office/officeimg3.jpg",
     alt: "Modern living room interior",
   },
 
@@ -45,11 +45,16 @@ export default function PropertyCarousel() {
     <div className="relative  overflow-hidden border border-slate-100 shadow-md bg-slate-900/5">
       {/* Image */}
       <div className="relative h-64  lg:h-110">
-        <img
-          src={current.image}
-          alt={current.alt}
-          className="h-full w-full object-cover transition-all duration-500"
-        />
+     import Image from "next/image";
+
+<Image
+  src={current.image}
+  alt={current.alt}
+  width={800}
+  height={600}
+  className="h-full w-full object-cover"
+/>
+
         <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-transparent" />
       </div>
 
