@@ -91,6 +91,7 @@ export default function AboutSection() {
   const [active, setActive] = useState("serviced");
 
   const [current, setCurrent] = useState(0);
+  
   const CATEGORIES = [
     {
       key: "prerented",
@@ -170,14 +171,14 @@ export default function AboutSection() {
     },
     {
       title: "DLF / Gurgaon Properties",
-      image: "hero2.webp",
+      image: "/hero2.webp",
 
       subtitle: "apartments/kothi/plots",
     },
 
     {
       title: "Farmhouses",
-      image: "services/farmhouse.jpg",
+      image: "/services/farmhouse.jpg",
       subtitle: "all over delhi NCR",
     },
   ];
@@ -251,7 +252,7 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
     },
 
     {
-      image: "banner3.png",
+      image: "/banner3.png",
       title: "Pre-Rented Commercial Properties",
       subtitle:
         "Verified Income-Generating Assets with Assured Monthly Rentals",
@@ -265,7 +266,7 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
     },
 
     {
-      image: "banner3.webp",
+      image: "/banner3.webp",
       title: "Residential Properties",
       subtitle:
         "Premium Homes in Prime Locations with Long-Term Value Appreciation",
@@ -302,52 +303,60 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 8000);
     return () => clearInterval(timer);
   }, []);
 
   return (
     <>
-      <section className="relative h-[60vh] md:h-[90vh] w-full overflow-hidden">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === current ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <Image
-              src={slide.image}
-              alt={slide.title}
-              fill
-              priority
-              className="object-cover"
-            />
+   <section className="relative h-[70vh] sm:h-[75vh] md:h-[90vh] w-full overflow-hidden">
+  {slides.map((slide, index) => (
+    <Link
+    
+      href="/services"
+ 
+      key={index}
+      className={`absolute inset-0 transition-opacity duration-1000 ${
+        index === current ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      {/* Background Image */}
+      <Image
+        src={slide.image}
+        alt={slide.title}
+        fill
+        priority={index === 0}
+        className="object-cover object-center"
+      />
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/40" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50" />
 
-            {/* Content */}
-            <div className="relative z-10 flex h-full items-center">
-              <div className=" md:mx-auto px-6 text-white">
-                <h1 className="text-2xl md:text-5xl font-semibold leading-tight">
-                  {slide.title}
-                </h1>
-                <p className="mt-4 max-w-4xl text-xl text-white">
-                  {slide.subtitle}
-                </p>
+      {/* Content */}
+      <div className="relative z-10 flex h-full items-center">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 text-white">
+          <div className="max-w-xl sm:max-w-2xl md:max-w-3xl">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold leading-snug md:leading-tight">
+              {slide.title}
+            </h1>
 
-                <Link
-                  href="/contact-us"
-                  className="mt-6 inline-block bg-[#ed3a20] px-6 py-3 text-sm font-semibold rounded-md hover:bg-red-700 transition"
-                >
-                  Request Call Back
-                </Link>
-              </div>
-            </div>
+            <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-white/90">
+              {slide.subtitle}
+            </p>
+
+            <Link
+              href="/contact-us"
+              className="inline-block mt-6 sm:mt-8 rounded-md bg-[#ed3a20] px-5 sm:px-6 md:px-8 py-3 text-sm sm:text-base font-semibold hover:bg-red-700 transition"
+            >
+              Request Call Back
+            </Link>
           </div>
-        ))}
-      </section>
+        </div>
+      </div>
+    </Link>
+  ))}
+</section>
+
 
       {/* about us */}
       <section
@@ -714,259 +723,7 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
         </div>
       </section>
 
-      {/* residential */}
-
-
-{/* 
-      <section className="bg-white py-20 px-10">
-        <h2 className="text-2xl md:text-5xl mb-8 font-bold">
-          Residential Properties
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <p className="text-black text-lg leading-relaxed mb-4 text-justify">
-            <strong className="text-red-600 mt-8">
-              Anand Aggarwal Properties
-            </strong>{" "}
-            offers premium residential properties across the North & West Delhi{" "}
-            <strong>
-              (Pushpanjali Enclave, Pitampura, Punjabi Bagh, Tarun enclave) and
-              DLF/Gurugram,
-            </strong>{" "}
-            catering to first-time buyers, growing families, HNIs, and NRI
-            clients. Our carefully curated portfolio includes builder floors &
-            apartments, luxury villas & penthouses, and homes within secure
-            gated communities located in prime residential colonies with
-            excellent infrastructure and connectivity. Every property is
-            verified for quality, legality, and long-term value, ensuring a
-            smooth and transparent home-buying experience. Backed by decades of
-            market expertise, we guide you at every step—from property selection
-            to final possession—helping you secure a home that perfectly matches
-            your lifestyle, budget, and future aspirations.
-          </p>
-
-          <img className="rounded-sm" src="/residential.webp" alt="" />
-        </div>
-
-        <div className="bg-red-50 p-8 rounded-xl w-full mt-5">
-          
-          <div className="bg-red-600 text-white px-6 py-3 rounded-full font-bold text-lg flex justify-between items-center">
-            <span>
-              RESIDENTIAL – North & West Delhi (Plots / Kothis / Floors)
-            </span>
-            <span className="text-sm">Ph.: 9810395051, 9899151090</span>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            <ul className="space-y-3">
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Pushpanjali
-                Enclave
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Deepali /
-                Tarun Enclave
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Lotus /
-                West Enclave
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Saraswati
-                Vihar
-              </li>
-            </ul>
-
-            <ul className="space-y-3">
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Suvidha
-                Kunj
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Lok Vihar /
-                Harsh Vihar
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Vaishali
-                Enclave
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Sharda
-                Niketan
-              </li>
-            </ul>
-
-            <ul className="space-y-3">
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Rajdhani /
-                M.P. Enclave
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Rohini (All
-                Sectors)
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Pitampura
-                (All Blocks)
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Punjabi
-                Bagh
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      
-
-        <div className="bg-red-50 p-8 rounded-xl w-full mt-5">
-         
-          <div className="bg-red-600 text-white px-6 py-3 rounded-full font-bold text-lg flex justify-between items-center">
-            <span>DLF/GURGAON (Plots / Kothis / Floors)</span>
-            <span className="text-sm">Ph.: 9810395051, 9899151090</span>
-          </div>
-
-         
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            <ul className="space-y-3">
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Dwarka
-                Expressway
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> DLF Phase I
-                to IV
-              </li>
-            </ul>
-
-            <ul className="space-y-3">
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Suncity
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Golf Course
-                Extension
-              </li>
-            </ul>
-
-            <ul className="space-y-3">
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Sushant Lok
-                I to III
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> South City
-                I & II
-              </li>
-            </ul>
-          </div>
-        </div>
-
-     
-
-        <div className="bg-red-50 p-8 rounded-xl w-full mt-5">
-      
-          <div className="bg-red-600 text-white px-6 py-3 rounded-full font-bold text-lg flex justify-between items-center">
-            <span>DLF / Gurgaon (Apartments)</span>
-            <span className="text-sm">Ph.: 9810395051, 9899151090</span>
-          </div>
-
-     
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            <ul className="space-y-3">
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> DLF
-                Aralias
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> DLF Camelias
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> DLF Privana
-              </li>
-            </ul>
-
-            <ul className="space-y-3">
-
-               <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> M3M
-                Projects
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Signature
-                Global
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Birla Group
-              </li>
-             
-            </ul>
-
-            <ul className="space-y-3">
-                 <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Adani Group
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Krisumi
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Suncity
-              </li>
-           
-            </ul>
-          </div>
-        </div>
-
     
-
-        <div className="bg-red-50 p-8 rounded-xl w-full mt-5">
-     
-          <div className="bg-red-600 text-white px-6 py-3 rounded-full font-bold text-lg flex justify-between items-center">
-            <span>North West Delhi (Apartments)</span>
-            <span className="text-sm">Ph.: 9810395051, 9899151090</span>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            <ul className="space-y-3">
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Unity
-                Amaryllis
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span>{" "}
-                DLF Midtown (Moti Nagar)
-              </li>
-            </ul>
-
-            <ul className="space-y-3">
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Maxwell
-              </li>
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span> Golf Island
-                Dwarka
-              </li>
-
-             
-            </ul>
-
-
-              <ul className="space-y-3">
-             <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span>{" "}
-                Sawasdee/Lawrence Road
-              </li>
-             
-
-              <li className="font-semibold flex items-start text-black">
-                <span className="text-red-600 mr-2 text-xl">•</span>{" "}
-               Rohini Sector-32
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>  */}
-
 
 
       {/* accordian */}

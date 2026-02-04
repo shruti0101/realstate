@@ -1,10 +1,13 @@
-"use client";
+
 import PropertyCarousel from "@/components/Carousel";
-import  { motion } from "framer-motion";
-import { ShieldCheck, CheckCircle, TrendingUp, Handshake } from "lucide-react";
 
 
 
+export const metadata = {
+  title: "About Us | Experts Pre-Rented Properties in Delhi",
+  description:
+    "Learn about our expertise in preleased properties in Delhi. We help investors find secure, income-generating real estate with confidence.",
+};
 
 
 export default function AboutPage() {
@@ -62,6 +65,7 @@ export default function AboutPage() {
                 commercial projects</strong> —helping clients evaluate risk, returns,
                 legal clarity and long-term suitability before committing
                 capital.
+                We deal in <strong>Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/NCR</strong> 
               </p>
 
           
@@ -201,7 +205,7 @@ export default function AboutPage() {
       <p className="mt-5 text-lg leading-8 text-black">
         We also actively serve high-demand neighborhoods such as
         <span className="font-semibold text-black">
-          {" "}Shalimar Bagh, Punjabi Bagh, and Paschim Vihar
+          {" "}Shalimar Bagh, PunjabiBagh, and Paschim Vihar
         </span>,
         ensuring access to the city’s most established and value-driven markets.
       </p>
