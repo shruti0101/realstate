@@ -75,8 +75,8 @@ export default function AboutSection() {
         console.log("RESPONSE DATA:", error.response.data);
         setStatus(
           "❌ " +
-            (error.response.data?.message ||
-              `Server error (${error.response.status}). Please try again later.`)
+          (error.response.data?.message ||
+            `Server error (${error.response.status}). Please try again later.`)
         );
       } else if (error.request) {
         setStatus("❌ No response from server. Please check your internet.");
@@ -91,7 +91,7 @@ export default function AboutSection() {
   const [active, setActive] = useState("serviced");
 
   const [current, setCurrent] = useState(0);
-  
+
   const CATEGORIES = [
     {
       key: "prerented",
@@ -272,7 +272,7 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
         "Premium Homes in Prime Locations with Long-Term Value Appreciation",
     },
 
-      {
+    {
       image: "/services/industry.webp",
       title: "Industrial Properties",
       subtitle:
@@ -280,22 +280,22 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
     },
 
     {
-  image: "/services/sonepat.jpg",
-  title: "KUNDLI / SONEPAT",
-  subtitle: "Fast-growing residential & commercial hub with excellent connectivity to Delhi NCR",
-},
+      image: "/services/sonepat.jpg",
+      title: "KUNDLI / SONEPAT",
+      subtitle: "Fast-growing residential & commercial hub with excellent connectivity to Delhi NCR",
+    },
 
-{
-  image: "/hero2.webp",
-  title: "DLF / Gurgaon Properties",
-  subtitle: "Premium luxury residences & commercial spaces in Gurgaon’s most prestigious sectors",
-},
+    {
+      image: "/hero2.webp",
+      title: "DLF / Gurgaon Properties",
+      subtitle: "Premium luxury residences & commercial spaces in Gurgaon’s most prestigious sectors",
+    },
 
-{
-  image: "/services/farmhouse.jpg",
-  title: "Farmhouses & Agricultural Land",
-  subtitle: "Spacious green land ideal for luxury farmhouses, weekend homes & long-term investment",
-},
+    {
+      image: "/services/farmhouse.jpg",
+      title: "Farmhouses & Agricultural Land",
+      subtitle: "Spacious green land ideal for luxury farmhouses, weekend homes & long-term investment",
+    },
 
 
   ];
@@ -309,53 +309,52 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
 
   return (
     <>
-   <section className="relative h-[70vh] sm:h-[75vh] md:h-[90vh] w-full overflow-hidden">
-  {slides.map((slide, index) => (
-    <Link
-    
-      href="/services"
- 
-      key={index}
-      className={`absolute inset-0 transition-opacity duration-1000 ${
-        index === current ? "opacity-100" : "opacity-0"
-      }`}
-    >
-      {/* Background Image */}
-      <Image
-        src={slide.image}
-        alt={slide.title}
-        fill
-        priority={index === 0}
-        className="object-cover object-center"
-      />
+      <section className="relative h-[70vh] sm:h-[75vh] md:h-[90vh] w-full overflow-hidden">
+        {slides.map((slide, index) => (
+          <Link
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+            href="/services"
 
-      {/* Content */}
-      <div className="relative z-10 flex h-full items-center">
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 text-white">
-          <div className="max-w-xl sm:max-w-2xl md:max-w-3xl">
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold leading-snug md:leading-tight">
-              {slide.title}
-            </h1>
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === current ? "opacity-100" : "opacity-0"
+              }`}
+          >
+            {/* Background Image */}
+            <Image
+              src={slide.image}
+              alt={slide.title}
+              fill
+              priority={index === 0}
+              className="object-cover object-center"
+            />
 
-            <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-white/90">
-              {slide.subtitle}
-            </p>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/50" />
 
-            <Link
-              href="/contact-us"
-              className="inline-block mt-6 sm:mt-8 rounded-md bg-[#ed3a20] px-5 sm:px-6 md:px-8 py-3 text-sm sm:text-base font-semibold hover:bg-red-700 transition"
-            >
-              Request Call Back
-            </Link>
-          </div>
-        </div>
-      </div>
-    </Link>
-  ))}
-</section>
+            {/* Content */}
+            <div className="relative z-10 flex h-full items-center">
+              <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 text-white">
+                <div className="max-w-xl sm:max-w-2xl md:max-w-3xl">
+                  <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold leading-snug md:leading-tight">
+                    {slide.title}
+                  </h1>
+
+                  <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-white/90">
+                    {slide.subtitle}
+                  </p>
+
+                  <Link
+                    href="/contact-us"
+                    className="inline-block mt-6 sm:mt-8 rounded-md bg-[#ed3a20] px-5 sm:px-6 md:px-8 py-3 text-sm sm:text-base font-semibold hover:bg-red-700 transition"
+                  >
+                    Request Call Back
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </section>
 
 
       {/* about us */}
@@ -516,7 +515,7 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
                 {/* Content */}
                 <div className="absolute inset-0 flex items-center justify-center px-6">
                   <div className="text-center">
-                  
+
                     <h3 className="text-2xl sm:text-3xl font-semibold text-white">
                       {city.name}
                     </h3>
@@ -723,7 +722,7 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
         </div>
       </section>
 
-    
+
 
 
       {/* accordian */}
@@ -952,11 +951,10 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
                 </p>
                 {status && (
                   <p
-                    className={`text-center text-sm font-medium p-2 rounded-lg ${
-                      status.startsWith("✅")
+                    className={`text-center text-sm font-medium p-2 rounded-lg ${status.startsWith("✅")
                         ? "bg-green-100 text-green-700"
                         : "bg-red-100 text-red-700"
-                    }`}
+                      }`}
                   >
                     {status}
                   </p>

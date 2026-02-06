@@ -10,7 +10,7 @@ const offices = [
       "Outer Ring Road, Pitampura, Delhi",
     ],
     mobile: ["+91 9810395051", "+91 9899151090"],
-    
+
     email: "anandaggarwalproperties1@gmail.com",
   },
 
@@ -33,9 +33,9 @@ export default function OfficesSection() {
 
         {/* Cards */}
         <div className=" max-w-3xl ">
-          {offices.map((office) => (
+          {offices.map((office, idx) => (
             <article
-              key={office.title}
+              key={idx}
               className="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-100  transition hover:-translate-y-2 hover:shadow-2xl"
             >
               {/* Top Bar */}
@@ -91,7 +91,7 @@ export default function OfficesSection() {
                     View on Map
                   </a>
                   <a href="tel:+919810759498"
-                  
+
                     className="hidden sm:inline-flex rounded-full border border-red-300 bg-slate-50 px-4 py-1.5 font-medium text-black transition hover:border-slate-400 hover:bg-slate-100"
                   >
                     Call Us
