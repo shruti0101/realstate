@@ -37,7 +37,7 @@ export default function ContactForm({
     "KUNDLI / SONEPAT",
     "DLF / Gurgaon Properties",
     "Farmhouses",
-  
+
   ];
 
   const handleSubmit = async (e) => {
@@ -107,7 +107,7 @@ export default function ContactForm({
             onChange={(e) => setName(e.target.value)}
             placeholder="Full Name"
             required
-            className="w-full px-4 py-3 border rounded-lg"
+            className="w-full px-4 py-3 border rounded-lg text-black"
           />
 
           <input
@@ -117,7 +117,7 @@ export default function ContactForm({
             maxLength={10}
             pattern="[0-9]{10}"
             required
-            className="w-full px-4 py-3 border rounded-lg"
+            className="w-full px-4 py-3 border rounded-lg text-black"
           />
 
           <input
@@ -126,14 +126,14 @@ export default function ContactForm({
             placeholder="Email Address"
             type="email"
             required
-            className="w-full px-4 py-3 border rounded-lg"
+            className="w-full px-4 py-3 border rounded-lg text-black"
           />
 
           <select
             value={service}
             onChange={(e) => setService(e.target.value)}
             required
-            className="w-full px-4 py-3 border rounded-lg"
+            className="w-full px-4 py-3 border rounded-lg text-black"
           >
             {services.map((srv, i) => (
               <option key={i} value={i === 0 ? "" : srv} disabled={i === 0}>
@@ -147,7 +147,7 @@ export default function ContactForm({
             onChange={(e) => setMessage(e.target.value)}
             rows={4}
             required
-            className="w-full px-4 py-3 border rounded-lg resize-none"
+            className="w-full px-4 py-3 border rounded-lg resize-none text-black"
           />
 
           <button

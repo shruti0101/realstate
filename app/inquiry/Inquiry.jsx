@@ -775,7 +775,7 @@ export default function Inquiry() {
                                             type="text"
                                             placeholder="Enter your name"
                                             required
-                                            className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
+                                            className="mt-2 w-full text-black rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
                                         />
                                     </div>
                                     <div>
@@ -791,7 +791,7 @@ export default function Inquiry() {
                                             minLength={10}
                                             pattern="[0-9]{10}"
                                             required
-                                            className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
+                                            className="mt-2 w-full text-black rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
                                         />
                                     </div>
                                 </div>
@@ -806,7 +806,7 @@ export default function Inquiry() {
                                         type="email"
                                         placeholder="Enter email"
                                         required
-                                        className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
+                                        className="mt-2 w-full text-black rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
                                     />
                                 </div>
 
@@ -818,7 +818,7 @@ export default function Inquiry() {
                                         value={service}
                                         onChange={(e) => setService(e.target.value)}
                                         required
-                                        className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
+                                        className="mt-2 w-full text-black rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
                                     >
                                         <option value="">Select property type</option>
                                         <option>Residential Properties</option>
@@ -841,7 +841,7 @@ export default function Inquiry() {
                                         rows={4}
                                         placeholder="Share budget, location & requirements..."
                                         required
-                                        className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
+                                        className="mt-2 w-full text-black rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#ED3A20]"
                                     />
                                 </div>
 
