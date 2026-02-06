@@ -386,7 +386,7 @@ export default function Inquiry() {
 
         <ServicesMarquee></ServicesMarquee>
 
-        {/* prerented */}
+        {/* prerented properties */}
         <section className="relative bg-slate-50 lg:py-8 py-4">
             <div className="absolute inset-0 bg-gradient-to-r from-[#ed3a20]/5 to-transparent"></div>
             <div className="relative mx-auto w-full  px-4 sm:px-6 lg:px-15 grid lg:grid-cols-2 lg:gap-12 gap-5 items-center">
