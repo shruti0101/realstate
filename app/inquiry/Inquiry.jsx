@@ -2,6 +2,7 @@
 import PropertyCarousel from '@/components/Carousel';
 import ContactForm from '@/components/Form';
 import ServicesMarquee from '@/components/Marquee';
+import { Building } from 'lucide-react';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -36,7 +37,7 @@ export default function Inquiry() {
             image: "banner2.png",
             title: "Banks, Retail & Institutional Properties",
             subtitle:
-                "Strong Tenant Profiles • Stable Cash Flow • Long-Term Security",
+                "Premium Tenants • Guaranteed Rental Income • Secure, Hassle-Free Investment Strong Tenant Profiles • Stable Cash Flow • Long-Term Security",
         },
 
         {
@@ -71,6 +72,13 @@ export default function Inquiry() {
             subtitle: "Spacious green land ideal for luxury farmhouses, weekend homes & long-term investment",
         },
     ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % slides.length);
+        }, 8000);
+        return () => clearInterval(timer);
+    }, []);
 
     const prevSlide = () => {
         setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -322,52 +330,6 @@ export default function Inquiry() {
         return acc;
     }, {});
 
-    const activeCat = {
-        id: 6,
-        title: "KUNDLI",
-        subtitle: "Strategic Growth Corridor of KUNDLI",
-        desc: `
-Anand Aggarwal Properties offers carefully curated <strong>residential</strong> and <strong>commercial real estate</strong> opportunities across <strong>Kundli</strong>—one of the fastest-growing real estate corridors in North Delhi NCR.
-Driven by excellent connectivity via <strong>NH-44</strong>, <strong>KMP Expressway</strong>, and proximity to <strong>Delhi</strong>, Kundli has emerged as a preferred destination for <strong>plotted developments</strong>, <strong>group housing projects</strong>, <strong>integrated townships</strong>, and <strong>commercial hubs</strong>.
-Whether you are looking for an affordable home, a future-ready investment, or a commercial space with high growth potential, our verified listings are selected for strong infrastructure, upcoming developments, and long-term appreciation. With deep local expertise and transparent advisory, we help you secure the right property in this rapidly evolving real estate market.
-`,
-        image: "/services/sonepat.jpg",
-        points: [
-            "Plotted Developments",
-            "Group Housing Projects",
-            "Commercial Markets",
-            "High Appreciation Potential",
-        ],
-
-        pamphlets: [
-            {
-
-
-                heading: "KUNDLI (Good for Investment)",
-                phone: "9891683399 , 9810327243",
-                columns: [
-                    ["VIBS - Imperial Greens", "TDI / Ansal",],
-                    ["Newstone", "Parker",],
-                    ["Royal Green Reality", "Anandam"],
-
-                ],
-            },
-            {
-
-
-                heading: "SONEPAT (Good for Investment)",
-                phone: "9891683399 , 9810327243",
-                columns: [
-                    ["Mapsko", "Krishna Artec"],
-                    ["SOHO", "Oneprastha",],
-                    ["Eldeco", "Jindal City"],
-
-                ],
-            },
-        ]
-
-    }
-
     return (<div className='w-full h-full'>
         <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] w-full overflow-hidden">
             {slides.map((slide, index) => (
@@ -425,7 +387,7 @@ Whether you are looking for an affordable home, a future-ready investment, or a 
         <ServicesMarquee></ServicesMarquee>
 
         {/* prerented */}
-        <section className="relative bg-slate-50 py-8">
+        <section className="relative bg-slate-50 lg:py-8 py-4">
             <div className="absolute inset-0 bg-gradient-to-r from-[#ed3a20]/5 to-transparent"></div>
             <div className="relative mx-auto w-full  px-4 sm:px-6 lg:px-15 grid lg:grid-cols-2 lg:gap-12 gap-5 items-center">
                 <div className=''>
@@ -439,22 +401,12 @@ Whether you are looking for an affordable home, a future-ready investment, or a 
                         Secure Assets with Assured Rental Income
                     </p>
                     <p className="mt-5 text-black leading-relaxed">
-                        At Anand Aggarwal Properties,  we offer <strong> verified pre-leased
-                            commercial assets across Delhi & NCR, including banks, MNC
-                            offices, retail brands, food chains, hospitals, and
-                            institutional properties located in high-footfall business
-                            zones.</strong>
+                        Unlock high-demand investment opportunities with <strong>Anand Aggarwal Properties!</strong> We offer verified pre-Leased commercial assets and Pre-Rented Properties properties across Delhi & NCR, including banks, MNC offices, retail brands, food chains, hospitals, and institutional spaces in prime business locations. Our portfolio of commercial properties and residential real estate provides investors with stable, low-risk returns and immediate rental income. <span className='lg:block hidden'> These commercial real estate and residential properties are already leased to reputed tenants, eliminating vacancy risks and ensuring predictable cash flow from day one – making it a smart, secure, and hassle-free investment for both seasoned and first-time investors.</span>
                     </p>
-                    <p className="mt-4 text-black leading-relaxed">
-                        Pre-rented properties are ideal for investors seeking stable,
-                        low-risk returns with immediate rental income. These assets are
-                        already leased to reputed tenants, eliminating vacancy risks and
-                        ensuring predictable cash flow from day one.
-                    </p>
-                    <Link href="tel:+919810759498"
+                    <Link href="https://wa.me/+919810759498" target="_blank"
                         className="mt-5 inline-flex items-center gap-2 rounded-full bg-red-600 cursor-pointer px-8 py-3 text-white font-medium shadow-md hover:bg-red-700 transition"
                     >
-                        Know more
+                        Contact Us <ArrowRight />
                     </Link>
                 </div>
 
@@ -531,51 +483,60 @@ Whether you are looking for an affordable home, a future-ready investment, or a 
             />
         )}
 
-        <div className="relative mx-auto w-full py-8 bg-gray-100 px-4 sm:px-6 lg:px-16 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="relative mx-auto w-full py-8 bg-gray-100 px-4 sm:px-6 lg:px-16 grid lg:grid-cols-2 gap-5 lg:gap-12 items-center">
             <div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
-                    {activeCat.title}
+                <h2 className="text-xl lg:text-3xl font-bold text-slate-900 leading-tight">
+                    Discover Strategic Growth Opportunities in Kundli with Anand Aggarwal Properties
                 </h2>
 
-                <p className="mt-2 text-lg font-semibold text-[#ed3a20]">
-                    {activeCat.subtitle}
+                <p className="mt-4 text-lg text-slate-700 leading-relaxed">
+                    Explore residential real estate and commercial properties in Kundli with Anand Aggarwal Properties, including pre-leased commercial assets, pre-leased properties, and pre-rented properties. Strategically located with excellent connectivity via NH-44 and KMP Expressway, Kundli offers high-growth opportunities in plotted developments, group housing, townships, and commercial hubs. <span className='lg:block hidden'> Our verified listings ensure strong infrastructure, long-term appreciation, and, for pre-rented properties, assured rental income—making it a smart, secure, and hassle-free investment.</span>
                 </p>
 
-                <p
-                    className="mt-4 text-lg text-slate-700 leading-relaxed"
-                    dangerouslySetInnerHTML={{ __html: activeCat.desc }}
-                />
-
-                <button
-                    onClick={() => setIsFormOpen(true)}
+                <a href="https://wa.me/+919810759498"
+                    target="_blank"
                     className="mt-6 inline-flex items-center gap-2 bg-[#ed3a20] px-8 py-3 text-white rounded-full text-sm font-semibold hover:bg-red-700 transition"
                 >
                     Discuss Your Project <ArrowRight size={16} />
-                </button>
+                </a>
             </div>
 
             <div className="rounded-3xl overflow-hidden shadow-xl border border-red-100 bg-white">
                 <img
-                    src={activeCat.image}
-                    alt={activeCat.title}
-                    className="h-64 w-full object-cover"
+                    src={"/services/sonepat.jpg"}
+                    alt={"Loading"}
+                    className="h-52 w-full object-cover"
                 />
 
-                <div className="p-5">
+                <div className="px-4 py-2">
                     <h3 className="text-lg font-semibold text-slate-900">
                         Selected Projects
                     </h3>
-                    <p className="mt-1 text-sm text-slate-900">
-                        Proven developments suitable for investment
+                    <p className="text-base text-slate-900">
+                        Kundli – Ideal for Investment
                     </p>
 
-                    <ul className="mt-3 space-y-2 text-sm font-bold text-slate-700">
-                        <li className=''>• Kundli – <span className="font-bold">Ideal for Investment</span></li>
-                        <li>• VIBS – Imperial Greens</li>
-                        <li>• Newstone</li>
-                        <li>• Parker</li>
-                        <li>• Royal Green Realty</li>
-                    </ul>
+                    <div className="mt-2 grid md:grid-cols-2 gap-4">
+                        <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810759498">
+                            <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
+                            <span className="text-xl font-semibold text-slate-700">VIBS – Imperial Greens</span>
+                        </a>
+
+                        <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810759498">
+                            <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
+                            <span className="text-xl font-semibold text-slate-700">Newstone</span>
+                        </a>
+
+                        <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810759498">
+                            <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
+                            <span className="text-xl font-semibold text-slate-700">Parker</span>
+                        </a>
+
+                        <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810759498">
+                            <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
+                            <span className="text-xl font-semibold text-slate-700">Royal Green Realty</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -635,7 +596,7 @@ Whether you are looking for an affordable home, a future-ready investment, or a 
         </section>
 
         {/*  */}
-        <section className="relative bg-center bg-cover bg-fixed py-5">
+        <section className="relative bg-center bg-cover bg-fixed py-5 bg-red-600">
             <div className="relative mx-auto max-w-6xl">
                 <div className="grid md:gap-10 gap-5 md:grid-cols-4 grid-cols-2 text-center text-white">
                     {[
@@ -660,27 +621,17 @@ Whether you are looking for an affordable home, a future-ready investment, or a 
             <div className="mx-auto lg:py-10 py-5 w-full px-4 sm:px-6 lg:px-22">
                 <div className="grid gap-5 lg:grid-cols-2 lg:gap-16 items-start">
                     <div>
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#ED3A20]">
-                            About Us
+                        <p className="text-[14px] font-semibold uppercase tracking-[0.3em] text-[#ED3A20]">
+                            About Anand Aggarwal Properties
                         </p>
                         <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight text-black">
-                            Real estate decisions backed by experience and due diligence.
+                            Making real estate decisions simple, safe, and profitable.
                         </h2>
                         <p className="mt-4 text-sm sm:text-[20px] leading-relaxed text-black">
-                            At Anand Aggarwal Properties, we’re not just real estate
-                            consultants—we’re builders of enduring legacies. Driven by a
-                            passion for excellence and a dedication to superior quality, we
-                            turn aspirations into reality. Established in 1985 on the values
-                            of integrity, reliability, and exceptional service. Today, we
-                            proudly stand as a trusted name in the industry.
+                            Established in 1985, Anand Aggarwal Properties is a trusted real estate advisory firm serving buyers and investors across Delhi/NCR. Built on the values of integrity, reliability, and transparent service, we help clients choose properties with confidence.
                         </p>
                         <p className="mt-3 text-sm sm:text-[20px] leading-relaxed text-black lg:block hidden">
-                            We work across residential and commercial segments— <strong>apartments,
-                                independent floors, plots, pre-leased assets and select
-                                commercial projects</strong> —helping clients evaluate risk, returns,
-                            legal clarity and long-term suitability before committing
-                            capital.
-                            We deal in <strong>Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/NCR</strong>
+                            We specialize in residential, commercial, industrial, and pre-leased properties including apartments, independent floors, plots, and investment-focused commercial spaces. Every opportunity is evaluated on location growth, return potential, legal clarity, and long-term suitability — so you don’t just buy property, you make a smart decision.
                         </p>
                     </div>
 
