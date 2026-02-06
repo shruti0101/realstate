@@ -29,8 +29,13 @@ body {
 
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleIn {
@@ -38,6 +43,7 @@ body {
     transform: scale(0.92);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -67,6 +73,7 @@ body {
   z-index: 999;
   transition: transform 0.2s ease;
 }
+
 .whatsapp-float:hover {
   transform: scale(1.1);
   color: white;
@@ -74,10 +81,10 @@ body {
 
 @media (max-width: 576px) {
   .whatsapp-float {
- 
+
     right: 5;
     bottom: 120px;
- 
+
   }
 }
 
@@ -95,6 +102,7 @@ body {
   z-index: 999;
   transition: transform 0.2s ease;
 }
+
 .call-float:hover {
   transform: scale(1.1);
   color: white;
@@ -102,9 +110,9 @@ body {
 
 @media (max-width: 576px) {
   .call-float {
- 
+
     right: 5;
     bottom: 50px;
- 
+
   }
 }
