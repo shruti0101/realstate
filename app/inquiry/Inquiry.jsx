@@ -367,7 +367,7 @@ export default function Inquiry() {
                 </button>
             </nav>
         </div>
-
+        {/* main Section */}
         <div className='w-full h-full mt-16'>
             <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] w-full overflow-hidden" id='/'>
                 {slides.map((slide, index) => (
