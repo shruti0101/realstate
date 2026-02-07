@@ -35,7 +35,7 @@ export default function Inquiry() {
         // },
 
         {
-            image: "banner2.png",
+            image: "banner2.webp",
             title: "Banks, Retail & Institutional Properties",
             subtitle:
                 "Premium Tenants • Guaranteed Rental Income • Secure, Hassle-Free Investment Strong Tenant Profiles • Stable Cash Flow • Long-Term Security",
@@ -56,7 +56,7 @@ export default function Inquiry() {
         },
 
         {
-            image: "/services/sonepat.jpg",
+            image: "/services/sonepat.webp",
             title: "KUNDLI",
             subtitle: "Fast-growing residential & commercial hub with excellent connectivity to Delhi NCR",
         },
@@ -68,7 +68,7 @@ export default function Inquiry() {
         },
 
         {
-            image: "/services/farmhouse.jpg",
+            image: "/services/farmhouse.webp",
             title: "Farmhouses & Agricultural Land",
             subtitle: "Spacious green land ideal for luxury farmhouses, weekend homes & long-term investment",
         },
@@ -77,7 +77,7 @@ export default function Inquiry() {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrent((prev) => (prev + 1) % slides.length);
-        }, 8000);
+        }, 5000);
         return () => clearInterval(timer);
     }, []);
 
@@ -92,7 +92,7 @@ export default function Inquiry() {
     const expertise = [
         {
             title: "Residential Properties",
-            image: "/services/1.avif",
+            image: "/services/1.webp",
 
             subtitle: "plots/kothis/floors",
         },
@@ -110,7 +110,7 @@ export default function Inquiry() {
         },
         {
             title: "Kundli ",
-            image: "/services/sonepat.jpg",
+            image: "/services/sonepat.webp",
 
             subtitle: "good for investment",
         },
@@ -123,7 +123,7 @@ export default function Inquiry() {
 
         {
             title: "Farmhouses",
-            image: "/services/farmhouse.jpg",
+            image: "/services/farmhouse.webp",
             subtitle: "all over delhi NCR",
         },
     ];
@@ -336,7 +336,7 @@ export default function Inquiry() {
             <nav className="mx-auto flex max-w-7xl items-center justify-between h-23 px-4 md:px-6 ">
                 {/* Logo */}
                 <Link href="/">
-                    <img className="w-35 md:w-48" src="/logo.png" />
+                    <img className="w-35 md:w-48" src="/logo.webp" />
                 </Link >
 
                 {/* Desktop Menu */}
@@ -387,19 +387,19 @@ export default function Inquiry() {
                         <div className="relative z-10 flex h-full items-center">
                             <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 text-white">
                                 <div className="max-w-xl sm:max-w-2xl md:max-w-3xl lg:text-left text-center">
-                                    <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold leading-snug">
+                                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-snug">
                                         {slide.title}
                                     </h1>
 
-                                    <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-white/90">
+                                    <p className="mt-4 text-lg sm:text-xl md:text-2xl text-white">
                                         {slide.subtitle}
                                     </p>
 
                                     <Link
-                                        href="tel:+919810759498"
+                                        href="tel:+919810395051"
                                         className="inline-block mt-6 sm:mt-8 rounded-md bg-[#ed3a20] px-6 md:px-8 py-3 text-sm sm:text-base font-semibold hover:bg-red-700 transition"
                                     >
-                                        Request Call Back
+                                        Contact Now
                                     </Link>
                                 </div>
                             </div>
@@ -426,8 +426,13 @@ export default function Inquiry() {
                 <ServicesMarquee></ServicesMarquee>
             </div>
 
+            <h1 className='relative lg:text-3xl text-2xl text-red-600 font-semibold bg-slate-50 text-center pt-5'>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#ed3a20]/5 to-transparent"></div>
+                Residential and Commercial Real Estate Property in Kundli / Pre-Rented Commercial
+            </h1>
+
             {/* prerented properties */}
-            <section className="relative bg-slate-50 lg:py-8 py-4" >
+            <section className="relative bg-slate-50 py-4" >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#ed3a20]/5 to-transparent"></div>
                 <div className="relative mx-auto w-full  px-4 sm:px-6 lg:px-15 grid lg:grid-cols-2 lg:gap-12 gap-5 items-center">
                     <div className=''>
@@ -443,7 +448,7 @@ export default function Inquiry() {
                         <p className="mt-5 text-black leading-relaxed">
                             Unlock high-demand investment opportunities with <strong>Anand Aggarwal Properties!</strong> We offer verified pre-Leased commercial assets and Pre-Rented Properties properties across Delhi & NCR, including banks, MNC offices, retail brands, food chains, hospitals, and institutional spaces in prime business locations. Our portfolio of commercial properties and residential real estate provides investors with stable, low-risk returns and immediate rental income. <span className='lg:block hidden'> These commercial real estate and residential properties are already leased to reputed tenants, eliminating vacancy risks and ensuring predictable cash flow from day one – making it a smart, secure, and hassle-free investment for both seasoned and first-time investors.</span>
                         </p>
-                        <Link href="https://wa.me/+919810759498" target="_blank"
+                        <Link href="https://wa.me/+919810395051" target="_blank"
                             className="mt-5 inline-flex items-center gap-2 rounded-full bg-red-600 cursor-pointer px-8 py-3 text-white font-medium shadow-md hover:bg-red-700 transition"
                         >
                             Contact Us <ArrowRight />
@@ -533,7 +538,7 @@ export default function Inquiry() {
                         Explore residential real estate and commercial properties in Kundli with Anand Aggarwal Properties, including pre-leased commercial assets, pre-leased properties, and pre-rented properties. Strategically located with excellent connectivity via NH-44 and KMP Expressway, Kundli offers high-growth opportunities in plotted developments, group housing, townships, and commercial hubs. <span className='lg:block hidden'> Our verified listings ensure strong infrastructure, long-term appreciation, and, for pre-rented properties, assured rental income—making it a smart, secure, and hassle-free investment.</span>
                     </p>
 
-                    <a href="https://wa.me/+919810759498"
+                    <a href="https://wa.me/+919810395051"
                         target="_blank"
                         className="mt-6 inline-flex items-center gap-2 bg-[#ed3a20] px-8 py-3 text-white rounded-full text-sm font-semibold hover:bg-red-700 transition"
                     >
@@ -543,7 +548,7 @@ export default function Inquiry() {
 
                 <div className="rounded-3xl overflow-hidden shadow-xl border border-red-100 bg-white">
                     <img
-                        src={"/services/sonepat.jpg"}
+                        src={"/services/sonepat.webp"}
                         alt={"Loading"}
                         className="h-52 w-full object-cover"
                     />
@@ -557,22 +562,22 @@ export default function Inquiry() {
                         </p>
 
                         <div className="mt-2 grid md:grid-cols-2 gap-4">
-                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810759498">
+                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810395051">
                                 <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
                                 <span className="text-xl font-semibold text-slate-700">VIBS – Imperial Greens</span>
                             </a>
 
-                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810759498">
+                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810395051">
                                 <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
                                 <span className="text-xl font-semibold text-slate-700">Newstone</span>
                             </a>
 
-                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810759498">
+                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810395051">
                                 <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
                                 <span className="text-xl font-semibold text-slate-700">Parker</span>
                             </a>
 
-                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810759498">
+                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810395051">
                                 <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
                                 <span className="text-xl font-semibold text-slate-700">Royal Green Realty</span>
                             </a>
@@ -623,7 +628,7 @@ export default function Inquiry() {
                                     </p>
 
                                     <Link
-                                        href="https://wa.me/+919810759498"
+                                        href="https://wa.me/+919810395051"
                                         className="mt-2 inline-block rounded-full text-white bg-[#ED3A20] px-4 py-1.5 text-xs font-semibold hover:bg-red-700 transition"
                                     >
                                         Know More
@@ -695,7 +700,7 @@ export default function Inquiry() {
                     </div>
 
                     <a
-                        href="tel:+919810759498"
+                        href="tel:+919810395051"
                         className="inline-flex items-center rounded-full bg-[#ED3A20] px-9 py-3 text-sm sm:text-base font-semibold text-white shadow-md hover:bg-[#c73019] transition whitespace-nowrap"
                     >
                         Schedule a Call

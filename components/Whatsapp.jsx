@@ -9,30 +9,30 @@ const Whatsapp = () => {
     <>
 
 
-       <a
-     href="https://wa.me/+919810759498"
-      className="whatsapp-float animate-bounce"
+      <a
+        href="https://wa.me/+919810395051"
+        className="whatsapp-float animate-bounce"
 
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp with Promozione Branding"
-    >
-      <FaWhatsapp size={31} />
-    </a>
-    <div className="">
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp with Promozione Branding"
+      >
+        <FaWhatsapp size={31} />
+      </a>
+      <div className="">
 
 
-       <a
-          href="tel:+919810759498"
+        <a
+          href="tel:+919810395051"
           className="call-float animate-bounce"
           aria-label="Call Promozione Branding"
         >
           <FaPhoneAlt className="" size={29} />
         </a>
-    </div>
-      
+      </div>
+
     </>
- 
+
 
 
 
