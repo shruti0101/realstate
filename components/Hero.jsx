@@ -39,6 +39,7 @@ export default function AboutSection() {
         email,
         product: service,
         message,
+        
       };
 
       const { data } = await axios.post(
