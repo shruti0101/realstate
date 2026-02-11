@@ -17,7 +17,7 @@ const Stickybottom = () => {
         hover:bg-[#ED3A20] transition cursor-pointer
       "
     >
-      Latest Pre-rented Properties
+      Latest Pre-Leased Properties
     </Link>
   );
 };

@@ -13,7 +13,7 @@ const services = [
     title: "Residential Properties",
     subtitle: "Premium Housing & Lifestyle Residences",
 
-    desc: `Anand Aggarwal Properties offers premium residential properties across the  North & West Delhi <strong> (Pushpanjali Enclave, Tarun Enclave, Pitampura, PunjabiBagh, ) </strong> and DLF/Gurugram, catering to first-time buyers, growing families, HNIs, and NRI clients. Our carefully curated portfolio includes <strong>builder floors & apartments</strong>, <strong>luxury villas & penthouses</strong>, and homes within <strong>secure gated communities</strong> located in <strong>prime residential colonies</strong> with excellent infrastructure and connectivity.
+    desc: `Anand Aggarwal Properties offers premium residential properties across the  North & West Delhi <strong> (Pushpanjali Enclave, Tarun Enclave, Pitampura, Punjabi Bagh and DLF/Gurugram) </strong>, catering to first-time buyers, growing families, HNIs, and NRI clients. Our carefully curated portfolio includes <strong>builder floors & apartments</strong>, <strong>luxury villas & penthouses</strong>, and homes within <strong>secure gated communities</strong> located in <strong>prime residential colonies</strong> with excellent infrastructure and connectivity.
 
 Every property is verified for quality, legality, and long-term value, ensuring a smooth and transparent home-buying experience. Backed by decades of market expertise, we guide you at every step—from property selection to final possession—helping you secure a home that perfectly matches your lifestyle, budget, and future aspirations.`,
 

@@ -63,13 +63,25 @@ export default function PreRentedInventory() {
       location: "Gurgaon",
       rental: "₹12 L / Month",
     },
+    {
+      category: "Retail",
+      tenant: "Bar Achieve",
+      location: "Gurgaon",
+      rental: "₹1.98 L / Month",
+    },
+    {
+      category: "Retail",
+      tenant: "Sumsung",
+      location: "Ghaziabad",
+      rental: "5 L / Month",
+    },
 
     // BANKS
     {
       category: "Banks",
-      tenant: "ICICI Bank",
-      location: "Delhi",
-      rental: "₹2.26 L / Month",
+      tenant: "HDFC Bank",
+      location: "Gurgaon",
+      rental: "₹3.90 L / Month",
     },
     {
       category: "Banks",
@@ -79,9 +91,9 @@ export default function PreRentedInventory() {
     },
     {
       category: "Banks",
-      tenant: "IOB Bank",
+      tenant: "Retail / Bank",
       location: "Delhi",
-      rental: "₹3.47 L / Month",
+      rental: "₹11.30 L / Month",
     },
     {
       category: "Banks",
@@ -108,26 +120,26 @@ export default function PreRentedInventory() {
     // HEALTHCARE
     {
       category: "Healthcare",
-      tenant: "Apollo Hospital",
+      tenant: "Hospital",
       location: "Delhi",
       rental: "₹23.00 L / Month",
     },
     {
       category: "Healthcare",
-      tenant: "RG Stone Hospital",
+      tenant: "Hospital",
       location: "Delhi",
       rental: "₹27.00 L / Month",
     },
     {
       category: "Healthcare",
-      tenant: "Fortis Hospital",
+      tenant: "Hospital",
       location: "Gurgaon",
       rental: "₹14.00 L / Month",
     },
 
     {
       category: "Healthcare",
-      tenant: " Hospital",
+      tenant: "Hospital",
       location: "Delhi",
       rental: "₹27.00 L / Month",
     },
@@ -140,7 +152,7 @@ export default function PreRentedInventory() {
       rental: "₹23.00 L / Month",
     },
 
-      {
+    {
       category: "Independent Buildings",
       tenant: "Multi-tenant ",
       location: "Delhi",
@@ -148,11 +160,17 @@ export default function PreRentedInventory() {
     },
 
 
-       {
+    {
       category: "Independent Buildings",
       tenant: "Multi-tenant ",
       location: "Delhi",
       rental: "₹16.00 L / Month",
+    },
+    {
+      category: "Independent Buildings",
+      tenant: "Tata Westsite",
+      location: "Model Town",
+      rental: "₹26.00 L / Month",
     },
   ];
 
@@ -170,10 +188,10 @@ export default function PreRentedInventory() {
         <div className="relative overflow-hidden bg-gradient-to-r from-[#ed3a20] via-red-600 to-[#b31217] py-12">
           <div className="mx-auto max-w-6xl px-4 text-center text-white">
             <p className="text-xs font-semibold tracking-[0.3em] uppercase">
-              Pre-Rented Commercial
+              Pre-Leased Commercial
             </p>
             <h1 className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-semibold">
-              Pre-Rented Commercial Properties Inventory
+              Pre-Leased Commercial Properties Inventory
             </h1>
             <p className="mt-3 max-w-2xl mx-auto text-md">
               Income-generating assets leased to reputed tenants with stable
@@ -198,7 +216,7 @@ export default function PreRentedInventory() {
               </span>
 
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
-                Pre-Rented Properties
+                Pre-Leased Properties
               </h2>
 
               <p className="mt-3 text-lg font-medium text-[#ed3a20]">
@@ -206,17 +224,17 @@ export default function PreRentedInventory() {
               </p>
 
               <p className="mt-5 text-black leading-relaxed">
-                   At Anand Aggarwal Properties,  we offer <strong> verified pre-leased
-                commercial assets across Delhi & NCR, including banks, MNC
-                offices, retail brands, food chains, hospitals, and
-                institutional properties located in high-footfall business
-                zones.</strong>
+                At Anand Aggarwal Properties,  we offer <strong> verified pre-leased
+                  commercial assets across Delhi & NCR, including banks, MNC
+                  offices, retail brands, food chains, hospitals, and
+                  institutional properties located in high-footfall business
+                  zones.</strong>
               </p>
 
               <p className="mt-4 text-black leading-relaxed">
-            
 
-                 Pre-rented properties are ideal for investors seeking stable,
+
+                Pre-Leased properties are ideal for investors seeking stable,
                 low-risk returns with immediate rental income. These assets are
                 already leased to reputed tenants, eliminating vacancy risks and
                 ensuring predictable cash flow from day one.
@@ -227,14 +245,14 @@ export default function PreRentedInventory() {
                 href="/contact-us"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-red-600 cursor-pointer px-8 py-3 text-white font-medium shadow-md hover:bg-red-700 transition"
               >
-                Explore Pre-Rented Opportunities
+                Explore Pre-Leased Opportunities
               </Link>
             </div>
 
             {/* Right Highlight Card */}
             <div className="bg-white rounded-3xl shadow-xl p-8 border border-red-100">
               <h3 className="text-xl font-bold text-slate-900 mb-6">
-                Why Invest in Pre-Rented Properties?
+                Why Invest in Pre-Leased Properties?
               </h3>
 
               <ul className="space-y-4 text-sm sm:text-base">
@@ -282,7 +300,7 @@ export default function PreRentedInventory() {
               <p className="text-2xl font-bold text-slate-900 mb-6">
                 {category}
                 <span className="ml-2 text-sm font-medium text-gray-500">
-                  (Monthly Rental)
+                  (Rent)
                 </span>
               </p>
 

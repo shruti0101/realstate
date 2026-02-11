@@ -96,7 +96,7 @@ export default function AboutSection() {
   const CATEGORIES = [
     {
       key: "prerented",
-      label: "Pre-Rented Commercial Properties",
+      label: "Pre-Leased Commercial Properties",
       image: "/pre-rented.webp",
       description:
         "Premium pre-leased commercial spaces offering stable monthly rental income and long-term tenant security.",
@@ -254,7 +254,7 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
 
     {
       image: "/banner88.webp",
-      title: "Pre-Rented Commercial Properties",
+      title: "Pre-Leased Commercial Properties",
       subtitle:
         "Verified Income-Generating Assets with Assured Monthly Rentals",
     },
@@ -623,19 +623,19 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
           </h1>
 
           <p className="mt-2 lg:text-base text-sm text-slate-900 leading-">
-            <a href="/services" className="font-bold text-red-600">Preleased properties</a> and <strong>pre-rented properties in Delhi</strong> are ideal for investors seeking <strong>assured rental income</strong> and <strong>low-risk real estate investment.</strong> These properties come with an existing tenant and a valid lease agreement, allowing buyers to earn returns from day one. With predictable cash flow and reduced vacancy risk, <strong>preleased properties</strong> are increasingly preferred in Delhi’s mature property market.
+            <a href="/services" className="font-bold text-red-600">Preleased properties</a> properties in Delhiare ideal for investors seeking <strong>assured rental income</strong> and <strong>low-risk real estate investment.</strong> These properties come with an existing tenant and a valid lease agreement, allowing buyers to earn returns from day one. With predictable cash flow and reduced vacancy risk, <strong>preleased properties</strong> are increasingly preferred in Delhi’s mature property market.
           </p>
 
           <p className="mt-2 lg:text-base text-sm text-slate-900 leading-">
-            The demand for <strong>pre-rented commercial properties</strong> in Delhi remains strong due to long-term leases, corporate tenants, and attractive rental yields. Assets such as office spaces, retail outlets, banks, and branded showrooms offer stability along with capital appreciation, making <strong>pre-rented commercial properties</strong> suitable for investors focused on consistent and higher returns.
+            The demand for <strong>Pre-Leased commercial properties</strong> in Delhi remains strong due to long-term leases, corporate tenants, and attractive rental yields. Assets such as office spaces, retail outlets, banks, and branded showrooms offer stability along with capital appreciation, making <strong>Pre-Leased commercial properties</strong> suitable for investors focused on consistent and higher returns.
           </p>
 
           <p className="mt-2 lg:text-base text-sm text-slate-900 leading-">
-            Alongside commercial assets, <strong>pre-rented commercial properties</strong> such as apartments and builder floors provide steady monthly income with comparatively lower investment entry points. These <strong>pre-rented commercial properties</strong> are easier to manage and witness consistent demand from professionals and families, making them a reliable option for long-term investors.
+            Alongside commercial assets, <strong>Pre-Leased commercial properties</strong> such as apartments and builder floors provide steady monthly income with comparatively lower investment entry points. These <strong>Pre-Leased commercial properties</strong> are easier to manage and witness consistent demand from professionals and families, making them a reliable option for long-term investors.
           </p>
 
           <p className="mt-2 lg:text-base text-sm text-slate-900 leading-">
-            Investing in <strong>preleased properties</strong> and <strong>pre-rented commercial properties</strong> in Delhi ensures transparency, immediate income generation, and long-term value appreciation. With proper due diligence, verified listings, and expert advisory support, investors can confidently choose the right <strong>pre-rented commercial properties</strong> or <strong>pre-rented residential properties</strong> aligned with their financial goals.
+            Investing in <strong>Pre-Leased commercial properties</strong> in Delhi ensures transparency, immediate income generation, and long-term value appreciation. With proper due diligence, verified listings, and expert advisory support, investors can confidently choose the right <strong>Pre-Leased commercial properties</strong> aligned with their financial goals.
           </p>
         </div>
 

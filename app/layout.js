@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Preleased Properties | Pre-Rented Properties in Delhi ",
+  title: "Preleased Properties | Pre-Leased Properties in Delhi ",
   description:
-    "Invest in pre-rented properties in Delhi with active leases and steady rental income. Discover commercial and residential options with high ROI.",
+    "Invest in Pre-Leased properties in Delhi with active leases and steady rental income. Discover commercial and residential options with high ROI.",
   icons: {
     icon: "/logo.webp",
   },

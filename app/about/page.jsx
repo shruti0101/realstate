@@ -4,7 +4,7 @@ import PropertyCarousel from "@/components/Carousel";
 
 
 export const metadata = {
-  title: "About Us | Experts Pre-Rented Properties in Delhi",
+  title: "About Us | Experts Pre-Leased Properties in Delhi",
   description:
     "Learn about our expertise in preleased properties in Delhi. We help investors find secure, income-generating real estate with confidence.",
 };

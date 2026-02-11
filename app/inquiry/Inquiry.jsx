@@ -29,7 +29,7 @@ export default function Inquiry() {
 
         // {
         //     image: "/banner3.png",
-        //     title: "Pre-Rented Commercial Properties",
+        //     title: "Pre-Leased Commercial Properties",
         //     subtitle:
         //         "Verified Income-Generating Assets with Assured Monthly Rentals",
         // },
@@ -428,7 +428,7 @@ export default function Inquiry() {
 
             <h1 className='relative lg:text-3xl text-2xl text-red-600 font-semibold bg-slate-50 text-center pt-5'>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#ed3a20]/5 to-transparent"></div>
-                Residential and Commercial Real Estate Property in Kundli / Pre-Rented Commercial
+                Residential and Commercial Real Estate Property in Kundli / Pre-Leased Commercial
             </h1>
 
             {/* prerented properties */}
@@ -440,13 +440,13 @@ export default function Inquiry() {
                             High-Demand Investment
                         </span>
                         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
-                            Pre-Rented Properties
+                            Pre-Leased Properties
                         </h2>
                         <p className="text-lg font-medium text-[#ed3a20]">
                             Secure Assets with Assured Rental Income
                         </p>
                         <p className="mt-5 text-black leading-relaxed">
-                            Unlock high-demand investment opportunities with <strong>Anand Aggarwal Properties!</strong> We offer verified pre-Leased commercial assets and Pre-Rented Properties properties across Delhi & NCR, including banks, MNC offices, retail brands, food chains, hospitals, and institutional spaces in prime business locations. Our portfolio of commercial properties and residential real estate provides investors with stable, low-risk returns and immediate rental income. <span className='lg:block hidden'> These commercial real estate and residential properties are already leased to reputed tenants, eliminating vacancy risks and ensuring predictable cash flow from day one – making it a smart, secure, and hassle-free investment for both seasoned and first-time investors.</span>
+                            Unlock high-demand investment opportunities with <strong>Anand Aggarwal Properties!</strong> We offer verified pre-Leased commercial assets and Pre-Leased Properties properties across Delhi & NCR, including banks, MNC offices, retail brands, food chains, hospitals, and institutional spaces in prime business locations. Our portfolio of commercial properties and residential real estate provides investors with stable, low-risk returns and immediate rental income. <span className='lg:block hidden'> These commercial real estate and residential properties are already leased to reputed tenants, eliminating vacancy risks and ensuring predictable cash flow from day one – making it a smart, secure, and hassle-free investment for both seasoned and first-time investors.</span>
                         </p>
                         <Link href="https://wa.me/+919810395051" target="_blank"
                             className="mt-5 inline-flex items-center gap-2 rounded-full bg-red-600 cursor-pointer px-8 py-3 text-white font-medium shadow-md hover:bg-red-700 transition"
@@ -535,7 +535,7 @@ export default function Inquiry() {
                     </h2>
 
                     <p className="mt-4 text-lg text-slate-700 leading-relaxed">
-                        Explore residential real estate and commercial properties in Kundli with Anand Aggarwal Properties, including pre-leased commercial assets, pre-leased properties, and pre-rented properties. Strategically located with excellent connectivity via NH-44 and KMP Expressway, Kundli offers high-growth opportunities in plotted developments, group housing, townships, and commercial hubs. <span className='lg:block hidden'> Our verified listings ensure strong infrastructure, long-term appreciation, and, for pre-rented properties, assured rental income—making it a smart, secure, and hassle-free investment.</span>
+                        Explore residential real estate and commercial properties in Kundli with Anand Aggarwal Properties, including pre-leased commercial assets, pre-leased properties, and Pre-Leased properties. Strategically located with excellent connectivity via NH-44 and KMP Expressway, Kundli offers high-growth opportunities in plotted developments, group housing, townships, and commercial hubs. <span className='lg:block hidden'> Our verified listings ensure strong infrastructure, long-term appreciation, and, for Pre-Leased properties, assured rental income—making it a smart, secure, and hassle-free investment.</span>
                     </p>
 
                     <a href="https://wa.me/+919810395051"
