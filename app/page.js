@@ -1,3 +1,4 @@
+import CitySection from "@/components/CitySection";
 import HeroCarousel from "@/components/Hero";
 
 import OfficesSection from "@/components/Office";
@@ -7,13 +8,13 @@ import OfficesSection from "@/components/Office";
 
 export default function Home() {
   return (
- <>
- {/* <PopupForm></PopupForm> */}
- <HeroCarousel></HeroCarousel>
- 
+    <>
+      {/* <PopupForm></PopupForm> */}
+      <HeroCarousel></HeroCarousel>
 
- <OfficesSection></OfficesSection>
 
- </>
+      <OfficesSection></OfficesSection>
+      <CitySection />
+    </>
   );
 }
