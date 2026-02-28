@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
         .join(" ");
 
     return {
-        title: `Pre-Leased Properties in ${cityName}.`,
+        title: `Pre-Leased Properties in ${cityName}`,
         description: `Explore Pre-Leased Properties in ${cityName} and Pre Rented Properties in ${cityName} with verified lease agreements and structured documentation. Get expert assistance today.`,
     };
 }

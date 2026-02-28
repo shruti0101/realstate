@@ -624,7 +624,7 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
           </h1>
 
           <p className="mt-2 lg:text-base text-sm text-slate-900 leading-">
-            <a href="/services" className="font-bold text-red-600">Preleased properties</a> properties in Delhiare ideal for investors seeking <strong>assured rental income</strong> and <strong>low-risk real estate investment.</strong> These properties come with an existing tenant and a valid lease agreement, allowing buyers to earn returns from day one. With predictable cash flow and reduced vacancy risk, <strong>preleased properties</strong> are increasingly preferred in Delhi’s mature property market.
+            <a href="/services" className="font-bold text-red-600">Preleased properties</a> in Delhi are ideal for investors seeking <strong>assured rental income</strong> and <strong>low-risk real estate investment.</strong> These properties come with an existing tenant and a valid lease agreement, allowing buyers to earn returns from day one. With predictable cash flow and reduced vacancy risk, <strong>preleased properties</strong> are increasingly preferred in Delhi’s mature property market.
           </p>
 
           <p className="mt-2 lg:text-base text-sm text-slate-900 leading-">
