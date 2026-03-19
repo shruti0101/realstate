@@ -2,6 +2,7 @@
 import PropertyCarousel from '@/components/Carousel';
 import ContactForm from '@/components/Form';
 import ServicesMarquee from '@/components/Marquee';
+import axios from 'axios';
 import { Building } from 'lucide-react';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
@@ -142,7 +143,7 @@ export default function Inquiry() {
 
         try {
             const formData = {
-                platform: "Real Estate Website",
+                platform: "Real Estate Landing Page",
                 platformEmail: "anandaggarwalproperties1@gmail.com",
                 name,
                 phone,
