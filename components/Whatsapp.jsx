@@ -10,7 +10,7 @@ const Whatsapp = () => {
 
 
       <a
-        href="https://wa.me/+919810395051"
+        href="https://wa.me/+919810327243"
         className="whatsapp-float animate-bounce"
 
         target="_blank"
@@ -23,7 +23,7 @@ const Whatsapp = () => {
 
 
         <a
-          href="tel:+919810395051"
+          href="tel:+919810327243"
           className="call-float animate-bounce"
           aria-label="Call Promozione Branding"
         >
