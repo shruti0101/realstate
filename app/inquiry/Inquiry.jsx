@@ -397,7 +397,7 @@ export default function Inquiry() {
                                     </p>
 
                                     <Link
-                                        href="tel:+919810395051"
+                                        href="tel:+919810327243"
                                         className="inline-block mt-6 sm:mt-8 rounded-md bg-[#ed3a20] px-6 md:px-8 py-3 text-sm sm:text-base font-semibold hover:bg-red-700 transition"
                                     >
                                         Contact Now
@@ -449,7 +449,7 @@ export default function Inquiry() {
                         <p className="mt-5 text-black leading-relaxed">
                             Unlock high-demand investment opportunities with <strong>Anand Aggarwal Properties!</strong> We offer verified pre-Leased commercial assets and Pre-Leased Properties properties across Delhi & NCR, including banks, MNC offices, retail brands, food chains, hospitals, and institutional spaces in prime business locations. Our portfolio of commercial properties and residential real estate provides investors with stable, low-risk returns and immediate rental income. <span className='lg:block hidden'> These commercial real estate and residential properties are already leased to reputed tenants, eliminating vacancy risks and ensuring predictable cash flow from day one – making it a smart, secure, and hassle-free investment for both seasoned and first-time investors.</span>
                         </p>
-                        <Link href="https://wa.me/+919810395051" target="_blank"
+                        <Link href="https://wa.me/+919810327243" target="_blank"
                             className="mt-5 inline-flex items-center gap-2 rounded-full bg-red-600 cursor-pointer px-8 py-3 text-white font-medium shadow-md hover:bg-red-700 transition"
                         >
                             Contact Us <ArrowRight />
@@ -539,7 +539,7 @@ export default function Inquiry() {
                         Explore residential real estate and commercial properties in Kundli with Anand Aggarwal Properties, including pre-leased commercial assets, pre-leased properties, and Pre-Leased properties. Strategically located with excellent connectivity via NH-44 and KMP Expressway, Kundli offers high-growth opportunities in plotted developments, group housing, townships, and commercial hubs. <span className='lg:block hidden'> Our verified listings ensure strong infrastructure, long-term appreciation, and, for Pre-Leased properties, assured rental income—making it a smart, secure, and hassle-free investment.</span>
                     </p>
 
-                    <a href="https://wa.me/+919810395051"
+                    <a href="https://wa.me/+919810327243"
                         target="_blank"
                         className="mt-6 inline-flex items-center gap-2 bg-[#ed3a20] px-8 py-3 text-white rounded-full text-sm font-semibold hover:bg-red-700 transition"
                     >
@@ -563,22 +563,22 @@ export default function Inquiry() {
                         </p>
 
                         <div className="mt-2 grid md:grid-cols-2 gap-4">
-                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810395051">
+                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810327243">
                                 <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
                                 <span className="text-xl font-semibold text-slate-700">VIBS – Imperial Greens</span>
                             </a>
 
-                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810395051">
+                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810327243">
                                 <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
                                 <span className="text-xl font-semibold text-slate-700">Newstone</span>
                             </a>
 
-                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810395051">
+                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810327243">
                                 <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
                                 <span className="text-xl font-semibold text-slate-700">Parker</span>
                             </a>
 
-                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810395051">
+                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810327243">
                                 <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
                                 <span className="text-xl font-semibold text-slate-700">Royal Green Realty</span>
                             </a>
@@ -629,7 +629,7 @@ export default function Inquiry() {
                                     </p>
 
                                     <Link
-                                        href="https://wa.me/+919810395051"
+                                        href="https://wa.me/+919810327243"
                                         className="mt-2 inline-block rounded-full text-white bg-[#ED3A20] px-4 py-1.5 text-xs font-semibold hover:bg-red-700 transition"
                                     >
                                         Know More
@@ -701,7 +701,7 @@ export default function Inquiry() {
                     </div>
 
                     <a
-                        href="tel:+919810395051"
+                        href="tel:+919810327243"
                         className="inline-flex items-center rounded-full bg-[#ED3A20] px-9 py-3 text-sm sm:text-base font-semibold text-white shadow-md hover:bg-[#c73019] transition whitespace-nowrap"
                     >
                         Schedule a Call
@@ -740,10 +740,10 @@ export default function Inquiry() {
                                     <p className="font-bold">
                                         <span className="font-bold">Mobile:</span>{" "}
                                         <a
-                                            href="tel:+919810395051"
+                                            href="tel:+919810327243"
                                             className="hover:text-[#ED3A20] transition"
                                         >
-                                            +91 9810395051
+                                            +91 9810327243
                                         </a>
                                         {" "},{" "}
                                         <a
