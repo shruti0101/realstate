@@ -507,7 +507,7 @@ export default function Inquiry() {
                                             }}
                                             className="mt-5 w-full rounded-full bg-[#ed3a20] text-white text-sm font-semibold px-1.5 py-1.5 sm:px-4 sm:py-2 hover:bg-red-700 transition"
                                         >
-                                           Get Rental Details
+                                            Get Rental Details
                                         </button>
                                     </div>
                                 ))}
@@ -574,13 +574,13 @@ export default function Inquiry() {
                                 <a
                                     key={index}
                                     href="tel:+919810327243"
-                                    className="animate-pulse group flex items-center space-x-4 p-4 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg hover:bg-slate-900 transition-all duration-300"
+                                    className="animate- group flex items-center space-x-4 p-4 rounded-2xl bg-[#ed3a20] shadow-sm hover:shadow-lg hover:bg-white transition-all duration-400"
                                 >
-                                    <span className="flex-shrink-0 w-14 h-14 bg-slate-900 text-white rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:text-slate-900">
+                                    <span className="flex-shrink-0 w-14 h-14 bg-white text-[#ed3a20] rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-[#ed3a20] group-hover:text-white">
                                         <Building size={28} />
                                     </span>
 
-                                    <span className="text-lg font-semibold text-slate-700 transition-all duration-300 group-hover:text-white">
+                                    <span className="text-lg font-semibold text-white transition-all duration-300 group-hover:text-[#ed3a20]">
                                         {item}
                                     </span>
                                 </a>
@@ -715,7 +715,7 @@ export default function Inquiry() {
             {/* contact us */}
             <div className='bg-white'>
                 <div className="mx-auto max-w-6xl px-4 py-5 sm:px-6 lg:px-8">
-                    <div className="grid gap-8 lg:grid-cols-2 lg:items-start bg-white">
+                    <div className="flex flex-col-reverse lg:grid gap-8 lg:grid-cols-2 lg:items-start bg-white">
                         <div className="space-y-5">
                             <div className="rounded-3xl border border-slate-200 bg-white shadow-sm p-1">
                                 <iframe
