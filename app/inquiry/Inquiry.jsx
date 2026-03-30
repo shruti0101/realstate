@@ -180,58 +180,54 @@ export default function Inquiry() {
     const [active, setActive] = useState(null);
     const [selectedLocation, setSelectedLocation] = useState("");
     const projects = [
-        // RETAIL
-        // {
-        //   category: "Retail",
-        //   tenant: "Manyavar",
-        //   location: "Delhi",
-        //   rental: "₹3.50 L / Month",
-        // },
         {
             category: "Retail",
             tenant: "Food Court",
             location: "Delhi",
             rental: "₹15.00 L / Month",
+            button: "Get Retail Rent List"
         },
         {
             category: "Retail",
             tenant: "Gaming Zone",
             location: "Gurgaon",
             rental: "₹3.60 L / Month",
+            button: "Get Retail Rent List"
         },
         {
             category: "Retail",
             tenant: "Birla Institute",
             location: "Gurgaon",
             rental: "₹5.13 L / Month",
+            button: "Get Retail Rent List"
         },
-
         {
             category: "Retail",
             tenant: "Dominos",
             location: "Delhi",
             rental: "₹2.85 L / Month",
+            button: "Get Retail Rent List"
         },
-
         {
             category: "Retail",
             tenant: "Manyavar",
             location: "Delhi",
             rental: "₹3.50 L / Month",
+            button: "Get Retail Rent List"
         },
-
         {
             category: "Retail",
             tenant: "Gym",
             location: "Delhi",
             rental: "₹7 L / Month",
+            button: "Get Retail Rent List"
         },
-
         {
             category: "Retail",
             tenant: "Cinema",
             location: "Gurgaon",
             rental: "₹12 L / Month",
+            button: "Get Retail Rent List"
         },
 
         // BANKS
@@ -240,40 +236,43 @@ export default function Inquiry() {
             tenant: "ICICI Bank",
             location: "Delhi",
             rental: "₹2.26 L / Month",
+            button: "Get Bank Property List"
         },
         {
             category: "Banks",
             tenant: "ICICI Bank",
             location: "Delhi",
             rental: "₹3.00 L / Month",
+            button: "Get Bank Property List"
         },
         {
             category: "Banks",
             tenant: "IOB Bank",
             location: "Delhi",
             rental: "₹3.47 L / Month",
+            button: "Get Bank Property List"
         },
         {
             category: "Banks",
             tenant: "BANDHAN Bank",
             location: "Delhi",
             rental: "₹2.75 L / Month",
+            button: "Get Bank Property List"
         },
-
         {
             category: "Banks",
             tenant: "HDFC Bank",
             location: "Delhi",
             rental: "₹3.97 L / Month",
+            button: "Get Bank Property List"
         },
         {
             category: "Banks",
             tenant: "UNION Bank",
             location: "Delhi",
             rental: "₹3.10 L / Month",
+            button: "Get Bank Property List"
         },
-
-        // OFFICES
 
         // HEALTHCARE
         {
@@ -281,25 +280,28 @@ export default function Inquiry() {
             tenant: "Apollo Hospital",
             location: "Delhi",
             rental: "₹23.00 L / Month",
+            button: "Download Asset Inventory"
         },
         {
             category: "Healthcare",
             tenant: "RG Stone Hospital",
             location: "Delhi",
             rental: "₹27.00 L / Month",
+            button: "Download Asset Inventory"
         },
         {
             category: "Healthcare",
             tenant: "Fortis Hospital",
             location: "Gurgaon",
             rental: "₹14.00 L / Month",
+            button: "Download Asset Inventory"
         },
-
         {
             category: "Healthcare",
             tenant: " Hospital",
             location: "Delhi",
             rental: "₹27.00 L / Month",
+            button: "Download Asset Inventory"
         },
 
         // INDEPENDENT BUILDINGS
@@ -308,21 +310,21 @@ export default function Inquiry() {
             tenant: "Banquet Hall",
             location: "Delhi",
             rental: "₹23.00 L / Month",
+            button: "Download Full Inventory"
         },
-
         {
             category: "Independent Buildings",
             tenant: "Multi-tenant ",
             location: "Delhi",
             rental: "₹28.25 L / Month",
+            button: "Download Full Inventory"
         },
-
-
         {
             category: "Independent Buildings",
             tenant: "Multi-tenant ",
             location: "Delhi",
             rental: "₹16.00 L / Month",
+            button: "Download Full Inventory"
         },
     ];
 
@@ -483,7 +485,7 @@ export default function Inquiry() {
                                 {items.map((item, i) => (
                                     <div
                                         key={i}
-                                        className="border border-gray-200 rounded-xl bg-white text-center p-6 shadow-sm hover:shadow-md transition"
+                                        className="border border-gray-200 rounded-xl bg-white text-center sm:p-6 p-4 shadow-sm hover:shadow-md transition"
                                     >
                                         <h3 className="lg:text-lg text-base font-semibold uppercase text-slate-900">
                                             {item.tenant}
@@ -503,9 +505,9 @@ export default function Inquiry() {
                                                 setSelectedLocation(item.location);
                                                 setIsFormOpen(true);
                                             }}
-                                            className="mt-5 w-full rounded-full bg-[#ed3a20] text-white text-sm font-semibold px-4 py-2 hover:bg-red-700 transition"
+                                            className="mt-5 w-full rounded-full bg-[#ed3a20] text-white text-sm font-semibold px-1.5 py-1.5 sm:px-4 sm:py-2 hover:bg-red-700 transition"
                                         >
-                                            Request Call
+                                           Get Rental Details
                                         </button>
                                     </div>
                                 ))}
@@ -562,26 +564,27 @@ export default function Inquiry() {
                             Kundli – Ideal for Investment
                         </p>
 
-                        <div className="mt-2 grid md:grid-cols-2 gap-4">
-                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810327243">
-                                <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
-                                <span className="text-xl font-semibold text-slate-700">VIBS – Imperial Greens</span>
-                            </a>
+                        <div className="mt-4 grid md:grid-cols-2 gap-2">
+                            {[
+                                "VIBS – Imperial Greens",
+                                "Newstone",
+                                "Parker",
+                                "Royal Green Realty",
+                            ].map((item, index) => (
+                                <a
+                                    key={index}
+                                    href="tel:+919810327243"
+                                    className="animate-pulse group flex items-center space-x-4 p-4 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg hover:bg-slate-900 transition-all duration-300"
+                                >
+                                    <span className="flex-shrink-0 w-14 h-14 bg-slate-900 text-white rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:text-slate-900">
+                                        <Building size={28} />
+                                    </span>
 
-                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810327243">
-                                <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
-                                <span className="text-xl font-semibold text-slate-700">Newstone</span>
-                            </a>
-
-                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810327243">
-                                <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
-                                <span className="text-xl font-semibold text-slate-700">Parker</span>
-                            </a>
-
-                            <a className="flex items-center space-x-2 cursor-pointer" href="tel:+919810327243">
-                                <span className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xs font-bold"><Building size={30} /></span>
-                                <span className="text-xl font-semibold text-slate-700">Royal Green Realty</span>
-                            </a>
+                                    <span className="text-lg font-semibold text-slate-700 transition-all duration-300 group-hover:text-white">
+                                        {item}
+                                    </span>
+                                </a>
+                            ))}
                         </div>
                     </div>
                 </div>
