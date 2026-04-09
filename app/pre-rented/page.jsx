@@ -168,7 +168,7 @@ export default function PreRentedInventory() {
     },
     {
       category: "Independent Buildings",
-      tenant: "Tata Westsite",
+      tenant: "Tata Westside",
       location: "Model Town",
       rental: "₹26.00 L / Month",
     },
@@ -202,7 +202,6 @@ export default function PreRentedInventory() {
       </section>
 
       {/* pre rnted */}
-
       <div>
         <section className="relative bg-slate-50 py-16">
           {/* Accent Background */}

@@ -13,6 +13,7 @@ import axios from "axios";
 import { CheckCircle } from "lucide-react";
 import { useEffect } from "react";
 import { ArrowRight } from "lucide-react";
+import Client from "./Client";
 
 export default function AboutSection() {
   const [name, setName] = useState("");
@@ -39,7 +40,7 @@ export default function AboutSection() {
         email,
         product: service,
         message,
-        
+
       };
 
       const { data } = await axios.post(
@@ -484,8 +485,9 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
         </motion.div>
       </section>
 
-      {/* our locations */}
+      <Client />
 
+      {/* our locations */}
       <section className="bg-[#f5f7fc] py-8 ">
         <div className="mx-auto py-5 w-full  px-4 sm:px-6 lg:px-20">
           {/* Heading */}

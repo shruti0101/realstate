@@ -1,5 +1,6 @@
 "use client";
 import PropertyCarousel from '@/components/Carousel';
+import Client from '@/components/Client';
 import ContactForm from '@/components/Form';
 import ServicesMarquee from '@/components/Marquee';
 import axios from 'axios';
@@ -485,6 +486,8 @@ export default function Inquiry() {
                     </div>
                 </div>
             </section>
+
+            <Client />
 
             {/* <div className="bg-red-600 text-white py-4 overflow-hidden">
                 <div className="whitespace-nowrap flex animate-scroll">
