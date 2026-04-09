@@ -334,6 +334,25 @@ export default function Inquiry() {
         return acc;
     }, {});
 
+    const builders = [
+        {
+            name: "VIBS – Imperial Greens",
+            image: "/1.jpeg",
+        },
+        {
+            name: "Newstone",
+            image: "/2.jpg",
+        },
+        {
+            name: "Parker",
+            image: "/3.webp",
+        },
+        {
+            name: "Royal Green Realty",
+            image: "/4.jpg",
+        },
+    ];
+
     return (<>
         <div className='bg-white -mt-40 z-50 w-full sticky top-0'>
             <nav className="mx-auto flex max-w-7xl items-center justify-between h-23 px-4 md:px-6 ">
@@ -443,7 +462,7 @@ export default function Inquiry() {
                             High-Demand Investment
                         </span>
                         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
-                            Pre-Leased Properties
+                            Pre-Leased Properties for <span className='text-[#ed3a20]'>Sale</span>
                         </h2>
                         <p className="text-lg font-medium text-[#ed3a20]">
                             Secure Assets with Assured Rental Income
@@ -466,6 +485,49 @@ export default function Inquiry() {
                     </div>
                 </div>
             </section>
+
+            <div className="bg-red-600 text-white py-4 overflow-hidden">
+                <div className="whitespace-nowrap flex animate-scroll">
+                    <span className="mx-10 text-xl font-bold">
+                        Residential and Commercial Real Estate Property for Sale
+                    </span>
+                    <span className="mx-10 text-xl font-bold">
+                        Pre-Leased Properties for Sale
+                    </span>
+                    <span className="mx-10 text-xl font-bold">
+                        Best Investment Opportunities in Kundli
+                    </span>
+                </div>
+            </div>
+
+            <div className="bg-red-50 py-10 px-4">
+                <h2 className="text-3xl font-bold text-center text-red-600 mb-6">
+                    Exclusive Deals on Premium Kundli Properties
+                </h2>
+
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                    {builders.map((builder, index) => (
+                        <div onClick={() => setIsFormOpen1(true)}
+                            key={index}
+                            className="bg-white rounded-2xl overflow-hidden shadow-md transform transition duration-500 hover:scale-105 hover:shadow-xl"
+                        >
+                            <div className="overflow-hidden">
+                                <img
+                                    src={builder.image}
+                                    alt={builder.name}
+                                    className="w-full h-48 object-cover transform transition duration-500 hover:scale-110"
+                                />
+                            </div>
+
+                            <div className="p-4 text-center">
+                                <h3 className="text-lg font-semibold text-red-600">
+                                    {builder.name}
+                                </h3>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
 
             {/* prperty */}
             <section className="bg-white py-5">
@@ -573,7 +635,7 @@ export default function Inquiry() {
                             ].map((item, index) => (
                                 <a
                                     key={index}
-                                    href="tel:+919810327243"
+                                    onClick={() => setIsFormOpen1(true)}
                                     className="animate- group flex items-center space-x-4 p-4 rounded-2xl bg-[#ed3a20] shadow-sm hover:shadow-lg hover:bg-white transition-all duration-400"
                                 >
                                     <span className="flex-shrink-0 w-14 h-14 bg-white text-[#ed3a20] rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-[#ed3a20] group-hover:text-white">
