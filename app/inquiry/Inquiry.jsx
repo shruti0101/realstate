@@ -4,7 +4,7 @@ import ContactForm from '@/components/Form';
 import ServicesMarquee from '@/components/Marquee';
 import axios from 'axios';
 import { Building } from 'lucide-react';
-import { ArrowRight, ArrowLeft } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Tag } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
@@ -448,10 +448,10 @@ export default function Inquiry() {
                 <ServicesMarquee></ServicesMarquee>
             </div>
 
-            <h1 className='relative lg:text-3xl text-2xl text-red-600 font-semibold bg-slate-50 text-center pt-5'>
+            {/* <h1 className='relative lg:text-3xl text-2xl text-red-600 font-semibold bg-slate-50 text-center pt-5'>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#ed3a20]/5 to-transparent"></div>
                 Residential and Commercial Real Estate Property in Kundli / Pre-Leased Commercial
-            </h1>
+            </h1> */}
 
             {/* prerented properties */}
             <section className="relative bg-slate-50 py-4" >
@@ -486,7 +486,7 @@ export default function Inquiry() {
                 </div>
             </section>
 
-            <div className="bg-red-600 text-white py-4 overflow-hidden">
+            {/* <div className="bg-red-600 text-white py-4 overflow-hidden">
                 <div className="whitespace-nowrap flex animate-scroll">
                     <span className="mx-10 text-xl font-bold">
                         Residential and Commercial Real Estate Property for Sale
@@ -498,10 +498,10 @@ export default function Inquiry() {
                         Best Investment Opportunities in Kundli
                     </span>
                 </div>
-            </div>
+            </div> */}
 
             <div className="bg-red-50 py-10 px-4">
-                <h2 className="text-3xl font-bold text-center text-red-600 mb-6">
+                <h2 className="md:text-4xl text-2xl font-bold text-center text-red-600 mb-6">
                     Exclusive Deals on Premium Kundli Properties
                 </h2>
 
@@ -520,7 +520,7 @@ export default function Inquiry() {
                             </div>
 
                             <div className="p-4 text-center">
-                                <h3 className="text-lg font-semibold text-red-600">
+                                <h3 className="text-lg font-bold text-red-600">
                                     {builder.name}
                                 </h3>
                             </div>
@@ -535,12 +535,22 @@ export default function Inquiry() {
                     {Object.entries(groupedProjects).map(([category, items]) => (
                         <div key={category}>
                             {/* CATEGORY HEADING */}
-                            <p className="text-2xl font-bold text-slate-900 mb-6">
-                                {category}
-                                <span className="ml-2 text-sm font-medium text-gray-500">
-                                    (Monthly Rental)
-                                </span>
-                            </p>
+                            <div className='flex-wrap flex md:justify-start gap-8 justify-between items-center mb-6'>
+                                <p className="text-2xl font-bold text-slate-900">
+                                    {category}
+                                    <span className="ml-2 text-sm font-medium text-gray-500">
+                                        (Monthly Rental)
+                                    </span>
+                                </p>
+                                <button onClick={() => setIsFormOpen1(true)}
+                                    className="md:m-0 ml-auto sale-btn relative flex items-center gap-2 overflow-hidden bg-red-600 text-white text-lg font-semibold px-6 py-2 rounded-full group"
+                                >
+                                    <span className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition duration-700"></span>
+
+                                    <Tag size={20} className="z-10" />
+                                    <span className="z-10">For Sale</span>
+                                </button>
+                            </div>
 
                             {/* CARDS */}
                             <div className="grid -cols-1 grid-cols-2 lg:grid-cols-4 lg:gap-6 gap-2">
