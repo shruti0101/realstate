@@ -359,7 +359,6 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
         ))}
       </section>
 
-
       {/* about us */}
       <section
         style={{ backgroundImage: "url(/sketch2.webp)" }}

@@ -9,6 +9,7 @@ import { ArrowRight, ArrowLeft, Tag } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
+import { motion } from "framer-motion"
 
 export default function Inquiry() {
     const [current, setCurrent] = useState(0);
@@ -449,6 +450,31 @@ export default function Inquiry() {
                 <ServicesMarquee></ServicesMarquee>
             </div>
 
+            <div className="relative lg:pt-0 pt-18 bg-gray-50">
+                <section className="absolute top-4 left-3 z-20">
+                    <div className="backdrop-blur-md bg-white/70 border border-white/40 shadow-xl rounded-full px-6 py-3 flex items-center gap-3">
+                        <motion.h2
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="text-[#ed3a20] font-semibold text-sm lg:text-[18px] whitespace-nowrap"
+                        >
+                            Featured in Hindustan Times
+                        </motion.h2>
+
+                        <motion.img
+                            src="/ht.webp"
+                            alt="Hindustan Times logo"
+                            className="h-8 lg:h-12 object-contain"
+                            whileHover={{ scale: 1.15, rotate: 2 }}
+                            transition={{ type: "spring", stiffness: 250 }}
+                        />
+                    </div>
+                </section>
+
+                <Client />
+            </div>
+
             {/* <h1 className='relative lg:text-3xl text-2xl text-red-600 font-semibold bg-slate-50 text-center pt-5'>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#ed3a20]/5 to-transparent"></div>
                 Residential and Commercial Real Estate Property in Kundli / Pre-Leased Commercial
@@ -486,8 +512,6 @@ export default function Inquiry() {
                     </div>
                 </div>
             </section>
-
-            <Client />
 
             {/* <div className="bg-red-600 text-white py-4 overflow-hidden">
                 <div className="whitespace-nowrap flex animate-scroll">
