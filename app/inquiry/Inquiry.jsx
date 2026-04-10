@@ -450,30 +450,29 @@ export default function Inquiry() {
                 <ServicesMarquee></ServicesMarquee>
             </div>
 
-            <div className="relative lg:pt-0 pt-20 bg-gray-50">
-                <section className="sale-btn absolute top-4 left-3 z-20">
-                    <div className="w-full backdrop-blur-sm bg-gary-200 border border-gray-200 shadow-xl rounded-full px-6 py-3 flex items-center gap-3">
-                        <motion.h2
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                            className="text-[#f0290b] font-extrabold text-lg lg:text-[18px] whitespace-nowrap"
-                        >
-                            Featured in Hindustan Times
-                        </motion.h2>
+           <div className="relative lg:pt-0 pt-20 bg-gray-50">
+<section className="sale-btn absolute top-4 left-1/2 -translate-x-1/2 lg:left-3 lg:translate-x-0 z-20 w-full flex justify-center lg:justify-start">        <div className="backdrop-blur-sm bg-white border border-gray-200 shadow-xl rounded-full px-6 py-3 flex items-center gap-3">
+            <motion.h2
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-[#f0290b] font-extrabold text-lg lg:text-[18px] whitespace-nowrap text-center"
+            >
+                Featured in Hindustan Times
+            </motion.h2>
 
-                        <motion.img
-                            src="/ht.webp"
-                            alt="Hindustan Times logo"
-                            className="h-10 lg:h-12 object-contain"
-                            whileHover={{ scale: 1.15, rotate: 2 }}
-                            transition={{ type: "spring", stiffness: 250 }}
-                        />
-                    </div>
-                </section>
+            <motion.img
+                src="/ht.webp"
+                alt="Hindustan Times logo"
+                className="h-10 lg:h-12 object-contain"
+                whileHover={{ scale: 1.15, rotate: 2 }}
+                transition={{ type: "spring", stiffness: 250 }}
+            />
+        </div>
+    </section>
 
-                <Client />
-            </div>
+    <Client />
+</div>
 
             {/* <h1 className='relative lg:text-3xl text-2xl text-red-600 font-semibold bg-slate-50 text-center pt-5'>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#ed3a20]/5 to-transparent"></div>
