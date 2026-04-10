@@ -450,14 +450,14 @@ export default function Inquiry() {
                 <ServicesMarquee></ServicesMarquee>
             </div>
 
-            <div className="relative lg:pt-0 pt-18 bg-gray-50">
+            <div className="relative lg:pt-0 pt-20 bg-gray-50">
                 <section className="sale-btn absolute top-4 left-3 z-20">
-                    <div className="backdrop-blur-sm bg-gary-200 border border-gray-200 shadow-xl rounded-full px-6 py-3 flex items-center gap-3">
+                    <div className="w-full backdrop-blur-sm bg-gary-200 border border-gray-200 shadow-xl rounded-full px-6 py-3 flex items-center gap-3">
                         <motion.h2
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="text-[#ed3a20] font-semibold text-base lg:text-[18px] whitespace-nowrap"
+                            className="text-[#f0290b] font-extrabold text-lg lg:text-[18px] whitespace-nowrap"
                         >
                             Featured in Hindustan Times
                         </motion.h2>
