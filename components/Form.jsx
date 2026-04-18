@@ -61,9 +61,10 @@ export default function ContactForm({
 
       console.log("PAYLOAD:", payload);
 
-      const { data } = await axios.post("http://localhost:3000/api/form/add", payload);
-      console.log("RESPONSE DATA:", data);
-
+      const { data } = await axios.post(
+        "https://brandbnalo.com/api/form/add",
+        payload
+      );
 
       if (data?.success) {
         setStatus("✅ Message sent successfully!");
