@@ -53,21 +53,24 @@ export default function ContactForm({
         name,
         phone,
         email,
-        place: price,
+        place: "N/A",
+          priceRange: price,
         product: service,
         message,
       };
 
-      const { data } = await axios.post(
-        "https://brandbnalo.com/api/form/add",
-        payload
-      );
+      console.log("PAYLOAD:", payload);
+
+      const { data } = await axios.post("http://localhost:3000/api/form/add", payload);
+      console.log("RESPONSE DATA:", data);
+
 
       if (data?.success) {
         setStatus("✅ Message sent successfully!");
         setName("");
         setEmail("");
         setPhone("");
+        setPrice("");
         setService("");
         setMessage("");
       } else {
@@ -134,20 +137,19 @@ export default function ContactForm({
             className="w-full px-4 py-3 border rounded-lg text-black"
           />
 
-          <select value={price} className="w-full px-4 py-3 border rounded-lg text-black" onChange={(e) => setPrice(e.target.value)}>
-            <option className="text-black">
-              Select Price Range
-            </option>
-            <option value={'1cr. to 5cr.'} className="text-black">
-              1cr. to 5cr.
-            </option>
-            <option value={'5cr. to 10cr.'} className="text-black">
-              5cr. to 10cr.
-            </option>
-            <option value={'10cr. Above'} className="text-black">
-              10cr. Above
-            </option>
-          </select>
+         <select
+  value={price}
+  required
+  onChange={(e) => setPrice(e.target.value)}
+  className="w-full px-4 py-3 border rounded-lg text-black"
+>
+  <option value="" disabled>
+    Select Price Range
+  </option>
+  <option value="1-5cr">1 Cr – 5 Cr</option>
+  <option value="5-10cr">5 Cr – 10 Cr</option>
+  <option value="10cr+">10 Cr & Above</option>
+</select>
 
           <select
             value={service}
