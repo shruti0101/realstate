@@ -80,6 +80,10 @@ export default function ContactForm({
     }
   };
 
+
+
+
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
       <div className="relative w-full max-w-lg bg-stone-50 rounded-3xl shadow-2xl border border-red-100">
