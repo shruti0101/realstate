@@ -62,7 +62,7 @@ export default function ContactForm({
       console.log("PAYLOAD:", payload);
 
       const { data } = await axios.post(
-        "https://brandbnalo.com/api/form/add",
+         "https://brandbnalo.com/api/form/add",
         payload
       );
 
