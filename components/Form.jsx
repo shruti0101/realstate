@@ -15,6 +15,7 @@ export default function ContactForm({
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [price, setPrice] = useState("");
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
 
@@ -52,7 +53,7 @@ export default function ContactForm({
         name,
         phone,
         email,
-        place: "N/A",
+        place: price,
         product: service,
         message,
       };
@@ -128,6 +129,21 @@ export default function ContactForm({
             required
             className="w-full px-4 py-3 border rounded-lg text-black"
           />
+
+          <select value={price} className="w-full px-4 py-3 border rounded-lg text-black" onChange={(e) => setPrice(e.target.value)}>
+            <option className="text-black">
+              Select Price Range
+            </option>
+            <option value={'1cr. to 5cr.'} className="text-black">
+              1cr. to 5cr.
+            </option>
+            <option value={'5cr. to 10cr.'} className="text-black">
+              5cr. to 10cr.
+            </option>
+            <option value={'10cr. Above'} className="text-black">
+              10cr. Above
+            </option>
+          </select>
 
           <select
             value={service}
