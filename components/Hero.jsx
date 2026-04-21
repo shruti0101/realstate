@@ -887,15 +887,15 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
                     Your Phone
                   </label>
                   <input
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    type="tel"
-                    maxLength={10}
-                    minLength={10}
-                    pattern="[0-9] {10}"
-                    placeholder="+91 -"
-                    className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#ED3A20]"
-                  />
+  value={phone}
+  onChange={(e) => setPhone(e.target.value)}
+  type="tel"
+  maxLength={10}
+  minLength={10}
+  pattern="[0-9]{10}"
+  placeholder="Enter 10-digit mobile number"
+  className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#ED3A20]"
+/>
                 </div>
               </div>
 
