@@ -3,8 +3,11 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Whatsapp from "@/components/Whatsapp";
-import LayoutClient from "@/components/LayoutClient"; // 👈 client wrapper
+import LayoutClient from "@/components/LayoutClient"; 
 import Script from 'next/script';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,6 +84,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         </LayoutClient>
 
         <Footer />
+         <ToastContainer />
       </body>
     </html>
   );

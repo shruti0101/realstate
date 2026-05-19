@@ -1,23 +1,72 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
-export default function ContactPopup() {
-  const formRef = useRef(null);
-  const router = useRouter();
+import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import { auth } from "@/utils/firebase";
 
+export default function ContactForm({
+  isOpen,
+  onClose,
+  defaultMessage = "",
+  defaultService = "",
+}) {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
-  const [isOpen, setIsOpen] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
 
+  // FORM STATES
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [price, setPrice] = useState("");
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
+
+  // OTP STATES
+  const [otp, setOtp] = useState("");
+  const [showOtpBox, setShowOtpBox] = useState(false);
+  const [confirmationResult, setConfirmationResult] = useState(null);
+  const [isPhoneVerified, setIsPhoneVerified] = useState(false);
+
+  /* 🔴 IMPORTANT: Sync defaults when popup opens */
+  useEffect(() => {
+    if (isOpen) {
+      setMessage(defaultMessage || "");
+      setService(defaultService || "");
+      setStatus("");
+    }
+  }, [isOpen, defaultMessage, defaultService]);
+
+  // FIREBASE RECAPTCHA
+  useEffect(() => {
+    if (!isOpen) return;
+
+    if (
+      typeof window !== "undefined" &&
+      !window.recaptchaVerifier
+    ) {
+      window.recaptchaVerifier = new RecaptchaVerifier(
+        auth,
+        "recaptcha-container",
+        {
+          size: "normal",
+        }
+      );
+
+      window.recaptchaVerifier.render();
+    }
+
+    return () => {
+      if (window.recaptchaVerifier) {
+        window.recaptchaVerifier.clear();
+        window.recaptchaVerifier = null;
+      }
+    };
+  }, [isOpen]);
+
+  if (!isOpen) return null;
 
   const services = [
     "Select Service",
@@ -27,173 +76,286 @@ export default function ContactPopup() {
     "KUNDLI / SONEPAT",
     "DLF / Gurgaon Properties",
     "Farmhouses",
-  
   ];
 
-
-  // Auto-popup delay
-  useEffect(() => {
-    const t = setTimeout(() => setIsOpen(true), 2000);
-    return () => clearTimeout(t);
-  }, []);
-
-  // FIXED CLOSE LOGIC — prevents double triggers
-  const closePopup = () => {
-    if (isClosing) return; // IMPORTANT FIX
-    setIsClosing(true);
-
-    setTimeout(() => {
-      setIsOpen(false);
-      setIsClosing(false);
-    }, 400);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setStatus("Sending...");
-
+  // SEND OTP
+  const sendOTP = async () => {
     try {
-      const formData = {
-        platform: "Real Estate Website",
-        platformEmail: "anand_aggarwal_properties@yahoo.com",
-        name,
-        phone,
-        email,
-        place:"N/A",
-        product: service,
-        message,
-      };
+      setLoading(true);
 
-      const { data } = await axios.post(
-        "https://brandbnalo.com/api/form/add",
-        formData
+      const appVerifier = window.recaptchaVerifier;
+
+      const result = await signInWithPhoneNumber(
+        auth,
+        "+91" + phone.trim(),
+        appVerifier
       );
 
-      if (data?.success) {
-        setStatus("Message sent successfully!");
-        closePopup();
-      
+      setConfirmationResult(result);
 
-        setName("");
-        setEmail("");
-        setPhone("");
-        setService("");
-        setMessage("");
-      } else {
-        setStatus("Something went wrong. Try again.");
-      }
+      setShowOtpBox(true);
+
+      toast.success("OTP Sent Successfully");
     } catch (error) {
-      setStatus(error?.message || "Network error");
+      console.log(error);
+
+      toast.error(error.message || "Failed to send OTP");
     } finally {
       setLoading(false);
     }
   };
 
-  if (!isOpen) return null;
+  // VERIFY OTP
+  const verifyOTP = async () => {
+    try {
+      setLoading(true);
+
+      await confirmationResult.confirm(otp);
+
+      setIsPhoneVerified(true);
+
+      toast.success("Phone Verified Successfully");
+
+      await submitForm();
+    } catch (error) {
+      console.log(error);
+
+      toast.error("Invalid OTP");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // SUBMIT FORM
+  const submitForm = async () => {
+    try {
+      setLoading(true);
+
+      const payload = {
+        platform: "Real Estate Website",
+        platformEmail: "anand_aggarwal_properties@yahoo.com",
+        name,
+        phone,
+        email,
+        place: "N/A",
+        priceRange: price,
+        product: service,
+        message,
+      };
+
+      console.log("PAYLOAD:", payload);
+
+      const { data } = await axios.post(
+        "https://brandbnalo.com/api/form/add",
+        payload
+      );
+
+      if (data?.success) {
+        setStatus("✅ Message sent successfully!");
+
+        toast.success("Form Submitted Successfully");
+
+        // RESET FORM
+        setName("");
+        setEmail("");
+        setPhone("");
+        setPrice("");
+        setService("");
+        setMessage("");
+        setOtp("");
+
+        setShowOtpBox(false);
+        setIsPhoneVerified(false);
+
+        setTimeout(() => {
+          onClose();
+        }, 2000);
+      } else {
+        setStatus("❌ Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.log(error);
+
+      setStatus("❌ Submission failed. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // HANDLE SUBMIT
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!phone || phone.length < 10) {
+      return toast.error("Enter Valid Phone Number");
+    }
+
+    // IF VERIFIED ALREADY
+    if (isPhoneVerified) {
+      await submitForm();
+      return;
+    }
+
+    // SEND OTP FIRST
+    await sendOTP();
+  };
 
   return (
-    <div
-      className={`fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center px-4 z-9999
-        ${isClosing ? "animate-fadeOut" : "animate-fadeIn"}`}
-      onClick={closePopup}
-    >
-      <div
-        style={{ backgroundImage: "url(/formbg.webp)" }}
-        className={`relative bg-cover bg-center w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden border border-red-300
-          ${isClosing ? "animate-slideDown" : "animate-slideUp"}`}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="absolute inset-0 bg-black/50" />
-
-        <div    onClick={closePopup} className="text-center p-6 ">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
+      <div className="relative w-full max-w-lg bg-stone-50 rounded-3xl shadow-2xl border border-red-100">
+        
+        {/* Header */}
+        <div className="bg-[#ed3a20] p-4 text-center relative rounded-t-3xl">
           <button
-         
-            className="   absolute top-4 right-4 text-white text-2xl hover:text-red-400 transition"
+            onClick={onClose}
+            className="absolute right-4 top-4 text-white text-xl"
           >
             ✕
           </button>
 
-          <h2 className="text-2xl font-bold text-white drop-shadow">
+          <h2 className="text-2xl font-bold text-white">
             Connect With Us
           </h2>
-          <div className="w-20 h-[3px] bg-white mx-auto mt-2 mb-1 rounded-full opacity-80" />
-          <p className="text-white/85 text-xs">A trusted advisor will call you shortly</p>
+
+          <p className="text-white/90 text-sm">
+            Our experts will contact you shortly
+          </p>
         </div>
 
-        <div className="relative px-6 pb-6 space-y-4 text-white">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <input value={name} type="text" placeholder="Your Name" required
-              onChange={(e) => setName(e.target.value)} className="formField" />
-            <input value={phone} type="tel" placeholder="Phone Number" maxLength={10} minLength={10}
-              pattern="[0-9]{10}" required onChange={(e) => setPhone(e.target.value)} className="formField" />
-            <input value={email} type="email" placeholder="Email Address" required
-              onChange={(e) => setEmail(e.target.value)} className="formField" />
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="p-6 space-y-4">
+          
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Full Name"
+            required
+            disabled={loading}
+            className="w-full px-4 py-3 border rounded-lg text-black"
+          />
 
-            <select value={service} required className="formField"
-              onChange={(e) => setService(e.target.value)}>
-              {services.map((srv, i) => (
-                <option key={i} value={i === 0 ? "" : srv} disabled={i === 0} className="text-black">
-                  {srv}
-                </option>
-              ))}
-            </select>
+          {/* PHONE */}
+          <div className="flex items-center border rounded-lg overflow-hidden">
+            <span className="px-3 text-black bg-gray-100 h-full flex items-center">
+              +91
+            </span>
 
-            <textarea value={message} required placeholder="Message"
-              onChange={(e) => setMessage(e.target.value)}
-              className="formField h-24 resize-none" />
+            <input
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              placeholder="Phone Number"
+              maxLength={10}
+              pattern="[0-9]{10}"
+              required
+              disabled={loading}
+              className="w-full px-4 py-3 text-black outline-none"
+            />
+          </div>
 
-            <button type="submit" disabled={loading}
-              className="w-full py-3 rounded-xl bg-[#ed3a20] hover:bg-red-600 transition text-white font-semibold shadow-lg">
-              {loading ? "Sending..." : "Submit Enquiry"}
-            </button>
-          </form>
+          {/* RECAPTCHA */}
+          <div id="recaptcha-container"></div>
+
+          {/* OTP BOX */}
+          {showOtpBox && !isPhoneVerified && (
+            <div className="space-y-3">
+              <input
+                type="text"
+                placeholder="Enter OTP"
+                value={otp}
+                onChange={(e) => setOtp(e.target.value)}
+                className="w-full px-4 py-3 border rounded-lg text-black"
+              />
+
+              <button
+                type="button"
+                onClick={verifyOTP}
+                className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold"
+              >
+                {loading ? "Verifying..." : "Verify OTP"}
+              </button>
+            </div>
+          )}
+
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email Address"
+            type="email"
+            required
+            disabled={loading}
+            className="w-full px-4 py-3 border rounded-lg text-black"
+          />
+
+          <select
+            value={price}
+            required
+            disabled={loading}
+            onChange={(e) => setPrice(e.target.value)}
+            className="w-full px-4 py-3 border rounded-lg text-black"
+          >
+            <option value="" disabled>
+              Select Price Range
+            </option>
+
+            <option value="1-5cr">1 Cr – 5 Cr</option>
+            <option value="5-10cr">5 Cr – 10 Cr</option>
+            <option value="10cr+">10 Cr & Above</option>
+          </select>
+
+          <select
+            value={service}
+            onChange={(e) => setService(e.target.value)}
+            required
+            disabled={loading}
+            className="w-full px-4 py-3 border rounded-lg text-black"
+          >
+            {services.map((srv, i) => (
+              <option
+                key={i}
+                value={i === 0 ? "" : srv}
+                disabled={i === 0}
+              >
+                {srv}
+              </option>
+            ))}
+          </select>
+
+          <textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            rows={4}
+            required
+            disabled={loading}
+            className="w-full px-4 py-3 border rounded-lg resize-none text-black"
+          />
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-[#ed3a20] text-white py-3 rounded-lg font-semibold"
+          >
+            {loading
+              ? "Loading..."
+              : !showOtpBox
+              ? "Send OTP"
+              : !isPhoneVerified
+              ? "Verify OTP First"
+              : "Submit Enquiry"}
+          </button>
 
           {status && (
-            <p className="text-center text-sm bg-white/15 p-2 rounded-lg">{status}</p>
+            <p
+              className={`text-center text-sm font-medium mt-2 ${
+                status.startsWith("✅")
+                  ? "text-green-600"
+                  : "text-red-600"
+              }`}
+            >
+              {status}
+            </p>
           )}
-        </div>
+        </form>
       </div>
-
-      <style jsx>{`
-        .formField {
-          width: 100%;
-          background: rgba(255, 255, 255, 0.12);
-          border: 1px solid rgba(255, 255, 255, 0.45);
-          color: #fff;
-          padding: 12px 14px;
-          border-radius: 10px;
-          font-size: 0.92rem;
-          outline: none;
-          transition: all 0.2s ease;
-        }
-        .formField::placeholder {
-          color: rgba(255, 255, 255, 0.75);
-        }
-        .formField:focus {
-          border-color: #ed3a20;
-          background: rgba(255, 255, 255, 0.18);
-          box-shadow: 0 0 0 2px rgba(237, 58, 32, 0.35);
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; } to { opacity: 1; }
-        }
-        @keyframes fadeOut {
-          from { opacity: 1; } to { opacity: 0; }
-        }
-        @keyframes slideUp {
-          from { transform: translateY(50px); opacity: 0; }
-          to { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes slideDown {
-          from { transform: translateY(0); opacity: 1; }
-          to { transform: translateY(50px); opacity: 0; }
-        }
-        .animate-fadeIn { animation: fadeIn .35s ease-out forwards; }
-        .animate-fadeOut { animation: fadeOut .35s ease-out forwards; }
-        .animate-slideUp { animation: slideUp .4s ease-out forwards; }
-        .animate-slideDown { animation: slideDown .4s ease-out forwards; }
-      `}</style>
     </div>
   );
 }

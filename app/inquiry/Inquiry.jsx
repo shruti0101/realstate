@@ -10,6 +10,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion"
+import InquiryForm from"@/components/InquiryForm"
 
 export default function Inquiry() {
     const [current, setCurrent] = useState(0);
@@ -161,7 +162,7 @@ export default function Inquiry() {
             );
 
             if (data?.success) {
-                setStatus("✅ Message sent successfully!");
+                setStatus(" Message sent successfully!");
                 setName("");
                 setEmail("");
                 setPhone("");
@@ -810,8 +811,11 @@ export default function Inquiry() {
                 </div>
             </section>
 
+
+
+
             {/* contact us */}
-            <div className='bg-white'>
+            {/* <div className='bg-white'>
                 <div className="mx-auto max-w-6xl px-4 py-5 sm:px-6 lg:px-8">
                     <div className="flex flex-col-reverse lg:grid gap-8 lg:grid-cols-2 lg:items-start bg-white">
                         <div className="space-y-5">
@@ -976,7 +980,12 @@ export default function Inquiry() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
+
+
+
+<InquiryForm></InquiryForm>
+
 
         </div>
         <ContactForm isOpen={isFormOpen1} onClose={() => setIsFormOpen1(false)} />
