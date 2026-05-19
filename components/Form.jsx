@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -30,7 +30,12 @@ export default function ContactForm({
   const [confirmationResult, setConfirmationResult] = useState(null);
   const [isPhoneVerified, setIsPhoneVerified] = useState(false);
 
-  /* 🔴 IMPORTANT: Sync defaults when popup opens */
+  // UNIQUE RECAPTCHA
+  const recaptchaVerifierRef = useRef(null);
+
+  const recaptchaId = "recaptcha-container-popup";
+
+  /* DEFAULT VALUES */
   useEffect(() => {
     if (isOpen) {
       setMessage(defaultMessage || "");
@@ -43,25 +48,30 @@ export default function ContactForm({
   useEffect(() => {
     if (!isOpen) return;
 
-    if (
-      typeof window !== "undefined" &&
-      !window.recaptchaVerifier
-    ) {
-      window.recaptchaVerifier = new RecaptchaVerifier(
-        auth,
-        "recaptcha-container",
-        {
-          size: "normal",
-        }
-      );
+    const initializeRecaptcha = async () => {
+      try {
+        if (!recaptchaVerifierRef.current) {
+          recaptchaVerifierRef.current = new RecaptchaVerifier(
+            auth,
+            recaptchaId,
+            {
+              size: "invisible",
+            }
+          );
 
-      window.recaptchaVerifier.render();
-    }
+          await recaptchaVerifierRef.current.render();
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    initializeRecaptcha();
 
     return () => {
-      if (window.recaptchaVerifier) {
-        window.recaptchaVerifier.clear();
-        window.recaptchaVerifier = null;
+      if (recaptchaVerifierRef.current) {
+        recaptchaVerifierRef.current.clear();
+        recaptchaVerifierRef.current = null;
       }
     };
   }, [isOpen]);
@@ -83,12 +93,15 @@ export default function ContactForm({
     try {
       setLoading(true);
 
-      const appVerifier = window.recaptchaVerifier;
+      if (!recaptchaVerifierRef.current) {
+        toast.error("Recaptcha not initialized");
+        return;
+      }
 
       const result = await signInWithPhoneNumber(
         auth,
         "+91" + phone.trim(),
-        appVerifier
+        recaptchaVerifierRef.current
       );
 
       setConfirmationResult(result);
@@ -143,8 +156,6 @@ export default function ContactForm({
         message,
       };
 
-      console.log("PAYLOAD:", payload);
-
       const { data } = await axios.post(
         "https://brandbnalo.com/api/form/add",
         payload
@@ -190,13 +201,13 @@ export default function ContactForm({
       return toast.error("Enter Valid Phone Number");
     }
 
-    // IF ALREADY VERIFIED
+    // IF VERIFIED
     if (isPhoneVerified) {
       await submitForm();
       return;
     }
 
-    // SEND OTP FIRST
+    // SEND OTP
     await sendOTP();
   };
 
@@ -204,7 +215,7 @@ export default function ContactForm({
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
       <div className="relative w-full max-w-lg bg-stone-50 rounded-3xl shadow-2xl border border-red-100">
 
-        {/* Header */}
+        {/* HEADER */}
         <div className="bg-[#ed3a20] p-4 text-center relative rounded-t-3xl">
           <button
             onClick={onClose}
@@ -222,7 +233,7 @@ export default function ContactForm({
           </p>
         </div>
 
-        {/* Form */}
+        {/* FORM */}
         <form onSubmit={handleSubmit} className="p-6 space-y-4">
 
           <input
@@ -252,8 +263,8 @@ export default function ContactForm({
             />
           </div>
 
-          {/* RECAPTCHA */}
-          <div id="recaptcha-container"></div>
+          {/* UNIQUE INVISIBLE RECAPTCHA */}
+          <div id={recaptchaId} className="hidden"></div>
 
           {/* OTP BOX */}
           {showOtpBox && !isPhoneVerified && (
