@@ -368,7 +368,7 @@ useEffect(() => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="mt-2 inline-flex items-center rounded-full bg-[#ED3A20] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-red-700 disabled:opacity-70 cursor-pointer"
+                  className="mt-2 inline-flex items-center rounded-full bg-[#bb2f2a] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-red-700 disabled:opacity-70 cursor-pointer"
                 >
                   {loading
                     ? "Loading..."

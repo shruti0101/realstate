@@ -27,7 +27,7 @@ export default function ServicesMarquee() {
   const items = [...marqueeServices, ...marqueeServices];
 
   return (
-    <div className="relative w-full overflow-hidden bg-[#ed3a20] py-4 shadow-lg shadow-red-900/40">
+    <div className="relative w-full overflow-hidden bg-[#bb2f2a] py-4 shadow-lg shadow-red-900/40">
       <div className="absolute inset-x-0 top-0 h-1 bg-white/30 blur-sm"></div>
 
       <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-[#ed3a20] to-transparent z-10"></div>

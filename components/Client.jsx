@@ -20,7 +20,7 @@ export default function Client() {
 
     return (
         <div className="bg-gray-50">
-            <h2 className="pt-5 text-center text-red-600 md:text-5xl text-4xl font-bold">
+            <h2 className="pt-5 text-center text-[#bb2f2a] md:text-5xl text-4xl font-bold">
                 Our Clients
             </h2>
 

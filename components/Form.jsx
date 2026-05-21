@@ -216,7 +216,7 @@ export default function ContactForm({
       <div className="relative w-full max-w-lg bg-stone-50 rounded-3xl shadow-2xl border border-red-100">
 
         {/* HEADER */}
-        <div className="bg-[#ed3a20] p-4 text-center relative rounded-t-3xl">
+        <div className="bg-[#bb2f2a] p-4 text-center relative rounded-t-3xl">
           <button
             onClick={onClose}
             className="absolute right-4 top-4 text-white text-xl"
@@ -343,7 +343,7 @@ export default function ContactForm({
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#ed3a20] text-white py-3 rounded-lg font-semibold"
+            className="w-full bg-[#bb2f2a] text-white py-3 rounded-lg font-semibold"
           >
             {loading
               ? "Loading..."
