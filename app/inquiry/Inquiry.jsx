@@ -405,6 +405,7 @@ export default function Inquiry() {
       </div>
       {/* main Section */}
       <div className="w-full h-full mt-16">
+        
         <section
           className="relative h-[50vh] sm:h-[70vh] md:h-[95vh] w-full overflow-hidden"
           id="/"
@@ -425,38 +426,122 @@ export default function Inquiry() {
               <div className="absolute inset-0 bg-black/50" />
 
               {/* Content */}
-              {/* Content */}
-              <div className="relative z-10 flex h-full items-center">
-                <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10 text-white">
-                  <div className="max-w-xl sm:max-w-2xl md:max-w-3xl text-center lg:text-left">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-snug">
-                      {slide.title}
-                    </h1>
+            <div className="relative z-10 flex h-full items-center">
+  <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
+    <div className="grid lg:grid-cols-2 gap-10 items-center">
 
-                    <p className="mt-4 text-lg sm:text-xl md:text-2xl">
-                      {slide.subtitle}
-                    </p>
+      {/* LEFT CONTENT */}
+      <div className="text-white">
+        <div className="max-w-3xl text-center lg:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-snug">
+            {slide.title}
+          </h1>
 
-                    <div className="flex flex-col md:flex-row items-center justify-start gap-4 mt-6">
-                      {/* CTA Button */}
-                      <Link
-                        href="tel:+919810327243"
-                        className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-600 to-red-800 px-6 md:px-8 py-3 text-sm md:text-base font-semibold text-white shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
-                      >
-                        Contact Now
-                      </Link>
+          <p className="mt-4 text-lg sm:text-xl md:text-2xl">
+            {slide.subtitle}
+          </p>
 
-                      {/* Price Badge */}
-                      <h1 className="text-center hidden md:block md:text-left whitespace-nowrap rounded-full border border-white/30 bg-white/10 px-5 py-2 text-lg md:text-2xl font-bold text-white backdrop-blur-md shadow-md">
-                        Starting <span className="text-yellow-400">₹ 2Cr*</span>{" "}
-                        Onwards
-                      </h1>
-                    </div>
+          <div className="flex flex-col md:flex-row items-center lg:items-start gap-4 mt-6">
+            <Link
+              href="tel:+919810327243"
+              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-600 to-red-800 px-6 md:px-8 py-3 text-sm md:text-base font-semibold text-white shadow-lg hover:scale-105 transition-all duration-300"
+            >
+              Contact Now
+            </Link>
 
-                    {/* FIXED HEADING POSITION */}
-                  </div>
-                </div>
-              </div>
+            <h1 className="hidden md:block whitespace-nowrap rounded-full border border-white/30 bg-black px-5 py-2 text-lg md:text-2xl font-bold text-white backdrop-blur-md">
+              Starting <span className="text-yellow-400">₹ 2Cr*</span> Onwards
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      {/* RIGHT FORM */}
+    {/* RIGHT FORM */}
+<div className="hidden lg:flex justify-end">
+  <div className="w-full max-w-lg rounded-[20px] border-[4px] border-[#B92F2A] bg-white/95 p-4 shadow-2xl">
+
+    <h3 className="text-center animate-pulse text-[30px] font-bold text-[#09143c] leading-tight">
+      Plan A Site Visit For
+    </h3>
+
+    <p className="text-center text-[19px] animate-pulse font-semibold text-[#09143c] mb-5">
+      Commercial Real Estate Delhi
+    </p>
+
+    <form onSubmit={handleSubmit} className="space-y-4">
+
+      <input
+        type="text"
+        placeholder="Your Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        required
+        className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
+      />
+
+      <input
+        type="email"
+        placeholder="Your Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+        className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
+      />
+
+      <input
+        type="tel"
+        placeholder="Your Number"
+        maxLength={10}
+        minLength={10}
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
+        required
+        className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
+      />
+
+      <select
+        value={service}
+        onChange={(e) => setService(e.target.value)}
+        required
+        className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
+      >
+        <option value="">Investment Budget</option>
+        <option value="₹50 Lakh - ₹1 Cr">₹50 Lakh - ₹1 Cr</option>
+        <option value="₹1 Cr - ₹2 Cr">₹1 Cr - ₹2 Cr</option>
+        <option value="₹2 Cr - ₹5 Cr">₹2 Cr - ₹5 Cr</option>
+        <option value="₹5 Cr+">₹5 Cr+</option>
+      </select>
+
+      <textarea
+        placeholder="Message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        rows={3}
+        className="w-full rounded-md border border-red-300 p-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
+      />
+
+      <button
+        type="submit"
+        disabled={loading}
+        className="w-full bg-[#B92F2A] hover:bg-red-700 text-white font-semibold py-4 rounded-md text-lg transition disabled:opacity-60"
+      >
+        {loading ? "Submitting..." : "Book a Site Visit"}
+      </button>
+
+      {status && (
+        <p className="text-center text-sm font-medium text-gray-700">
+          {status}
+        </p>
+      )}
+
+    </form>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
             </div>
           ))}
 
@@ -487,7 +572,7 @@ export default function Inquiry() {
       whitespace-nowrap
       rounded-2xl
       border border-white
-      
+      bg-black
       px-6 py-4
       text-2xl md:text-3xl
       font-extrabold
@@ -717,7 +802,7 @@ export default function Inquiry() {
               Aggarwal Properties
             </h2>
 
-            <p className="mt-4 text-lg text-slate-700 leading-relaxed">
+            <p className="hidden md:block mt-4 text-lg text-slate-700 leading-relaxed">
               Explore residential real estate and commercial properties in
               Kundli with Anand Aggarwal Properties, including pre-leased
               commercial assets, pre-leased properties, and Pre-Leased
@@ -900,20 +985,20 @@ export default function Inquiry() {
         </section>
 
         {/* cta */}
-        <section className="md:py-5 py-2 bg-gray-100" id="contact-us">
+        <section className="md:py-5 py-3 bg-[#B92F2A]" id="contact-us">
           <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center sm:justify-between gap-4">
             <div className="text-center sm:text-left">
-              <h3 className="text-xl sm:text-3xl font-semibold text-black">
+              <h3 className="text-xl sm:text-3xl font-semibold text-white">
                 Discuss your project needs
               </h3>
-              <p className="mt-3 text-sm sm:text-lg text-black max-w-xl">
+              <p className="mt-3 text-sm sm:text-lg text-white max-w-xl">
                 Talk with our team and explore your options.
               </p>
             </div>
 
             <a
               href="tel:+919810327243"
-              className="inline-flex items-center rounded-full bg-[#bb2f2a] px-9 py-3 text-sm sm:text-base font-semibold text-white shadow-md hover:bg-[#c73019] transition whitespace-nowrap"
+              className="inline-flex items-center rounded-full bg-white px-9 py-3 text-sm sm:text-base font-semibold text-black shadow-md animate-pulse transition whitespace-nowrap"
             >
               Schedule a Call
             </a>

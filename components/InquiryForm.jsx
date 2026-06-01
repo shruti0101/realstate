@@ -184,8 +184,15 @@ useEffect(() => {
 
   return (
     <div className="bg-white">
+      <h2 className="text-center text-[#B92F2A] font-bold text-2xl px-2  md:text-4xl my-3 md:my-5">Plan A Site Visit For
+Commercial Real Estate Delhi
+
+</h2>
       <div className="mx-auto max-w-6xl px-4 py-5 sm:px-6 lg:px-8">
+        
         <div className="flex flex-col-reverse lg:grid gap-8 lg:grid-cols-2 lg:items-start bg-white">
+
+
 
           {/* LEFT SIDE */}
           <div className="space-y-5">
