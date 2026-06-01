@@ -480,14 +480,7 @@ export default function Inquiry() {
         className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
       />
 
-      <input
-        type="email"
-        placeholder="Your Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-        className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
-      />
+   
 
       <input
         type="tel"
@@ -500,6 +493,17 @@ export default function Inquiry() {
         className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
       />
 
+
+   <input
+        type="email"
+        placeholder="Your Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+        className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
+      />
+
+
       <select
         value={service}
         onChange={(e) => setService(e.target.value)}
@@ -507,7 +511,7 @@ export default function Inquiry() {
         className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
       >
         <option value="">Investment Budget</option>
-        <option value="₹50 Lakh - ₹1 Cr">₹50 Lakh - ₹1 Cr</option>
+     
         <option value="₹1 Cr - ₹2 Cr">₹1 Cr - ₹2 Cr</option>
         <option value="₹2 Cr - ₹5 Cr">₹2 Cr - ₹5 Cr</option>
         <option value="₹5 Cr+">₹5 Cr+</option>
