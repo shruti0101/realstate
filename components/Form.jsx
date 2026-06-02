@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
-import { auth } from "@/utils/firebase";
+// import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+// import { auth } from "@/utils/firebase";
 
 export default function ContactForm({
   isOpen,
@@ -25,15 +25,15 @@ export default function ContactForm({
   const [message, setMessage] = useState("");
 
   // OTP STATES
-  const [otp, setOtp] = useState("");
-  const [showOtpBox, setShowOtpBox] = useState(false);
-  const [confirmationResult, setConfirmationResult] = useState(null);
-  const [isPhoneVerified, setIsPhoneVerified] = useState(false);
+  // const [otp, setOtp] = useState("");
+  // const [showOtpBox, setShowOtpBox] = useState(false);
+  // const [confirmationResult, setConfirmationResult] = useState(null);
+  // const [isPhoneVerified, setIsPhoneVerified] = useState(false);
 
   // UNIQUE RECAPTCHA
-  const recaptchaVerifierRef = useRef(null);
+  // const recaptchaVerifierRef = useRef(null);
 
-  const recaptchaId = "recaptcha-container-popup";
+  // const recaptchaId = "recaptcha-container-popup";
 
   /* DEFAULT VALUES */
   useEffect(() => {
@@ -45,36 +45,36 @@ export default function ContactForm({
   }, [isOpen, defaultMessage, defaultService]);
 
   // FIREBASE RECAPTCHA
-  useEffect(() => {
-    if (!isOpen) return;
+  // useEffect(() => {
+  //   if (!isOpen) return;
 
-    const initializeRecaptcha = async () => {
-      try {
-        if (!recaptchaVerifierRef.current) {
-          recaptchaVerifierRef.current = new RecaptchaVerifier(
-            auth,
-            recaptchaId,
-            {
-              size: "invisible",
-            }
-          );
+  //   const initializeRecaptcha = async () => {
+  //     try {
+  //       if (!recaptchaVerifierRef.current) {
+  //         recaptchaVerifierRef.current = new RecaptchaVerifier(
+  //           auth,
+  //           recaptchaId,
+  //           {
+  //             size: "invisible",
+  //           }
+  //         );
 
-          await recaptchaVerifierRef.current.render();
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    };
+  //         await recaptchaVerifierRef.current.render();
+  //       }
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
 
-    initializeRecaptcha();
+  //   initializeRecaptcha();
 
-    return () => {
-      if (recaptchaVerifierRef.current) {
-        recaptchaVerifierRef.current.clear();
-        recaptchaVerifierRef.current = null;
-      }
-    };
-  }, [isOpen]);
+  //   return () => {
+  //     if (recaptchaVerifierRef.current) {
+  //       recaptchaVerifierRef.current.clear();
+  //       recaptchaVerifierRef.current = null;
+  //     }
+  //   };
+  // }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -89,55 +89,55 @@ export default function ContactForm({
   ];
 
   // SEND OTP
-  const sendOTP = async () => {
-    try {
-      setLoading(true);
+  // const sendOTP = async () => {
+  //   try {
+  //     setLoading(true);
 
-      if (!recaptchaVerifierRef.current) {
-        toast.error("Recaptcha not initialized");
-        return;
-      }
+  //     if (!recaptchaVerifierRef.current) {
+  //       toast.error("Recaptcha not initialized");
+  //       return;
+  //     }
 
-      const result = await signInWithPhoneNumber(
-        auth,
-        "+91" + phone.trim(),
-        recaptchaVerifierRef.current
-      );
+  //     const result = await signInWithPhoneNumber(
+  //       auth,
+  //       "+91" + phone.trim(),
+  //       recaptchaVerifierRef.current
+  //     );
 
-      setConfirmationResult(result);
+  //     setConfirmationResult(result);
 
-      setShowOtpBox(true);
+  //     setShowOtpBox(true);
 
-      toast.success("OTP Sent Successfully");
-    } catch (error) {
-      console.log(error);
+  //     toast.success("OTP Sent Successfully");
+  //   } catch (error) {
+  //     console.log(error);
 
-      toast.error(error.message || "Failed to send OTP");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     toast.error(error.message || "Failed to send OTP");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   // VERIFY OTP
-  const verifyOTP = async () => {
-    try {
-      setLoading(true);
+  // const verifyOTP = async () => {
+  //   try {
+  //     setLoading(true);
 
-      await confirmationResult.confirm(otp);
+  //     await confirmationResult.confirm(otp);
 
-      setIsPhoneVerified(true);
+  //     setIsPhoneVerified(true);
 
-      toast.success("Phone Verified Successfully");
+  //     toast.success("Phone Verified Successfully");
 
-      await submitForm();
-    } catch (error) {
-      console.log(error);
+  //     await submitForm();
+  //   } catch (error) {
+  //     console.log(error);
 
-      toast.error("Invalid OTP");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     toast.error("Invalid OTP");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   // SUBMIT FORM
   const submitForm = async () => {
@@ -173,10 +173,10 @@ export default function ContactForm({
         setPrice("");
         setService("");
         setMessage("");
-        setOtp("");
+        // setOtp("");
 
-        setShowOtpBox(false);
-        setIsPhoneVerified(false);
+        // setShowOtpBox(false);
+        // setIsPhoneVerified(false);
 
         setTimeout(() => {
           onClose();
@@ -202,13 +202,14 @@ export default function ContactForm({
     }
 
     // IF VERIFIED
-    if (isPhoneVerified) {
-      await submitForm();
-      return;
-    }
+    // if (isPhoneVerified) {
+    //   await submitForm();
+    //   return;
+    // }
 
     // SEND OTP
-    await sendOTP();
+    // await sendOTP();
+    await submitForm();
   };
 
   return (
@@ -264,10 +265,10 @@ export default function ContactForm({
           </div>
 
           {/* UNIQUE INVISIBLE RECAPTCHA */}
-          <div id={recaptchaId} className="hidden"></div>
+          {/* <div id={recaptchaId} className="hidden"></div> */}
 
           {/* OTP BOX */}
-          {showOtpBox && !isPhoneVerified && (
+          {/* {showOtpBox && !isPhoneVerified && (
             <div className="space-y-3">
               <input
                 type="text"
@@ -285,7 +286,7 @@ export default function ContactForm({
                 {loading ? "Verifying..." : "Verify OTP"}
               </button>
             </div>
-          )}
+          )} */}
 
           <input
             value={email}
@@ -345,13 +346,7 @@ export default function ContactForm({
             disabled={loading}
             className="w-full bg-[#bb2f2a] text-white py-3 rounded-lg font-semibold"
           >
-            {loading
-              ? "Loading..."
-              : !showOtpBox
-              ? "Send OTP"
-              : !isPhoneVerified
-              ? "Verify OTP First"
-              : "Submit Enquiry"}
+             {loading ? "Loading..." : "Submit Enquiry"}
           </button>
 
           {status && (
