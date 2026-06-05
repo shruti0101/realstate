@@ -80,7 +80,14 @@ const Footer = () => {
       {/* Copyright */}
       <div className=" flex flex-col md:flex-row py-1 px-3 justify-between text-center text-xs sm:text-sm text-slate-300">
       <p>© 2025 Anand Aggarwal Properties — All Rights Reserved</p>  
-      <p>Website Designed By Promozione Branding Pvt. Ltd. <a className="text-red-600 underline" href="https://promozionebranding.com/">Website Designing Company.</a> </p>
+      <p>Website Designed By  Inquiry Bazaar Pvt. Ltd.  {" "}
+        <a
+          target="_blank"
+          href="https://inquirybazaar.com/"
+          className="text-[#FAAC18] hover:underline"
+        >
+           B2B Marketplace
+        </a> </p>
       </div>
     </footer> 
   );
