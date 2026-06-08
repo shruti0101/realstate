@@ -512,7 +512,6 @@ export default function Inquiry() {
       >
         <option value="">Investment Budget</option>
      
-        <option value="₹1 Cr - ₹2 Cr">₹1 Cr - ₹2 Cr</option>
         <option value="₹2 Cr - ₹5 Cr">₹2 Cr - ₹5 Cr</option>
         <option value="₹5 Cr+">₹5 Cr+</option>
       </select>
