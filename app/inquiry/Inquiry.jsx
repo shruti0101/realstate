@@ -751,6 +751,7 @@ export default function Inquiry() {
                 <div className="grid -cols-1 grid-cols-2 lg:grid-cols-4 lg:gap-6 gap-2">
                   {items.map((item, i) => (
                     <div
+                     onClick={() => setIsFormOpen1(true)}
                       key={i}
                       className="border border-gray-200 rounded-xl bg-white text-center sm:p-6 p-4 shadow-sm hover:shadow-md transition"
                     >
@@ -893,6 +894,7 @@ export default function Inquiry() {
               {expertise.map((exp, i) => (
                 <div
                   key={i}
+                   onClick={() => setIsFormOpen1(true)}
                   className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition"
                 >
                   {/* Image */}
