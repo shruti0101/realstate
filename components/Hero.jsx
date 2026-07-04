@@ -40,7 +40,6 @@ export default function AboutSection() {
         email,
         product: service,
         message,
-
       };
 
       const { data } = await axios.post(
@@ -51,7 +50,7 @@ export default function AboutSection() {
             "Content-Type": "application/json",
             Accept: "application/json",
           },
-        }
+        },
       );
 
       if (data?.success) {
@@ -68,7 +67,7 @@ export default function AboutSection() {
       } else {
         setLoading(false);
         setStatus(
-          "❌ Something went wrong on the server. Please try again later."
+          "❌ Something went wrong on the server. Please try again later.",
         );
       }
     } catch (error) {
@@ -78,8 +77,8 @@ export default function AboutSection() {
         console.log("RESPONSE DATA:", error.response.data);
         setStatus(
           "❌ " +
-          (error.response.data?.message ||
-            `Server error (${error.response.status}). Please try again later.`)
+            (error.response.data?.message ||
+              `Server error (${error.response.status}). Please try again later.`),
         );
       } else if (error.request) {
         setStatus("❌ No response from server. Please check your internet.");
@@ -240,7 +239,7 @@ export default function AboutSection() {
 
   const slides = [
     {
-      image: "/banner5.webp",
+      image: "/banner5(1).webp",
       title: "Welcome to Anand Aggarwal Properties.",
 
       subtitle: `
@@ -285,22 +284,23 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
     {
       image: "/services/sonepat.webp",
       title: "KUNDLI / SONEPAT",
-      subtitle: "Fast-growing residential & commercial hub with excellent connectivity to Delhi NCR",
+      subtitle:
+        "Fast-growing residential & commercial hub with excellent connectivity to Delhi NCR",
     },
 
     {
       image: "/hero2.webp",
       title: "DLF / Gurgaon Properties",
-      subtitle: "Premium luxury residences & commercial spaces in Gurgaon’s most prestigious sectors",
+      subtitle:
+        "Premium luxury residences & commercial spaces in Gurgaon’s most prestigious sectors",
     },
 
     {
       image: "/services/farmhouse.webp",
       title: "Farmhouses & Agricultural Land",
-      subtitle: "Spacious green land ideal for luxury farmhouses, weekend homes & long-term investment",
+      subtitle:
+        "Spacious green land ideal for luxury farmhouses, weekend homes & long-term investment",
     },
-
-
   ];
 
   useEffect(() => {
@@ -315,12 +315,11 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
       <section className="relative h-[70vh] sm:h-[75vh] md:h-[90vh] w-full overflow-hidden">
         {slides.map((slide, index) => (
           <Link
-
             href="/services"
-
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${index === current ? "opacity-100" : "opacity-0"
-              }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === current ? "opacity-100" : "opacity-0"
+            }`}
           >
             {/* Background Image */}
             <Image
@@ -518,7 +517,6 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
                 {/* Content */}
                 <div className="absolute inset-0 flex items-center justify-center px-6">
                   <div className="text-center">
-
                     <h3 className="text-2xl sm:text-3xl font-semibold text-white">
                       {city.name}
                     </h3>
@@ -625,19 +623,45 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
           </h1>
 
           <p className="mt-2 lg:text-base text-sm text-slate-900 leading-">
-            <a href="/services" className="font-bold text-red-600">Preleased properties</a> in Delhi are ideal for investors seeking <strong>assured rental income</strong> and <strong>low-risk real estate investment.</strong> These properties come with an existing tenant and a valid lease agreement, allowing buyers to earn returns from day one. With predictable cash flow and reduced vacancy risk, <strong>preleased properties</strong> are increasingly preferred in Delhi’s mature property market.
+            <a href="/services" className="font-bold text-red-600">
+              Preleased properties
+            </a>{" "}
+            in Delhi are ideal for investors seeking{" "}
+            <strong>assured rental income</strong> and{" "}
+            <strong>low-risk real estate investment.</strong> These properties
+            come with an existing tenant and a valid lease agreement, allowing
+            buyers to earn returns from day one. With predictable cash flow and
+            reduced vacancy risk, <strong>preleased properties</strong> are
+            increasingly preferred in Delhi’s mature property market.
           </p>
 
           <p className="mt-2 lg:text-base text-sm text-slate-900 leading-">
-            The demand for <strong>Pre-Leased commercial properties</strong> in Delhi remains strong due to long-term leases, corporate tenants, and attractive rental yields. Assets such as office spaces, retail outlets, banks, and branded showrooms offer stability along with capital appreciation, making <strong>Pre-Leased commercial properties</strong> suitable for investors focused on consistent and higher returns.
+            The demand for <strong>Pre-Leased commercial properties</strong> in
+            Delhi remains strong due to long-term leases, corporate tenants, and
+            attractive rental yields. Assets such as office spaces, retail
+            outlets, banks, and branded showrooms offer stability along with
+            capital appreciation, making{" "}
+            <strong>Pre-Leased commercial properties</strong> suitable for
+            investors focused on consistent and higher returns.
           </p>
 
           <p className="mt-2 lg:text-base text-sm text-slate-900 leading-">
-            Alongside commercial assets, <strong>Pre-Leased commercial properties</strong> such as apartments and builder floors provide steady monthly income with comparatively lower investment entry points. These <strong>Pre-Leased commercial properties</strong> are easier to manage and witness consistent demand from professionals and families, making them a reliable option for long-term investors.
+            Alongside commercial assets,{" "}
+            <strong>Pre-Leased commercial properties</strong> such as apartments
+            and builder floors provide steady monthly income with comparatively
+            lower investment entry points. These{" "}
+            <strong>Pre-Leased commercial properties</strong> are easier to
+            manage and witness consistent demand from professionals and
+            families, making them a reliable option for long-term investors.
           </p>
 
           <p className="mt-2 lg:text-base text-sm text-slate-900 leading-">
-            Investing in <strong>Pre-Leased commercial properties</strong> in Delhi ensures transparency, immediate income generation, and long-term value appreciation. With proper due diligence, verified listings, and expert advisory support, investors can confidently choose the right <strong>Pre-Leased commercial properties</strong> aligned with their financial goals.
+            Investing in <strong>Pre-Leased commercial properties</strong> in
+            Delhi ensures transparency, immediate income generation, and
+            long-term value appreciation. With proper due diligence, verified
+            listings, and expert advisory support, investors can confidently
+            choose the right <strong>Pre-Leased commercial properties</strong>{" "}
+            aligned with their financial goals.
           </p>
         </div>
 
@@ -757,9 +781,6 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
           </div>
         </div>
       </section>
-
-
-
 
       {/* accordian */}
 
@@ -887,15 +908,15 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
                     Your Phone
                   </label>
                   <input
-  value={phone}
-  onChange={(e) => setPhone(e.target.value)}
-  type="tel"
-  maxLength={10}
-  minLength={10}
-  pattern="[0-9]{10}"
-  placeholder="Enter 10-digit mobile number"
-  className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#ED3A20]"
-/>
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    type="tel"
+                    maxLength={10}
+                    minLength={10}
+                    pattern="[0-9]{10}"
+                    placeholder="Enter 10-digit mobile number"
+                    className="w-full border-b border-slate-400 pb-2 bg-transparent text-base text-slate-900 placeholder:text-slate-500 outline-none focus:border-[#ED3A20]"
+                  />
                 </div>
               </div>
 
@@ -987,10 +1008,11 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
                 </p>
                 {status && (
                   <p
-                    className={`text-center text-sm font-medium p-2 rounded-lg ${status.startsWith("✅")
-                      ? "bg-green-100 text-green-700"
-                      : "bg-red-100 text-red-700"
-                      }`}
+                    className={`text-center text-sm font-medium p-2 rounded-lg ${
+                      status.startsWith("✅")
+                        ? "bg-green-100 text-green-700"
+                        : "bg-red-100 text-red-700"
+                    }`}
                   >
                     {status}
                   </p>
