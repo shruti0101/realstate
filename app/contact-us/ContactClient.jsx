@@ -24,6 +24,7 @@ export default function ContactSection() {
 
     try {
       const formData = {
+        supplierToken: "6a9bdc7779bd32ac5164a497",
         platform: "Real Estate Website",
         platformEmail: "anandaggarwalproperties1@gmail.com",
         name,
@@ -167,7 +168,7 @@ export default function ContactSection() {
                     <option>KUNDLI / SONEPAT</option>
                     <option>DLF / Gurgaon Properties</option>
                     <option>Farmhouses</option>
-                
+
                   </select>
                 </div>
 
@@ -196,11 +197,10 @@ export default function ContactSection() {
 
                   {status && (
                     <p
-                      className={`text-xs sm:text-sm font-medium ${
-                        status.startsWith("✅")
+                      className={`text-xs sm:text-sm font-medium ${status.startsWith("✅")
                           ? "text-green-600"
                           : "text-red-600"
-                      }`}
+                        }`}
                     >
                       {status}
                     </p>
@@ -228,9 +228,9 @@ export default function ContactSection() {
                 </p>
 
                 <p className="mt-2 text-lg font-medium text-black">
-                 B-27, Pushpanjali Enclave,
+                  B-27, Pushpanjali Enclave,
 
-Outer Ring Road, Pitampura, Delhi
+                  Outer Ring Road, Pitampura, Delhi
                 </p>
 
                 <div className="mt-3 grid text-md  text-black">
@@ -242,7 +242,7 @@ Outer Ring Road, Pitampura, Delhi
                     >
                       +91 9810395051
                     </a>
-          {" "},{" "}
+                    {" "},{" "}
                     <a
                       href="tel:+919891683399"
                       className="hover:text-[#ED3A20] transition"
@@ -252,7 +252,7 @@ Outer Ring Road, Pitampura, Delhi
                   </p>
                 </div>
 
-             
+
 
                 <p className="mt-2 font-bold">
                   <span className="font-bold">Email:</span>{" "}

@@ -33,6 +33,7 @@ export default function AboutSection() {
 
     try {
       const formData = {
+        supplierToken: "6a9bdc7779bd32ac5164a497",
         platform: "Real Estate Website landing page",
         platformEmail: "anandaggarwalproperties1@gmail.com",
         name,
@@ -78,8 +79,8 @@ export default function AboutSection() {
         console.log("RESPONSE DATA:", error.response.data);
         setStatus(
           "❌ " +
-            (error.response.data?.message ||
-              `Server error (${error.response.status}). Please try again later.`),
+          (error.response.data?.message ||
+            `Server error (${error.response.status}). Please try again later.`),
         );
       } else if (error.request) {
         setStatus("❌ No response from server. Please check your internet.");
@@ -313,9 +314,9 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
 
   return (
     <>
-      
 
-      <HeroSection slides={slides}/>
+
+      <HeroSection slides={slides} />
 
       {/* about us */}
       <section
@@ -967,11 +968,10 @@ We deal in Residential, Industrial, Pre-Leased & Commercial Properties in Delhi/
                 </p>
                 {status && (
                   <p
-                    className={`text-center text-sm font-medium p-2 rounded-lg ${
-                      status.startsWith("✅")
+                    className={`text-center text-sm font-medium p-2 rounded-lg ${status.startsWith("✅")
                         ? "bg-green-100 text-green-700"
                         : "bg-red-100 text-red-700"
-                    }`}
+                      }`}
                   >
                     {status}
                   </p>

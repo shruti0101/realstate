@@ -147,6 +147,7 @@ export default function Inquiry() {
 
     try {
       const formData = {
+        supplierToken: "6a9bdc7779bd32ac5164a497",
         platform: "Real Estate Landing Page",
         platformEmail: "anandaggarwalproperties1@gmail.com",
         name,
@@ -405,7 +406,7 @@ export default function Inquiry() {
       </div>
       {/* main Section */}
       <div className="w-full h-full mt-16">
-        
+
         <section
           className="relative h-[50vh] sm:h-[70vh] md:h-[95vh] w-full overflow-hidden"
           id="/"
@@ -426,125 +427,125 @@ export default function Inquiry() {
               <div className="absolute inset-0 bg-black/50" />
 
               {/* Content */}
-            <div className="relative z-10 flex h-full items-center">
-  <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
-    <div className="grid lg:grid-cols-2 gap-10 items-center">
+              <div className="relative z-10 flex h-full items-center">
+                <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
+                  <div className="grid lg:grid-cols-2 gap-10 items-center">
 
-      {/* LEFT CONTENT */}
-      <div className="text-white">
-        <div className="max-w-3xl text-center lg:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-snug">
-            {slide.title}
-          </h1>
+                    {/* LEFT CONTENT */}
+                    <div className="text-white">
+                      <div className="max-w-3xl text-center lg:text-left">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-snug">
+                          {slide.title}
+                        </h1>
 
-          <p className="mt-4 text-lg sm:text-xl md:text-2xl">
-            {slide.subtitle}
-          </p>
+                        <p className="mt-4 text-lg sm:text-xl md:text-2xl">
+                          {slide.subtitle}
+                        </p>
 
-          <div className="flex flex-col md:flex-row items-center lg:items-start gap-4 mt-6">
-            <Link
-              href="tel:+919810327243"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-600 to-red-800 px-6 md:px-8 py-3 text-sm md:text-base font-semibold text-white shadow-lg hover:scale-105 transition-all duration-300"
-            >
-              Contact Now
-            </Link>
+                        <div className="flex flex-col md:flex-row items-center lg:items-start gap-4 mt-6">
+                          <Link
+                            href="tel:+919810327243"
+                            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-600 to-red-800 px-6 md:px-8 py-3 text-sm md:text-base font-semibold text-white shadow-lg hover:scale-105 transition-all duration-300"
+                          >
+                            Contact Now
+                          </Link>
 
-            <h1 className="hidden md:block whitespace-nowrap rounded-full border border-white/30 bg-black px-5 py-2 text-lg md:text-2xl font-bold text-white backdrop-blur-md">
-              Starting <span className="text-yellow-400">₹ 2Cr*</span> Onwards
-            </h1>
-          </div>
-        </div>
-      </div>
+                          <h1 className="hidden md:block whitespace-nowrap rounded-full border border-white/30 bg-black px-5 py-2 text-lg md:text-2xl font-bold text-white backdrop-blur-md">
+                            Starting <span className="text-yellow-400">₹ 2Cr*</span> Onwards
+                          </h1>
+                        </div>
+                      </div>
+                    </div>
 
-      {/* RIGHT FORM */}
-    {/* RIGHT FORM */}
-<div className="hidden lg:flex justify-end">
-  <div className="w-full max-w-lg rounded-[20px] border-[4px] border-[#B92F2A] bg-white/95 p-4 shadow-2xl">
+                    {/* RIGHT FORM */}
+                    {/* RIGHT FORM */}
+                    <div className="hidden lg:flex justify-end">
+                      <div className="w-full max-w-lg rounded-[20px] border-[4px] border-[#B92F2A] bg-white/95 p-4 shadow-2xl">
 
-    <h3 className="text-center animate-pulse text-[30px] font-bold text-[#09143c] leading-tight">
-      Plan A Site Visit For
-    </h3>
+                        <h3 className="text-center animate-pulse text-[30px] font-bold text-[#09143c] leading-tight">
+                          Plan A Site Visit For
+                        </h3>
 
-    <p className="text-center text-[19px] animate-pulse font-semibold text-[#09143c] mb-5">
-      Commercial Real Estate Delhi
-    </p>
+                        <p className="text-center text-[19px] animate-pulse font-semibold text-[#09143c] mb-5">
+                          Commercial Real Estate Delhi
+                        </p>
 
-    <form onSubmit={handleSubmit} className="space-y-4">
+                        <form onSubmit={handleSubmit} className="space-y-4">
 
-      <input
-        type="text"
-        placeholder="Your Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-        className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
-      />
-
-   
-
-      <input
-        type="tel"
-        placeholder="Your Number"
-        maxLength={10}
-        minLength={10}
-        value={phone}
-        onChange={(e) => setPhone(e.target.value)}
-        required
-        className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
-      />
+                          <input
+                            type="text"
+                            placeholder="Your Name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                            className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
+                          />
 
 
-   <input
-        type="email"
-        placeholder="Your Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-        className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
-      />
+
+                          <input
+                            type="tel"
+                            placeholder="Your Number"
+                            maxLength={10}
+                            minLength={10}
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            required
+                            className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
+                          />
 
 
-      <select
-        value={service}
-        onChange={(e) => setService(e.target.value)}
-        required
-        className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
-      >
-        <option value="">Investment Budget</option>
-     
-        <option value="₹2 Cr - ₹5 Cr">₹2 Cr - ₹5 Cr</option>
-        <option value="₹5 Cr+">₹5 Cr+</option>
-      </select>
+                          <input
+                            type="email"
+                            placeholder="Your Email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                            className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
+                          />
 
-      <textarea
-        placeholder="Message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        rows={3}
-        className="w-full rounded-md border border-red-300 p-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
-      />
 
-      <button
-        type="submit"
-        disabled={loading}
-        className="w-full bg-[#B92F2A] hover:bg-red-700 text-white font-semibold py-4 rounded-md text-lg transition disabled:opacity-60"
-      >
-        {loading ? "Submitting..." : "Book a Site Visit"}
-      </button>
+                          <select
+                            value={service}
+                            onChange={(e) => setService(e.target.value)}
+                            required
+                            className="w-full h-14 rounded-md border border-red-300 px-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
+                          >
+                            <option value="">Investment Budget</option>
 
-      {status && (
-        <p className="text-center text-sm font-medium text-gray-700">
-          {status}
-        </p>
-      )}
+                            <option value="₹2 Cr - ₹5 Cr">₹2 Cr - ₹5 Cr</option>
+                            <option value="₹5 Cr+">₹5 Cr+</option>
+                          </select>
 
-    </form>
-  </div>
-</div>
+                          <textarea
+                            placeholder="Message"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                            rows={3}
+                            className="w-full rounded-md border border-red-300 p-4 text-gray-700 focus:outline-none focus:border-[#B92F2A]"
+                          />
 
-    </div>
-  </div>
-</div>
+                          <button
+                            type="submit"
+                            disabled={loading}
+                            className="w-full bg-[#B92F2A] hover:bg-red-700 text-white font-semibold py-4 rounded-md text-lg transition disabled:opacity-60"
+                          >
+                            {loading ? "Submitting..." : "Book a Site Visit"}
+                          </button>
+
+                          {status && (
+                            <p className="text-center text-sm font-medium text-gray-700">
+                              {status}
+                            </p>
+                          )}
+
+                        </form>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
 
@@ -567,9 +568,9 @@ export default function Inquiry() {
 
         <div id="services">
           <ServicesMarquee></ServicesMarquee>
-         <div className="flex md:hidden flex-col  items-center justify-center my-2">
-  <h1
-    className="
+          <div className="flex md:hidden flex-col  items-center justify-center my-2">
+            <h1
+              className="
       w-[90vw]
       text-center
       whitespace-nowrap
@@ -587,14 +588,14 @@ export default function Inquiry() {
       hover:shadow-[0_0_35px_rgba(37,99,235,0.8)]
       transition-all duration-500
     "
-  >
-    Starting{" "}
-    <span className="text-yellow-300 drop-shadow-[0_0_12px_rgba(255,215,0,0.9)]">
-      ₹ 2Cr*
-    </span>{" "}
-    Onwards
-  </h1>
-</div>
+            >
+              Starting{" "}
+              <span className="text-yellow-300 drop-shadow-[0_0_12px_rgba(255,215,0,0.9)]">
+                ₹ 2Cr*
+              </span>{" "}
+              Onwards
+            </h1>
+          </div>
         </div>
 
         <div className="relative lg:pt-0 pt-20 bg-gray-50">
@@ -751,7 +752,7 @@ export default function Inquiry() {
                 <div className="grid -cols-1 grid-cols-2 lg:grid-cols-4 lg:gap-6 gap-2">
                   {items.map((item, i) => (
                     <div
-                     onClick={() => setIsFormOpen1(true)}
+                      onClick={() => setIsFormOpen1(true)}
                       key={i}
                       className="border border-gray-200 rounded-xl bg-white text-center sm:p-6 p-4 shadow-sm hover:shadow-md transition"
                     >
@@ -894,7 +895,7 @@ export default function Inquiry() {
               {expertise.map((exp, i) => (
                 <div
                   key={i}
-                   onClick={() => setIsFormOpen1(true)}
+                  onClick={() => setIsFormOpen1(true)}
                   className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition"
                 >
                   {/* Image */}
