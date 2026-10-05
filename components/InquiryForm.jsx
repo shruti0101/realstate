@@ -24,49 +24,49 @@ export default function ContactSection() {
   // const [confirmationResult, setConfirmationResult] = useState(null);
   // const [isPhoneVerified, setIsPhoneVerified] = useState(false);
 
-  
-// FIREBASE RECAPTCHA
-// useEffect(() => {
-//   if (typeof window === "undefined") return;
 
-//   const initializeRecaptcha = async () => {
-//     try {
-//       // clear old verifier
-//       if (window.contactRecaptchaVerifier) {
-//         window.contactRecaptchaVerifier.clear();
-//         window.contactRecaptchaVerifier = null;
-//       }
+  // FIREBASE RECAPTCHA
+  // useEffect(() => {
+  //   if (typeof window === "undefined") return;
 
-//       // create new verifier
-//       window.contactRecaptchaVerifier = new RecaptchaVerifier(
-//         auth,
-//         "contact-recaptcha-container",
-//         {
-//           size: "invisible",
+  //   const initializeRecaptcha = async () => {
+  //     try {
+  //       // clear old verifier
+  //       if (window.contactRecaptchaVerifier) {
+  //         window.contactRecaptchaVerifier.clear();
+  //         window.contactRecaptchaVerifier = null;
+  //       }
 
-//           callback: () => {
-//             console.log("reCAPTCHA solved");
-//           },
-//         }
-//       );
+  //       // create new verifier
+  //       window.contactRecaptchaVerifier = new RecaptchaVerifier(
+  //         auth,
+  //         "contact-recaptcha-container",
+  //         {
+  //           size: "invisible",
 
-//       await window.contactRecaptchaVerifier.render();
+  //           callback: () => {
+  //             console.log("reCAPTCHA solved");
+  //           },
+  //         }
+  //       );
 
-//       console.log("reCAPTCHA initialized");
-//     } catch (error) {
-//       console.log("RECAPTCHA ERROR:", error);
-//     }
-//   };
+  //       await window.contactRecaptchaVerifier.render();
 
-//   initializeRecaptcha();
+  //       console.log("reCAPTCHA initialized");
+  //     } catch (error) {
+  //       console.log("RECAPTCHA ERROR:", error);
+  //     }
+  //   };
 
-//   return () => {
-//     if (window.contactRecaptchaVerifier) {
-//       window.contactRecaptchaVerifier.clear();
-//       window.contactRecaptchaVerifier = null;
-//     }
-//   };
-// }, []);
+  //   initializeRecaptcha();
+
+  //   return () => {
+  //     if (window.contactRecaptchaVerifier) {
+  //       window.contactRecaptchaVerifier.clear();
+  //       window.contactRecaptchaVerifier = null;
+  //     }
+  //   };
+  // }, []);
 
   // SEND OTP
   // const sendOTP = async () => {
@@ -122,6 +122,7 @@ export default function ContactSection() {
       setLoading(true);
 
       const payload = {
+        supplierToken: "6a9bdc7779bd32ac5164a497",
         platform: "Real Estate Website",
         platformEmail: "anand_aggarwal_properties@yahoo.com",
         name,
@@ -186,11 +187,11 @@ export default function ContactSection() {
   return (
     <div className="bg-white">
       <h2 className="text-center text-[#B92F2A] font-bold text-2xl px-2  md:text-4xl my-3 md:my-5">Plan A Site Visit For
-Commercial Real Estate Delhi
+        Commercial Real Estate Delhi
 
-</h2>
+      </h2>
       <div className="mx-auto max-w-6xl px-4 py-5 sm:px-6 lg:px-8">
-        
+
         <div className="flex flex-col-reverse lg:grid gap-8 lg:grid-cols-2 lg:items-start bg-white">
 
 
@@ -253,9 +254,9 @@ Commercial Real Estate Delhi
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
 
             <form className="space-y-5" onSubmit={handleSubmit}>
-              
+
               <div className="grid gap-4 sm:grid-cols-2">
-                
+
                 <div>
                   <label className="block text-sm font-semibold text-slate-700">
                     Full Name
@@ -293,7 +294,7 @@ Commercial Real Estate Delhi
               </div>
 
               {/* RECAPTCHA */}
-         {/* <div id="contact-recaptcha-container"></div> */}
+              {/* <div id="contact-recaptcha-container"></div> */}
 
               {/* OTP BOX */}
               {/* {showOtpBox && !isPhoneVerified && (
@@ -378,16 +379,15 @@ Commercial Real Estate Delhi
                   disabled={loading}
                   className="mt-2 inline-flex items-center rounded-full bg-[#bb2f2a] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-red-700 disabled:opacity-70 cursor-pointer"
                 >
-                   {loading ? "Loading..." : "Submit Enquiry"}
+                  {loading ? "Loading..." : "Submit Enquiry"}
                 </button>
 
                 {status && (
                   <p
-                    className={`text-xs sm:text-sm font-medium ${
-                      status.startsWith("✅")
+                    className={`text-xs sm:text-sm font-medium ${status.startsWith("✅")
                         ? "text-green-600"
                         : "text-red-600"
-                    }`}
+                      }`}
                   >
                     {status}
                   </p>

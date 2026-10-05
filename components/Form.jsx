@@ -145,6 +145,7 @@ export default function ContactForm({
       setLoading(true);
 
       const payload = {
+        supplierToken: "6a9bdc7779bd32ac5164a497",
         platform: "Real Estate Website",
         platformEmail: "anand_aggarwal_properties@yahoo.com",
         name,
@@ -346,16 +347,15 @@ export default function ContactForm({
             disabled={loading}
             className="w-full bg-[#bb2f2a] text-white py-3 rounded-lg font-semibold"
           >
-             {loading ? "Loading..." : "Submit Enquiry"}
+            {loading ? "Loading..." : "Submit Enquiry"}
           </button>
 
           {status && (
             <p
-              className={`text-center text-sm font-medium mt-2 ${
-                status.startsWith("✅")
+              className={`text-center text-sm font-medium mt-2 ${status.startsWith("✅")
                   ? "text-green-600"
                   : "text-red-600"
-              }`}
+                }`}
             >
               {status}
             </p>

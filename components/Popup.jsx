@@ -132,6 +132,7 @@ export default function ContactForm({
       setLoading(true);
 
       const payload = {
+        supplierToken: "6a9bdc7779bd32ac5164a497",
         platform: "Real Estate Website",
         platformEmail: "anand_aggarwal_properties@yahoo.com",
         name,
@@ -198,13 +199,13 @@ export default function ContactForm({
 
     // SEND OTP FIRST
     // await sendOTP();
-     await submitForm();
+    await submitForm();
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
       <div className="relative w-full max-w-lg bg-stone-50 rounded-3xl shadow-2xl border border-red-100">
-        
+
         {/* Header */}
         <div className="bg-[#bb2f2a] p-4 text-center relative rounded-t-3xl">
           <button
@@ -225,7 +226,7 @@ export default function ContactForm({
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="p-6 space-y-4">
-          
+
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -340,11 +341,10 @@ export default function ContactForm({
 
           {status && (
             <p
-              className={`text-center text-sm font-medium mt-2 ${
-                status.startsWith("✅")
-                  ? "text-green-600"
-                  : "text-red-600"
-              }`}
+              className={`text-center text-sm font-medium mt-2 ${status.startsWith("✅")
+                ? "text-green-600"
+                : "text-red-600"
+                }`}
             >
               {status}
             </p>
